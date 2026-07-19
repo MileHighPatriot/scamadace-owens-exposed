@@ -1,12 +1,16 @@
 # Connect ScamdaceOwensExposed.com
 
-The site is already live on GitHub Pages. To use **scamadaceowensexposed.com**:
+**Site is live now:**  
+https://milehighpatriot.github.io/scamadace-owens-exposed/
 
-## 1. Buy the domain
-Buy `scamadaceowensexposed.com` at any registrar (Cloudflare, Porkbun, Namecheap, Google Domains/Squarespace, etc.).
+**Repo:**  
+https://github.com/MileHighPatriot/scamadace-owens-exposed
 
-## 2. Add DNS records (apex domain)
-At your registrar DNS settings, add these **A records** for `@` (root):
+## Buy the domain
+Purchase **scamadaceowensexposed.com** (Cloudflare, Porkbun, Namecheap, etc.).
+
+## Point DNS to GitHub Pages
+At your registrar, create these records for the root domain:
 
 | Type | Name | Value |
 |------|------|-------|
@@ -15,13 +19,15 @@ At your registrar DNS settings, add these **A records** for `@` (root):
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
 
-Optional **www**:
+Optional `www`:
+
 | Type | Name | Value |
 |------|------|-------|
 | CNAME | www | MileHighPatriot.github.io |
 
-## 3. GitHub custom domain
-Repo → Settings → Pages → Custom domain → `scamadaceowensexposed.com` → Save  
-Check **Enforce HTTPS** after DNS propagates (can take a few minutes to 48 hours).
+## Attach the domain in GitHub
+1. Create a file named `CNAME` in the repo root with one line: `scamadaceowensexposed.com`
+2. Or: **Settings → Pages → Custom domain** → enter `scamadaceowensexposed.com` → Save
+3. After DNS works (minutes to 48h), check **Enforce HTTPS**
 
-The repo already includes a `CNAME` file for this domain.
+Until that DNS is live, the public URL stays on github.io so the site does not go dark.
