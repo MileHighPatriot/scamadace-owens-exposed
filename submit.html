@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit a Claim — Scamdace Owens Exposed</title>
+  <meta name="description" content="Submit a Candace Owens claim about Charlie Kirk’s assassination — primary evidence required." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <strong>Scamdace Owens Exposed</strong>
+        <span>Kirk assassination claim archive</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="claims.html">Claim catalog</a>
+        <a href="facts.html">Public record</a>
+        <a href="submit.html" class="active">Submit a claim</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="hero" style="padding-top:1rem">
+      <div class="hero-kicker">Living catalog</div>
+      <h1>Submit a claim</h1>
+      <p class="lede">
+        Help make the archive complete. We want claims Owens actually made (show, X, interview) between
+        <strong>Sept 10, 2025 and today</strong>, plus relevant pre-incident claims about herself / Kirk / TPUSA if they feed the assassination narrative.
+      </p>
+    </header>
+
+    <div class="form-note">
+      <strong>Evidence required.</strong> Opinion (“I think she implied…”) without a link will not be added.
+      You must provide at least one primary URL: her X post, show episode, or a clip that is clearly her speaking.
+      Secondary reporting is acceptable only when it quotes her primary words (not opponents paraphrasing her unfairly).
+    </div>
+
+    <form id="submit-form" class="card">
+      <div class="form-group">
+        <label for="claim">What did she claim? *</label>
+        <span class="hint">One clear proposition. Example: “She said no gun was fired from Losee and the mic exploded.”</span>
+        <textarea id="claim" name="claim" required placeholder="State the claim precisely…"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="date">Approximate date of the claim</label>
+        <input id="date" name="date" type="text" placeholder="e.g. July 7, 2026 or June 2026 episode" />
+      </div>
+      <div class="form-group">
+        <label for="primary">Primary evidence link(s) *</label>
+        <span class="hint">Paste one URL per line. Must include http(s). X status links and YouTube timestamps preferred.</span>
+        <textarea id="primary" name="primary" required placeholder="https://x.com/RealCandaceO/status/…"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="notes">Optional notes (quotes, timestamps, context)</label>
+        <textarea id="notes" name="notes" placeholder="Exact quote if you have it; episode title; why it matters…"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="submitter">Your X handle (optional)</label>
+        <input id="submitter" name="submitter" type="text" placeholder="@yourhandle" />
+      </div>
+      <button class="btn btn-primary" type="submit">Generate submission &amp; share to X</button>
+      <button class="btn btn-secondary" type="button" id="copy-submission" style="margin-left:0.5rem">Copy draft only</button>
+    </form>
+
+    <pre id="submit-output" class="card" hidden style="white-space:pre-wrap;color:var(--text-muted);margin-top:1rem"></pre>
+
+    <div class="callout" style="margin-top:1.5rem">
+      Submissions go to public X via intent (cc <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a>)
+      and copy to your clipboard. There is no backend database on GitHub Pages — this keeps the site free and static.
+      For private tips, DM @America1st5280 with links only (no doxxing material).
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>Scamdace Owens Exposed · MileHigh Patriot · <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a></div>
+      <div><a href="corrections.html">Corrections</a></div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/submit.js"></script>
+  <script>
+    document.getElementById("copy-submission")?.addEventListener("click", function () {
+      const out = document.getElementById("submit-output");
+      if (out && out.textContent) SOE.copyText(out.textContent, this);
+      else alert("Submit the form first to generate a draft.");
+    });
+  </script>
+</body>
+</html>
