@@ -1,27 +1,55 @@
 /* Individual claim: claim first, then full evidence stack */
 (function () {
-  const root = document.getElementById("claim-root");
+  var root = document.getElementById("claim-root");
   if (!root || !window.CLAIMS_DATA) return;
 
-  const id = new URLSearchParams(location.search).get("id");
-  const claim = SOE.getClaim(id);
+  var id = new URLSearchParams(location.search).get("id");
+  var claim = SOE.getClaim(id);
 
   if (!claim) {
+    document.title = "Claim not found — Scamdace Owens Exposed";
+    SOE.applySocialMeta({
+      title: document.title,
+      description:
+        "That claim ID was not found in the Scamdace Owens Exposed catalog.",
+      url: SOE.absoluteUrl("claim.html" + (id ? "?id=" + encodeURIComponent(id) : "")),
+    });
     root.innerHTML =
-      '<div class="empty-state"><h1>Claim not found</h1><p><a class="btn btn-primary" href="claims.html">Back to all claims</a></p></div>';
+      '<div class="empty-state empty-state-rich">' +
+      "<h1>Claim not found</h1>" +
+      "<p>No claim matches" +
+      (id
+        ? ' <code class="inline-code">' + escapeHtml(id) + "</code>"
+        : " — missing <code class=\"inline-code\">?id=</code> parameter") +
+      ".</p>" +
+      '<div class="btn-row" style="justify-content:center">' +
+      '<a class="btn btn-primary" href="claims.html">Browse all claims</a>' +
+      '<a class="btn btn-secondary" href="index.html">Home</a>' +
+      "</div></div>";
     return;
   }
 
-  document.title = claim.shortTitle + " — Scamdace Owens Exposed";
+  var pageTitle = claim.shortTitle + " — Scamdace Owens Exposed";
+  var pageDesc = (
+    claim.summary ||
+    "Deep evidence disproof of a Candace Owens claim about the Charlie Kirk assassination."
+  ).slice(0, 200);
+  document.title = pageTitle;
+  SOE.applySocialMeta({
+    title: pageTitle,
+    description: pageDesc,
+    url: SOE.absoluteUrl("claim.html?id=" + encodeURIComponent(claim.id)),
+    type: "article",
+  });
 
-  const meta = (window.VERDICT_META || {})[claim.verdict] || {};
-  const tags = SOE.categoryLabels(claim.categories)
+  var meta = (window.VERDICT_META || {})[claim.verdict] || {};
+  var tags = SOE.categoryLabels(claim.categories)
     .map(function (t) {
-      return '<span class="tag">' + t + "</span>";
+      return '<span class="tag">' + escapeHtml(t) + "</span>";
     })
     .join(" ");
 
-  const primaryHtml = (claim.primarySources || [])
+  var primaryHtml = (claim.primarySources || [])
     .map(function (s) {
       return (
         "<li><a href=\"" +
@@ -45,16 +73,16 @@
       })
       .filter(Boolean)
       .map(function (block) {
-        // Single newlines inside a block become spaces for clean paragraph flow
-        const clean = block.replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+        var clean = block.replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
         return "<p>" + escapeHtml(clean) + "</p>";
       })
       .join("");
   }
 
-  const evidenceHtml = (claim.evidence || [])
+  var evidence = claim.evidence || [];
+  var evidenceHtml = evidence
     .map(function (e, i) {
-      const sources = (e.sources || [])
+      var sources = (e.sources || [])
         .map(function (s) {
           return (
             "<li><a href=\"" +
@@ -73,7 +101,7 @@
         (i + 1) +
         "</div>" +
         '<div class="tier-badge">' +
-        SOE.tierLabel(e.tier) +
+        escapeHtml(SOE.tierLabel(e.tier)) +
         "</div>" +
         "<h3>" +
         escapeHtml(e.title) +
@@ -91,9 +119,9 @@
     })
     .join("");
 
-  const relatedHtml = (claim.related || [])
+  var relatedHtml = (claim.related || [])
     .map(function (rid) {
-      const r = SOE.getClaim(rid);
+      var r = SOE.getClaim(rid);
       if (!r) return "";
       return (
         '<a class="claim-card" href="claim.html?id=' +
@@ -109,12 +137,53 @@
     })
     .join("");
 
-  const n = (claim.evidence || []).length;
+  // Sticky mini-TOC for long stacks
+  var tocItems =
+    '<li><a href="#her-claim">1. Her claim</a></li>' +
+    '<li><a href="#primary">2. Where she said it</a></li>' +
+    '<li><a href="#disproof">3. Evidence stack (' +
+    evidence.length +
+    ")</a></li>";
+  evidence.forEach(function (e, i) {
+    tocItems +=
+      '<li class="toc-sub"><a href="#evidence-' +
+      (i + 1) +
+      '">E' +
+      (i + 1) +
+      " · " +
+      escapeHtml(truncate(e.title, 42)) +
+      "</a></li>";
+  });
+  if (relatedHtml) {
+    tocItems += '<li><a href="#related">Related claims</a></li>';
+  }
+
+  var shareUrl = SOE.absoluteUrl(
+    "claim.html?id=" + encodeURIComponent(claim.id)
+  );
+  var tweetText =
+    claim.shortTitle +
+    " — " +
+    (meta.label || claim.verdict) +
+    ". Evidence archive:";
+  var xShare =
+    "https://x.com/intent/tweet?text=" +
+    encodeURIComponent(tweetText + " " + shareUrl);
+
+  var n = evidence.length;
+  var updatedLabel = SOE.formatUpdated(SOE.SITE_UPDATED);
 
   root.innerHTML =
-    '<div class="breadcrumb"><a href="index.html">Home</a> · <a href="claims.html">All claims</a> · ' +
+    '<nav class="breadcrumb" aria-label="Breadcrumb">' +
+    '<a href="index.html">Home</a>' +
+    ' <span class="bc-sep" aria-hidden="true">/</span> ' +
+    '<a href="claims.html">All claims</a>' +
+    ' <span class="bc-sep" aria-hidden="true">/</span> ' +
+    "<span aria-current=\"page\">" +
     escapeHtml(claim.shortTitle) +
-    "</div>" +
+    "</span></nav>" +
+    '<div class="claim-layout">' +
+    '<div class="claim-main">' +
     '<header class="claim-hero">' +
     '<div class="claim-card-top">' +
     SOE.verdictHtml(claim.verdict) +
@@ -133,12 +202,25 @@
     " — " +
     escapeHtml(meta.blurb || "") +
     "</p>" +
+    '<p class="claim-updated"><time datetime="' +
+    escapeAttr(SOE.SITE_UPDATED) +
+    '">Catalog baseline: ' +
+    escapeHtml(updatedLabel) +
+    "</time></p>" +
     '<div class="btn-row">' +
     '<a class="btn btn-secondary btn-sm" href="claims.html">← All claims</a>' +
     '<a class="btn btn-primary btn-sm" href="#disproof">Jump to evidence (' +
     n +
     ")</a>" +
     '<button type="button" class="btn btn-secondary btn-sm" id="print-btn">Print / save PDF</button>' +
+    "</div>" +
+    '<div class="share-bar" role="group" aria-label="Share this claim">' +
+    '<span class="share-label">Share</span>' +
+    '<button type="button" class="btn btn-secondary btn-sm" id="copy-link-btn">Copy link</button>' +
+    '<a class="btn btn-secondary btn-sm" id="share-x-btn" href="' +
+    escapeAttr(xShare) +
+    '" target="_blank" rel="noopener">Post on X</a>' +
+    '<button type="button" class="btn btn-secondary btn-sm" id="native-share-btn" hidden>Share…</button>' +
     "</div>" +
     "</header>" +
     '<section class="claim-section" id="her-claim">' +
@@ -151,7 +233,7 @@
     '<h2><span class="step">2</span> Where she said it (primary / near-primary)</h2>' +
     '<div class="callout">We prioritize Owens’s own X posts and show episodes. Some entries also use contemporaneous reports that quote her words when a single stable clip URL is fragmented.</div>' +
     '<ul class="source-list primary-list">' +
-    primaryHtml +
+    (primaryHtml || "<li class=\"src-note\">No primary links listed yet.</li>") +
     "</ul>" +
     "</section>" +
     '<section class="claim-section" id="disproof">' +
@@ -164,23 +246,59 @@
     "</strong><p>" +
     escapeHtml(meta.blurb || "") +
     "</p>" +
-    "<p class=\"stance\">Each evidence item below is meant to dismantle <em>this</em> claim specifically — not to restate the whole case from scratch. No personal insults; no soft-pedaling falsehoods.</p></div></div>" +
-    evidenceHtml +
+    '<p class="stance">Each evidence item below is meant to dismantle <em>this</em> claim specifically — not to restate the whole case from scratch. No personal insults; no soft-pedaling falsehoods.</p></div></div>' +
+    (evidenceHtml ||
+      '<div class="empty-state">Evidence stack is being assembled for this claim.</div>') +
     "</section>" +
     (relatedHtml
-      ? '<section class="claim-section"><h2>Related claims</h2><div class="claim-list">' +
+      ? '<section class="claim-section" id="related"><h2>Related claims</h2><div class="claim-list">' +
         relatedHtml +
         "</div></section>"
       : "") +
     '<section class="claim-section">' +
     '<div class="callout">See something missing or wrong? Contact <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a> with primary links. <a href="submit.html">Submit a claim</a> · <a href="corrections.html">Corrections</a></div>' +
     '<div class="btn-row"><a class="btn btn-primary" href="claims.html">← Back to all claims</a></div>' +
-    "</section>";
+    "</section>" +
+    "</div>" + // claim-main
+    '<aside class="claim-toc" aria-label="On this page">' +
+    '<div class="claim-toc-inner">' +
+    "<h2>On this page</h2>" +
+    "<ol>" +
+    tocItems +
+    "</ol>" +
+    "</div></aside>" +
+    "</div>"; // claim-layout
 
   document.getElementById("print-btn")?.addEventListener("click", function () {
     window.print();
   });
 
+  var copyBtn = document.getElementById("copy-link-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      SOE.copyText(shareUrl, copyBtn);
+    });
+  }
+
+  var nativeBtn = document.getElementById("native-share-btn");
+  if (nativeBtn && navigator.share) {
+    nativeBtn.hidden = false;
+    nativeBtn.addEventListener("click", function () {
+      navigator
+        .share({
+          title: claim.shortTitle,
+          text: pageDesc,
+          url: shareUrl,
+        })
+        .catch(function () {});
+    });
+  }
+
+  function truncate(s, n) {
+    s = String(s || "");
+    if (s.length <= n) return s;
+    return s.slice(0, n - 1).trim() + "…";
+  }
   function escapeHtml(s) {
     return String(s || "")
       .replace(/&/g, "&amp;")

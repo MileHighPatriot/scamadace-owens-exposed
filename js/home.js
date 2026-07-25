@@ -1,14 +1,14 @@
 /* Homepage stats + major claims list */
 (function () {
-  const stats = document.getElementById("home-stats");
-  const featured = document.getElementById("featured-claims");
+  var stats = document.getElementById("home-stats");
+  var featured = document.getElementById("featured-claims");
   if (!window.CLAIMS_DATA) return;
 
-  const data = window.CLAIMS_DATA;
-  const falseN = data.filter(function (c) {
+  var data = window.CLAIMS_DATA;
+  var falseN = data.filter(function (c) {
     return c.verdict === "FALSE" || c.verdict === "CONTRADICTED";
   }).length;
-  const evidenceN = data.reduce(function (n, c) {
+  var evidenceN = data.reduce(function (n, c) {
     return n + (c.evidence || []).length;
   }, 0);
 
@@ -26,9 +26,14 @@
   }
 
   if (featured) {
-    const picks = data.filter(function (c) {
+    var picks = data.filter(function (c) {
       return c.featured;
     });
+    if (!picks.length) {
+      featured.innerHTML =
+        '<div class="empty-state">Featured claims will appear here once marked in the catalog.</div>';
+      return;
+    }
     featured.innerHTML = picks
       .map(function (c) {
         return (
@@ -50,9 +55,10 @@
   }
 
   function escapeHtml(s) {
-    return String(s)
+    return String(s || "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 })();
