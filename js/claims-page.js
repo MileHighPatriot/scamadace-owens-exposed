@@ -1,36 +1,59 @@
 /* Simple claim catalog: one row per claim → click for full evidence */
 (function () {
-  const listEl = document.getElementById("claim-list");
-  const searchEl = document.getElementById("search");
-  const verdictEl = document.getElementById("filter-verdict");
-  const countEl = document.getElementById("result-count");
-  const chipsEl = document.getElementById("category-chips");
+  var listEl = document.getElementById("claim-list");
+  var searchEl = document.getElementById("search");
+  var verdictEl = document.getElementById("filter-verdict");
+  var countEl = document.getElementById("result-count");
+  var chipsEl = document.getElementById("category-chips");
   if (!listEl || !window.CLAIMS_DATA) return;
 
-  let activeCategory = "all";
+  var activeCategory = "all";
 
-  // Sort: featured/core first, then alpha by short title
+  // Deep-link: ?q= / ?verdict= / ?cat=
+  try {
+    var params = new URLSearchParams(location.search);
+    if (searchEl && params.get("q")) searchEl.value = params.get("q");
+    if (verdictEl && params.get("verdict")) {
+      var v = params.get("verdict").toUpperCase();
+      if (Array.from(verdictEl.options).some(function (o) { return o.value === v; })) {
+        verdictEl.value = v;
+      }
+    }
+    if (params.get("cat")) activeCategory = params.get("cat");
+  } catch (e) {}
+
+  function severityRank(s) {
+    return { core: 0, high: 1, medium: 2, low: 3 }[s] ?? 4;
+  }
+
   function sortedBase() {
     return window.CLAIMS_DATA.slice().sort(function (a, b) {
-      const ae = a.featured || a.severity === "core" ? 0 : 1;
-      const be = b.featured || b.severity === "core" ? 0 : 1;
-      if (ae !== be) return ae - be;
+      // Featured first, then core/high severity, then title
+      var af = a.featured ? 0 : 1;
+      var bf = b.featured ? 0 : 1;
+      if (af !== bf) return af - bf;
+      var as = severityRank(a.severity);
+      var bs = severityRank(b.severity);
+      if (as !== bs) return as - bs;
       return (a.shortTitle || "").localeCompare(b.shortTitle || "");
     });
   }
 
   function buildChips() {
     if (!chipsEl) return;
-    const all = [{ id: "all", label: "All" }].concat(window.CATEGORIES || []);
+    var all = [{ id: "all", label: "All" }].concat(window.CATEGORIES || []);
     chipsEl.innerHTML = all
       .map(function (c) {
+        var active = c.id === activeCategory;
         return (
           '<button type="button" class="chip' +
-          (c.id === activeCategory ? " active" : "") +
+          (active ? " active" : "") +
           '" data-cat="' +
-          c.id +
-          '">' +
-          c.label +
+          escapeAttr(c.id) +
+          '"' +
+          (active ? ' aria-pressed="true"' : ' aria-pressed="false"') +
+          ">" +
+          escapeHtml(c.label) +
           "</button>"
         );
       })
@@ -45,10 +68,10 @@
   }
 
   function filtered() {
-    const q = (searchEl && searchEl.value ? searchEl.value : "")
+    var q = (searchEl && searchEl.value ? searchEl.value : "")
       .trim()
       .toLowerCase();
-    const v = verdictEl ? verdictEl.value : "all";
+    var v = verdictEl ? verdictEl.value : "all";
     return sortedBase().filter(function (c) {
       if (
         activeCategory !== "all" &&
@@ -57,15 +80,31 @@
         return false;
       if (v !== "all" && c.verdict !== v) return false;
       if (!q) return true;
-      const blob = [c.title, c.shortTitle, c.summary, c.claimDetail]
+      var blob = [
+        c.title,
+        c.shortTitle,
+        c.summary,
+        c.claimDetail,
+        c.id,
+        (c.categories || []).join(" "),
+      ]
         .join(" ")
         .toLowerCase();
       return blob.indexOf(q) !== -1;
     });
   }
 
+  function clearFilters() {
+    activeCategory = "all";
+    if (searchEl) searchEl.value = "";
+    if (verdictEl) verdictEl.value = "all";
+    buildChips();
+    render();
+    if (searchEl) searchEl.focus();
+  }
+
   function render() {
-    const items = filtered();
+    var items = filtered();
     if (countEl) {
       countEl.textContent =
         items.length +
@@ -75,17 +114,23 @@
     }
     if (!items.length) {
       listEl.innerHTML =
-        '<div class="empty-state">No claims match. Clear search or choose All.</div>';
+        '<div class="empty-state empty-state-rich">' +
+        "<p><strong>No claims match.</strong></p>" +
+        "<p>Try a broader search, choose All categories, or clear filters.</p>" +
+        '<button type="button" class="btn btn-secondary btn-sm" id="clear-filters">Clear filters</button>' +
+        "</div>";
+      var clearBtn = document.getElementById("clear-filters");
+      if (clearBtn) clearBtn.addEventListener("click", clearFilters);
       return;
     }
     listEl.innerHTML = items
       .map(function (c, idx) {
-        const n = (c.evidence || []).length;
+        var n = (c.evidence || []).length;
         return (
           '<a class="claim-row" href="claim.html?id=' +
           encodeURIComponent(c.id) +
           '">' +
-          '<div class="claim-row-num">' +
+          '<div class="claim-row-num" aria-hidden="true">' +
           (idx + 1) +
           "</div>" +
           '<div class="claim-row-body">' +
@@ -112,14 +157,20 @@
   }
 
   function escapeHtml(s) {
-    return String(s)
+    return String(s || "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
   }
+  function escapeAttr(s) {
+    return escapeHtml(s).replace(/'/g, "&#39;");
+  }
 
-  if (searchEl) searchEl.addEventListener("input", render);
+  if (searchEl) {
+    searchEl.setAttribute("aria-label", "Search claims");
+    searchEl.addEventListener("input", render);
+  }
   if (verdictEl) verdictEl.addEventListener("change", render);
   buildChips();
   render();
