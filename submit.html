@@ -6,7 +6,7 @@
   <title>Submit a Claim — Scamdace Owens Exposed</title>
   <meta name="description" content="Submit a Candace Owens claim about Charlie Kirk’s assassination — primary evidence required." />
   <meta name="author" content="MileHigh Patriot (@America1st5280)" />
-  <meta name="theme-color" content="#0b0d10" />
+  <meta name="theme-color" content="#08090c" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://milehighpatriot.github.io/scamadace-owens-exposed/submit.html" />
   <meta property="og:site_name" content="Scamdace Owens Exposed" />
@@ -32,9 +32,14 @@
       <button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>
       <nav class="nav-links" id="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="claims.html">Claim catalog</a>
+        <a href="claims.html">Claims</a>
+        <a href="archive.html">Archive</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="people.html">People</a>
         <a href="facts.html">Public record</a>
-        <a href="submit.html" class="active">Submit a claim</a>
+        <a href="search.html">Search</a>
+        <a href="earnings.html">Earnings</a>
+        <a href="submit.html" class="active">Submit</a>
         <a href="about.html">About</a>
       </nav>
     </div>
@@ -63,17 +68,35 @@
         <textarea id="claim" name="claim" required placeholder="State the claim precisely…"></textarea>
       </div>
       <div class="form-group">
-        <label for="date">Approximate date of the claim</label>
-        <input id="date" name="date" type="text" placeholder="e.g. July 7, 2026 or June 2026 episode" />
+        <label for="date">Date of the claim *</label>
+        <span class="hint">As specific as possible: July 28, 2026 or Ep 367 air date.</span>
+        <input id="date" name="date" type="text" required placeholder="e.g. July 7, 2026 or June 2026 episode" />
+      </div>
+      <div class="form-group">
+        <label for="platform">Platform</label>
+        <input id="platform" name="platform" type="text" placeholder="X / YouTube / Rumble / podcast" />
       </div>
       <div class="form-group">
         <label for="primary">Primary evidence link(s) *</label>
-        <span class="hint">Paste one URL per line. Must include http(s). X status links and YouTube timestamps preferred.</span>
+        <span class="hint">Paste one URL per line. Must include http(s). X status links and YouTube timestamps preferred. Archive.today optional second line.</span>
         <textarea id="primary" name="primary" required placeholder="https://x.com/RealCandaceO/status/…"></textarea>
       </div>
       <div class="form-group">
-        <label for="notes">Optional notes (quotes, timestamps, context)</label>
-        <textarea id="notes" name="notes" placeholder="Exact quote if you have it; episode title; why it matters…"></textarea>
+        <label for="timestamp">Timestamp / show clock</label>
+        <span class="hint">e.g. Posted 22:27 UTC · or show clock ~12:17–16:00</span>
+        <input id="timestamp" name="timestamp" type="text" placeholder="~12:17 or 22:27 UTC" />
+      </div>
+      <div class="form-group">
+        <label for="quote">Exact quote (preferred)</label>
+        <textarea id="quote" name="quote" placeholder="Short exact words she said…"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="related">Related claim IDs (if known)</label>
+        <input id="related" name="related" type="text" placeholder="exploding-microphone, robinson-framed" />
+      </div>
+      <div class="form-group">
+        <label for="notes">Optional notes (context)</label>
+        <textarea id="notes" name="notes" placeholder="Episode title; why it matters; screenshot available?"></textarea>
       </div>
       <div class="form-group">
         <label for="submitter">Your X handle (optional)</label>
@@ -101,14 +124,17 @@
         By MileHigh Patriot · <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <a href="claims.html">Claim catalog</a>
+        <a href="claims.html">Claims</a>
+        <a href="archive.html">Archive hub</a>
         <a href="facts.html">Public record</a>
+        <a href="search.html">Search</a>
         <a href="earnings.html">Earnings</a>
         <a href="submit.html">Submit</a>
         <a href="corrections.html">Corrections</a>
         <a href="about.html">About</a>
+        <a href="feed.xml">RSS</a>
       </nav>
-      <p class="footer-meta">Catalog baseline: July 25, 2026 · Static archive · No tracking required</p>
+      <p class="footer-meta">Catalog baseline: August 12, 2026 · Static archive · No tracking required</p>
     </div>
   </footer>
 

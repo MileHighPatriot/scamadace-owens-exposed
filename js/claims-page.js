@@ -3,8 +3,11 @@
   var listEl = document.getElementById("claim-list");
   var searchEl = document.getElementById("search");
   var verdictEl = document.getElementById("filter-verdict");
+  var severityEl = document.getElementById("filter-severity");
+  var activeEl = document.getElementById("filter-active");
   var countEl = document.getElementById("result-count");
   var chipsEl = document.getElementById("category-chips");
+  var randomBtn = document.getElementById("random-claim");
   if (!listEl || !window.CLAIMS_DATA) return;
 
   var activeCategory = "all";
@@ -20,6 +23,12 @@
       }
     }
     if (params.get("cat")) activeCategory = params.get("cat");
+    if (activeEl && params.get("active")) {
+      var actParam = params.get("active");
+      if (Array.from(activeEl.options).some(function (o) { return o.value === actParam; })) {
+        activeEl.value = actParam;
+      }
+    }
   } catch (e) {}
 
   function severityRank(s) {
@@ -72,6 +81,8 @@
       .trim()
       .toLowerCase();
     var v = verdictEl ? verdictEl.value : "all";
+    var sev = severityEl ? severityEl.value : "all";
+    var act = activeEl ? activeEl.value : "all";
     return sortedBase().filter(function (c) {
       if (
         activeCategory !== "all" &&
@@ -79,6 +90,14 @@
       )
         return false;
       if (v !== "all" && c.verdict !== v) return false;
+      if (sev !== "all" && c.severity !== sev) return false;
+      if (act === "featured" && !c.featured) return false;
+      if (act === "active") {
+        var still =
+          (c.confidence && c.confidence.stillActive) ||
+          /2026|active|still|ongoing|July/i.test(c.dateRange || "");
+        if (!still) return false;
+      }
       if (!q) return true;
       var blob = [
         c.title,
@@ -98,9 +117,20 @@
     activeCategory = "all";
     if (searchEl) searchEl.value = "";
     if (verdictEl) verdictEl.value = "all";
+    if (severityEl) severityEl.value = "all";
+    if (activeEl) activeEl.value = "all";
     buildChips();
     render();
     if (searchEl) searchEl.focus();
+  }
+
+  if (randomBtn) {
+    randomBtn.addEventListener("click", function () {
+      var pool = window.CLAIMS_DATA;
+      if (!pool.length) return;
+      var c = pool[Math.floor(Math.random() * pool.length)];
+      location.href = "claim.html?id=" + encodeURIComponent(c.id);
+    });
   }
 
   function render() {
@@ -139,6 +169,9 @@
           (c.featured
             ? '<span class="tag tag-hot">Major claim</span>'
             : "") +
+          (c.dateRange
+            ? '<span class="tag">' + escapeHtml(c.dateRange) + "</span>"
+            : "") +
           "</div>" +
           "<h2>" +
           escapeHtml(c.shortTitle || c.title) +
@@ -172,6 +205,8 @@
     searchEl.addEventListener("input", render);
   }
   if (verdictEl) verdictEl.addEventListener("change", render);
+  if (severityEl) severityEl.addEventListener("change", render);
+  if (activeEl) activeEl.addEventListener("change", render);
   buildChips();
   render();
 })();

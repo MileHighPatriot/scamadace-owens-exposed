@@ -2,14 +2,14 @@
  * Scamdace Owens Exposed — Kirk-content earnings research
  * Author: MileHigh Patriot (@America1st5280)
  * All dollar figures that are not public price lists are ESTIMATES.
- * Updated: July 25, 2026
+ * Updated: August 12, 2026 (research window still keyed to late July)
  */
 window.EARNINGS_DATA = {
-  asOf: "2026-07-25",
+  asOf: "2026-07-30",
   window: {
-    label: "Sept 10, 2025 – July 25, 2026 (~10.5 months)",
+    label: "Sept 10, 2025 – August 12, 2026 (~11 months; model through late July)",
     start: "2025-09-10",
-    end: "2026-07-25",
+    end: "2026-07-30",
   },
 
   platformSnapshot: {

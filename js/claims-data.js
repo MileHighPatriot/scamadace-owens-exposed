@@ -1,7 +1,7 @@
 /**
  * Scamdace Owens Exposed — claim catalog
  * Author: MileHigh Patriot (@America1st5280)
- * Updated: July 25, 2026 — comprehensive claim coverage pass
+ * Updated: August 12, 2026 — uncompressed 4K / maroon-guy stills, TPUSA journalist “PR disaster,” PBD debate moderator
  */
 window.CLAIMS_DATA = [
   {
@@ -12,7 +12,7 @@ window.CLAIMS_DATA = [
       "forensic",
       "cover-up"
     ],
-    "dateRange": "June–July 2026 (still promoted through July 25)",
+    "dateRange": "June–July 2026 (still promoted through late July)",
     "verdict": "FALSE",
     "severity": "core",
     "featured": true,
@@ -22,22 +22,36 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 7, 2026): mic exploded / no gun from Losee",
         "url": "https://x.com/RealCandaceO/status/2074622867103174949",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 7, 2026",
+        "timestamp": "Posted ~22:33 UTC (X)",
+        "quote": "no gun was ever fired from Losee— Charlie’s mic exploded",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
       },
       {
         "label": "Owens X (July 15, 2026): mic exploded and killed him",
         "url": "https://x.com/RealCandaceO/status/2077420174903218573",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 15, 2026",
+        "timestamp": "Posted on X (July 15, 2026)",
+        "quote": "mic exploded and killed him",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2077420174903218573"
       },
       {
         "label": "Episode packaging: who mic’d Charlie / most viable theory",
         "url": "https://podcasts.happyscribe.com/candace/a-shocking-discovery-about-the-man-who-mic-ed-charlie-kirk",
-        "note": "Show transcript packaging"
+        "note": "Show transcript packaging · date from claim window",
+        "date": "June–July 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcasts.happyscribe.com%2Fcandace%2Fa-shocking-discovery-about-the-man-who-mic-ed-charlie-kirk"
       },
       {
         "label": "Reporting on SUV RODE fragment claims",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/charlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence/articleshow/131952143.cms",
-        "note": "Documents June 2026 argument"
+        "note": "Documents June 2026 argument · date from claim window",
+        "date": "June–July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcharlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence%2Farticleshow%2F131952143.cms"
       }
     ],
     "evidence": [
@@ -141,8 +155,15 @@ window.CLAIMS_DATA = [
       "oneill-ied-shot",
       "dna-indefensible",
       "suv-mystery-object",
-      "philip-goldsberry-micing"
-    ]
+      "philip-goldsberry-micing",
+      "gun-not-fired",
+      "rooftop-no-recoil"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "iphone-gun",
@@ -162,12 +183,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X rejecting rooftop gunfire for mic explosion",
         "url": "https://x.com/RealCandaceO/status/2074622867103174949",
-        "note": "Primary denial of conventional gun-from-roof"
+        "note": "Primary denial of conventional gun-from-roof",
+        "date": "July 7, 2026",
+        "timestamp": "Posted ~22:33 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
       },
       {
         "label": "Owens device/mic-as-weapon show arc",
         "url": "https://x.com/RealCandaceO",
-        "note": "June–July 2026 series"
+        "note": "June–July 2026 series · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO"
       }
     ],
     "evidence": [
@@ -242,7 +269,12 @@ window.CLAIMS_DATA = [
       "no-rooftop-shot",
       "robinson-framed",
       "who-micd-charlie"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "no-rooftop-shot",
@@ -262,7 +294,11 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 7, 2026)",
         "url": "https://x.com/RealCandaceO/status/2074622867103174949",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 7, 2026",
+        "timestamp": "Posted ~22:33 UTC (X)",
+        "quote": "no gun was ever fired from Losee— Charlie’s mic exploded",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
       }
     ],
     "evidence": [
@@ -358,8 +394,15 @@ window.CLAIMS_DATA = [
       "iphone-gun",
       "autopsy-flipflops",
       "dna-indefensible",
-      "losee-lone-witness"
-    ]
+      "losee-lone-witness",
+      "rooftop-no-recoil",
+      "gun-not-fired"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "trap-door-tunnels",
@@ -379,12 +422,18 @@ window.CLAIMS_DATA = [
       {
         "label": "NYT: trap door / underground speculation",
         "url": "https://www.nytimes.com/2025/09/29/us/charlie-kirk-assassination-conspiracy-theories.html",
-        "note": "Quotes her show"
+        "note": "Quotes her show · date from claim window",
+        "date": "September 2025",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.nytimes.com%2F2025%2F09%2F29%2Fus%2Fcharlie-kirk-assassination-conspiracy-theories.html"
       },
       {
         "label": "Britannica: shot-from-below / tunnels",
         "url": "https://www.britannica.com/biography/Candace-Owens",
-        "note": "Summary of early theories"
+        "note": "Summary of early theories · date from claim window",
+        "date": "September 2025",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.britannica.com%2Fbiography%2FCandace-Owens"
       }
     ],
     "evidence": [
@@ -462,7 +511,12 @@ window.CLAIMS_DATA = [
     "related": [
       "no-rooftop-shot",
       "exploding-microphone"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "maroon-shirts",
@@ -472,7 +526,7 @@ window.CLAIMS_DATA = [
       "suspect",
       "cover-up"
     ],
-    "dateRange": "Sept 2025; major push July 2026",
+    "dateRange": "Sept 2025; major push July 2026; revived Aug 10–12, 2026",
     "verdict": "MISLEADING",
     "severity": "core",
     "featured": true,
@@ -482,17 +536,27 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 8, 2026): maroon boys folder",
         "url": "https://x.com/RealCandaceO/status/2075005541185954213",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 8, 2026",
+        "timestamp": "X post · July 8, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075005541185954213"
       },
       {
         "label": "Owens X (July 7, 2026): decoy boys",
         "url": "https://x.com/RealCandaceO/status/2074622867103174949",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 7, 2026",
+        "timestamp": "Posted ~22:33 UTC (X)",
+        "quote": "multiple decoy boys wearing maroon shirts were crawling the campus that day",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
       },
       {
         "label": "Owens X (March 30, 2026): parachute regiment maroon",
         "url": "https://x.com/RealCandaceO/status/2038592037931368551",
-        "note": "Primary France link"
+        "note": "Primary France link",
+        "date": "March 30, 2026",
+        "timestamp": "X post · March 30, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2038592037931368551"
       }
     ],
     "evidence": [
@@ -549,10 +613,17 @@ window.CLAIMS_DATA = [
     ],
     "related": [
       "robinson-framed",
+      "uncompressed-4k-not-robinson",
       "france-legionnaires",
       "decoy-early-poi",
-      "freemason-33"
-    ]
+      "freemason-33",
+      "rooftop-no-recoil"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "mormon-bee-cult",
@@ -573,17 +644,26 @@ window.CLAIMS_DATA = [
       {
         "label": "Clip packaging: bee cult / Mormon connection",
         "url": "https://www.tiktok.com/@celebrity.talk.us/video/7553806171002440991",
-        "note": "Clip of her bee/Mormon discussion"
+        "note": "Clip of her bee/Mormon discussion · date from claim window",
+        "date": "Sept–Nov 2025 and recurring",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.tiktok.com%2F%40celebrity.talk.us%2Fvideo%2F7553806171002440991"
       },
       {
         "label": "Criticism listing Mormon bees among her theories",
         "url": "https://billmuehlenberg.com/2026/07/11/more-on-the-evil-candace-cult/",
-        "note": "Egyptian planes, exploding mics, Mormon bees, maroon shirts listed"
+        "note": "Egyptian planes, exploding mics, Mormon bees, maroon shirts listed · date from claim window",
+        "date": "Sept–Nov 2025 and recurring",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fbillmuehlenberg.com%2F2026%2F07%2F11%2Fmore-on-the-evil-candace-cult%2F"
       },
       {
         "label": "Atlanta Black Star: Mormon Bee Cult among theories",
         "url": "https://www.facebook.com/ATLBlackStar/posts/candace-owens-is-promoting-a-new-conspiracy-theory-surrounding-the-september-ass/1199983055327862/",
-        "note": "Documents packaging"
+        "note": "Documents packaging · date from claim window",
+        "date": "Sept–Nov 2025 and recurring",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.facebook.com%2FATLBlackStar%2Fposts%2Fcandace-owens-is-promoting-a-new-conspiracy-theory-surrounding-the-september-ass%2F1199983055327862%2F"
       }
     ],
     "evidence": [
@@ -639,7 +719,12 @@ window.CLAIMS_DATA = [
       "freemason-33",
       "france-legionnaires",
       "robinson-framed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "egypt-planes",
@@ -659,22 +744,34 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 19, 2026): Egyptian planes involved",
         "url": "https://x.com/RealCandaceO/status/2078659194203312615",
-        "note": "Primary reaffirmation"
+        "note": "Primary reaffirmation",
+        "date": "July 19, 2026",
+        "timestamp": "Posted ~01:52 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2078659194203312615"
       },
       {
         "label": "Jerusalem Post: Egyptians at La Quinta",
         "url": "https://www.jpost.com/international/article-876348",
-        "note": "Nov 2025; unverified"
+        "note": "Nov 2025; unverified · date from claim window",
+        "date": "Nov 2025 – still reaffirmed July 19, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.jpost.com%2Finternational%2Farticle-876348"
       },
       {
         "label": "CNN: Egyptian airplane theory",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "Documents claim + mockery response"
+        "note": "Documents claim + mockery response · date from claim window",
+        "date": "Nov 2025 – still reaffirmed July 19, 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       },
       {
         "label": "Roundup noting timing/UTC errors",
         "url": "https://www.godreports.com/2025/12/what-are-candace-owens-theories-about-charlie-kirks-assassination/",
-        "note": "Secondary roundup of primary claims"
+        "note": "Secondary roundup of primary claims · date from claim window",
+        "date": "Nov 2025 – still reaffirmed July 19, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.godreports.com%2F2025%2F12%2Fwhat-are-candace-owens-theories-about-charlie-kirks-assassination%2F"
       }
     ],
     "evidence": [
@@ -770,7 +867,12 @@ window.CLAIMS_DATA = [
       "erika-theories",
       "foreign-agents-bigger",
       "smokehouse-receipt"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "france-legionnaires",
@@ -790,22 +892,34 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (March 30, 2026): ritualistic killing + French legion",
         "url": "https://x.com/RealCandaceO/status/2038592466308288670",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "March 30, 2026",
+        "timestamp": "X post · March 30, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2038592466308288670"
       },
       {
         "label": "Owens X: parachute regiment maroon",
         "url": "https://x.com/RealCandaceO/status/2038592037931368551",
-        "note": "Primary"
+        "note": "Primary · date from claim window",
+        "date": "Nov 2025 – March 2026+",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2038592037931368551"
       },
       {
         "label": "JPost: Legionnaires question",
         "url": "https://www.jpost.com/international/article-876348",
-        "note": "With Egyptians claims"
+        "note": "With Egyptians claims · date from claim window",
+        "date": "Nov 2025 – March 2026+",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.jpost.com%2Finternational%2Farticle-876348"
       },
       {
         "label": "MS NOW: French Foreign Legion among her suspect list",
         "url": "https://www.ms.now/opinion/candace-owens-turning-point-erika-charlie-kirk-conspiracy",
-        "note": "Overview"
+        "note": "Overview · date from claim window",
+        "date": "Nov 2025 – March 2026+",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.ms.now%2Fopinion%2Fcandace-owens-turning-point-erika-charlie-kirk-conspiracy"
       }
     ],
     "evidence": [
@@ -877,7 +991,12 @@ window.CLAIMS_DATA = [
       "egypt-planes",
       "foreign-agents-bigger",
       "mormon-bee-cult"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "french-hit-on-candace",
@@ -898,22 +1017,34 @@ window.CLAIMS_DATA = [
       {
         "label": "Jerusalem Post: Macron hit squad claim",
         "url": "https://www.jpost.com/diaspora/antisemitism/article-874818",
-        "note": "Documents URGENT post"
+        "note": "Documents URGENT post · date from claim window",
+        "date": "November 2025 – ongoing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.jpost.com%2Fdiaspora%2Fantisemitism%2Farticle-874818"
       },
       {
         "label": "Euronews: no evidence; GIGN + Israeli operative",
         "url": "https://www.euronews.com/my-europe/2025/11/27/candace-owens-says-macrons-ordered-her-assassination-but-provides-no-evidence",
-        "note": "Primary details + no proof"
+        "note": "Primary details + no proof · date from claim window",
+        "date": "November 2025 – ongoing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.euronews.com%2Fmy-europe%2F2025%2F11%2F27%2Fcandace-owens-says-macrons-ordered-her-assassination-but-provides-no-evidence"
       },
       {
         "label": "USA Today: documents Nov post",
         "url": "https://www.usatoday.com/story/opinion/columnist/2025/11/25/candace-owens-exploit-kirk-macron-conspiracy/87464601007/",
-        "note": "Contemporaneous"
+        "note": "Contemporaneous · date from claim window",
+        "date": "November 2025 – ongoing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fopinion%2Fcolumnist%2F2025%2F11%2F25%2Fcandace-owens-exploit-kirk-macron-conspiracy%2F87464601007%2F"
       },
       {
         "label": "TOI: FBI awareness of France-hired-killers claim",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/kash-patel-addresses-candace-owens-shocking-claim-that-france-hired-killers-to-assassinate-her/articleshow/125824018.cms",
-        "note": "Follow-up coverage"
+        "note": "Follow-up coverage · date from claim window",
+        "date": "November 2025 – ongoing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fkash-patel-addresses-candace-owens-shocking-claim-that-france-hired-killers-to-assassinate-her%2Farticleshow%2F125824018.cms"
       }
     ],
     "evidence": [
@@ -991,7 +1122,12 @@ window.CLAIMS_DATA = [
       "france-legionnaires",
       "israel-mossad",
       "killed-for-candace"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "israel-mossad",
@@ -1012,17 +1148,26 @@ window.CLAIMS_DATA = [
       {
         "label": "Guardian: Owens Israel-centered theories",
         "url": "https://www.theguardian.com/us-news/2025/sep/24/charlie-kirk-conspiracies-rightwing-podcasters",
-        "note": "Implication method"
+        "note": "Implication method · date from claim window",
+        "date": "Sept 2025 – July 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.theguardian.com%2Fus-news%2F2025%2Fsep%2F24%2Fcharlie-kirk-conspiracies-rightwing-podcasters"
       },
       {
         "label": "CNN: Israel implication after Erika meeting",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "Pattern"
+        "note": "Pattern · date from claim window",
+        "date": "Sept 2025 – July 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       },
       {
         "label": "Owens X Mossad rhetoric example",
         "url": "https://x.com/RealCandaceO/status/2074645801930776622",
-        "note": "Primary"
+        "note": "Primary · date from claim window",
+        "date": "Sept 2025 – July 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074645801930776622"
       }
     ],
     "evidence": [
@@ -1101,7 +1246,12 @@ window.CLAIMS_DATA = [
       "foreign-agents-bigger",
       "prophecy-texts",
       "bill-ackman-intervention"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "freemason-33",
@@ -1122,17 +1272,26 @@ window.CLAIMS_DATA = [
       {
         "label": "TOI: 33 cult signaling quotes",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-flags-repeated-33-references-in-charlie-kirk-murder-calls-it-cult-cult-involvement-and-deeper-story/articleshow/129936596.cms",
-        "note": "Documents claims"
+        "note": "Documents claims · date from claim window",
+        "date": "March–April 2026 especially",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-flags-repeated-33-references-in-charlie-kirk-murder-calls-it-cult-cult-involvement-and-deeper-story%2Farticleshow%2F129936596.cms"
       },
       {
         "label": "Owens X: ritualistic killing + French legion",
         "url": "https://x.com/RealCandaceO/status/2038592466308288670",
-        "note": "Primary"
+        "note": "Primary · date from claim window",
+        "date": "March–April 2026 especially",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2038592466308288670"
       },
       {
         "label": "TOI: Freemasonry / sacrificed angle",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/charlie-was-likely-sacrificed-candace-owens-revisits-charlie-kirks-death-with-controversial-freemasonry-angle/articleshow/129434919.cms",
-        "note": "Freemason research arc"
+        "note": "Freemason research arc · date from claim window",
+        "date": "March–April 2026 especially",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcharlie-was-likely-sacrificed-candace-owens-revisits-charlie-kirks-death-with-controversial-freemasonry-angle%2Farticleshow%2F129434919.cms"
       }
     ],
     "evidence": [
@@ -1198,7 +1357,12 @@ window.CLAIMS_DATA = [
       "mormon-bee-cult",
       "france-legionnaires",
       "maroon-shirts"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "robinson-framed",
@@ -1208,27 +1372,74 @@ window.CLAIMS_DATA = [
       "suspect",
       "cover-up"
     ],
-    "dateRange": "Sept 2025 – July 2026 (post-prelim hearing)",
+    "dateRange": "Sept 2025 – August 12, 2026 (still active)",
     "verdict": "CONTRADICTED",
     "severity": "core",
     "featured": true,
-    "summary": "Owens: confident Robinson did not murder Kirk; total patsy; not even on campus; Fed slop; Twiggs as federal setup.",
-    "claimDetail": "Candace Owens has not merely questioned details of the case against Tyler Robinson. She has denied the core conclusion. In comments reported by the New York Times in July 2026, she said she felt confident stating that Robinson did not murder Charlie Kirk, called him a total patsy, and claimed he was not even on campus that day. On X she has dismissed the official narrative as “Fed slop,” cast doubt using partner statements about what Robinson did or did not discuss, and speculated that Lance Twiggs could be revealed as a federal asset who helped set Robinson up.\n\nAt the same time she has promoted replacement mechanisms and villains: exploding microphones, foreign planes, French troops, freemason signaling, maroon decoys, and inside-job framing. The through-line is that the charged defendant is a narrative inconvenience rather than the person at the center of a dense public evidence package.",
+    "summary": "Owens: confident Robinson did not murder Kirk; total patsy; not even on campus; Fed slop; Twiggs as federal setup. Doubled down Aug 2026 that there is “more evidence” he is a patsy than that he committed the crime.",
+    "claimDetail": "Candace Owens has not merely questioned details of the case against Tyler Robinson. She has denied the core conclusion. In comments reported by the New York Times in July 2026, she said she felt confident stating that Robinson did not murder Charlie Kirk, called him a total patsy, and claimed he was not even on campus that day. On X she has dismissed the official narrative as “Fed slop,” cast doubt using partner statements about what Robinson did or did not discuss, and speculated that Lance Twiggs could be revealed as a federal asset who helped set Robinson up.\n\nIn early August 2026 she escalated again during a public spat with commentator Andrew Wilson: she accepted the framed claim that there is more evidence Robinson was set up as a patsy than evidence he committed the murder, said she was willing to defend that claim “gladly,” and negotiated a high-dollar debate package around it — after a preliminary hearing had already walked the public through campus video, DNA, and confessional communications.\n\nAt the same time she has promoted replacement mechanisms and villains: exploding microphones, foreign planes, French troops, freemason signaling, maroon decoys, and inside-job framing. The through-line is that the charged defendant is a narrative inconvenience rather than the person at the center of a dense public evidence package.",
     "primarySources": [
       {
         "label": "NYT: Owens says Robinson did not murder Kirk",
         "url": "https://www.nytimes.com/2026/07/07/us/charlie-kirk-assassination-conspiracy-theories.html",
-        "note": "Direct quotes"
+        "note": "Direct quotes · date from claim window",
+        "date": "Sept 2025 – July 28, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.nytimes.com%2F2026%2F07%2F07%2Fus%2Fcharlie-kirk-assassination-conspiracy-theories.html"
       },
       {
         "label": "Owens X: Fed slop",
         "url": "https://x.com/RealCandaceO/status/2075294579574575553",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 9, 2026",
+        "timestamp": "Posted ~19:02 UTC (X)",
+        "quote": "I cannot bear the Fed slop any longer.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075294579574575553"
       },
       {
         "label": "Owens X: Twiggs / mic / decoys",
         "url": "https://x.com/RealCandaceO/status/2074622867103174949",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 7, 2026",
+        "timestamp": "Posted ~22:33 UTC (X)",
+        "quote": "Lance Twiggs is going to be determined a federal asset who helped set Tyler Robinson up",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
+      },
+      {
+        "label": "Owens X (July 28, 2026): wrongly framed / free Robinson promo",
+        "url": "https://x.com/RealCandaceO/status/2082207124986220726",
+        "note": "Primary",
+        "date": "July 28, 2026",
+        "timestamp": "Posted ~20:50 UTC (X)",
+        "quote": "Might even free a young man who is being wrongly framed for the murder of Charlie Kirk. Note the people who sold you Fed slop.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082207124986220726"
+      },
+      {
+        "label": "Owens X (July 9, 2026): Twiggs is “obvious Fed asset”",
+        "url": "https://x.com/RealCandaceO/status/2075293803649396940",
+        "note": "Primary",
+        "date": "July 9, 2026",
+        "timestamp": "Posted ~18:59 UTC (X)",
+        "quote": "I cannot wait until this obvious Fed asset is allowed to be cross examined from the defense.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075293803649396940"
+      },
+      {
+        "label": "Owens X (July 10, 2026): smashed phone / confession photos",
+        "url": "https://x.com/RealCandaceO/status/2075586194549751867",
+        "note": "Primary",
+        "date": "July 10, 2026",
+        "timestamp": "Posted ~14:21 UTC (X)",
+        "quote": "stunning text message confession… picture on Lance’s phone which just happens to be smashed in the very corner that would allow us to verify what time these photos were taken",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075586194549751867"
+      },
+      {
+        "label": "Reporting (Aug 8–9, 2026): “more evidence” he is a patsy + Wilson debate",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/i-am-willing-to-defend-candace-owens-ignites-fresh-charlie-kirk-murder-controversy-with-bold-tyler-robinson-patsy-claim/articleshow/133061054.cms",
+        "note": "Documents Aug 2026 doubling-down · quotes attributed to Owens on X",
+        "date": "August 8, 2026",
+        "timestamp": "Public exchange with Andrew Wilson (early August 2026)",
+        "quote": "yes, yes, yes I accept the claim there is more evidence Tyler Robinson was set up as a patsy than evidence that he committed this crime. I am willing to defend, gladly, with the facts of the case presented thus far.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fi-am-willing-to-defend-candace-owens-ignites-fresh-charlie-kirk-murder-controversy-with-bold-tyler-robinson-patsy-claim%2Farticleshow%2F133061054.cms"
       }
     ],
     "evidence": [
@@ -1322,6 +1533,8 @@ window.CLAIMS_DATA = [
     ],
     "related": [
       "maroon-shirts",
+      "uncompressed-4k-not-robinson",
+      "more-evidence-patsy",
       "exploding-microphone",
       "feds-altered-evidence",
       "iphone-gun",
@@ -1332,8 +1545,18 @@ window.CLAIMS_DATA = [
       "mormon-bee-cult",
       "dna-indefensible",
       "smokehouse-receipt",
-      "only-robinson-not-enough"
-    ]
+      "only-robinson-not-enough",
+      "twiggs-fed-asset",
+      "gun-not-fired",
+      "rooftop-no-recoil",
+      "more-evidence-patsy",
+      "device-seizure-decentralized"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "harpole-plot",
@@ -1354,12 +1577,18 @@ window.CLAIMS_DATA = [
       {
         "label": "LA Mag: Harpole sues Owens",
         "url": "https://lamag.com/lawsuits/candace-owens-sued-for-claiming-charlie-kirks-bodyguard-helped-plot-his-murder",
-        "note": "Complaint themes"
+        "note": "Complaint themes · date from claim window",
+        "date": "Dec 2025 – 2026 lawsuit",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Flamag.com%2Flawsuits%2Fcandace-owens-sued-for-claiming-charlie-kirks-bodyguard-helped-plot-his-murder"
       },
       {
         "label": "Reason/Volokh: continued after flight records",
         "url": "https://reason.com/volokh/2026/04/30/candace-owens-sued-for-defamation-over-claims-of-conspiracy-to-assassinate-charlie-kirk/",
-        "note": "Key excerpts"
+        "note": "Key excerpts · date from claim window",
+        "date": "Dec 2025 – 2026 lawsuit",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Freason.com%2Fvolokh%2F2026%2F04%2F30%2Fcandace-owens-sued-for-defamation-over-claims-of-conspiracy-to-assassinate-charlie-kirk%2F"
       }
     ],
     "evidence": [
@@ -1433,8 +1662,14 @@ window.CLAIMS_DATA = [
     "related": [
       "military-inside-job",
       "security-setup",
-      "tpusa-inside-job"
-    ]
+      "tpusa-inside-job",
+      "zachariah-koreshi-detain"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "military-inside-job",
@@ -1454,12 +1689,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Viral military involvement packaging",
         "url": "https://x.com/RT_com/status/1998443903830069294",
-        "note": "Clip packaging"
+        "note": "Clip packaging · date from claim window",
+        "date": "Dec 2025 – July 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRT_com%2Fstatus%2F1998443903830069294"
       },
       {
         "label": "Fort Huachuca claims in Harpole suit",
         "url": "https://reason.com/volokh/2026/04/30/candace-owens-sued-for-defamation-over-claims-of-conspiracy-to-assassinate-charlie-kirk/",
-        "note": "Documented statements"
+        "note": "Documented statements · date from claim window",
+        "date": "Dec 2025 – July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Freason.com%2Fvolokh%2F2026%2F04%2F30%2Fcandace-owens-sued-for-defamation-over-claims-of-conspiracy-to-assassinate-charlie-kirk%2F"
       }
     ],
     "evidence": [
@@ -1519,8 +1760,15 @@ window.CLAIMS_DATA = [
     "related": [
       "harpole-plot",
       "robinson-framed",
-      "security-setup"
-    ]
+      "security-setup",
+      "rookie-cop-ncis",
+      "zachariah-koreshi-detain"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "tpusa-inside-job",
@@ -1540,17 +1788,26 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X: Kolvet Judas",
         "url": "https://x.com/RealCandaceO/status/2075227079520473580",
-        "note": "Primary"
+        "note": "Primary · date from claim window",
+        "date": "Oct 2025 – 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075227079520473580"
       },
       {
         "label": "CNN: TPUSA employee suspicions",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "After Erika meeting"
+        "note": "After Erika meeting · date from claim window",
+        "date": "Oct 2025 – 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       },
       {
         "label": "Tribune: TPUSA-as-suspect pattern",
         "url": "https://www.tribtoday.com/opinion/editorials/2025/12/shameful-conspiracy-theories-of-candace-owens/",
-        "note": "Pattern summary"
+        "note": "Pattern summary · date from claim window",
+        "date": "Oct 2025 – 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.tribtoday.com%2Fopinion%2Feditorials%2F2025%2F12%2Fshameful-conspiracy-theories-of-candace-owens%2F"
       }
     ],
     "evidence": [
@@ -1611,6 +1868,7 @@ window.CLAIMS_DATA = [
       "harpole-plot",
       "pro-israel-motive",
       "erika-theories",
+      "tpusa-trans-journalist",
       "aspen-recording-fake",
       "blake-neff-hotel",
       "quietly-cremated",
@@ -1618,7 +1876,12 @@ window.CLAIMS_DATA = [
       "mikey-mccoy-suspicion",
       "tpusa-ten-lies",
       "money-missing-tpa"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "erika-theories",
@@ -1639,12 +1902,18 @@ window.CLAIMS_DATA = [
       {
         "label": "CNN: planes following Erika; TPUSA suspicions",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "Documents patterns"
+        "note": "Documents patterns · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       },
       {
         "label": "NYT: implicated widow via implication",
         "url": "https://www.nytimes.com/2026/07/07/us/charlie-kirk-assassination-conspiracy-theories.html",
-        "note": "Method summary"
+        "note": "Method summary · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.nytimes.com%2F2026%2F07%2F07%2Fus%2Fcharlie-kirk-assassination-conspiracy-theories.html"
       }
     ],
     "evidence": [
@@ -1717,7 +1986,12 @@ window.CLAIMS_DATA = [
       "dream-betrayal",
       "sandy-hook-lawsuit-threat",
       "erika-would-be-on-trial"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "erika-surveillance",
@@ -1736,12 +2010,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Roundup of multi-year plane claims",
         "url": "https://www.godreports.com/2025/12/what-are-candace-owens-theories-about-charlie-kirks-assassination/",
-        "note": "Claim structure"
+        "note": "Claim structure · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.godreports.com%2F2025%2F12%2Fwhat-are-candace-owens-theories-about-charlie-kirks-assassination%2F"
       },
       {
         "label": "CNN: Erika followed by Egyptian airplanes",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "Mainstream documentation"
+        "note": "Mainstream documentation · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       }
     ],
     "evidence": [
@@ -1805,7 +2085,12 @@ window.CLAIMS_DATA = [
     "related": [
       "egypt-planes",
       "erika-theories"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "ben-shapiro-foreknowledge",
@@ -1825,12 +2110,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X timeline July 8, 2026",
         "url": "https://x.com/RealCandaceO/status/2074853320485715984",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 8, 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074853320485715984"
       },
       {
         "label": "Owens X: Shapiro too involved",
         "url": "https://x.com/RealCandaceO/status/2074988397513289894",
-        "note": "Primary"
+        "note": "Primary · date from claim window",
+        "date": "July 2026; July 2026 security-phone arc",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074988397513289894"
       }
     ],
     "evidence": [
@@ -1886,7 +2177,12 @@ window.CLAIMS_DATA = [
       "israel-mossad",
       "pro-israel-motive",
       "shapiro-security-phone"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "killed-for-candace",
@@ -1907,12 +2203,18 @@ window.CLAIMS_DATA = [
       {
         "label": "YouTube packaging: refused order to assassinate me",
         "url": "https://www.youtube.com/watch?v=kQNMB32XR_I",
-        "note": "Claim packaging"
+        "note": "Claim packaging · date from claim window",
+        "date": "2026 especially",
+        "timestamp": "Video · open and scrub; clip may not have fixed start offset",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkQNMB32XR_I"
       },
       {
         "label": "Shawn Ryan packaging: supposed to be you",
         "url": "https://www.facebook.com/shawnryanshow/posts/it-was-supposed-to-be-you-what-candace-owens-was-told-after-charlie-kirks-deathh/1744263067148013/",
-        "note": "Her recounting"
+        "note": "Her recounting · date from claim window",
+        "date": "2026 especially",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.facebook.com%2Fshawnryanshow%2Fposts%2Fit-was-supposed-to-be-you-what-candace-owens-was-told-after-charlie-kirks-deathh%2F1744263067148013%2F"
       }
     ],
     "evidence": [
@@ -1964,7 +2266,12 @@ window.CLAIMS_DATA = [
       "israel-mossad",
       "pro-israel-motive",
       "time-traveler"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "pro-israel-motive",
@@ -1984,7 +2291,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Sun-Sentinel: texts Owens released",
         "url": "https://www.sun-sentinel.com/2025/10/14/jewish-donors-play-into-all-the-stereotypes-charlie-kirk-wrote-in-leaked-text-messages-before-his-murder/",
-        "note": "Documents messages"
+        "note": "Documents messages · date from claim window",
+        "date": "Oct 2025 – 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.sun-sentinel.com%2F2025%2F10%2F14%2Fjewish-donors-play-into-all-the-stereotypes-charlie-kirk-wrote-in-leaked-text-messages-before-his-murder%2F"
       }
     ],
     "evidence": [
@@ -2055,7 +2365,12 @@ window.CLAIMS_DATA = [
       "netanyahu-denial",
       "bill-ackman-intervention",
       "coworker-betrayal-texts"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "crime-scene-destroyed",
@@ -2075,7 +2390,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Reporting on SUV / inside-job claims",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/charlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence/articleshow/131952143.cms",
-        "note": "Documents scenario talk"
+        "note": "Documents scenario talk · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcharlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence%2Farticleshow%2F131952143.cms"
       }
     ],
     "evidence": [
@@ -2147,7 +2465,12 @@ window.CLAIMS_DATA = [
       "feds-altered-evidence",
       "freedom-shirt",
       "paved-crime-scene"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "security-setup",
@@ -2167,7 +2490,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Harpole suit describing setup rhetoric",
         "url": "https://lamag.com/lawsuits/candace-owens-sued-for-claiming-charlie-kirks-bodyguard-helped-plot-his-murder",
-        "note": "Accusation escalation"
+        "note": "Accusation escalation · date from claim window",
+        "date": "Sept 2025 – 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Flamag.com%2Flawsuits%2Fcandace-owens-sued-for-claiming-charlie-kirks-bodyguard-helped-plot-his-murder"
       }
     ],
     "evidence": [
@@ -2222,7 +2548,12 @@ window.CLAIMS_DATA = [
     "related": [
       "harpole-plot",
       "military-inside-job"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "who-micd-charlie",
@@ -2242,7 +2573,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Episode transcript: who mic’d Charlie",
         "url": "https://podcasts.happyscribe.com/candace/a-shocking-discovery-about-the-man-who-mic-ed-charlie-kirk",
-        "note": "Primary show content"
+        "note": "Primary show content · date from claim window",
+        "date": "June 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcasts.happyscribe.com%2Fcandace%2Fa-shocking-discovery-about-the-man-who-mic-ed-charlie-kirk"
       }
     ],
     "evidence": [
@@ -2285,7 +2619,12 @@ window.CLAIMS_DATA = [
       "exploding-microphone",
       "iphone-gun",
       "philip-goldsberry-micing"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "netanyahu-denial",
@@ -2304,7 +2643,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Coverage of Owens reaction to denial",
         "url": "https://jewishlouisville.org/netanyahu-says-israel-did-not-kill-charlie-kirk-rejecting-an-idea-circulating-on-the-far-right/",
-        "note": "Documents pattern"
+        "note": "Documents pattern · date from claim window",
+        "date": "September 2025",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fjewishlouisville.org%2Fnetanyahu-says-israel-did-not-kill-charlie-kirk-rejecting-an-idea-circulating-on-the-far-right%2F"
       }
     ],
     "evidence": [
@@ -2337,7 +2679,12 @@ window.CLAIMS_DATA = [
       "israel-mossad",
       "pro-israel-motive",
       "netanyahu-invite-threat"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "feds-altered-evidence",
@@ -2357,12 +2704,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Coverage: feds play games / altered texts",
         "url": "https://www.aol.com/entertainment/candace-owens-fuels-conspiracy-theories-165329100.html",
-        "note": "Early episode documentation"
+        "note": "Early episode documentation · date from claim window",
+        "date": "Sept 2025 – 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.aol.com%2Fentertainment%2Fcandace-owens-fuels-conspiracy-theories-165329100.html"
       },
       {
         "label": "CNN: LE covering up bigger crime",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "Pattern"
+        "note": "Pattern · date from claim window",
+        "date": "Sept 2025 – 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       }
     ],
     "evidence": [
@@ -2438,8 +2791,15 @@ window.CLAIMS_DATA = [
     "related": [
       "robinson-framed",
       "crime-scene-destroyed",
-      "dna-indefensible"
-    ]
+      "dna-indefensible",
+      "twiggs-fed-asset",
+      "dogs-missed-rifle"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "autopsy-flipflops",
@@ -2458,7 +2818,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Public summary of shifting claims",
         "url": "https://www.reddit.com/r/changemyview/comments/1o5s2mh/cmv_the_charlie_kirk_conspiracy_theories_are/",
-        "note": "Documents observed flip-flop pattern"
+        "note": "Documents observed flip-flop pattern · date from claim window",
+        "date": "Sept–Oct 2025 especially",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fchangemyview%2Fcomments%2F1o5s2mh%2Fcmv_the_charlie_kirk_conspiracy_theories_are%2F"
       }
     ],
     "evidence": [
@@ -2499,7 +2862,12 @@ window.CLAIMS_DATA = [
     "related": [
       "exploding-microphone",
       "no-rooftop-shot"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "time-traveler",
@@ -2519,7 +2887,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Jerusalem Post: time traveler claims",
         "url": "https://www.jpost.com/omg/viral-news-from-the-web/article-883608",
-        "note": "Documents episode"
+        "note": "Documents episode · date from claim window",
+        "date": "January 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.jpost.com%2Fomg%2Fviral-news-from-the-web%2Farticle-883608"
       }
     ],
     "evidence": [
@@ -2561,7 +2932,12 @@ window.CLAIMS_DATA = [
     "related": [
       "killed-for-candace",
       "foreign-agents-bigger"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "foreign-agents-bigger",
@@ -2581,7 +2957,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Viral clip packaging foreign agents claim",
         "url": "https://x.com/EvanAKilgore/status/1984381936941371511",
-        "note": "Widely shared packaging"
+        "note": "Widely shared packaging · date from claim window",
+        "date": "Oct 2025 – 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FEvanAKilgore%2Fstatus%2F1984381936941371511"
       }
     ],
     "evidence": [
@@ -2633,7 +3012,12 @@ window.CLAIMS_DATA = [
       "france-legionnaires",
       "time-traveler",
       "only-robinson-not-enough"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "aspen-recording-fake",
@@ -2653,7 +3037,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X show billboard April 13, 2026",
         "url": "https://x.com/RealCandaceO/status/2043800674329141526",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "April 13, 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2043800674329141526"
       }
     ],
     "evidence": [
@@ -2685,7 +3072,12 @@ window.CLAIMS_DATA = [
     "related": [
       "tpusa-inside-job",
       "robinson-framed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 0,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "freedom-shirt",
@@ -2705,7 +3097,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X June 23, 2026",
         "url": "https://x.com/RealCandaceO/status/2069538160212938919",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "June 23, 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2069538160212938919"
       }
     ],
     "evidence": [
@@ -2737,7 +3132,12 @@ window.CLAIMS_DATA = [
     "related": [
       "crime-scene-destroyed",
       "exploding-microphone"
-    ]
+    ],
+    "confidence": {
+      "centrality": 0,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "decoy-early-poi",
@@ -2757,12 +3157,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Fox: POI questioned and released",
         "url": "https://www.foxnews.com/us/what-we-know-charlie-kirk-shooting-utah-valley-university",
-        "note": "Early investigative noise"
+        "note": "Early investigative noise · date from claim window",
+        "date": "September 2025",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.foxnews.com%2Fus%2Fwhat-we-know-charlie-kirk-shooting-utah-valley-university"
       },
       {
         "label": "Owens later decoy synthesis",
         "url": "https://x.com/RealCandaceO/status/2075005541185954213",
-        "note": "Primary decoy claim"
+        "note": "Primary decoy claim · date from claim window",
+        "date": "September 2025",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075005541185954213"
       }
     ],
     "evidence": [
@@ -2799,7 +3205,12 @@ window.CLAIMS_DATA = [
     "related": [
       "maroon-shirts",
       "robinson-framed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "prophecy-texts",
@@ -2819,7 +3230,10 @@ window.CLAIMS_DATA = [
       {
         "label": "NY Post: texts Owens released",
         "url": "https://nypost.com/2025/11/01/us-news/charlie-kirk-prophesized-his-own-assassination-in-chilling-text-messages/",
-        "note": "Documents exchange"
+        "note": "Documents exchange · date from claim window",
+        "date": "Oct–Nov 2025",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fnypost.com%2F2025%2F11%2F01%2Fus-news%2Fcharlie-kirk-prophesized-his-own-assassination-in-chilling-text-messages%2F"
       }
     ],
     "evidence": [
@@ -2857,7 +3271,12 @@ window.CLAIMS_DATA = [
       "pro-israel-motive",
       "israel-mossad",
       "kill-me-text-premonition"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "quietly-cremated",
@@ -2868,7 +3287,7 @@ window.CLAIMS_DATA = [
       "tpusa",
       "self"
     ],
-    "dateRange": "July 25, 2026 (active)",
+    "dateRange": "July 30–29, 2026 (active)",
     "verdict": "UNSUPPORTED",
     "severity": "high",
     "featured": true,
@@ -2878,12 +3297,29 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 25, 2026): Where is Charlie buried / quietly cremated",
         "url": "https://x.com/RealCandaceO/status/2080815439874035906",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 25, 2026",
+        "timestamp": "Posted ~00:40 UTC (X)",
+        "quote": "Where is Charlie Kirk’s body buried? Why do I get the sense he was quietly cremated?",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2080815439874035906"
       },
       {
         "label": "Owens X (July 25, 2026): demand cremation yes/no from Neff/Kolvet",
         "url": "https://x.com/RealCandaceO/status/2081074518315913398",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 25, 2026",
+        "timestamp": "Posted ~17:50 UTC (X)",
+        "quote": "can you confirm whether or not Charlie was cremated? Simple yes or no question",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2081074518315913398"
+      },
+      {
+        "label": "Owens X (July 29, 2026): what happened to Charlie’s body after Utah",
+        "url": "https://x.com/RealCandaceO/status/2082601468872327290",
+        "note": "Primary · show promo",
+        "date": "July 29, 2026",
+        "timestamp": "Posted ~22:57 UTC (X) · episode of that day",
+        "quote": "We reveal what happened to Charlie’s body after it left Utah and why it may be that TPUSA wishes to shut down any discussion about it.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082601468872327290"
       }
     ],
     "evidence": [
@@ -2936,8 +3372,14 @@ window.CLAIMS_DATA = [
       "erika-theories",
       "autopsy-flipflops",
       "feds-altered-evidence",
-      "tpusa-inside-job"
-    ]
+      "tpusa-inside-job",
+      "me-lungs-heart"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "smokehouse-receipt",
@@ -2957,24 +3399,45 @@ window.CLAIMS_DATA = [
     "claimDetail": "Candace Owens has repeatedly elevated a story about Tyler Robinson dining at Cowboy’s Smokehouse in Panguitch, Utah, the night of September 10, 2025—hours after the UVU shooting and roughly three hours’ drive south. Restaurant staff later said a quiet lone diner matched Robinson; a receipt/card charge in that name was pulled; the FBI was called. Owens claims she saw an unblurred receipt, spoke to the owner, and that “there is going to be no way around this one.” On July 19 she doubled down: Egyptian planes were involved and “the receipt belongs to Tyler Robinson.”\n\nThe claim is misleading because a dinner hours later in southern Utah—if true—does not place him off the UVU rooftop at ~12:23 p.m. It is post-crime travel, not an alibi for the shooting global. Prosecutors’ July 2026 hearing package focuses on campus surveillance, rooftop geometry, rifle DNA, and same-day confessional communications—not on whether he later ate steak.\n\nOwens also treats FBI “hardly cared” as proof of a frame. Tip acknowledgment without a public show-trial of every diner interview is normal. Banking details on a receipt, even if genuine, do not erase trigger-guard DNA statistics or alleged confessional communications. She uses the receipt as a shiny object while re-tethering long-running Egypt-plane lore.",
     "primarySources": [
       {
+        "label": "Owens X (July 19, 2026): receipt real / Feds hardly cared",
+        "url": "https://x.com/RealCandaceO/status/2078632931958870381",
+        "note": "Primary",
+        "date": "July 19, 2026",
+        "timestamp": "Posted ~00:08 UTC (X)",
+        "quote": "The receipt that has been posted is real… The Feds hardly cared.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2078632931958870381"
+      },
+      {
         "label": "Owens X (July 17, 2026): unblurred receipt + owner/FBI",
         "url": "https://x.com/RealCandaceO/status/2078237490251702364",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 17, 2026",
+        "timestamp": "X post · July 17, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2078237490251702364"
       },
       {
         "label": "Owens X (July 19, 2026): Egypt planes + receipt is Robinson’s",
         "url": "https://x.com/RealCandaceO/status/2078659194203312615",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 19, 2026",
+        "timestamp": "Posted ~01:52 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2078659194203312615"
       },
       {
         "label": "Fox News: restaurant owner account (Jan 2026)",
         "url": "https://www.foxnews.com/us/one-tyler-robinson-last-meals-free-man-may-have-been-steak-dinner-medium-rare",
-        "note": "Earlier public reporting of tip"
+        "note": "Earlier public reporting of tip",
+        "date": "Jan 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.foxnews.com%2Fus%2Fone-tyler-robinson-last-meals-free-man-may-have-been-steak-dinner-medium-rare"
       },
       {
         "label": "NY Post: Utah restaurateur claims",
         "url": "https://nypost.com/2026/01/17/us-news/utah-restaurateur-claims-tyler-robinson-stopped-in-after-charlie-kirk-killing-reveals-what-the-alleged-assassin-ordered/",
-        "note": "Secondary"
+        "note": "Secondary · date from claim window",
+        "date": "Jan 2026 report; Owens July 17–19, 2026 spike",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fnypost.com%2F2026%2F01%2F17%2Fus-news%2Futah-restaurateur-claims-tyler-robinson-stopped-in-after-charlie-kirk-killing-reveals-what-the-alleged-assassin-ordered%2F"
       }
     ],
     "evidence": [
@@ -3032,7 +3495,12 @@ window.CLAIMS_DATA = [
       "decoy-early-poi",
       "feds-altered-evidence",
       "dna-indefensible"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "dna-indefensible",
@@ -3053,17 +3521,26 @@ window.CLAIMS_DATA = [
       {
         "label": "Podcast packaging: Ep 358 DNA / “scientifically indefensible” framing",
         "url": "https://podcastrex.com/shows/candace/im-back-and-the-tyler-robinson-show-trial-begins-ep-358",
-        "note": "Documents her July 2026 framing"
+        "note": "Documents her July 2026 framing · date from claim window",
+        "date": "July 10–14, 2026",
+        "timestamp": "X post · open link for exact post time",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcastrex.com%2Fshows%2Fcandace%2Fim-back-and-the-tyler-robinson-show-trial-begins-ep-358"
       },
       {
         "label": "AP: DNA inclusion testimony at prelim hearing",
         "url": "https://apnews.com/live/charlie-kirk-tyler-robinson-hearing-07-10-2026",
-        "note": "Court record control sample"
+        "note": "Court record control sample · date from claim window",
+        "date": "July 10–14, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fapnews.com%2Flive%2Fcharlie-kirk-tyler-robinson-hearing-07-10-2026"
       },
       {
         "label": "CNN hearing takeaways: DNA and ballistics",
         "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways",
-        "note": "Secondary court summary"
+        "note": "Secondary court summary · date from claim window",
+        "date": "July 10–14, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2026%2F07%2F11%2Fus%2Fcharlie-kirk-tyler-robinson-hearing-takeaways"
       }
     ],
     "evidence": [
@@ -3120,8 +3597,15 @@ window.CLAIMS_DATA = [
       "feds-altered-evidence",
       "exploding-microphone",
       "no-rooftop-shot",
-      "smokehouse-receipt"
-    ]
+      "smokehouse-receipt",
+      "gun-not-fired",
+      "twiggs-fed-asset"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "blake-neff-hotel",
@@ -3142,12 +3626,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 17, 2026): Why can’t Neff remember city/hotel",
         "url": "https://x.com/RealCandaceO/status/2077915421915644390",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 17, 2026",
+        "timestamp": "X post · July 17, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2077915421915644390"
       },
       {
         "label": "Yahoo/The Blast: Owens presses Neff on timeline",
         "url": "https://www.yahoo.com/entertainment/celebrity/articles/candace-owens-presses-tpusa-staffer-163000602.html",
-        "note": "Documents claim + Neff pushback"
+        "note": "Documents claim + Neff pushback · date from claim window",
+        "date": "July 14–20, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.yahoo.com%2Fentertainment%2Fcelebrity%2Farticles%2Fcandace-owens-presses-tpusa-staffer-163000602.html"
       }
     ],
     "evidence": [
@@ -3185,7 +3675,12 @@ window.CLAIMS_DATA = [
       "erika-theories",
       "security-setup",
       "quietly-cremated"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "oneill-ied-shot",
@@ -3196,7 +3691,7 @@ window.CLAIMS_DATA = [
       "military",
       "cover-up"
     ],
-    "dateRange": "July 2026 (Owens promo wave); O’Neill comments earlier 2026",
+    "dateRange": "July 2026 (Owens promo wave through July 20+); O’Neill comments earlier 2026",
     "verdict": "UNSUPPORTED",
     "severity": "medium",
     "featured": false,
@@ -3206,12 +3701,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 20, 2026): O’Neill Feds lying promo",
         "url": "https://x.com/RealCandaceO/status/2079325256087458303",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 20, 2026",
+        "timestamp": "Posted ~21:59 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2079325256087458303"
       },
       {
         "label": "PrimeTimer: Owens reacts to SEAL comments",
         "url": "https://www.primetimer.com/news/candace-owens-reacts-to-former-navy-seals-comments-from-april-on-charlie-kirks-assassination",
-        "note": "Secondary packaging"
+        "note": "Secondary packaging · date from claim window",
+        "date": "July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.primetimer.com%2Fnews%2Fcandace-owens-reacts-to-former-navy-seals-comments-from-april-on-charlie-kirks-assassination"
       }
     ],
     "evidence": [
@@ -3254,7 +3755,12 @@ window.CLAIMS_DATA = [
       "no-rooftop-shot",
       "military-inside-job",
       "dna-indefensible"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "dream-betrayal",
@@ -3275,12 +3781,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Politico: Owens says Kirk came in a dream / betrayed",
         "url": "https://www.politico.com/news/magazine/2026/07/11/candace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161",
-        "note": "Documents dream claim + TPUSA scrutiny arc"
+        "note": "Documents dream claim + TPUSA scrutiny arc · date from claim window",
+        "date": "Oct 2025 – ongoing framing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.politico.com%2Fnews%2Fmagazine%2F2026%2F07%2F11%2Fcandace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161"
       },
       {
         "label": "Slate: dream betrayal framing",
         "url": "https://slate.com/news-and-politics/2026/02/candace-owens-charlie-kirk-erika-israel.html",
-        "note": "Secondary analysis of dream-as-evidence method"
+        "note": "Secondary analysis of dream-as-evidence method · date from claim window",
+        "date": "Oct 2025 – ongoing framing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fslate.com%2Fnews-and-politics%2F2026%2F02%2Fcandace-owens-charlie-kirk-erika-israel.html"
       }
     ],
     "evidence": [
@@ -3314,7 +3826,12 @@ window.CLAIMS_DATA = [
       "mikey-mccoy-suspicion",
       "killed-for-candace",
       "foreign-agents-bigger"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "bill-ackman-intervention",
@@ -3335,17 +3852,26 @@ window.CLAIMS_DATA = [
       {
         "label": "HappyScribe: “They Are Lying About Charlie Kirk” transcript packaging",
         "url": "https://podcasts.happyscribe.com/candace/they-are-lying-about-charlie-kirk",
-        "note": "Documents intervention / threats language"
+        "note": "Documents intervention / threats language · date from claim window",
+        "date": "Sept 2025 onward",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcasts.happyscribe.com%2Fcandace%2Fthey-are-lying-about-charlie-kirk"
       },
       {
         "label": "Yahoo: Ackman denies intervention/blackmail claims",
         "url": "https://www.yahoo.com/news/articles/bill-ackman-denies-candace-owens-180309066.html",
-        "note": "Denial + characterization of her claim"
+        "note": "Denial + characterization of her claim · date from claim window",
+        "date": "Sept 2025 onward",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.yahoo.com%2Fnews%2Farticles%2Fbill-ackman-denies-candace-owens-180309066.html"
       },
       {
         "label": "Slate: Ackman intervention framing in broader arc",
         "url": "https://slate.com/news-and-politics/2026/02/candace-owens-charlie-kirk-erika-israel.html",
-        "note": "Secondary"
+        "note": "Secondary · date from claim window",
+        "date": "Sept 2025 onward",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fslate.com%2Fnews-and-politics%2F2026%2F02%2Fcandace-owens-charlie-kirk-erika-israel.html"
       }
     ],
     "evidence": [
@@ -3384,7 +3910,12 @@ window.CLAIMS_DATA = [
       "netanyahu-denial",
       "netanyahu-invite-threat",
       "ben-shapiro-foreknowledge"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "mikey-mccoy-suspicion",
@@ -3405,12 +3936,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Politico: Owens focus on McCoy & Farnsworth",
         "url": "https://www.politico.com/news/magazine/2026/07/11/candace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161",
-        "note": "Documents named-staff scrutiny arc"
+        "note": "Documents named-staff scrutiny arc · date from claim window",
+        "date": "Oct 2025 – July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.politico.com%2Fnews%2Fmagazine%2F2026%2F07%2F11%2Fcandace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161"
       },
       {
         "label": "TOI: Owens “10 TPUSA lies” including McCoy blood/call stories",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story/articleshow/125337151.cms",
-        "note": "Documents her list packaging"
+        "note": "Documents her list packaging · date from claim window",
+        "date": "Oct 2025 – July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story%2Farticleshow%2F125337151.cms"
       }
     ],
     "evidence": [
@@ -3450,7 +3987,12 @@ window.CLAIMS_DATA = [
       "security-setup",
       "dream-betrayal",
       "erika-theories"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "terryl-farnsworth-selfie",
@@ -3471,12 +4013,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Politico: Farnsworth as early focus of Owens scrutiny",
         "url": "https://www.politico.com/news/magazine/2026/07/11/candace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161",
-        "note": "Named staff arc"
+        "note": "Named staff arc · date from claim window",
+        "date": "Fall 2025 – 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.politico.com%2Fnews%2Fmagazine%2F2026%2F07%2F11%2Fcandace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161"
       },
       {
         "label": "TOI: TPUSA lies list includes Farnsworth/camera claims",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story/articleshow/125337151.cms",
-        "note": "Documents camera-related dispute packaging"
+        "note": "Documents camera-related dispute packaging · date from claim window",
+        "date": "Fall 2025 – 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story%2Farticleshow%2F125337151.cms"
       }
     ],
     "evidence": [
@@ -3504,7 +4052,12 @@ window.CLAIMS_DATA = [
       "tpusa-ten-lies",
       "security-setup",
       "crime-scene-destroyed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "tpusa-ten-lies",
@@ -3525,12 +4078,18 @@ window.CLAIMS_DATA = [
       {
         "label": "TOI: Owens lists 10 TPUSA “verifiable lies”",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story/articleshow/125337151.cms",
-        "note": "Documents the list packaging"
+        "note": "Documents the list packaging · date from claim window",
+        "date": "Nov 2025 packaging; ongoing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story%2Farticleshow%2F125337151.cms"
       },
       {
         "label": "Politico: Owens vs TPUSA after Kirk death",
         "url": "https://www.politico.com/news/magazine/2026/07/11/candace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161",
-        "note": "Broader conflict context"
+        "note": "Broader conflict context · date from claim window",
+        "date": "Nov 2025 packaging; ongoing",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.politico.com%2Fnews%2Fmagazine%2F2026%2F07%2F11%2Fcandace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161"
       }
     ],
     "evidence": [
@@ -3558,7 +4117,12 @@ window.CLAIMS_DATA = [
       "tpusa-inside-job",
       "feds-altered-evidence",
       "robinson-framed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "shapiro-security-phone",
@@ -3580,12 +4144,18 @@ window.CLAIMS_DATA = [
       {
         "label": "TOI: Owens on Shapiro security updates",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/who-on-charlies-team-betrayed-candace-owens-raises-explosive-questions-over-ben-shapiro-security-updates/articleshow/132272457.cms",
-        "note": "Documents claim language"
+        "note": "Documents claim language · date from claim window",
+        "date": "July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fwho-on-charlies-team-betrayed-candace-owens-raises-explosive-questions-over-ben-shapiro-security-updates%2Farticleshow%2F132272457.cms"
       },
       {
         "label": "Owens X (July 23, 2026): Shapiro lunch date 9/10 promo",
         "url": "https://x.com/RealCandaceO/status/2080407561216692474",
-        "note": "Primary — related bounty arc"
+        "note": "Primary — related bounty arc",
+        "date": "July 23, 2026",
+        "timestamp": "X post · July 23, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2080407561216692474"
       }
     ],
     "evidence": [
@@ -3619,7 +4189,12 @@ window.CLAIMS_DATA = [
       "pro-israel-motive",
       "security-setup",
       "bill-ackman-intervention"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "netanyahu-invite-threat",
@@ -3640,12 +4215,18 @@ window.CLAIMS_DATA = [
       {
         "label": "HappyScribe: Netanyahu call / invite language in early arc",
         "url": "https://podcasts.happyscribe.com/candace/they-are-lying-about-charlie-kirk",
-        "note": "Documents packaging"
+        "note": "Documents packaging · date from claim window",
+        "date": "Sept 2025 onward",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcasts.happyscribe.com%2Fcandace%2Fthey-are-lying-about-charlie-kirk"
       },
       {
         "label": "Guardian: Owens pushing Israel-centered conspiracy early",
         "url": "https://www.theguardian.com/us-news/2025/sep/24/charlie-kirk-conspiracies-rightwing-podcasters",
-        "note": "Early arc documentation"
+        "note": "Early arc documentation · date from claim window",
+        "date": "Sept 2025 onward",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.theguardian.com%2Fus-news%2F2025%2Fsep%2F24%2Fcharlie-kirk-conspiracies-rightwing-podcasters"
       }
     ],
     "evidence": [
@@ -3672,7 +4253,12 @@ window.CLAIMS_DATA = [
       "netanyahu-denial",
       "pro-israel-motive",
       "bill-ackman-intervention"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "kill-me-text-premonition",
@@ -3693,12 +4279,18 @@ window.CLAIMS_DATA = [
       {
         "label": "PrimeTimer: Owens on “they are going to kill me” text claim",
         "url": "https://www.primetimer.com/news/candace-owens-claims-a-tpusa-employee-received-a-text-from-charlie-kirk-saying-they-are-going-to-kiii-me-before-he-was-assassinated",
-        "note": "Documents packaging"
+        "note": "Documents packaging · date from claim window",
+        "date": "Nov 2025 packaging; related 2018 prophecy texts",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.primetimer.com%2Fnews%2Fcandace-owens-claims-a-tpusa-employee-received-a-text-from-charlie-kirk-saying-they-are-going-to-kiii-me-before-he-was-assassinated"
       },
       {
         "label": "NY Post: 2018 prophecy-style texts Owens released",
         "url": "https://nypost.com/2025/11/01/us-news/charlie-kirk-prophesized-his-own-assassination-in-chilling-text-messages/",
-        "note": "Related dread-text documentation"
+        "note": "Related dread-text documentation",
+        "date": "2018",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fnypost.com%2F2025%2F11%2F01%2Fus-news%2Fcharlie-kirk-prophesized-his-own-assassination-in-chilling-text-messages%2F"
       }
     ],
     "evidence": [
@@ -3725,7 +4317,12 @@ window.CLAIMS_DATA = [
       "pro-israel-motive",
       "tpusa-inside-job",
       "israel-mossad"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": false
+    }
   },
   {
     "id": "money-missing-tpa",
@@ -3746,7 +4343,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 23, 2026): money missing from TP Action?",
         "url": "https://x.com/RealCandaceO/status/2080110918109745358",
-        "note": "Primary — yes/no framing"
+        "note": "Primary — yes/no framing",
+        "date": "July 23, 2026",
+        "timestamp": "X post · July 23, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2080110918109745358"
       }
     ],
     "evidence": [
@@ -3773,7 +4373,12 @@ window.CLAIMS_DATA = [
       "erika-theories",
       "coworker-betrayal-texts",
       "tpusa-ten-lies"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "coworker-betrayal-texts",
@@ -3794,12 +4399,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 24, 2026): diabolical lies / betrayal framing",
         "url": "https://x.com/RealCandaceO/status/2080469561371979786",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 24, 2026",
+        "timestamp": "X post · July 24, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2080469561371979786"
       },
       {
         "label": "Owens X (July 23, 2026): more coworker betrayal texts promo",
         "url": "https://x.com/RealCandaceO/status/2080407561216692474",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 23, 2026",
+        "timestamp": "X post · July 23, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2080407561216692474"
       }
     ],
     "evidence": [
@@ -3828,7 +4439,12 @@ window.CLAIMS_DATA = [
       "money-missing-tpa",
       "dream-betrayal",
       "mikey-mccoy-suspicion"
-    ]
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "suv-mystery-object",
@@ -3848,17 +4464,26 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 14, 2026): unidentified SUV object",
         "url": "https://x.com/RealCandaceO/status/2077149611513303078",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 14, 2026",
+        "timestamp": "X post · July 14, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2077149611513303078"
       },
       {
         "label": "Owens X (July 21, 2026): more never-before-seen SUV photos",
         "url": "https://x.com/RealCandaceO/status/2079677830632272196",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 21, 2026",
+        "timestamp": "X post · July 21, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2079677830632272196"
       },
       {
         "label": "TOI: prior RODE/SUV fragment packaging",
         "url": "https://timesofindia.indiatimes.com/world/us-streamers/charlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence/articleshow/131952143.cms",
-        "note": "Related June–July vehicle arc"
+        "note": "Related June–July vehicle arc · date from claim window",
+        "date": "July 14–21, 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcharlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence%2Farticleshow%2F131952143.cms"
       }
     ],
     "evidence": [
@@ -3890,7 +4515,12 @@ window.CLAIMS_DATA = [
       "who-micd-charlie",
       "oneill-ied-shot",
       "crime-scene-destroyed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "losee-lone-witness",
@@ -3911,14 +4541,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 15, 2026): lone Losee rooftop recording",
         "url": "https://x.com/RealCandaceO/status/2077525238007664648",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 15, 2026",
+        "timestamp": "Posted ~22:46 UTC (X) · exclusive lone rooftop witness recording promo",
+        "quote": "Exclusive Recording of the LONE person to have recorded the alleged shooter dropping onto Losee Rooftop",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2077525238007664648"
       }
     ],
     "evidence": [
       {
         "tier": 2,
         "title": "State already advanced a rooftop shooter theory in open court",
-        "body": "Investigators described enhanced surveillance of a figure on the Losee perch at the shot window. The public case is not “no rooftop.” A private teaser cannot claim monopoly on rooftop evidence while ignoring state video narrative.",
+        "body": "Investigators described enhanced surveillance of a figure on the Losee perch at the shot g. The public case is not “no rooftop.” A private teaser cannot claim monopoly on rooftop evidence while ignoring state video narrative.",
         "sources": [
           {
             "name": "CNN: rooftop surveillance",
@@ -3942,7 +4576,12 @@ window.CLAIMS_DATA = [
       "robinson-framed",
       "maroon-shirts",
       "decoy-early-poi"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "sandy-hook-lawsuit-threat",
@@ -3963,7 +4602,10 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens X (July 21, 2026): Sandy Hook lawsuit signaling",
         "url": "https://x.com/RealCandaceO/status/2079677830632272196",
-        "note": "Primary"
+        "note": "Primary",
+        "date": "July 21, 2026",
+        "timestamp": "X post · July 21, 2026",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2079677830632272196"
       }
     ],
     "evidence": [
@@ -3990,7 +4632,12 @@ window.CLAIMS_DATA = [
       "tpusa-inside-job",
       "harpole-plot",
       "quietly-cremated"
-    ]
+    ],
+    "confidence": {
+      "centrality": 0,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "paved-crime-scene",
@@ -4011,12 +4658,18 @@ window.CLAIMS_DATA = [
       {
         "label": "Owens-adjacent O’Neill promo wave (July 2026)",
         "url": "https://x.com/RealCandaceO/status/2079325256087458303",
-        "note": "Primary packaging near scene-cleanup skepticism"
+        "note": "Primary packaging near scene-cleanup skepticism",
+        "date": "July 20, 2026",
+        "timestamp": "Posted ~21:59 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2079325256087458303"
       },
       {
         "label": "WaPo: conspiracy theories still raging during hearing",
         "url": "https://www.washingtonpost.com/nation/2026/07/11/conspiracy-theories-about-charlie-kirks-death-are-still-raging-infuriating-friends/",
-        "note": "Context of ongoing scene-narrative fights"
+        "note": "Context of ongoing scene-narrative fights · date from claim window",
+        "date": "2025–2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.washingtonpost.com%2Fnation%2F2026%2F07%2F11%2Fconspiracy-theories-about-charlie-kirks-death-are-still-raging-infuriating-friends%2F"
       }
     ],
     "evidence": [
@@ -4043,7 +4696,12 @@ window.CLAIMS_DATA = [
       "feds-altered-evidence",
       "oneill-ied-shot",
       "robinson-framed"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "philip-goldsberry-micing",
@@ -4064,12 +4722,18 @@ window.CLAIMS_DATA = [
       {
         "label": "HappyScribe: “Man Who Mic’ed Charlie Kirk” episode packaging",
         "url": "https://podcasts.happyscribe.com/candace/a-shocking-discovery-about-the-man-who-mic-ed-charlie-kirk",
-        "note": "Documents Goldsberry / RODE packaging"
+        "note": "Documents Goldsberry / RODE packaging · date from claim window",
+        "date": "June–July 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcasts.happyscribe.com%2Fcandace%2Fa-shocking-discovery-about-the-man-who-mic-ed-charlie-kirk"
       },
       {
         "label": "Owens X mic exploded posts (July 2026)",
         "url": "https://x.com/RealCandaceO/status/2074622867103174949",
-        "note": "Primary mechanism claim"
+        "note": "Primary mechanism claim",
+        "date": "July 7, 2026",
+        "timestamp": "Posted ~22:33 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
       }
     ],
     "evidence": [
@@ -4096,7 +4760,12 @@ window.CLAIMS_DATA = [
       "who-micd-charlie",
       "oneill-ied-shot",
       "suv-mystery-object"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
   },
   {
     "id": "erika-would-be-on-trial",
@@ -4117,7 +4786,10 @@ window.CLAIMS_DATA = [
       {
         "label": "The Bulwark: Owens quip on roles reversed / trial",
         "url": "https://www.thebulwark.com/p/candace-owens-gets-inside-tpusas-head",
-        "note": "Documents the quip packaging"
+        "note": "Documents the quip packaging · date from claim window",
+        "date": "Feb 2026 packaging",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.thebulwark.com%2Fp%2Fcandace-owens-gets-inside-tpusas-head"
       }
     ],
     "evidence": [
@@ -4139,7 +4811,12 @@ window.CLAIMS_DATA = [
       "quietly-cremated",
       "tpusa-inside-job",
       "sandy-hook-lawsuit-threat"
-    ]
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 2,
+      "stillActive": true
+    }
   },
   {
     "id": "only-robinson-not-enough",
@@ -4160,17 +4837,26 @@ window.CLAIMS_DATA = [
       {
         "label": "CNN: after Erika meeting, still rejects sole responsibility",
         "url": "https://www.cnn.com/2025/12/16/politics/candace-owens-erika-kirk-podcast",
-        "note": "Documents refusal of sole-actor baseline"
+        "note": "Documents refusal of sole-actor baseline · date from claim window",
+        "date": "Sept 2025 – July 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.cnn.com%2F2025%2F12%2F16%2Fpolitics%2Fcandace-owens-erika-kirk-podcast"
       },
       {
         "label": "Politico: denied Robinson acted alone early",
         "url": "https://www.politico.com/news/magazine/2026/07/11/candace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161",
-        "note": "Early alone-denial framing"
+        "note": "Early alone-denial framing · date from claim window",
+        "date": "Sept 2025 – July 2026",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.politico.com%2Fnews%2Fmagazine%2F2026%2F07%2F11%2Fcandace-owens-charlie-kirk-conspiracy-tpusa-tyler-robinson-trial-00989161"
       },
       {
         "label": "Guardian: something isn’t right / who ordered the hit packaging",
         "url": "https://www.theguardian.com/us-news/2025/sep/24/charlie-kirk-conspiracies-rightwing-podcasters",
-        "note": "Early episode titles / arc"
+        "note": "Early episode titles / arc · date from claim window",
+        "date": "Sept 2025 – July 2026",
+        "timestamp": "Show/podcast · open episode; use chapter markers when available",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.theguardian.com%2Fus-news%2F2025%2Fsep%2F24%2Fcharlie-kirk-conspiracies-rightwing-podcasters"
       }
     ],
     "evidence": [
@@ -4200,9 +4886,1211 @@ window.CLAIMS_DATA = [
       "egypt-planes",
       "tpusa-inside-job",
       "dna-indefensible"
-    ]
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 2,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "rooftop-no-recoil",
+    "title": "4K Losee rooftop footage shows “no recoil,” a military lateral crawl, and a flash — so it cannot be amateur Tyler Robinson firing a Mauser",
+    "shortTitle": "Rooftop “no recoil” / military crawl",
+    "categories": [
+      "forensic",
+      "suspect",
+      "cover-up"
+    ],
+    "dateRange": "July 28–29, 2026 (Ep 367; promo July 28)",
+    "verdict": "UNSUPPORTED",
+    "severity": "core",
+    "featured": true,
+    "summary": "Owens released zoomed rooftop footage and claimed no visible recoil, a tactical lateral crawl, and a mysterious flash — arguing this disproves the Robinson/Mauser narrative.",
+    "claimDetail": "On July 28–29, 2026 (Candace Ep 367), Candace Owens promoted and aired what she called “never before seen” zoomed Losee Center rooftop footage of the alleged gunman. On X she teased: “Never before seen footage from the Losee Rooftop. Did officials already perjure themselves?” and that the episode “Might even free a young man who is being wrongly framed.”\n\nOn the show she argued frame-by-frame that the figure performs a military “lateral crawl,” that a flash appears during the crawl, that something is “flung forward” (which her brain read as unfolding a gun), and — crucially — that viewers cannot observe the strong shoulder kickback expected from a German Mauser 98-class rifle. She tied this to an earlier exclusive witness who allegedly said he saw no recoil and that the person looked professionally trained. She concluded the sequence “doesn’t feel” like Tyler Robinson.\n\nThis is a classic re-litigation of identity and mechanism by consumer video interpretation. Court packages already placed a rifle case, DNA work, and rooftop surveillance before the public. Absence of a clearly visible kickback on heavily zoomed, distant, compressed video is not ballistics. Professionals and amateurs both crawl; “looks tactical” is not a positive ID of a military hit team. A flash on a rooftop can be a phone, reflection, lens artifact, or clothing — not proof of a signal mirror for a multi-operator plot.",
+    "primarySources": [
+      {
+        "label": "Owens X (July 28, 2026): Losee rooftop footage / rookie cop show promo",
+        "url": "https://x.com/RealCandaceO/status/2082231480697393455",
+        "note": "Primary · show promo for Ep 367",
+        "date": "July 28, 2026",
+        "timestamp": "Posted ~22:27 UTC (X)",
+        "quote": "Never before seen footage from the Losee Rooftop. Did officials already perjure themselves? You decide. We reveal the rookie cop who got lucky and found the gun.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082231480697393455"
+      },
+      {
+        "label": "Owens X (July 28, 2026): “wrongly framed” / Fed slop",
+        "url": "https://x.com/RealCandaceO/status/2082207124986220726",
+        "note": "Primary",
+        "date": "July 28, 2026",
+        "timestamp": "Posted ~20:50 UTC (X)",
+        "quote": "Might even free a young man who is being wrongly framed for the murder of Charlie Kirk. Note the people who sold you Fed slop.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082207124986220726"
+      },
+      {
+        "label": "Candace Ep 367 transcript packaging (July 29, 2026): rooftop + no recoil",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary show · full transcript with timestamps",
+        "date": "July 29, 2026 (episode date listed)",
+        "timestamp": "Show clock ~02:39 start rooftop; ~09:29–10:43 lateral crawl; ~10:43–11:38 flash; ~12:17–16:00 no-recoil argument; ~15:00–16:30 “not giving Tyler Robinson”",
+        "quote": "Anybody see a recoil? I didn’t see one… That feels to me like what the witness said, that that person looks like they’ve got training. It’s not giving Tyler Robinson to me.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      },
+      {
+        "label": "Episode page / Rumble packaging for Ep 367",
+        "url": "https://podcastrex.com/shows/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Show packaging summarizing no-recoil / crawl claims",
+        "date": "July 28–29, 2026",
+        "timestamp": "Episode segments listed on packaging pages",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcastrex.com%2Fshows%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 1,
+        "title": "Court-facing case remains a rooftop rifle homicide, not a “no shot occurred” file",
+        "body": "July 2026 preliminary hearing coverage and wire reporting walked through surveillance placing a figure on the Losee-area rooftop geometry, a recovered rifle, DNA analysis, and confessional-style communications. Owens’s consumer zoom of the same class of rooftop media does not erase that package.\n\nIf her claim is “no rifle was fired,” she is reopening the mic-bomb / alternate-mechanism war already disproved by multi-angle courtyard gunshot media. If her claim is only “that blur isn’t Robinson,” she still needs affirmative identity of a different shooter — not vibes about crawl technique.",
+        "sources": [
+          {
+            "name": "CNN: July 2026 prelim hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "AP: timeline / charging evidence",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "title": "No visible recoil on zoomed CCTV is not ballistics",
+        "body": "Recoil visibility depends on camera angle, distance, compression, frame rate, zoom crop, body position, bipod/bag support, and whether the exact fire frame is even in the clip. Owens herself apologized that the video is not “Benny Johnson 4K” clarity and that timestamps were pushed.\n\nA Mauser-class bolt gun has real recoil. That does not mean every phone or campus camera will render a Hollywood shoulder slam. Expert reconstruction uses high-frame-rate synced video, muzzle report timing, and recovered weapon testing — not audience chat polls (“Anybody see a recoil?”).",
+        "sources": [
+          {
+            "name": "CBS: shooting timeline / scene basics",
+            "url": "https://www.cbsnews.com/news/timeline-charlie-kirk-fatal-shooting/"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "title": "“Lateral crawl = professional hitman” is pattern-seeking, not identification",
+        "body": "Military manuals describe common low crawls used by hunters, airsofters, and anyone trying not to silhouette on a roof. Performing a low crawl does not identify a unit, a foreign service, or exclude a 23-year-old who planned a murder.\n\nOwens pairs “looks trained” with “not giving Tyler Robinson” without a validated height/gait/face comparison that survives court methods. Family recognition disputes and blurry stairwell stills are already catalogued elsewhere; Ep 367 does not close identity with crawl cosplay.",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "Flash-during-crawl speculation is unfalsifiable content fuel",
+        "body": "She lists possibilities (signal mirror, flag, background car, lens weirdness) then invites the audience to treat mystery as proof of coordination. That is not investigation. A real signal-mirror claim needs a second camera angle, light physics, or recovered device — not “we’re just going to show you that.”",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "Promo language (“free a young man”) is advocacy, not evidence",
+        "body": "The July 28 X promo framed the episode as potentially freeing a wrongly framed defendant and shaming “Fed slop” sellers. That is campaign messaging. Evidence either matches Robinson to the roof shot or it doesn’t. Marketing copy about freeing him is not a third ballistics test.",
+        "sources": [
+          {
+            "name": "Owens X promo July 28, 2026",
+            "url": "https://x.com/RealCandaceO/status/2082207124986220726"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "no-rooftop-shot",
+      "robinson-framed",
+      "dna-indefensible",
+      "exploding-microphone",
+      "rookie-cop-ncis",
+      "gun-not-fired",
+      "dogs-missed-rifle",
+      "maroon-shirts"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "rookie-cop-ncis",
+    "title": "The “rookie cop” who found Robinson’s rifle is suspicious because his father is a longtime NCIS official — implying planted evidence",
+    "shortTitle": "Rookie cop / NCIS father “plant”",
+    "categories": [
+      "cover-up",
+      "military",
+      "suspect"
+    ],
+    "dateRange": "July 28–29, 2026 (Ep 367)",
+    "verdict": "UNSUPPORTED",
+    "severity": "high",
+    "featured": true,
+    "summary": "Owens named Mitchell Curtis as the young officer who found the gun and highlighted father Foster Curtis’s NCIS career and June 2025 job change as proof the find is “incredible” luck in a planted-gun story.",
+    "claimDetail": "In Candace Ep 367 (July 28–29, 2026), after arguing bomb dogs failed to find the rifle, Owens said federal direction sent “rookie” officers back into a field search and that Mitchell Curtis of Pleasant Grove Police — a 2025 UVU graduate — found the gun. She then spent the arc on his father, Foster Curtis: ~21 years at NCIS rising to division chief in the Office of Inspector General, then a June 2, 2025 move to Richmond, Virginia interim inspector general amid local controversy.\n\nShe explicitly connected NCIS’s role investigating major Navy/Marine crime to her hypothesis that the assassination “may have been plotted and planned and executed by our military,” making the father’s former office the “office that would be in charge of that investigation.” The rhetorical payload: the gun find is “beginner’s luck” engineered by a Fed family tree, not ordinary policing.\n\nThis is guilt-by-association genealogy. Having a parent who once worked federal law enforcement does not prove a son planted a rifle. Local officers find evidence in large scenes every day. NCIS jurisdiction over Navy crimes does not make every NCIS alumnus’s child a co-conspirator in a Utah political murder. She offers no document that Foster directed the UVU search, no order to plant, and no chain-of-custody break tied to the father.",
+    "primarySources": [
+      {
+        "label": "Owens X (July 28, 2026): rookie cop who “got lucky” promo",
+        "url": "https://x.com/RealCandaceO/status/2082231480697393455",
+        "note": "Primary",
+        "date": "July 28, 2026",
+        "timestamp": "Posted ~22:27 UTC (X)",
+        "quote": "We reveal the rookie cop who got lucky and found the gun. And some interesting ties he has.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082231480697393455"
+      },
+      {
+        "label": "Candace Ep 367 transcript (July 29, 2026): Mitchell Curtis / Foster Curtis NCIS",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary show transcript",
+        "date": "July 29, 2026",
+        "timestamp": "Show clock ~17:10 “Who found the gun”; ~20:55–24:41 Mitchell Curtis / Foster Curtis NCIS bio arc",
+        "quote": "I’m told Mitchell Curtis of Pleasant Grove Police… finds this gun… The most interesting thing about Mitchell Curtis is not actually his background. It’s his father’s… Foster spent 21 years with NCIS…",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      },
+      {
+        "label": "Episode packaging summarizing NCIS-father claim",
+        "url": "https://podcastrex.com/shows/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Near-primary packaging",
+        "date": "July 28–29, 2026",
+        "timestamp": "Segment: rookie cop / NCIS background",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcastrex.com%2Fshows%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "Association is not participation",
+        "body": "Conspiracy content thrives on “tree of brand new faces.” A young local officer’s parent having a federal résumé is a coincidence class that exists in every large metro. To convert coincidence into planting, you need orders, access logs, tampered seals, or confession — none of which Ep 367 produces.",
+        "sources": []
+      },
+      {
+        "tier": 1,
+        "title": "The state’s exhibit is still the rifle + DNA + scene work, not the biography of the finder",
+        "body": "Court presentations emphasize scientific and video links between the recovered weapon and Robinson. Impeaching the first finder would require showing the rifle was introduced from elsewhere with broken custody. Owens instead narrates “luck” and NCIS prestige TV lore.",
+        "sources": [
+          {
+            "name": "CNN hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "AP charging / evidence overview",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Jurisdiction sleight of hand",
+        "body": "She says if the military plotted the kill, NCIS would investigate Navy/Marine crime — then treats a retired/transferred NCIS father’s son finding a gun in Utah as if that completes a military-plot proof. NCIS does not own all U.S. political murder investigations. The leap from “dad worked NCIS” to “military assassination covered by NCIS alumni” is fan fiction structure.",
+        "sources": []
+      },
+      {
+        "tier": 4,
+        "title": "Job change in June 2025 is not a Sept 10 plot tell",
+        "body": "Career moves, local IG controversies, and NDAs happen in government without being pre-positioning for a UVU hit three months later. Absent authenticated tasking connecting Foster Curtis to Utah ops on Sept 9–11, the timeline is decorative.",
+        "sources": []
+      }
+    ],
+    "related": [
+      "dogs-missed-rifle",
+      "gun-not-fired",
+      "military-inside-job",
+      "feds-altered-evidence",
+      "robinson-framed",
+      "harpole-plot",
+      "rooftop-no-recoil"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "dogs-missed-rifle",
+    "title": "Bomb dogs “failed” / Freya had a “bad sniffer,” so the rifle find is staged (and Robinson’s “pooch” text proves the setup)",
+    "shortTitle": "Dogs missed the rifle / “bad sniffer”",
+    "categories": [
+      "cover-up",
+      "suspect",
+      "forensic"
+    ],
+    "dateRange": "July 2026 (clarified on Ep 367 July 28–29)",
+    "verdict": "MISLEADING",
+    "severity": "high",
+    "featured": true,
+    "summary": "Owens claims scent dogs and bomb dog Freya failed where the gun was, then rookies “found” it — and treats a Robinson text hoping a dog has a bad sniffer as too perfect to be real.",
+    "claimDetail": "On Ep 367 Owens clarified earlier online confusion: some dogs chased a human scent near the amphitheater (she nicknames Loki), while bomb dog Freya searched a field and “came up empty” until federal direction sent rookie officers back and the gun appeared. She reads Robinson’s alleged text to Lance Twiggs — hoping the “pooch has a bad sniffer” — as uncanny foreshadowing that “sounds like someone’s new to the English language,” i.e., fabricated Fed writing.\n\nThe misleading move is converting ordinary K9 limits and a second search into proof of planting. Dogs miss. Handlers re-search. Rookies find evidence. None of that requires a Hollywood prop rifle. Treating a suspect’s text about dogs as proof the text is fake is circular: if he dumped a gun, worrying about dogs is exactly what a guilty person texts.",
+    "primarySources": [
+      {
+        "label": "Candace Ep 367 transcript: Loki/Freya dogs + “bad sniffer” text",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary",
+        "date": "July 29, 2026",
+        "timestamp": "Show clock ~17:10–20:55 dogs / Freya / “hoping that pooch has a bad sniffer” text reading",
+        "quote": "Freya was the bomb dog, I am told. She’s the one who had a broken nose that day… And lo and behold, the rookie officers find the gun.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      },
+      {
+        "label": "Owens X (July 28, 2026): rookie cop found the gun promo",
+        "url": "https://x.com/RealCandaceO/status/2082231480697393455",
+        "note": "Primary promo tying gun find story",
+        "date": "July 28, 2026",
+        "timestamp": "Posted ~22:27 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082231480697393455"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 4,
+        "title": "K9 non-alert ≠ empty field forever",
+        "body": "Bomb dogs and trailing dogs have different training, wind, contamination, and handler cueing issues. A non-alert followed by a visual search finding a wrapped or distant rifle is not a logical proof of planting. It is a reason for humans to keep looking.",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "“The text is too on-the-nose” is not authentication science",
+        "body": "Owens has repeatedly called confessional communications Fed theater. Authentication is for labs and phone extractions, not for whether a phrase sounds Gen-Z enough for her ear. Irony: she simultaneously needs the text to be “real enough” to mock and “fake enough” to free Robinson.",
+        "sources": [
+          {
+            "name": "Owens X on Twiggs confession photos / smashed screen",
+            "url": "https://x.com/RealCandaceO/status/2075586194549751867"
+          }
+        ]
+      },
+      {
+        "tier": 1,
+        "title": "Weapon recovery path is secondary to weapon-to-suspect science in public court story",
+        "body": "Even if first-pass dogs missed, prosecutors still have to connect the recovered rifle to Robinson via DNA, prints, ownership trail, and video. The “dogs failed therefore plant” slogan skips those exhibits.",
+        "sources": [
+          {
+            "name": "CNN hearing package",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "rookie-cop-ncis",
+      "gun-not-fired",
+      "feds-altered-evidence",
+      "robinson-framed",
+      "dna-indefensible"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "gun-not-fired",
+    "title": "Robinson’s rifle is his gun but it was “not fired” that day — dust in the barrel / non-smoking gun proves the kill weapon is fake",
+    "shortTitle": "Gun “not fired” / dust-in-barrel",
+    "categories": [
+      "forensic",
+      "suspect"
+    ],
+    "dateRange": "March–July 2026 (reasserted Ep 358 & Ep 367)",
+    "verdict": "CONTRADICTED",
+    "severity": "core",
+    "featured": true,
+    "summary": "Owens has said she does not deny the recovered gun is Robinson’s, but claims dust in the barrel and other tells show it was not fired in the assassination — a “non-smoking gun.”",
+    "claimDetail": "Owens has tried to split the baby: accept that the recovered rifle is associated with Tyler Robinson, but deny it is the murder weapon. In her July 13–14, 2026 return episode packaging (Ep 358) she said she never denied the gun found was Robinson’s gun, “but rather I have asserted that the gun was not fired on that day and was not used to kill Charlie Kirk.” On Ep 367 she again called it a “non-smoking gun,” claiming preliminary hearing discussion of dust in the barrel indicated non-usage, and that his fingerprints were the most degraded among multiple print sets — which she spun as planting.\n\nThis is contradicted by the public posture of a firearms homicide case: a rifle recovered and forensically tied into the charging theory, DNA inclusion testimony reported from the prelim, and multi-angle evidence of a gunshot killing. “Dust in the barrel” internet lore is not a published lab conclusion that no shot was fired. Degraded prints can mean handling order, environment, or recovery conditions — not automatic proof of a frame.",
+    "primarySources": [
+      {
+        "label": "Ep 358 HappyScribe transcript packaging: “gun was not fired on that day”",
+        "url": "https://podcasts.happyscribe.com/candace/i-m-back-and-the-tyler-robinson-show-trial-begins",
+        "note": "Primary show transcript packaging",
+        "date": "July 13–14, 2026 (Ep 358 window)",
+        "timestamp": "Transcript region discussing gun / fingerprints / “I have never denied that the gun found was indeed Tyler Robinson’s gun, but rather… not fired on that day”",
+        "quote": "I have never denied that the gun found was indeed Tyler Robinson’s gun, but rather I have asserted that the gun was not fired on that day and was not used to kill Charlie Kirk.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodcasts.happyscribe.com%2Fcandace%2Fi-m-back-and-the-tyler-robinson-show-trial-begins"
+      },
+      {
+        "label": "Candace Ep 367: non-smoking gun / dust in barrel",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary",
+        "date": "July 29, 2026",
+        "timestamp": "Show clock ~17:10–17:45 non-smoking gun / dust in barrel / degraded prints",
+        "quote": "this non-smoking gun… had dust in the barrel indicating non-usage… Tyler Robinson’s fingerprints… the most degraded prints… How is that possible unless somebody planted his gun?",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      },
+      {
+        "label": "Owens X (July 28, 2026): framing episode as freeing wrongly framed man",
+        "url": "https://x.com/RealCandaceO/status/2082207124986220726",
+        "note": "Primary context for gun-find / frame narrative",
+        "date": "July 28, 2026",
+        "timestamp": "Posted ~20:50 UTC (X)",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082207124986220726"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 1,
+        "title": "Public case treats the recovered rifle as the murder weapon class",
+        "body": "Prosecutors did not build a “prop rifle left as theater” theory in the open prelim narrative. They built a rifle homicide with scientific association to Robinson. Owens’s split (his gun, not the kill) needs lab and trajectory proof the fatal round did not come from that weapon — not podcast dust lore.",
+        "sources": [
+          {
+            "name": "CNN hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "AP evidence overview",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "title": "Courtyard media is a gunshot event",
+        "body": "Independent multi-angle video shows a report synchronized with catastrophic injury. If the recovered rifle is a decoy, Owens must produce the real weapon class (mic bomb, second gun, etc.). She rotates those theories without settling on recoverable proof.",
+        "sources": [
+          {
+            "name": "CBS shooting timeline",
+            "url": "https://www.cbsnews.com/news/timeline-charlie-kirk-fatal-shooting/"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "title": "“Dust” and “most degraded prints” are not self-interpreting",
+        "body": "Firearms examiners document bore condition carefully; social media summaries of testimony are often incomplete. Multiple handlers (owner, relatives, recoverers, techs) explain multiple print sets. “Most degraded = planted” is a non sequitur. Environment, time, and substrate matter.",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "Contradiction with her own mic-explosion track",
+        "body": "If no gun was fired from Losee because the mic exploded, the “his rifle wasn’t fired” claim is redundant theater. If a gun was fired but not his, she needs the other gun. She often runs both lines depending on the episode — a tell that the goal is permanent doubt, not a single coherent mechanism.",
+        "sources": [
+          {
+            "name": "Owens X July 7, 2026 mic exploded",
+            "url": "https://x.com/RealCandaceO/status/2074622867103174949"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "dna-indefensible",
+      "rooftop-no-recoil",
+      "exploding-microphone",
+      "robinson-framed",
+      "dogs-missed-rifle",
+      "feds-altered-evidence"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "twiggs-fed-asset",
+    "title": "Lance Twiggs is an “obvious Fed asset” who helped frame Robinson; confession texts are unvetted / effectively doctored theater",
+    "shortTitle": "Twiggs “Fed asset” / fake confession texts",
+    "categories": [
+      "suspect",
+      "cover-up"
+    ],
+    "dateRange": "Sept 2025 – July 10, 2026 (hearing spike); ongoing",
+    "verdict": "UNSUPPORTED",
+    "severity": "core",
+    "featured": true,
+    "summary": "Owens labels Lance Twiggs a federal co-conspirator, mocks smashed-phone photo evidence of texts, and says the confession narrative is show-trial Fed slop.",
+    "claimDetail": "Across the July 2026 preliminary hearing window, Candace Owens posted that Lance Twiggs is an “obvious Fed asset,” that he helped set Tyler Robinson up, that confessional texts shown via photos of a smashed phone (damage over the clock) cannot be trusted, and that the judge’s limits on defense vetting/cross-examination prove a “show trial.” She emphasized Twiggs saying Robinson was not political and never discussed Charlie Kirk or LGBTQ issues — then treated the alleged post-crime confession texts as psychologically impossible and therefore fabricated.\n\nCalling a cooperating witness a Fed asset is a serious affirmative claim. It requires employment records, tasking, or communications with handlers — not “I don’t like his testimony.” Phone-screen damage over a clock is a reason to demand full forensic extraction, not a completed proof of forgery. Preliminary hearings often limit scope; that is procedure, not automatic proof the messages are fake.",
+    "primarySources": [
+      {
+        "label": "Owens X (July 9, 2026): “obvious Fed asset”",
+        "url": "https://x.com/RealCandaceO/status/2075293803649396940",
+        "note": "Primary",
+        "date": "July 9, 2026",
+        "timestamp": "Posted ~18:59 UTC (X)",
+        "quote": "I cannot wait until this obvious Fed asset is allowed to be cross examined from the defense.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075293803649396940"
+      },
+      {
+        "label": "Owens X (July 9, 2026): Twiggs never heard political talk / Fed slop",
+        "url": "https://x.com/RealCandaceO/status/2075294579574575553",
+        "note": "Primary",
+        "date": "July 9, 2026",
+        "timestamp": "Posted ~19:02 UTC (X)",
+        "quote": "Lance Twiggs says he never heard Tyler talk about Charlie Kirk or LGBTQ issues… I cannot bear the Fed slop any longer.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075294579574575553"
+      },
+      {
+        "label": "Owens X (July 9, 2026): Twiggs is FBI co-conspirator (her view)",
+        "url": "https://x.com/RealCandaceO/status/2075284117189517472",
+        "note": "Primary",
+        "date": "July 9, 2026",
+        "timestamp": "Posted ~18:21 UTC (X)",
+        "quote": "Lance… is the FBI’s co-conspirator who helped to set Tyler Robinson up. Accordingly, he has been protected since day one.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075284117189517472"
+      },
+      {
+        "label": "Owens X (July 10, 2026): smashed phone corner over time display",
+        "url": "https://x.com/RealCandaceO/status/2075586194549751867",
+        "note": "Primary",
+        "date": "July 10, 2026",
+        "timestamp": "Posted ~14:21 UTC (X)",
+        "quote": "stunning text message confession after the murder, shown to us via a picture on Lance’s phone which just happens to be smashed in the very corner that would allow us to verify what time these photos were taken",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2075586194549751867"
+      },
+      {
+        "label": "Owens X (July 6, 2026): texts not vetted / may be doctored",
+        "url": "https://x.com/RealCandaceO/status/2074139019957370939",
+        "note": "Primary",
+        "date": "July 6, 2026",
+        "timestamp": "Posted ~14:30 UTC (X)",
+        "quote": "Evidence like text message confessions will be allowed… despite the fact that Tyler’s defense has not been allowed to vet those messages to determine if they were doctored",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074139019957370939"
+      },
+      {
+        "label": "PrimeTimer report documenting “obvious Fed asset” posts",
+        "url": "https://www.primetimer.com/news/candace-owens-calls-lance-twiggs-an-obvious-fed-asset-and-questions-his-account-of-tyler-robinson-s-alleged-confession",
+        "note": "Secondary documentation of July 9, 2026 X series",
+        "date": "July 9, 2026 coverage",
+        "timestamp": "Article/report documenting the claim window",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.primetimer.com%2Fnews%2Fcandace-owens-calls-lance-twiggs-an-obvious-fed-asset-and-questions-his-account-of-tyler-robinson-s-alleged-confession"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "“Fed asset” is a claim that needs employment proof",
+        "body": "Witnesses can be wrong, biased, or lying without being FBI employees. Owens’s language (“co-conspirator,” “protected since day one”) alleges a state framing operation. Produce the tasking. Until then it is insult-as-theory.",
+        "sources": []
+      },
+      {
+        "tier": 1,
+        "title": "Hearing evidence is broader than one roommate’s texts",
+        "body": "Public reporting on the prelim described surveillance, DNA, and communications packages. Even if defense later impeaches Twiggs, that is normal adversarial process — not proof the entire rooftop case dissolves.",
+        "sources": [
+          {
+            "name": "CNN hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "Salt Lake Tribune: conspiracies during hearing week",
+            "url": "https://www.sltrib.com/news/2026/07/09/internet-conspiracies-abound-tyler/"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "title": "Broken glass over a clock ≠ completed forgery proof",
+        "body": "Forensic best practice is a full phone image, hash values, and carrier logs. Photographing a cracked screen is imperfect. Imperfect collection is a discovery fight, not automatic proof messages were authored by the FBI.",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "Motive inconsistency cuts both ways",
+        "body": "Owens treats “he never talked politics” as proof he couldn’t kill over politics. People hide beliefs; people also lie after a partner’s arrest. Neither slogan replaces digital forensics and campus video.",
+        "sources": []
+      }
+    ],
+    "related": [
+      "robinson-framed",
+      "feds-altered-evidence",
+      "dna-indefensible",
+      "only-robinson-not-enough",
+      "gun-not-fired"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "skinny-jeans-rifle",
+    "title": "Robinson could not have brought a ~3'6\" assembled Mauser onto the Losee roof in skinny jeans — so the official entry story is impossible",
+    "shortTitle": "Skinny jeans / rifle concealment",
+    "categories": [
+      "forensic",
+      "suspect",
+      "timeline"
+    ],
+    "dateRange": "July 28–29, 2026 (Ep 367)",
+    "verdict": "MISLEADING",
+    "severity": "medium",
+    "featured": false,
+    "summary": "Owens mocked the idea that a 5'10\" man in skinny jeans could have the fully assembled rifle hidden in his pants while climbing to the roof.",
+    "claimDetail": "During Ep 367’s rooftop segment, Owens argued the official narrative has Robinson in skinny jeans with a phone in a pocket, yet somehow carrying a minimum ~3'6\" fully assembled Mauser-class rifle as if “Crip Walking” it onto the roof. She asked whether he wiggled it out of a tight ankle cuff or dropped his pants on the roof, treating the packaging as absurd on its face.\n\nThis is misleading because charging stories about long guns typically involve how a weapon was transported (broken down, bag, case, loose carry under clothing, pre-staged) — details that evolve in discovery. Mocking a straw-man “rifle fully assembled inside skinny jeans leg” is easy comedy; it is not a proof that no rifle reached the roof. Roof video of a figure with a long object and a recovered rifle still have to be answered on their own terms.",
+    "primarySources": [
+      {
+        "label": "Candace Ep 367 transcript: skinny jeans / 3'6\" gun bit",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary",
+        "date": "July 29, 2026",
+        "timestamp": "Show clock ~08:20–09:40 skinny jeans / gun length / “how does the gun get out of his skinny jeans”",
+        "quote": "if we are told that someone who was wearing skinny jeans… decided to essentially Crip Walk on the gun onto the lozzy rooftop… The gun is minimum 3 foot 6 inches, fully assembled… how does the gun get out of his skinny jeans at that point?",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "Straw-man transport is not the only transport",
+        "body": "Bolt guns are routinely moved in bags, broken down, under coats, or pre-positioned. If Owens has proof the state claims “fully assembled inside skinny jeans only,” cite the transcript line from prosecutors — not her parody.",
+        "sources": []
+      },
+      {
+        "tier": 3,
+        "title": "Roof media and recovery still control",
+        "body": "The relevant questions are: was a long gun on the roof, was it fired, and is it tied to Robinson? Pants comedy does not answer those.",
+        "sources": [
+          {
+            "name": "AP timeline / roof position reporting",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "rooftop-no-recoil",
+      "gun-not-fired",
+      "robinson-framed",
+      "no-rooftop-shot"
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "me-lungs-heart",
+    "title": "Defense motion on the medical examiner report (lung and heart traumatic injuries) upends the simple “single neck shot” story Owens wants you to treat as a cover-up tell",
+    "shortTitle": "ME report / lungs & heart injuries spin",
+    "categories": [
+      "forensic",
+      "cover-up"
+    ],
+    "dateRange": "July 29–30, 2026 (active promo)",
+    "verdict": "MISLEADING",
+    "severity": "high",
+    "featured": true,
+    "summary": "Owens promoted that Robinson’s defense filed on the ME report citing traumatic injuries to Charlie’s lungs and heart — packaging it alongside body-after-Utah secrecy as if the wound story is collapsing.",
+    "claimDetail": "On July 29, 2026 Owens posted a show rundown: what happened to Charlie’s body after it left Utah; Tyler Robinson’s defense filing regarding the medical examiner’s report citing traumatic injuries to Charlie’s lungs and heart; and another Blake Neff “moved goalpost.”\n\nHigh-velocity rifle trauma to the neck can involve massive hemorrhage, temporary cavity effects, and complex damage pathways that lay audiences summarize poorly. A defense motion citing lung and heart trauma is not automatically proof of a second weapon, a mic bomb, or a staged autopsy — it may be consistent with catastrophic ballistic injury, transport trauma, or resuscitation artifact depending on the actual report language.\n\nOwens’s packaging places ME complexity next to cremation/body secrecy themes to keep “the official wound story is fake” energy alive after the prelim hearing. Without publishing the full ME findings and expert reading, she is converting a defense filing headline into conspiracy fuel.",
+    "primarySources": [
+      {
+        "label": "Owens X (July 29, 2026): defense ME motion / lungs & heart / body after Utah",
+        "url": "https://x.com/RealCandaceO/status/2082601468872327290",
+        "note": "Primary",
+        "date": "July 29, 2026",
+        "timestamp": "Posted ~22:57 UTC (X) · show of that day",
+        "quote": "Tyler Robinson’s defense files a motion regarding the medical examiner’s report citing traumatic injuries to Charlie’s lungs and heart… We reveal what happened to Charlie’s body after it left Utah",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2082601468872327290"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 2,
+        "title": "Ballistic neck trauma can be multi-structure",
+        "body": "A single projectile event can destroy vascular structures and affect airway/chest dynamics. “Lungs and heart mentioned” is not a synonym for “multiple assassins” or “bomb.” Read the ME report, not the promo bullet list.",
+        "sources": [
+          {
+            "name": "NBC: what we know about the assassination",
+            "url": "https://www.nbcnews.com/news/us-news/know-charlie-kirks-assassination-rcna230552"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Defense filings are advocacy documents",
+        "body": "Defense motions maximize helpful readings. Some will be right; some will lose. Treating every defense sentence as secret truth flipped against “the Feds” is fan behavior, not forensic method.",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "Bundling with body-secrecy is a tell",
+        "body": "Pairing ME complexity with “where is the body” keeps the audience in permanent anomaly mode. See quietly-cremated claim: private disposition after a public murder is not proof of a body double.",
+        "sources": [
+          {
+            "name": "Owens cremation posts July 25",
+            "url": "https://x.com/RealCandaceO/status/2080815439874035906"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "quietly-cremated",
+      "autopsy-flipflops",
+      "exploding-microphone",
+      "dna-indefensible",
+      "gun-not-fired"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "zachariah-koreshi-detain",
+    "title": "Zachariah Koreshi was mysteriously detained then released — and his father’s military/DoD ties prove the “wrong man” was a suppressed lead",
+    "shortTitle": "Koreshi detention “suppressed lead”",
+    "categories": [
+      "cover-up",
+      "military",
+      "suspect"
+    ],
+    "dateRange": "July 28–29, 2026 (Ep 367 recounting Sept 2025)",
+    "verdict": "UNSUPPORTED",
+    "severity": "medium",
+    "featured": false,
+    "summary": "Owens revived that local police/feds detained Zachariah Koreshi then released him, stressing his father’s military career and Fort Huachuca-adjacent app funding as a coincidence too big to ignore.",
+    "claimDetail": "On Ep 367 Owens asked why, during the manhunt, authorities detained Zachariah Koreshi and then released him with “no explanation,” while highlighting alleged family military ties and a military app connected to operations/Fort Huachuca/DoD money. She framed it as a “big mistake” the public deserves answers for — implying the real plot trail was dropped.\n\nEarly manhunts detain wrong people. Release after interview is normal when evidence does not hold. Family military service is common in Utah. Without charging documents, body-worn camera proof of a framed release, or evidence tying Koreshi to the roof shot, this is leftover POI folklore — adjacent to her broader Fort Huachuca / military-inside-job cluster already on this site.",
+    "primarySources": [
+      {
+        "label": "Candace Ep 367 transcript: Zachariah Koreshi detention questions",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary",
+        "date": "July 29, 2026",
+        "timestamp": "Show clock ~03:23–04:45 Koreshi detention / military father / Fort Huachuca mention",
+        "quote": "why was Zachariah Koreshi initially arrested by local police and feds and then he was released… Of all the people, they happen to select this kid who has got a father, who is a career military man… tied to Fort Wachuka",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "Detention-and-release is not proof of a suppressed assassin",
+        "body": "Police can be wrong, tip-driven, or cautious. The burden is on Owens to show Koreshi was the shooter or a known co-conspirator — not to treat release as the scandal.",
+        "sources": []
+      },
+      {
+        "tier": 1,
+        "title": "Charged suspect remains Robinson in the public case",
+        "body": "The open charging and prelim path centers Tyler Robinson. Alternate POIs need affirmative evidence, not genealogy.",
+        "sources": [
+          {
+            "name": "AP Robinson charging context",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "harpole-plot",
+      "military-inside-job",
+      "decoy-early-poi",
+      "robinson-framed",
+      "rookie-cop-ncis"
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "kolvet-white-house-lie",
+    "title": "Andrew Kolvet “lied” about a White House meeting timed with Netanyahu’s visit — proof TPUSA is running a conspiracy of liars about Charlie’s death",
+    "shortTitle": "Kolvet White House meeting “lie”",
+    "categories": [
+      "tpusa",
+      "cover-up",
+      "israel"
+    ],
+    "dateRange": "July 28–29, 2026 (Ep 367 open)",
+    "verdict": "UNSUPPORTED",
+    "severity": "medium",
+    "featured": false,
+    "summary": "Owens opened Ep 367 claiming Kolvet lied about a scheduled White House meeting (with other TPUSA execs) around Netanyahu’s visit, treating schedule fog as conspiracy confirmation.",
+    "claimDetail": "Ep 367 opens with Owens attacking Andrew Kolvet as a serial liar about a White House meeting she says was on the books for Kolvet, Marina Miles, Justin Strife, and in-house counsel, allegedly near Netanyahu’s presence in town — then “suddenly canceled,” after which Kolvet denied a meeting. She says a White House employee source confirmed it, and that coincidence “begins to look and feel like a conspiracy when Andrew continues to lie so brazenly about everything.”\n\nEven if a meeting was scheduled and scrubbed, that is organizational politics or security scheduling — not evidence Kolvet murdered Charlie Kirk or covered up an Israeli hit. Owens’s method is to treat every TPUSA calendar discrepancy as bloodstain evidence. Without authenticated visitor logs, she has an anonymous source war, not a proven Netanyahu coordination plot.",
+    "primarySources": [
+      {
+        "label": "Candace Ep 367 transcript open: Kolvet White House / Netanyahu timing",
+        "url": "https://podscripts.co/podcasts/candace/exclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
+        "note": "Primary",
+        "date": "July 29, 2026",
+        "timestamp": "Show clock ~00:00–02:20 Kolvet “liar” / White House meeting / Netanyahu coincidence",
+        "quote": "I was also able to confirm with a White House employee that there certainly was a White House meeting on the books… Why do you lie? … BB Netanyahu happens to be in town. Is it a coincidence?",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "Schedule disputes ≠ homicide conspiracy",
+        "body": "Political orgs cancel D.C. meetings constantly. Linking a cancelation to Netanyahu’s travel and then to Kirk’s murder is a free-association chain. Demand visitor logs or stop.",
+        "sources": []
+      },
+      {
+        "tier": 5,
+        "title": "Anonymous “White House employee” is weak against named denial",
+        "body": "Source wars between a podcaster and a TPUSA executive are not self-authenticating. Whichever side is wrong about a calendar still has not proven a murder plot.",
+        "sources": []
+      }
+    ],
+    "related": [
+      "tpusa-inside-job",
+      "israel-mossad",
+      "dream-betrayal",
+      "tpusa-ten-lies",
+      "coworker-betrayal-texts"
+    ],
+    "confidence": {
+      "centrality": 1,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "more-evidence-patsy",
+    "title": "There is more evidence Tyler Robinson was set up as a patsy than evidence he committed the murder — and Owens will “gladly” defend that in a high-dollar debate",
+    "shortTitle": "“More evidence” he is a patsy (Aug 2026)",
+    "categories": [
+      "suspect",
+      "cover-up",
+      "self"
+    ],
+    "dateRange": "August 5–12, 2026 (active; Friday debate announced)",
+    "verdict": "CONTRADICTED",
+    "severity": "core",
+    "featured": true,
+    "summary": "After the July prelim, Owens doubled down: more evidence Robinson is a fed-set-up patsy than that he did the crime; accepted a high-dollar debate with Andrew Wilson. On Aug 11 she named Patrick Bet-David as moderator and said Friday’s debate is “officially happening.”",
+    "claimDetail": "In early August 2026, Candace Owens turned a social-media fight with commentator Andrew Wilson into a formal claim commitment. Wilson argued she had already asserted that there is overwhelming evidence Robinson was set up by the feds as a patsy. Owens did not walk it back. She said she firmly believes there is evidence he was set up as a patsy, is more than happy to defend that claim, and then went further: she accepted the sharper formulation that there is more evidence he was set up as a patsy than evidence that he committed the crime — “yes, yes, yes” — and said she would defend that gladly with “the facts of the case presented thus far.”\n\nThe exchange was packaged with money: Wilson publicly described a $300,000 debate offer (later discussed on Joe Rogan’s podcast); Owens counter-offered $500k, then accepted the original $300k, demanded the debate happen at her location (citing pregnancy), no smoking around her, live stream, cross-examination time, and public scoring — and floated that TPUSA should say Wilson was debating on their behalf. Michael Knowles, Wilson’s first-choice moderator, declined and said the murder case belongs in court, not a paid content product.\n\nOn August 11 she announced Patrick Bet-David as moderator and said Friday’s debate was “officially happening.” She said she trusts him to “moderate fairly,” that he will control breaks and speaking turns, and that producers will talk to him when either side wants something raised. That is a production plan, not a forensic filing.\n\nThis is not “just asking questions.” It is a weighted evidentiary claim after a multi-day preliminary hearing put campus video, DNA, and confessional communications on the public record. Treating a podcast debate purse as the burden of proof is entertainment. The case is not decided by who books a better room.",
+    "primarySources": [
+      {
+        "label": "TOI (Aug 9, 2026): “I am willing to defend” / more-evidence patsy claim",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/i-am-willing-to-defend-candace-owens-ignites-fresh-charlie-kirk-murder-controversy-with-bold-tyler-robinson-patsy-claim/articleshow/133061054.cms",
+        "note": "Documents X exchange · quotes attributed to Owens",
+        "date": "August 8–9, 2026",
+        "timestamp": "Public X exchange early August 2026",
+        "quote": "Yes, Andrew. I firmly believe there is evidence Tyler Robinson was set up as a patsy and I am more than happy to defend that claim… yes, yes, yes I accept the claim there is more evidence Tyler Robinson was set up as a patsy than evidence that he committed this crime.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fi-am-willing-to-defend-candace-owens-ignites-fresh-charlie-kirk-murder-controversy-with-bold-tyler-robinson-patsy-claim%2Farticleshow%2F133061054.cms"
+      },
+      {
+        "label": "AOL / SoapCentral (Aug 8, 2026): Wilson debate purse + reverse claim",
+        "url": "https://www.aol.com/articles/tyler-robinson-set-patsy-candace-203329000.html",
+        "note": "Secondary reporting on debate packaging",
+        "date": "August 8, 2026",
+        "timestamp": "Article documenting Aug 5–8 debate spat",
+        "quote": "I am willing to defend, gladly, with the facts of the case presented thus far.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.aol.com%2Farticles%2Ftyler-robinson-set-patsy-candace-203329000.html"
+      },
+      {
+        "label": "Owens X (Aug 11, 2026): Friday debate + PBD moderator promo",
+        "url": "https://x.com/RealCandaceO/status/2087296768417415659",
+        "note": "Primary show promo",
+        "date": "August 11, 2026",
+        "timestamp": "Posted ~21:55 UTC (X)",
+        "quote": "We announce the moderator for Friday’s debate! It’s officially happening.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2087296768417415659"
+      },
+      {
+        "label": "AOL / SoapCentral (Aug 12, 2026): Patrick Bet-David named moderator",
+        "url": "https://www.aol.com/articles/moderate-fairly-candace-owens-announces-034216000.html",
+        "note": "Documents Aug 11 show quotes + debate conditions",
+        "date": "August 12, 2026",
+        "timestamp": "Article on Aug 11 episode",
+        "quote": "I think that he will moderate fairly. I actually truly believe that he will moderate fairly and that is my number one interest in this.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.aol.com%2Farticles%2Fmoderate-fairly-candace-owens-announces-034216000.html"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 1,
+        "title": "“More evidence he is a patsy” fails the open-court identity stack",
+        "body": "A preliminary hearing is not a final verdict, but it is not “no case.” Prosecutors put on campus surveillance they say places Robinson at UVU, roof movement consistent with a shooter window, DNA testimony tying him to the recovered rifle, a pre-crime note, and communications characterized as confessional. Defense challenges methods and authentication — that is normal adversarial process.\n\nOwens’s August formulation requires the public to believe the conspiracy evidence outweighs that package. She has not produced authenticated exculpatory location proof, lab products, or a coherent alternative shooter with physical exhibits. She has produced rhetoric, side-by-side crawl demos, and a debate price tag.",
+        "sources": [
+          {
+            "name": "CNN: hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "Washington Post: conspiracy theories still raging after hearing",
+            "url": "https://www.washingtonpost.com/nation/2026/07/11/conspiracy-theories-about-charlie-kirks-death-are-still-raging-infuriating-friends/"
+          },
+          {
+            "name": "NYT: conspiracies around the hearing",
+            "url": "https://www.nytimes.com/2026/07/07/us/charlie-kirk-assassination-conspiracy-theories.html"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Debate purses do not reweigh DNA and video",
+        "body": "A $300k (or $500k) influencer debate can be entertaining. It does not authenticate a frame-up. If Owens has decisive proof Robinson was set up, it belongs in filings and authenticated exhibits — not as a content product with cross-examination “for the public to score.” Money is a signal of audience size, not of forensic weight.",
+        "sources": [
+          {
+            "name": "TOI debate packaging report",
+            "url": "https://timesofindia.indiatimes.com/world/us-streamers/i-am-willing-to-defend-candace-owens-ignites-fresh-charlie-kirk-murder-controversy-with-bold-tyler-robinson-patsy-claim/articleshow/133061054.cms"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Related: “offered to help the defense” is political theater around the same claim",
+        "body": "During the July hearing window, coverage also described Owens offering to help Robinson’s defense while calling him a patsy who was not even on campus. Helping a defendant is a free-country choice. Treating that offer as proof the prosecution case is empty is circular: she assumes the frame-up, then cites her own activism as validation.",
+        "sources": [
+          {
+            "name": "G3 Weekly / hearing commentary summarizing the offer",
+            "url": "https://www.youtube.com/watch?v=WHkdhb4rANE"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "robinson-framed",
+      "uncompressed-4k-not-robinson",
+      "twiggs-fed-asset",
+      "feds-altered-evidence",
+      "rooftop-no-recoil",
+      "dna-indefensible"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "device-seizure-decentralized",
+    "title": "If law enforcement seizes Owens’s devices, “every piece of footage and evidence” will hit the internet immediately — because her investigation is decentralized and cannot be captured",
+    "shortTitle": "Device-seizure “decentralized dump”",
+    "categories": [
+      "cover-up",
+      "self",
+      "suspect"
+    ],
+    "dateRange": "July 30–31, 2026",
+    "verdict": "MISLEADING",
+    "severity": "medium",
+    "featured": true,
+    "summary": "Responding to online seizure speculation, Owens claimed a device grab would only release her investigation materials en masse; framed herself as holding a non-capturable evidence nucleus.",
+    "claimDetail": "On or about July 30, 2026, after military veteran and podcaster Matt Tardio posted speculation that Owens’s electronics could be seized, Owens replied that people should not be shocked if every piece of footage and evidence hits the internet immediately anyway — because “when an investigation is truly decentralized, there is no nucleus that can be captured.”\n\nAs of that date, reporting found no confirmed law-enforcement plan to seize her devices. The post therefore operates as pre-emptive martyr narrative: imply the state may move against her archive, imply she alone (or her network) holds decisive footage the feds lack, and convert speculation into brand resilience.\n\nEven if she has bystander clips, a “decentralized dump” threat is not evidence that Robinson is innocent, that a mic exploded, or that the hearing package is fake. It is a content-protection slogan that flatters subscribers into thinking they are co-investigators in a raid-proof underground — while the actual criminal case proceeds on exhibits.",
+    "primarySources": [
+      {
+        "label": "Hindustan Times (July 31, 2026): “every piece of footage” device-seizure reply",
+        "url": "https://www.hindustantimes.com/world-news/us-news/every-piece-of-footage-candace-owens-drops-defiant-charlie-kirk-investigation-message-after-device-seizure-warning-101785444851653.html",
+        "note": "Quotes Owens X reply to Matt Tardio speculation",
+        "date": "July 30–31, 2026",
+        "timestamp": "X reply reported July 30–31, 2026",
+        "quote": "If I have all of my electronics seized, try not to be shocked when every piece of footage and evidence hits the internet immediately anyway. When an investigation is truly decentralized, there is no nucleus that can be captured.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.hindustantimes.com%2Fworld-news%2Fus-news%2Fevery-piece-of-footage-candace-owens-drops-defiant-charlie-kirk-investigation-message-after-device-seizure-warning-101785444851653.html"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 2,
+        "title": "No confirmed seizure plan — the premise was online speculation",
+        "body": "Contemporary reporting noted that as of July 30 there was no confirmed report that any agency had seized or planned to seize Owens’s devices. Building a “they can’t silence me” arc on a third-party tweet is classic persecution marketing. If a warrant ever appears, that is a legal fact to evaluate on its own terms. Speculative raid cosplay is not a fact pattern.",
+        "sources": [
+          {
+            "name": "Hindustan Times: no confirmed seizure as of July 30",
+            "url": "https://www.hindustantimes.com/world-news/us-news/every-piece-of-footage-candace-owens-drops-defiant-charlie-kirk-investigation-message-after-device-seizure-warning-101785444851653.html"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Holding clips ≠ holding a better homicide theory",
+        "body": "Bystander video can be useful. Prosecutors and the public already have multi-angle primary media of the courtyard event and hearing exhibits. A threat to dump a private archive does not answer DNA, roof surveillance, or confessional texts. It answers a brand risk: what if someone takes her hard drives. Those are different problems.",
+        "sources": [
+          {
+            "name": "AP: charging / evidence overview",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "“Decentralized investigation” is an unfalsifiable escape hatch",
+        "body": "If materials never dump, believers say she is still protecting sources. If materials dump and prove nothing new, believers say the real files are still offline. If authorities do nothing, she was “too smart to be captured.” The slogan is structured so that every outcome is a win for the narrative. That is rhetoric design, not case analysis.",
+        "sources": []
+      }
+    ],
+    "related": [
+      "robinson-framed",
+      "more-evidence-patsy",
+      "feds-altered-evidence",
+      "officer-bagley-rooftop"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "officer-bagley-rooftop",
+    "title": "Owens “found” who Officer Bagley was with on a Losee rooftop — footage the feds and UVU police supposedly could not produce before the prelim",
+    "shortTitle": "Officer Bagley rooftop companion “save”",
+    "categories": [
+      "timeline",
+      "security",
+      "cover-up",
+      "self"
+    ],
+    "dateRange": "August 3–7, 2026",
+    "verdict": "UNSUPPORTED",
+    "severity": "medium",
+    "featured": true,
+    "summary": "Early August show arc: sarcastic “thank you Candace” bit claiming she IDed Bagley’s rooftop companion from Sept 10 bystander footage authorities somehow missed — critics say she later walked back false allegations.",
+    "claimDetail": "In early August 2026, Candace Owens aired a segment (also pushed on Facebook/social) in which she said she combed through footage sent to her on September 10 and found who Officer Bagley was with on a Losee rooftop around 12:44–12:47 p.m. She framed it as doing what “all the resources of the feds and UVU police and all the cameras” could not do before the preliminary hearing — complete with a sarcastic “Oh my gosh, you’re welcome, Officer Bagley” performance while zooming stills of a “plain clothes” figure and a red-hat silhouette.\n\nWithin days, critics (including a viral Cinema Shogun post covered in secondary press) accused her of presenting inaccurate information and walking back false allegations against the officer in a later episode. Whether every specific name/ID in the segment was later softened is secondary to the method: treat ordinary scene-policing ambiguity as a gotcha that reopens the murder mechanism, and cast herself as the only competent investigator.\n\nIdentifying two people on a roof after a mass-casualty event — if accurate — is not proof of a second shooter, a mic bomb, or a frame-up of Robinson. First responders and plainclothes personnel on elevated positions are expected. The leap from “here is a still” to “authorities hid the real plot” is the unsupported part.",
+    "primarySources": [
+      {
+        "label": "TOI (Aug 7, 2026): Bagley investigation under fire + show quotes",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/she-has-her-audience-wrapped-around-her-finger-candace-owens-officer-bagley-investigation-comes-under-fire-after-viral-post-exposes-dramatic-reversal-claim/articleshow/133017948.cms",
+        "note": "Quotes Owens show segment; documents walk-back criticism",
+        "date": "August 7, 2026",
+        "timestamp": "Show segment re: 12:44 / 12:47 PM rooftop stills (as quoted)",
+        "quote": "lucky for Officer Bagley, I went combing through all the footage that was sent to me on September 10th… Officer Bagley gets up there at 1244… footage of who Officer Bagley was with… captured by a bystander at 1247 PM… despite all of the resources of the feds and UVU police… you couldn’t do it before that preliminary hearing… here I am to save the day.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fshe-has-her-audience-wrapped-around-her-finger-candace-owens-officer-bagley-investigation-comes-under-fire-after-viral-post-exposes-dramatic-reversal-claim%2Farticleshow%2F133017948.cms"
+      },
+      {
+        "label": "Candace Owens Facebook (Aug 3–4, 2026): “Since the FBI Couldn’t Find This Footage… I Found It for Them.”",
+        "url": "https://www.facebook.com/realCandaceOwens/videos/since-the-fbi-couldnt-find-this-footage-i-found-it-for-them/1103593659122749/",
+        "note": "Primary packaging title + segment framing",
+        "date": "August 3–4, 2026",
+        "timestamp": "Social video post ~Aug 3–4, 2026",
+        "quote": "Since the FBI Couldn’t Find This Footage… I Found It for Them.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.facebook.com%2FrealCandaceOwens%2Fvideos%2Fsince-the-fbi-couldnt-find-this-footage-i-found-it-for-them%2F1103593659122749%2F"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "Scene officers on roofs ≠ assassin plot",
+        "body": "After a public assassination, law enforcement occupies high ground, secures buildings, and sweeps for secondary threats. Showing an officer (or companion) on a roof at 12:44–12:47 — after the shot window discussed in court coverage — does not overturn the charged shooter’s identity package. Time stamps matter: post-event security presence is not pre-event sniper proof.",
+        "sources": [
+          {
+            "name": "AP: timeline and charging evidence",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Self-flattering “feds couldn’t do it” is not authentication",
+        "body": "Even if a bystander clip is real, sarcastic “you’re welcome Officer Bagley” presentation is persuasion theater. Authentication means chain of custody, original files, and comparison to known officers — not podcast confidence. Critics alleging a later walk-back underscore the risk: high-confidence ID segments that require next-episode cleanup.",
+        "sources": [
+          {
+            "name": "TOI: walk-back / “podslop” criticism coverage",
+            "url": "https://timesofindia.indiatimes.com/world/us-streamers/she-has-her-audience-wrapped-around-her-finger-candace-owens-officer-bagley-investigation-comes-under-fire-after-viral-post-exposes-dramatic-reversal-claim/articleshow/133017948.cms"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "title": "Mechanism of death remains a gunshot event on multi-angle video",
+        "body": "None of the Bagley companion framing changes what courtyard video shows: a report, an instantaneous neck wound presentation, and crowd reaction consistent with a distant shot. Rooftop stills of personnel after the fact do not install a bomb in the microphone or erase the rifle case.",
+        "sources": [
+          {
+            "name": "CBS: shooting timeline",
+            "url": "https://www.cbsnews.com/news/timeline-charlie-kirk-fatal-shooting/"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "rooftop-no-recoil",
+      "rookie-cop-ncis",
+      "security-setup",
+      "device-seizure-decentralized",
+      "robinson-framed"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "uncompressed-4k-not-robinson",
+    "title": "Uncompressed “4K” parking-lot stills prove the maroon-shirt figure is not Tyler Robinson — and the court only showed compressed footage",
+    "shortTitle": "Uncompressed 4K “not Robinson” stills",
+    "categories": [
+      "suspect",
+      "cover-up"
+    ],
+    "dateRange": "August 10–12, 2026 (active)",
+    "verdict": "MISLEADING",
+    "severity": "core",
+    "featured": true,
+    "summary": "Aug 10–11 show/X wave: “exclusive” stills from influencer-shown 4K / uncompressed parking-lot footage of a maroon-shirt figure who “might not be” / does not look like Tyler Robinson; Owens says the still is not AI and that the court showed compressed video.",
+    "claimDetail": "On August 10, 2026, Candace Owens promoted a show segment with “more exclusive photos from the ‘4K footage’ that was shown to the influencers Tyler Robinson” — then the punchline: “there is evidence that it might not be Tyler Robinson after all.” On August 11 she escalated the same product: Turning Point’s “unusual silence” after “yesterday’s uncompressed photos of the not-so-Tyler-Robinson-looking maroon guy.”\n\nThe stills in circulation were pulled from parking-lot CCTV that had already been used in the July preliminary hearing. A zoomed grab went viral after a Substack account argued the person is not Robinson. David Freiheit (Viva Frei) replied that he agreed the *picture* does not look like Robinson — because it appears to be an AI-enhanced still of the same-angle hearing video, not a second secret 4K camera. Owens called that “an outright lie,” wrote that “the photo was not in any way enhanced by AI technology,” and said “to the contrary the public was shown compressed footage by the court.”\n\nThis is the maroon-shirt identity attack wearing a new codec. A single outdoor still — compressed, uncompressed, sharpened, or “4K” — is not a substitute for the identity stack already described in open court: campus surveillance sequences, DNA testimony on the recovered rifle, a pre-crime note, and communications characterized as confessional. If a frame is too poor to ID Robinson, it is also too poor to certify a federal double. If a frame has been processed, new facial detail is an artifact, not a confession. Either way, “look at this grab” does not reweigh the case.",
+    "primarySources": [
+      {
+        "label": "Owens X (Aug 10, 2026): exclusive 4K photos / “might not be Tyler Robinson”",
+        "url": "https://x.com/RealCandaceO/status/2086932820572700801",
+        "note": "Primary show promo",
+        "date": "August 10, 2026",
+        "timestamp": "Posted ~21:48 UTC (X)",
+        "quote": "We have more exclusive photos from the “4K footage” that was shown to the influencers Tyler Robinson. Except… there is evidence that it might not be Tyler Robinson after all.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2086932820572700801"
+      },
+      {
+        "label": "Owens X (Aug 11, 2026): photo not AI; court showed compressed footage",
+        "url": "https://x.com/RealCandaceO/status/2087169969213653274",
+        "note": "Primary reply to Viva Frei",
+        "date": "August 11, 2026",
+        "timestamp": "Posted ~13:31 UTC (X)",
+        "quote": "The photo was not in any way enhanced by AI technology. To the contrary the public was shown compressed footage by the court.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2087169969213653274"
+      },
+      {
+        "label": "Owens X (Aug 11, 2026): uncompressed maroon-guy stills + TPUSA silence",
+        "url": "https://x.com/RealCandaceO/status/2087296768417415659",
+        "note": "Primary show promo",
+        "date": "August 11, 2026",
+        "timestamp": "Posted ~21:55 UTC (X)",
+        "quote": "We discuss Turning Point’s unusual silence following our release of yesterday’s uncompressed photos of the not-so-Tyler-Robinson-looking maroon guy.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2087296768417415659"
+      },
+      {
+        "label": "Hindustan Times (Aug 12, 2026): parking-lot video / Owens “not AI” reply",
+        "url": "https://www.hindustantimes.com/trending/us/tyler-robinsons-parking-lot-video-sparks-new-claims-on-charlie-kirks-killing-candace-owens-reacts-101786471495864.html",
+        "note": "Documents viral still + Freiheit AI-enhancement critique + Owens denial",
+        "date": "August 12, 2026",
+        "timestamp": "Article published Aug 12, 2026",
+        "quote": "The photo was not in any way enhanced by AI technology. To the contrary, the public was shown compressed footage by the court.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.hindustantimes.com%2Ftrending%2Fus%2Ftyler-robinsons-parking-lot-video-sparks-new-claims-on-charlie-kirks-killing-candace-owens-reacts-101786471495864.html"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 1,
+        "title": "One parking-lot still does not outrank the open-court identity stack",
+        "body": "The July preliminary hearing already put on campus surveillance prosecutors say places Robinson at UVU, roof-path movement, DNA testimony tying him to the recovered rifle, a pre-crime note, and communications characterized as confessional. Defense gets to challenge authentication and methods. That is a real process.\n\nOwens’s August stills are a content product built from (or about) footage already in that hearing. A zoomed maroon-shirt grab — even labeled 4K or “uncompressed” — does not cancel DNA on a trigger, does not cancel a note, and does not cancel a communications package. Identity in a homicide case is a stack. She is selling a JPEG as a stack.",
+        "sources": [
+          {
+            "name": "CNN: hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "AP: timeline and charging evidence details",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          },
+          {
+            "name": "Washington Post: evidence laid out in court hearings",
+            "url": "https://www.washingtonpost.com/nation/2026/07/11/conspiracy-theories-about-charlie-kirks-death-are-still-raging-infuriating-friends/"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "“Uncompressed vs compressed” is a motte-and-bailey",
+        "body": "Motte: courts often play compressed exhibit video in a hearing room; a cleaner export of the same camera can exist. Bailey: therefore the maroon guy is not Robinson and TPUSA’s silence is the tell.\n\nBitrate is not identity. If Owens has a higher-quality export of the *same* parking-lot camera, she still has one outdoor still of a person in a maroon shirt. If she has a *different* camera, she needs chain of custody, time sync, and a reason the hearing package is a fraud — not a show-promo adjective (“4K,” “exclusive,” “uncompressed”).\n\nViva Frei’s public critique was specific: the viral still is the same angle as the hearing surveillance, and similar “this is not Tyler” stills have already circulated as processed screenshots. Owens answered with a categorical “not in any way enhanced by AI” plus an insult. A categorical denial is not a file hash. Ask for the original camera file, the export settings, and a frame-accurate match to the exhibit — not a codec slogan.",
+        "sources": [
+          {
+            "name": "Owens X: not AI / court compressed",
+            "url": "https://x.com/RealCandaceO/status/2087169969213653274"
+          },
+          {
+            "name": "Hindustan Times: Freiheit comparison + Owens reply",
+            "url": "https://www.hindustantimes.com/trending/us/tyler-robinsons-parking-lot-video-sparks-new-claims-on-charlie-kirks-killing-candace-owens-reacts-101786471495864.html"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Blur and processing cut both ways — this is the maroon-folder trick again",
+        "body": "If the face is too unclear to identify Robinson, it is also too unclear to certify a federal double, a decoy, or a “not-so-Tyler-Robinson-looking maroon guy” as a second person. If the still has been sharpened or upscaled, new jawlines and eye sockets are exactly what enhancement invents.\n\nOwens has run this method since 2025: treat clothing color + bad pixels as a cast list. August’s “uncompressed” label is the same method with a production word stapled on. Folders of similarly dressed men are scrapbooks. They are not counterintelligence products.",
+        "sources": [
+          {
+            "name": "This site: maroon shirts / decoy boys",
+            "url": "claim.html?id=maroon-shirts"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "TPUSA “silence” is not a forensic exhibit",
+        "body": "Organizations do not have a duty to narrate every influencer still in real time. Silence can mean legal caution, grief, contempt, or a communications freeze. It cannot mean “they know the maroon guy isn’t Robinson.” Treating a gap in someone else’s press shop as proof of a frame-up is the oldest content move in this catalog.",
+        "sources": []
+      }
+    ],
+    "related": [
+      "maroon-shirts",
+      "robinson-framed",
+      "more-evidence-patsy",
+      "decoy-early-poi",
+      "rooftop-no-recoil",
+      "tpusa-trans-journalist"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "tpusa-trans-journalist",
+    "title": "TPUSA working with a journalist who “supports transgenderism” is a PR disaster that undercuts the claim transgender ideology was behind Kirk’s assassination",
+    "shortTitle": "TPUSA + trans-supporting journalist “PR disaster”",
+    "categories": [
+      "tpusa",
+      "motive"
+    ],
+    "dateRange": "August 11, 2026",
+    "verdict": "MISLEADING",
+    "severity": "medium",
+    "featured": true,
+    "summary": "Aug 11 show promo: another “PR disaster” because TPUSA is “now working with a journalist who supports transgenderism” while having told the public transgender ideology was behind the assassination.",
+    "claimDetail": "On August 11, 2026, Candace Owens stacked a third bullet onto her Friday-debate promo: “Another day, another PR disaster for TPUSA who are now working with a journalist who supports transgenderism…despite insisting to the public that transgendered ideology was behind Charlie’s assassination.”\n\nShe did not name the journalist in that post. The move is a brand fight, not a case filing. Even if Turning Point booked, appeared with, or was quoted by a reporter whose views on gender differ from Kirk’s, that is 2026 media relations. It is not a bullet, a rooftop, a lab result, or a motive exhibit from September 10, 2025.\n\nProsecutors — not TPUSA press strategy — decide what they will try to prove about Robinson’s alleged motive. Booking a journalist later does not rewrite the charged homicide. Owens is converting an unnamed staffing/booking gripe into implied proof that the official story is a lie. That leap is the claim. It is not supported.",
+    "primarySources": [
+      {
+        "label": "Owens X (Aug 11, 2026): TPUSA + journalist who “supports transgenderism”",
+        "url": "https://x.com/RealCandaceO/status/2087296768417415659",
+        "note": "Primary show promo",
+        "date": "August 11, 2026",
+        "timestamp": "Posted ~21:55 UTC (X)",
+        "quote": "Another day, another PR disaster for TPUSA who are now working with a journalist who supports transgenderism…despite insisting to the public that transgendered ideology was behind Charlie’s assassination.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2087296768417415659"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 5,
+        "title": "A 2026 booking does not adjudicate a 2025 homicide motive",
+        "body": "Media organizations talk to reporters they disagree with. Campaigns and nonprofits do it constantly, including after tragedies, because news gathering is not a loyalty test. If TPUSA sat with, was profiled by, or shared a stage with a journalist who is not gender-critical, that is a communications choice. It is not evidence that Robinson is innocent, that a microphone exploded, or that “transgender ideology” was or was not the charged motive.\n\nOwens’s construction is: (1) TPUSA said X about motive; (2) TPUSA later worked with someone who believes Y; (3) therefore the assassination story is a PR lie. Step 3 does not follow. Hypocrisy — if it even is hypocrisy — is not a rifle.",
+        "sources": [
+          {
+            "name": "Owens X: Aug 11 show promo",
+            "url": "https://x.com/RealCandaceO/status/2087296768417415659"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "title": "Motive is what prosecutors put on the record — not what a podcast calls a “PR disaster”",
+        "body": "The public charging narrative described by major outlets is a rooftop rifle case against Tyler Robinson, with communications and ideology discussed as part of the state’s theory. That theory lives or dies in court. TPUSA’s later press shop cannot retroactively create or destroy it. If Owens has a named journalist, a named booking, and a document showing TPUSA fabricated a motive, she can put those on the table. An unnamed “journalist who supports transgenderism” is a vibe.",
+        "sources": [
+          {
+            "name": "AP: charging / evidence overview",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          },
+          {
+            "name": "Reuters: charges / death-penalty factors",
+            "url": "https://www.reuters.com/legal/government/what-know-about-charlie-kirks-assassination-and-death-penalty-2025-09-17/"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "Unnamed targets are how a daily show stays unfalsifiable",
+        "body": "If she names the journalist and the “working with” fact is trivial (a quote, a panel, a profile), believers will say the *real* scandal is still coming. If she never names them, the smear still shipped. Either outcome feeds the TPUSA-as-cover-up product. Demand a name, a date, and what “working with” meant — then ask what any of it has to do with DNA on a trigger.",
+        "sources": []
+      }
+    ],
+    "related": [
+      "tpusa-inside-job",
+      "tpusa-ten-lies",
+      "erika-theories",
+      "uncompressed-4k-not-robinson",
+      "more-evidence-patsy"
+    ],
+    "confidence": {
+      "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
   }
 ];
+
 window.CATEGORIES = [
   {
     "id": "forensic",
@@ -4261,6 +6149,7 @@ window.CATEGORIES = [
     "label": "Owens self-insert"
   }
 ];
+
 window.VERDICT_META = {
   "FALSE": {
     "label": "False",
