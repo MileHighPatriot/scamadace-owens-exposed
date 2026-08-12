@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Scamdace Owens Exposed">
-  <rect width="32" height="32" rx="6" fill="#0b0d10"/>
-  <rect x="1" y="1" width="30" height="30" rx="5" fill="none" stroke="#c9a227" stroke-width="1.5"/>
-  <text x="16" y="22" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="16" font-weight="700" fill="#c9a227">S</text>
+  <rect width="32" height="32" rx="7" fill="#08090c"/>
+  <rect x="1.25" y="1.25" width="29.5" height="29.5" rx="6" fill="none" stroke="#d4ae3a" stroke-width="1.4"/>
+  <rect x="4.2" y="4.2" width="6" height="1.2" fill="#d4ae3a"/>
+  <rect x="21.8" y="26.6" width="6" height="1.2" fill="#d4ae3a"/>
+  <text x="16" y="22" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="15" font-weight="700" fill="#f0c95a">S</text>
 </svg>

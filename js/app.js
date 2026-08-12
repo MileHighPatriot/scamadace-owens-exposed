@@ -9,7 +9,7 @@
 
   // Canonical public origin (GitHub Pages until custom domain is enforced)
   var SITE_ORIGIN = "https://milehighpatriot.github.io/scamadace-owens-exposed";
-  var SITE_UPDATED = "2026-07-25";
+  var SITE_UPDATED = "2026-08-12";
 
   // —— Mobile nav (a11y) ——
   var toggle = qs(".nav-toggle");
@@ -80,6 +80,14 @@
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress, { passive: true });
   updateProgress();
+
+  function updateHeaderState() {
+    var header = qs(".site-header");
+    if (!header) return;
+    header.classList.toggle("is-scrolled", (window.scrollY || 0) > 10);
+  }
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  updateHeaderState();
 
   // —— Back to top ——
   var topBtn = document.createElement("button");
@@ -258,6 +266,106 @@
         return iso;
       }
     },
+
+    escapeHtml: escapeHtml,
+    escapeAttr: escapeAttr,
+
+    archiveUrl: function (url) {
+      if (!url || !/^https?:\/\//i.test(url)) return null;
+      return "https://archive.today/?run=1&url=" + encodeURIComponent(url);
+    },
+
+    /** Inject shared header/footer when #site-header-mount / #site-footer-mount exist. */
+    mountChrome: function () {
+      var headerMount = qs("#site-header-mount");
+      var footerMount = qs("#site-footer-mount");
+      var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+      if (path === "claim.html") path = "claims.html";
+
+      function navLink(href, label, extraClass) {
+        var file = href.split("/").pop().toLowerCase();
+        var active =
+          file === path ||
+          (path === "" && file === "index.html") ||
+          (path === "claims.html" && file === "claims.html");
+        // archive pages highlight Archive hub
+        var archivePages =
+          "timeline episodes people methods pivots contradictions quotes vault compare hearing legal exhibits media glossary faq journalists family graph map search report press-kit research grief-economy burdens falsify archive";
+        if (
+          archivePages.split(" ").indexOf(path.replace(".html", "")) !== -1 &&
+          file === "archive.html"
+        ) {
+          active = true;
+        }
+        return (
+          '<a href="' +
+          href +
+          '"' +
+          (active ? ' class="active' + (extraClass ? " " + extraClass : "") + '"' : extraClass ? ' class="' + extraClass + '"' : "") +
+          (active ? ' aria-current="page"' : "") +
+          ">" +
+          label +
+          "</a>"
+        );
+      }
+
+      if (headerMount) {
+        headerMount.innerHTML =
+          '<header class="site-header">' +
+          '<div class="nav-inner">' +
+          '<a class="brand" href="index.html"><strong>Scamdace Owens Exposed</strong><span>Kirk assassination claim archive</span></a>' +
+          '<button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>' +
+          '<nav class="nav-links" id="site-nav" aria-label="Primary">' +
+          navLink("index.html", "Home") +
+          navLink("claims.html", "Claims") +
+          navLink("archive.html", "Archive") +
+          navLink("timeline.html", "Timeline") +
+          navLink("people.html", "People") +
+          navLink("facts.html", "Public record") +
+          navLink("search.html", "Search") +
+          navLink("earnings.html", "Earnings") +
+          navLink("submit.html", "Submit") +
+          navLink("about.html", "About") +
+          "</nav></div>" +
+          '<div class="nav-sub" aria-label="Archive sections">' +
+          '<a href="episodes.html">Episodes</a>' +
+          '<a href="methods.html">Methods</a>' +
+          '<a href="contradictions.html">Contradictions</a>' +
+          '<a href="quotes.html">Quotes</a>' +
+          '<a href="vault.html">Vault</a>' +
+          '<a href="hearing.html">Hearing</a>' +
+          '<a href="legal.html">Legal</a>' +
+          '<a href="graph.html">Graph</a>' +
+          '<a href="report.html">Report</a>' +
+          '<a href="journalists.html">Journalists</a>' +
+          '<a href="family.html">Families</a>' +
+          '<a href="feed.xml">RSS</a>' +
+          "</div></header>";
+        // re-bind mobile nav on injected header
+        bindNavToggle();
+        updateHeaderState();
+      }
+
+      if (footerMount) {
+        footerMount.innerHTML =
+          '<footer class="site-footer"><div class="footer-inner">' +
+          "<div><strong>Scamdace Owens Exposed</strong><br/>By MileHigh Patriot · " +
+          '<a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a></div>' +
+          '<nav class="footer-links" aria-label="Footer">' +
+          '<a href="claims.html">Claims</a>' +
+          '<a href="archive.html">Archive hub</a>' +
+          '<a href="facts.html">Public record</a>' +
+          '<a href="search.html">Search</a>' +
+          '<a href="earnings.html">Earnings</a>' +
+          '<a href="submit.html">Submit</a>' +
+          '<a href="corrections.html">Corrections</a>' +
+          '<a href="about.html">About</a>' +
+          '<a href="feed.xml">RSS</a>' +
+          "</nav>" +
+          '<p class="footer-meta">Catalog baseline: August 12, 2026 · Static archive · No tracking required</p>' +
+          "</div></footer>";
+      }
+    },
   };
 
   function escapeHtml(s) {
@@ -269,5 +377,32 @@
   }
   function escapeAttr(s) {
     return escapeHtml(s).replace(/'/g, "&#39;");
+  }
+
+  function bindNavToggle() {
+    var toggle = qs(".nav-toggle");
+    var links = qs(".nav-links");
+    if (!toggle || !links) return;
+    if (!links.id) links.id = "site-nav";
+    toggle.setAttribute("aria-controls", links.id);
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+    function setOpen(open) {
+      links.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+    // avoid duplicate listeners by cloning
+    var newToggle = toggle.cloneNode(true);
+    toggle.parentNode.replaceChild(newToggle, toggle);
+    newToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setOpen(!links.classList.contains("open"));
+    });
+  }
+
+  // Mount chrome for archive pages (and any page using mounts)
+  if (qs("#site-header-mount") || qs("#site-footer-mount")) {
+    SOE.mountChrome();
   }
 })();

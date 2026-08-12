@@ -51,15 +51,40 @@
 
   var primaryHtml = (claim.primarySources || [])
     .map(function (s) {
+      var metaBits = [];
+      if (s.date) metaBits.push('<span class="src-date">' + escapeHtml(s.date) + "</span>");
+      if (s.timestamp)
+        metaBits.push(
+          '<span class="src-timestamp">⏱ ' + escapeHtml(s.timestamp) + "</span>"
+        );
+      var metaRow = metaBits.length
+        ? '<div class="src-meta">' + metaBits.join(" · ") + "</div>"
+        : "";
+      var quoteRow = s.quote
+        ? '<blockquote class="src-quote">“' +
+          escapeHtml(s.quote) +
+          '”</blockquote>'
+        : "";
+      var arch =
+        s.archiveUrl ||
+        (SOE.archiveUrl ? SOE.archiveUrl(s.url) : null);
       return (
-        "<li><a href=\"" +
+        '<li class="primary-source-item">' +
+        metaRow +
+        '<a href="' +
         escapeAttr(s.url) +
-        "\" target=\"_blank\" rel=\"noopener\">" +
+        '" target="_blank" rel="noopener">' +
         escapeHtml(s.label) +
         "</a>" +
+        (arch
+          ? ' · <a class="archive-link" href="' +
+            escapeAttr(arch) +
+            '" target="_blank" rel="noopener">Archive</a>'
+          : "") +
         (s.note
           ? ' <span class="src-note">— ' + escapeHtml(s.note) + "</span>"
           : "") +
+        quoteRow +
         "</li>"
       );
     })
@@ -201,6 +226,14 @@
     escapeHtml(meta.label || claim.verdict) +
     " — " +
     escapeHtml(meta.blurb || "") +
+    (claim.confidence
+      ? " · <strong>Centrality:</strong> " +
+        escapeHtml(String(claim.confidence.centrality)) +
+        "/3 · <strong>Checkability:</strong> " +
+        escapeHtml(String(claim.confidence.checkability)) +
+        "/3" +
+        (claim.confidence.stillActive ? " · <strong>Still active</strong>" : "")
+      : "") +
     "</p>" +
     '<p class="claim-updated"><time datetime="' +
     escapeAttr(SOE.SITE_UPDATED) +
@@ -230,8 +263,8 @@
     "</div>" +
     "</section>" +
     '<section class="claim-section" id="primary">' +
-    '<h2><span class="step">2</span> Where she said it (primary / near-primary)</h2>' +
-    '<div class="callout">We prioritize Owens’s own X posts and show episodes. Some entries also use contemporaneous reports that quote her words when a single stable clip URL is fragmented.</div>' +
+    '<h2><span class="step">2</span> Where she said it — dates, links, timestamps</h2>' +
+    '<div class="callout"><strong>Disputability standard:</strong> every entry aims for (1) a dated primary link to Owens herself (X post or show episode), (2) a clock/timestamp or promo time when available, and (3) a short on-record quote. Secondary reports appear only when they quote her words and a stable clip URL is fragmented. Pause the linked media at the listed timestamp to verify she said it.</div>' +
     '<ul class="source-list primary-list">' +
     (primaryHtml || "<li class=\"src-note\">No primary links listed yet.</li>") +
     "</ul>" +
@@ -256,8 +289,8 @@
         "</div></section>"
       : "") +
     '<section class="claim-section">' +
-    '<div class="callout">See something missing or wrong? Contact <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a> with primary links. <a href="submit.html">Submit a claim</a> · <a href="corrections.html">Corrections</a></div>' +
-    '<div class="btn-row"><a class="btn btn-primary" href="claims.html">← Back to all claims</a></div>' +
+    '<div class="callout">See something missing or wrong? Contact <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a> with primary links. <a href="submit.html">Submit a claim</a> · <a href="corrections.html">Corrections</a> · <a href="vault.html">Source vault</a> · <a href="quotes.html">Quote bank</a> · <a href="archive.html">Archive hub</a></div>' +
+    '<div class="btn-row"><a class="btn btn-primary" href="claims.html">← Back to all claims</a><a class="btn btn-secondary" href="contradictions.html">Contradiction engine</a><a class="btn btn-secondary" href="timeline.html">Timeline</a></div>' +
     "</section>" +
     "</div>" + // claim-main
     '<aside class="claim-toc" aria-label="On this page">' +

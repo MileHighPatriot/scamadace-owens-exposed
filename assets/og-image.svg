@@ -2,15 +2,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b0d10"/>
-      <stop offset="100%" stop-color="#161b22"/>
+      <stop offset="0%" stop-color="#08090c"/>
+      <stop offset="100%" stop-color="#141a22"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="0" y="0" width="12" height="630" fill="#c9a227"/>
-  <text x="80" y="200" fill="#c9a227" font-family="Georgia, serif" font-size="28" letter-spacing="4">INVESTIGATIVE ARCHIVE</text>
-  <text x="80" y="290" fill="#e8eef6" font-family="Georgia, serif" font-size="64" font-weight="700">Scamdace Owens Exposed</text>
-  <text x="80" y="360" fill="#9aa8b8" font-family="Segoe UI, system-ui, sans-serif" font-size="28">Candace Owens claims about Charlie Kirk&#8217;s</text>
-  <text x="80" y="400" fill="#9aa8b8" font-family="Segoe UI, system-ui, sans-serif" font-size="28">assassination — documented, then dismantled.</text>
-  <text x="80" y="520" fill="#6b7a8c" font-family="Segoe UI, system-ui, sans-serif" font-size="22">MileHigh Patriot · @America1st5280 · Evidence-tiered catalog</text>
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#d4ae3a" stroke-width="2" opacity="0.35"/>
+  <rect x="36" y="36" width="22" height="22" fill="none" stroke="#d4ae3a" stroke-width="2"/>
+  <rect x="1142" y="572" width="22" height="22" fill="none" stroke="#d4ae3a" stroke-width="2"/>
+  <rect x="0" y="0" width="10" height="630" fill="#d4ae3a"/>
+  <text x="80" y="188" fill="#d4ae3a" font-family="Georgia, serif" font-size="22" letter-spacing="5">INVESTIGATIVE ARCHIVE</text>
+  <text x="80" y="278" fill="#eef3f8" font-family="Georgia, serif" font-size="62" font-weight="700">Scamdace Owens Exposed</text>
+  <text x="80" y="348" fill="#9aa8b8" font-family="Segoe UI, system-ui, sans-serif" font-size="26">Candace Owens claims about Charlie Kirk’s assassination</text>
+  <text x="80" y="388" fill="#9aa8b8" font-family="Segoe UI, system-ui, sans-serif" font-size="26">documented, then dismantled with evidence.</text>
+  <text x="80" y="520" fill="#6b7a8c" font-family="Segoe UI, system-ui, sans-serif" font-size="20">MileHigh Patriot · @America1st5280 · Evidence-tiered catalog</text>
 </svg>
