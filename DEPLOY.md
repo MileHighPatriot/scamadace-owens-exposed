@@ -41,4 +41,4 @@ Open `http://localhost:8080`.
 1. Edit `js/claims-data.js`.
 2. Run `node scripts/generate-pages.js` (writes full `c/<id>.html` permalinks and refreshes `sitemap.xml`).
 3. Run `node scripts/generate-pages.js --check` to confirm the catalog and permalinks still match.
-4. Commit and push. Pages rebuilds automatically. CI also runs `--check` on `main`.
+4. Commit and push. Pages rebuilds automatically.
