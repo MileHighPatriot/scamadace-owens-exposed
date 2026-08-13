@@ -4,22 +4,26 @@ Public static website cataloguing Candace Owens’s claims about the Charlie Kir
 
 **Author:** MileHigh Patriot ([@America1st5280](https://x.com/America1st5280))
 
+**Live:** [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/)
+
 ## Core pages
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Homepage + archive super-index |
+| `index.html` | Homepage: public record, this week’s claims, catalog CTA |
 | `claims.html` | Searchable claim catalog (filters, random claim) |
-| `claim.html?id=…` | Deep-dive: claim → dated primaries → evidence stack |
-| `facts.html` | Public record baseline |
+| `c/<id>.html` | Deep-dive permalink: claim → dated primaries → evidence stack |
+| `facts.html` | Public record baseline + evidence tiers |
 | `earnings.html` | Estimated revenue from Kirk-assassination content |
 | `submit.html` | Submit claims (date, URL, timestamp, quote required fields) |
 | `about.html` | Mission / author |
 | `corrections.html` | Corrections + changelog |
-| `archive.html` | **Archive hub** (all tools) |
+| `archive.html` | **Archive hub** (timeline, people, vault, and the rest) |
 | `feed.xml` | RSS changelog |
 
-## Archive expansion (super-extensive)
+Old links of the form `claim.html?id=exploding-microphone` still redirect to `c/exploding-microphone.html`.
+
+## Archive expansion
 
 | File | Purpose |
 |------|---------|
@@ -55,7 +59,13 @@ Public static website cataloguing Candace Owens’s claims about the Charlie Kir
 - `js/claims-data.js` — 60+ claim objects (primary sources with date/timestamp/quote/archiveUrl + confidence)
 - `js/archive-data.js` — timeline, people, methods, quotes, legal, hearing, glossary, etc.
 - `js/archive.js` — page renderers for archive sections
-- `js/app.js` — shared chrome, helpers, archive URL builder
+- `js/app.js` — shared chrome, helpers, permalink builder
+
+After editing the catalog, regenerate permalinks and the sitemap:
+
+```bash
+node scripts/generate-pages.js
+```
 
 ## Deploy
 
@@ -63,4 +73,8 @@ See [DEPLOY.md](./DEPLOY.md) for free GitHub Pages setup.
 
 ## Local preview
 
-Open `index.html` or run `Open Scamdace Owens Exposed.command` from the parent project folder.
+```bash
+python3 -m http.server 8080
+```
+
+Or open `index.html` / run `Open Scamdace Owens Exposed.command` from the parent project folder.

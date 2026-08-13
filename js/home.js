@@ -13,14 +13,9 @@
     return n + (c.evidence || []).length;
   }, 0);
 
-  var quoteN =
-    window.ARCHIVE_DATA && window.ARCHIVE_DATA.quotes
-      ? window.ARCHIVE_DATA.quotes.length
-      : 0;
-  var mediaN =
-    window.ARCHIVE_DATA && window.ARCHIVE_DATA.media
-      ? window.ARCHIVE_DATA.media.length
-      : 0;
+  function claimHref(id) {
+    return window.SOE && SOE.claimHref ? SOE.claimHref(id) : "c/" + encodeURIComponent(id) + ".html";
+  }
 
   function statCard(kicker, num, label) {
     return (
@@ -40,10 +35,7 @@
     stats.innerHTML =
       statCard("Catalog", data.length, "Claims documented") +
       statCard("Verdicts", falseN, "False or contradicted") +
-      statCard("Evidence", evidenceN, "Items stacked across claims") +
-      (quoteN ? statCard("Quotes", quoteN, "Timestamped primary lines") : "") +
-      (mediaN ? statCard("Vault", mediaN, "Primary source rows") : "") +
-      statCard("Archive", "25+", "Tools, trackers, and indexes");
+      statCard("Evidence", evidenceN, "Items stacked across claims");
   }
 
   var latestIds = [
@@ -63,8 +55,8 @@
     wave.innerHTML = latest
       .map(function (c) {
         return (
-          '<a class="wave-card" href="claim.html?id=' +
-          encodeURIComponent(c.id) +
+          '<a class="wave-card" href="' +
+          claimHref(c.id) +
           '">' +
           '<div class="claim-card-top">' +
           SOE.verdictHtml(c.verdict) +
@@ -86,11 +78,7 @@
       "exploding-microphone",
       "robinson-framed",
       "no-rooftop-shot",
-      "maroon-shirts",
       "israel-mossad",
-      "tpusa-inside-job",
-      "erika-theories",
-      "dna-indefensible",
     ];
     var picks = coreOrder
       .map(function (id) {
@@ -107,8 +95,8 @@
     featured.innerHTML = picks
       .map(function (c) {
         return (
-          '<a class="claim-row" href="claim.html?id=' +
-          encodeURIComponent(c.id) +
+          '<a class="claim-row" href="' +
+          claimHref(c.id) +
           '">' +
           '<div class="claim-row-body" style="padding-left:0">' +
           '<div class="claim-card-top">' +

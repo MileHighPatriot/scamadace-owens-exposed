@@ -33,9 +33,11 @@ Open `http://localhost:8080`.
 ## After deploy checklist
 
 - Replace the placeholder in the Combat Toolkit master reply with your real GitHub Pages URL.
-- Share `claims.html` and a flagship claim (e.g. `claim.html?id=exploding-microphone`) on X.
+- Share `claims.html` and a flagship claim (e.g. `c/exploding-microphone.html`) on X.
 - Pin an @America1st5280 post linking the homepage.
 
 ## Updating claims
 
-Edit `js/claims-data.js`, commit, push. Pages rebuilds automatically.
+1. Edit `js/claims-data.js`.
+2. Run `node scripts/generate-pages.js` (writes `c/<id>.html` permalinks and refreshes `sitemap.xml`).
+3. Commit and push. Pages rebuilds automatically.
