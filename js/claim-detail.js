@@ -3,7 +3,7 @@
   var root = document.getElementById("claim-root");
   if (!root || !window.CLAIMS_DATA) return;
 
-  var id = new URLSearchParams(location.search).get("id");
+  var id = SOE.currentClaimId ? SOE.currentClaimId() : new URLSearchParams(location.search).get("id");
   var claim = SOE.getClaim(id);
 
   if (!claim) {
@@ -12,7 +12,7 @@
       title: document.title,
       description:
         "That claim ID was not found in the Scamdace Owens Exposed catalog.",
-      url: SOE.absoluteUrl("claim.html" + (id ? "?id=" + encodeURIComponent(id) : "")),
+      url: SOE.absoluteUrl(id ? SOE.claimPath(id) : "claims.html"),
     });
     root.innerHTML =
       '<div class="empty-state empty-state-rich">' +
@@ -38,7 +38,7 @@
   SOE.applySocialMeta({
     title: pageTitle,
     description: pageDesc,
-    url: SOE.absoluteUrl("claim.html?id=" + encodeURIComponent(claim.id)),
+    url: SOE.absoluteUrl(SOE.claimPath(claim.id)),
     type: "article",
   });
 
@@ -149,8 +149,8 @@
       var r = SOE.getClaim(rid);
       if (!r) return "";
       return (
-        '<a class="claim-card" href="claim.html?id=' +
-        encodeURIComponent(r.id) +
+        '<a class="claim-card" href="' +
+        SOE.claimHref(r.id) +
         '"><div class="claim-card-top">' +
         SOE.verdictHtml(r.verdict) +
         "</div><h2>" +
@@ -183,9 +183,7 @@
     tocItems += '<li><a href="#related">Related claims</a></li>';
   }
 
-  var shareUrl = SOE.absoluteUrl(
-    "claim.html?id=" + encodeURIComponent(claim.id)
-  );
+  var shareUrl = SOE.absoluteUrl(SOE.claimPath(claim.id));
   var tweetText =
     claim.shortTitle +
     " — " +
