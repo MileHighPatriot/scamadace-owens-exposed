@@ -27,10 +27,140 @@ function loadWindow() {
   var sandbox = { window: {}, console: console };
   vm.runInNewContext(fs.readFileSync(path.join(ROOT, "js/claims-data.js"), "utf8"), sandbox);
   vm.runInNewContext(fs.readFileSync(path.join(ROOT, "js/claim-render.js"), "utf8"), sandbox);
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, "js/archive-data.js"), "utf8"), sandbox);
   if (!sandbox.window.SOE_RENDER) {
     throw new Error("js/claim-render.js did not attach window.SOE_RENDER");
   }
   return sandbox.window;
+}
+
+var ARCHIVE_PAGES = [
+  "archive",
+  "timeline",
+  "episodes",
+  "people",
+  "methods",
+  "pivots",
+  "contradictions",
+  "quotes",
+  "vault",
+  "compare",
+  "hearing",
+  "legal",
+  "exhibits",
+  "media",
+  "glossary",
+  "faq",
+  "journalists",
+  "family",
+  "graph",
+  "map",
+  "search",
+  "report",
+  "press-kit",
+  "research",
+  "grief-economy",
+  "burdens",
+  "falsify",
+];
+
+function renderArchiveInner(page, loaded, site) {
+  var captured = { html: "" };
+  var fakeRoot = {
+    getAttribute: function () {
+      return null;
+    },
+    setAttribute: function () {},
+    set innerHTML(v) {
+      captured.html = v;
+    },
+    get innerHTML() {
+      return captured.html;
+    },
+  };
+  var sandbox = {
+    window: loaded,
+    console: console,
+    location: { hash: "", href: "", pathname: "/" + page + ".html" },
+    setTimeout: function () {},
+    document: {
+      getElementById: function (id) {
+        return id === "page-root" ? fakeRoot : null;
+      },
+      body: {
+        getAttribute: function (name) {
+          return name === "data-page" ? page : "";
+        },
+      },
+      querySelectorAll: function () {
+        return [];
+      },
+    },
+    SOE: {
+      SITE_ORIGIN: site.origin,
+      escapeHtml: loaded.SOE_RENDER.escapeHtml,
+      verdictHtml: function (verdict) {
+        var meta = (loaded.VERDICT_META || {})[verdict] || {
+          label: verdict,
+          className: "verdict-unsupported",
+        };
+        return (
+          '<span class="verdict ' +
+          meta.className +
+          '">' +
+          loaded.SOE_RENDER.escapeHtml(meta.label) +
+          "</span>"
+        );
+      },
+      claimHref: function (id) {
+        return "c/" + encodeURIComponent(id) + ".html";
+      },
+      claimPath: function (id) {
+        return "c/" + encodeURIComponent(id) + ".html";
+      },
+    },
+  };
+  sandbox.window.SOE = sandbox.SOE;
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, "js/archive.js"), "utf8"), sandbox);
+  if (!captured.html || captured.html.indexOf("Loading archive") !== -1) {
+    throw new Error("Archive renderer failed for " + page);
+  }
+  return captured.html;
+}
+
+function bakeArchiveFile(page, loaded, site) {
+  var rel = page + ".html";
+  var src = fs.readFileSync(path.join(ROOT, rel), "utf8");
+  var inner = renderArchiveInner(page, loaded, site);
+  var header = loaded.SOE_RENDER.renderHeader("", page === "archive" ? "archive.html" : page + ".html");
+  var footer = loaded.SOE_RENDER.renderFooter("");
+  src = src.replace(/>Record<\/a>/g, ">Facts</a>");
+  src = src.replace(
+    /<div id="site-header-mount">[\s\S]*?<\/div>\s*<main/,
+    '<div id="site-header-mount">\n    ' + header + "\n  </div>\n\n  <main"
+  );
+  src = src.replace(
+    /<div id="site-footer-mount">[\s\S]*?<\/div>\s*<script/,
+    '<div id="site-footer-mount">\n    ' + footer + "\n  </div>\n  <script"
+  );
+  src = src.replace(
+    /<div id="page-root"[^>]*>[\s\S]*?<\/div>\s*<\/main>/,
+    '<div id="page-root" class="archive-root" data-static-archive="' +
+      page +
+      '" aria-live="polite">\n' +
+      inner +
+      "\n    </div>\n  </main>"
+  );
+  if (src.indexOf("js/claim-render.js") === -1) {
+    src = src.replace(
+      '<script src="js/claims-data.js"></script>',
+      '<script src="js/claims-data.js"></script>\n  <script src="js/claim-render.js"></script>'
+    );
+  }
+  if (src.indexOf("Loading archive module") !== -1) {
+    throw new Error("Failed to bake " + rel);
+  }
+  return src;
 }
 
 function esc(s) {
@@ -287,6 +417,9 @@ function expectedFiles(loaded, site) {
   });
   files["c/index.html"] = catalogIndex(site);
   files["sitemap.xml"] = buildSitemap(loaded.CLAIMS_DATA, site);
+  ARCHIVE_PAGES.forEach(function (page) {
+    files[page + ".html"] = bakeArchiveFile(page, loaded, site);
+  });
   return files;
 }
 
@@ -354,7 +487,13 @@ function main() {
     fs.writeFileSync(path.join(ROOT, rel), expected[rel]);
   });
 
-  console.log("Wrote " + claims.length + " claim pages to c/ and refreshed sitemap.xml");
+  console.log(
+    "Wrote " +
+      claims.length +
+      " claim pages, " +
+      ARCHIVE_PAGES.length +
+      " archive pages, and sitemap.xml"
+  );
 }
 
 main();
