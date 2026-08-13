@@ -118,7 +118,7 @@
     ["index.html", "Home"],
     ["claims.html", "Claims"],
     ["archive.html", "Archive"],
-    ["facts.html", "Record"],
+    ["facts.html", "Facts"],
     ["search.html", "Search"],
     ["about.html", "About"],
   ];

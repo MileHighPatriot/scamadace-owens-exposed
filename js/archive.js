@@ -5,6 +5,7 @@
   var root = document.getElementById("page-root");
   if (!root) return;
   var page = document.body.getAttribute("data-page") || "";
+  var alreadyStatic = root.getAttribute("data-static-archive") === page;
   var A = window.ARCHIVE_DATA || {};
   var claims = window.CLAIMS_DATA || [];
   var byId = {};
@@ -209,17 +210,6 @@
             "</article>";
         });
       html += "</div>";
-      setTimeout(function () {
-        var input = document.getElementById("ep-search");
-        if (!input) return;
-        input.addEventListener("input", function () {
-          var q = input.value.toLowerCase().trim();
-          document.querySelectorAll("#ep-list .stack-card").forEach(function (el) {
-            var t = el.getAttribute("data-text") || "";
-            el.hidden = q && t.indexOf(q) === -1;
-          });
-        });
-      }, 0);
       return html;
     },
 
@@ -263,21 +253,6 @@
         html += "</article>";
       });
       html += "</div>";
-      setTimeout(function () {
-        var input = document.getElementById("ppl-search");
-        if (!input) return;
-        input.addEventListener("input", function () {
-          var q = input.value.toLowerCase().trim();
-          document.querySelectorAll("#ppl-list .stack-card").forEach(function (el) {
-            var t = el.getAttribute("data-text") || "";
-            el.hidden = q && t.indexOf(q) === -1;
-          });
-        });
-        if (hash) {
-          var el = document.getElementById(hash);
-          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 0);
       return html;
     },
 
@@ -373,17 +348,6 @@
           "</p></article>";
       });
       html += "</div>";
-      setTimeout(function () {
-        var input = document.getElementById("q-search");
-        if (!input) return;
-        input.addEventListener("input", function () {
-          var qq = input.value.toLowerCase().trim();
-          document.querySelectorAll("#q-list .stack-card").forEach(function (el) {
-            var t = el.getAttribute("data-text") || "";
-            el.hidden = qq && t.indexOf(qq) === -1;
-          });
-        });
-      }, 0);
       return html;
     },
 
@@ -423,21 +387,6 @@
           '" target="_blank" rel="noopener">Archive capture ↗</a></p></article>';
       });
       html += "</div>";
-      setTimeout(function () {
-        function apply() {
-          var q = (document.getElementById("v-search").value || "").toLowerCase();
-          var k = document.getElementById("v-kind").value;
-          document.querySelectorAll("#v-list .stack-card").forEach(function (el) {
-            var t = el.getAttribute("data-text") || "";
-            var kind = el.getAttribute("data-kind");
-            var okK = k === "all" || kind === k;
-            var okQ = !q || t.indexOf(q) !== -1;
-            el.hidden = !(okK && okQ);
-          });
-        }
-        document.getElementById("v-search").addEventListener("input", apply);
-        document.getElementById("v-kind").addEventListener("change", apply);
-      }, 0);
       return html;
     },
 
@@ -557,17 +506,6 @@
           "</dd></div>";
       });
       html += "</dl>";
-      setTimeout(function () {
-        var input = document.getElementById("g-search");
-        if (!input) return;
-        input.addEventListener("input", function () {
-          var q = input.value.toLowerCase().trim();
-          document.querySelectorAll("#g-list .glossary-item").forEach(function (el) {
-            var t = el.getAttribute("data-text") || "";
-            el.hidden = q && t.indexOf(q) === -1;
-          });
-        });
-      }, 0);
       return html;
     },
 
@@ -741,102 +679,8 @@
       var html =
         toolbar(
           '<input class="search-input" id="site-search" type="search" placeholder="Search claims, quotes, people, glossary…" autofocus />'
-        ) + '<div id="site-search-results" class="stack-list"></div>';
-      setTimeout(function () {
-        var input = document.getElementById("site-search");
-        var out = document.getElementById("site-search-results");
-        function run() {
-          var q = (input.value || "").toLowerCase().trim();
-          if (q.length < 2) {
-            out.innerHTML =
-              '<p class="section-sub">Type at least 2 characters. Searches claim titles/summaries, quotes, people, glossary.</p>';
-            return;
-          }
-          var hits = [];
-          claims.forEach(function (c) {
-            var blob = (
-              c.title +
-              " " +
-              c.shortTitle +
-              " " +
-              c.summary +
-              " " +
-              c.claimDetail +
-              " " +
-              c.id
-            ).toLowerCase();
-            if (blob.indexOf(q) !== -1) {
-              hits.push({
-                type: "Claim",
-                title: c.shortTitle,
-                body: c.summary,
-                href: claimHref(c.id),
-                meta: c.verdict,
-              });
-            }
-          });
-          (A.quotes || []).forEach(function (qq) {
-            if ((qq.quote + " " + qq.claimTitle).toLowerCase().indexOf(q) !== -1) {
-              hits.push({
-                type: "Quote",
-                title: qq.claimTitle,
-                body: qq.quote,
-                href: claimHref(qq.claimId),
-                meta: qq.date,
-              });
-            }
-          });
-          (A.people || []).forEach(function (p) {
-            if (
-              (p.name + " " + p.summary + " " + p.owensAngle)
-                .toLowerCase()
-                .indexOf(q) !== -1
-            ) {
-              hits.push({
-                type: "Person",
-                title: p.name,
-                body: p.summary,
-                href: "people.html#" + encodeURIComponent(p.id),
-                meta: p.role,
-              });
-            }
-          });
-          (A.glossary || []).forEach(function (g) {
-            if ((g.term + " " + g.def).toLowerCase().indexOf(q) !== -1) {
-              hits.push({
-                type: "Glossary",
-                title: g.term,
-                body: g.def,
-                href: "glossary.html",
-                meta: "term",
-              });
-            }
-          });
-          if (!hits.length) {
-            out.innerHTML = empty("No hits for “" + q + "”");
-            return;
-          }
-          out.innerHTML = hits
-            .slice(0, 80)
-            .map(function (h) {
-              return (
-                '<article class="stack-card"><div class="stack-meta">' +
-                esc(h.type) +
-                (h.meta ? " · " + esc(h.meta) : "") +
-                '</div><h3><a href="' +
-                esc(h.href) +
-                '">' +
-                esc(h.title) +
-                "</a></h3><p>" +
-                esc(h.body).slice(0, 280) +
-                "</p></article>"
-              );
-            })
-            .join("");
-        }
-        input.addEventListener("input", run);
-        run();
-      }, 0);
+        ) +
+        '<div id="site-search-results" class="stack-list"><p class="section-sub">Type at least 2 characters. Searches claim titles/summaries, quotes, people, glossary.</p></div>';
       return html;
     },
 
@@ -889,13 +733,6 @@
         });
       html +=
         "<h3>How to use</h3><ol><li>Read facts.html baseline</li><li>Open individual claim stacks</li><li>Verify primaries via vault.html archives</li></ol></article>";
-      setTimeout(function () {
-        var btn = document.getElementById("print-report");
-        if (btn)
-          btn.addEventListener("click", function () {
-            window.print();
-          });
-      }, 0);
       return html;
     },
 
@@ -984,7 +821,150 @@
     },
   };
 
-  // Alias media already set
+  function bindArchiveEnhancements() {
+    function filterCards(inputId, listSel) {
+      var input = document.getElementById(inputId);
+      if (!input) return;
+      input.addEventListener("input", function () {
+        var q = input.value.toLowerCase().trim();
+        document.querySelectorAll(listSel).forEach(function (el) {
+          var t = el.getAttribute("data-text") || "";
+          el.hidden = q && t.indexOf(q) === -1;
+        });
+      });
+    }
+    filterCards("ep-search", "#ep-list .stack-card");
+    filterCards("ppl-search", "#ppl-list .stack-card");
+    filterCards("q-search", "#q-list .stack-card");
+    filterCards("g-search", "#g-list .glossary-item");
+
+    var vSearch = document.getElementById("v-search");
+    var vKind = document.getElementById("v-kind");
+    if (vSearch && vKind) {
+      function applyVault() {
+        var q = (vSearch.value || "").toLowerCase();
+        var k = vKind.value;
+        document.querySelectorAll("#v-list .stack-card").forEach(function (el) {
+          var t = el.getAttribute("data-text") || "";
+          var kind = el.getAttribute("data-kind");
+          el.hidden = !((k === "all" || kind === k) && (!q || t.indexOf(q) !== -1));
+        });
+      }
+      vSearch.addEventListener("input", applyVault);
+      vKind.addEventListener("change", applyVault);
+    }
+
+    var hash = (location.hash || "").replace(/^#/, "");
+    if (hash) {
+      var el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    var printBtn = document.getElementById("print-report");
+    if (printBtn) {
+      printBtn.addEventListener("click", function () {
+        window.print();
+      });
+    }
+
+    var siteSearch = document.getElementById("site-search");
+    var siteOut = document.getElementById("site-search-results");
+    if (siteSearch && siteOut) {
+      function runSearch() {
+        var q = (siteSearch.value || "").toLowerCase().trim();
+        if (q.length < 2) {
+          siteOut.innerHTML =
+            '<p class="section-sub">Type at least 2 characters. Searches claim titles/summaries, quotes, people, glossary.</p>';
+          return;
+        }
+        var hits = [];
+        claims.forEach(function (c) {
+          var blob = (
+            c.title +
+            " " +
+            c.shortTitle +
+            " " +
+            c.summary +
+            " " +
+            c.claimDetail +
+            " " +
+            c.id
+          ).toLowerCase();
+          if (blob.indexOf(q) !== -1) {
+            hits.push({
+              type: "Claim",
+              title: c.shortTitle,
+              body: c.summary,
+              href: claimHref(c.id),
+              meta: c.verdict,
+            });
+          }
+        });
+        (A.quotes || []).forEach(function (qq) {
+          if ((qq.quote + " " + qq.claimTitle).toLowerCase().indexOf(q) !== -1) {
+            hits.push({
+              type: "Quote",
+              title: qq.claimTitle,
+              body: qq.quote,
+              href: claimHref(qq.claimId),
+              meta: qq.date,
+            });
+          }
+        });
+        (A.people || []).forEach(function (p) {
+          if ((p.name + " " + p.summary + " " + p.owensAngle).toLowerCase().indexOf(q) !== -1) {
+            hits.push({
+              type: "Person",
+              title: p.name,
+              body: p.summary,
+              href: "people.html#" + encodeURIComponent(p.id),
+              meta: p.role,
+            });
+          }
+        });
+        (A.glossary || []).forEach(function (g) {
+          if ((g.term + " " + g.def).toLowerCase().indexOf(q) !== -1) {
+            hits.push({
+              type: "Glossary",
+              title: g.term,
+              body: g.def,
+              href: "glossary.html",
+              meta: "term",
+            });
+          }
+        });
+        if (!hits.length) {
+          siteOut.innerHTML = empty("No hits for “" + q + "”");
+          return;
+        }
+        siteOut.innerHTML = hits
+          .slice(0, 80)
+          .map(function (h) {
+            return (
+              '<article class="stack-card"><div class="stack-meta">' +
+              esc(h.type) +
+              (h.meta ? " · " + esc(h.meta) : "") +
+              '</div><h3><a href="' +
+              esc(h.href) +
+              '">' +
+              esc(h.title) +
+              "</a></h3><p>" +
+              esc(h.body).slice(0, 280) +
+              "</p></article>"
+            );
+          })
+          .join("");
+      }
+      siteSearch.addEventListener("input", runSearch);
+      runSearch();
+    }
+  }
+
+  if (alreadyStatic) {
+    bindArchiveEnhancements();
+    return;
+  }
+
   var fn = renderers[page];
   if (!fn) {
     root.innerHTML = empty("Unknown archive page: " + page);
@@ -992,6 +972,7 @@
   }
   try {
     root.innerHTML = fn();
+    bindArchiveEnhancements();
   } catch (e) {
     root.innerHTML =
       '<div class="empty-state">Render error on this page. Check console.</div>';
