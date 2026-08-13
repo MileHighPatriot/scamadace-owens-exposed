@@ -50,7 +50,13 @@
 
   // —— Active nav (claim detail counts as catalog) ——
   var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  if (path === "claim.html") path = "claims.html";
+  if (
+    path === "claim.html" ||
+    document.body.getAttribute("data-claim-id") ||
+    /\/c\//.test(location.pathname || "")
+  ) {
+    path = "claims.html";
+  }
   qsa(".nav-links a").forEach(function (a) {
     var href = (a.getAttribute("href") || "").split("/").pop().toLowerCase();
     if (href === path || (path === "" && href === "index.html")) {
@@ -112,6 +118,26 @@
   window.SOE = {
     SITE_ORIGIN: SITE_ORIGIN,
     SITE_UPDATED: SITE_UPDATED,
+    OG_IMAGE: SITE_ORIGIN.replace(/\/$/, "") + "/assets/og-image.png",
+    rootPrefix: /\/c\/[^/]+\.html$/i.test(location.pathname || "") ? "../" : "",
+
+    claimPath: function (id) {
+      return "c/" + encodeURIComponent(id) + ".html";
+    },
+
+    claimHref: function (id) {
+      return (this.rootPrefix || "") + this.claimPath(id);
+    },
+
+    currentClaimId: function () {
+      var q = new URLSearchParams(location.search).get("id");
+      if (q) return q;
+      var attr = document.body.getAttribute("data-claim-id");
+      if (attr) return attr;
+      var m = (location.pathname || "").match(/\/c\/([^/]+)\.html$/i);
+      if (m) return decodeURIComponent(m[1]);
+      return null;
+    },
 
     getClaim: function (id) {
       return (window.CLAIMS_DATA || []).find(function (c) {
@@ -187,19 +213,19 @@
       return labels[tier] || "Evidence";
     },
 
-    /** Absolute URL for the current page (or path relative to site root). */
+    /** Absolute URL for a site-root path (e.g. c/foo.html) or the current page. */
     absoluteUrl: function (pathOrUrl) {
       if (pathOrUrl && /^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
-      try {
-        if (location.protocol === "http:" || location.protocol === "https:") {
-          return pathOrUrl
-            ? new URL(pathOrUrl, location.href).href
-            : location.href.split("#")[0];
+      var origin = SITE_ORIGIN.replace(/\/$/, "");
+      if (!pathOrUrl) {
+        var file = (location.pathname.split("/").pop() || "index.html");
+        if (/\/c\/[^/]+\.html$/i.test(location.pathname || "")) {
+          return origin + "/c/" + file;
         }
-      } catch (e) {}
-      var base = SITE_ORIGIN.replace(/\/$/, "");
-      if (!pathOrUrl) return base + "/";
-      return base + "/" + String(pathOrUrl).replace(/^\//, "");
+        if (!file || file === "index.html") return origin + "/";
+        return origin + "/" + file;
+      }
+      return origin + "/" + String(pathOrUrl).replace(/^\//, "");
     },
 
     /** Ensure / update a <meta> or <link> head tag. */
@@ -236,9 +262,7 @@
       var desc = opts.description || "";
       var url = opts.url || SOE.absoluteUrl();
       var type = opts.type || "website";
-      var image =
-        opts.image ||
-        SITE_ORIGIN.replace(/\/$/, "") + "/assets/og-image.svg";
+      var image = opts.image || SOE.OG_IMAGE;
       if (desc) SOE.setHeadMeta("name", "description", desc);
       SOE.setHeadMeta("property", "og:title", title);
       SOE.setHeadMeta("property", "og:description", desc);
@@ -246,6 +270,9 @@
       SOE.setHeadMeta("property", "og:type", type);
       SOE.setHeadMeta("property", "og:site_name", "Scamdace Owens Exposed");
       SOE.setHeadMeta("property", "og:image", image);
+      SOE.setHeadMeta("property", "og:image:type", "image/png");
+      SOE.setHeadMeta("property", "og:image:width", "1200");
+      SOE.setHeadMeta("property", "og:image:height", "630");
       SOE.setHeadMeta("name", "twitter:card", "summary_large_image");
       SOE.setHeadMeta("name", "twitter:title", title);
       SOE.setHeadMeta("name", "twitter:description", desc);
@@ -279,29 +306,34 @@
     mountChrome: function () {
       var headerMount = qs("#site-header-mount");
       var footerMount = qs("#site-footer-mount");
+      var prefix = SOE.rootPrefix || "";
       var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-      if (path === "claim.html") path = "claims.html";
+      if (
+        path === "claim.html" ||
+        document.body.getAttribute("data-claim-id") ||
+        /\/c\//.test(location.pathname || "")
+      ) {
+        path = "claims.html";
+      }
 
-      function navLink(href, label, extraClass) {
+      var archivePages =
+        "timeline episodes people methods pivots contradictions quotes vault compare hearing legal exhibits media glossary faq journalists family graph map report press-kit research grief-economy burdens falsify archive";
+      var isArchiveTool =
+        archivePages.split(" ").indexOf(path.replace(".html", "")) !== -1;
+
+      function navLink(href, label) {
         var file = href.split("/").pop().toLowerCase();
         var active =
           file === path ||
-          (path === "" && file === "index.html") ||
-          (path === "claims.html" && file === "claims.html");
-        // archive pages highlight Archive hub
-        var archivePages =
-          "timeline episodes people methods pivots contradictions quotes vault compare hearing legal exhibits media glossary faq journalists family graph map search report press-kit research grief-economy burdens falsify archive";
-        if (
-          archivePages.split(" ").indexOf(path.replace(".html", "")) !== -1 &&
-          file === "archive.html"
-        ) {
-          active = true;
-        }
+          (path === "" && file === "index.html");
+        if (isArchiveTool && file === "archive.html") active = true;
+        if (path === "facts.html" && file === "facts.html") active = true;
         return (
           '<a href="' +
+          prefix +
           href +
           '"' +
-          (active ? ' class="active' + (extraClass ? " " + extraClass : "") + '"' : extraClass ? ' class="' + extraClass + '"' : "") +
+          (active ? ' class="active"' : "") +
           (active ? ' aria-current="page"' : "") +
           ">" +
           label +
@@ -310,38 +342,39 @@
       }
 
       if (headerMount) {
+        var sub = isArchiveTool
+          ? '<div class="nav-sub" aria-label="Archive sections">' +
+            '<a href="' + prefix + 'episodes.html">Episodes</a>' +
+            '<a href="' + prefix + 'methods.html">Methods</a>' +
+            '<a href="' + prefix + 'contradictions.html">Contradictions</a>' +
+            '<a href="' + prefix + 'quotes.html">Quotes</a>' +
+            '<a href="' + prefix + 'vault.html">Vault</a>' +
+            '<a href="' + prefix + 'hearing.html">Hearing</a>' +
+            '<a href="' + prefix + 'legal.html">Legal</a>' +
+            '<a href="' + prefix + 'graph.html">Graph</a>' +
+            '<a href="' + prefix + 'report.html">Report</a>' +
+            '<a href="' + prefix + 'journalists.html">Journalists</a>' +
+            '<a href="' + prefix + 'family.html">Families</a>' +
+            '<a href="' + prefix + 'feed.xml">RSS</a>' +
+            "</div>"
+          : "";
         headerMount.innerHTML =
           '<header class="site-header">' +
           '<div class="nav-inner">' +
-          '<a class="brand" href="index.html"><strong>Scamdace Owens Exposed</strong><span>Kirk assassination claim archive</span></a>' +
+          '<a class="brand" href="' +
+          prefix +
+          'index.html"><strong>Scamdace Owens Exposed</strong><span>Kirk assassination claim archive</span></a>' +
           '<button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>' +
           '<nav class="nav-links" id="site-nav" aria-label="Primary">' +
           navLink("index.html", "Home") +
           navLink("claims.html", "Claims") +
           navLink("archive.html", "Archive") +
-          navLink("timeline.html", "Timeline") +
-          navLink("people.html", "People") +
-          navLink("facts.html", "Public record") +
+          navLink("facts.html", "Record") +
           navLink("search.html", "Search") +
-          navLink("earnings.html", "Earnings") +
-          navLink("submit.html", "Submit") +
           navLink("about.html", "About") +
           "</nav></div>" +
-          '<div class="nav-sub" aria-label="Archive sections">' +
-          '<a href="episodes.html">Episodes</a>' +
-          '<a href="methods.html">Methods</a>' +
-          '<a href="contradictions.html">Contradictions</a>' +
-          '<a href="quotes.html">Quotes</a>' +
-          '<a href="vault.html">Vault</a>' +
-          '<a href="hearing.html">Hearing</a>' +
-          '<a href="legal.html">Legal</a>' +
-          '<a href="graph.html">Graph</a>' +
-          '<a href="report.html">Report</a>' +
-          '<a href="journalists.html">Journalists</a>' +
-          '<a href="family.html">Families</a>' +
-          '<a href="feed.xml">RSS</a>' +
-          "</div></header>";
-        // re-bind mobile nav on injected header
+          sub +
+          "</header>";
         bindNavToggle();
         updateHeaderState();
       }
@@ -352,15 +385,17 @@
           "<div><strong>Scamdace Owens Exposed</strong><br/>By MileHigh Patriot · " +
           '<a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a></div>' +
           '<nav class="footer-links" aria-label="Footer">' +
-          '<a href="claims.html">Claims</a>' +
-          '<a href="archive.html">Archive hub</a>' +
-          '<a href="facts.html">Public record</a>' +
-          '<a href="search.html">Search</a>' +
-          '<a href="earnings.html">Earnings</a>' +
-          '<a href="submit.html">Submit</a>' +
-          '<a href="corrections.html">Corrections</a>' +
-          '<a href="about.html">About</a>' +
-          '<a href="feed.xml">RSS</a>' +
+          '<a href="' + prefix + 'claims.html">Claims</a>' +
+          '<a href="' + prefix + 'archive.html">Archive hub</a>' +
+          '<a href="' + prefix + 'facts.html">Public record</a>' +
+          '<a href="' + prefix + 'timeline.html">Timeline</a>' +
+          '<a href="' + prefix + 'people.html">People</a>' +
+          '<a href="' + prefix + 'search.html">Search</a>' +
+          '<a href="' + prefix + 'earnings.html">Earnings</a>' +
+          '<a href="' + prefix + 'submit.html">Submit</a>' +
+          '<a href="' + prefix + 'corrections.html">Corrections</a>' +
+          '<a href="' + prefix + 'about.html">About</a>' +
+          '<a href="' + prefix + 'feed.xml">RSS</a>' +
           "</nav>" +
           '<p class="footer-meta">Catalog baseline: August 12, 2026 · Static archive · No tracking required</p>' +
           "</div></footer>";

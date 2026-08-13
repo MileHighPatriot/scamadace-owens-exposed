@@ -129,7 +129,7 @@
       var pool = window.CLAIMS_DATA;
       if (!pool.length) return;
       var c = pool[Math.floor(Math.random() * pool.length)];
-      location.href = "claim.html?id=" + encodeURIComponent(c.id);
+      location.href = SOE.claimHref(c.id);
     });
   }
 
@@ -157,8 +157,8 @@
       .map(function (c, idx) {
         var n = (c.evidence || []).length;
         return (
-          '<a class="claim-row" href="claim.html?id=' +
-          encodeURIComponent(c.id) +
+          '<a class="claim-row" href="' +
+          SOE.claimHref(c.id) +
           '">' +
           '<div class="claim-row-num" aria-hidden="true">' +
           (idx + 1) +

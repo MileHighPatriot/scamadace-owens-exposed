@@ -15,12 +15,17 @@
   function esc(s) {
     return SOE.escapeHtml ? SOE.escapeHtml(String(s == null ? "" : s)) : String(s == null ? "" : s);
   }
+  function claimHref(id) {
+    return window.SOE && SOE.claimHref
+      ? SOE.claimHref(id)
+      : "c/" + encodeURIComponent(id) + ".html";
+  }
   function claimLink(id) {
     var c = byId[id];
     if (!c) return '<code>' + esc(id) + "</code>";
     return (
-      '<a href="claim.html?id=' +
-      encodeURIComponent(id) +
+      '<a href="' +
+      claimHref(id) +
       '">' +
       esc(c.shortTitle || id) +
       "</a>"
@@ -591,8 +596,8 @@
           (i + 1) +
           " · " +
           verdict(c) +
-          "</div><h3><a href=\"claim.html?id=" +
-          encodeURIComponent(id) +
+          '</div><h3><a href="' +
+          claimHref(id) +
           '">' +
           esc(c.shortTitle) +
           "</a></h3><p>" +
@@ -662,8 +667,8 @@
           (deg[c.id] || 0) +
           " links · " +
           verdict(c) +
-          '</div><h3><a href="claim.html?id=' +
-          encodeURIComponent(c.id) +
+          '</div><h3><a href="' +
+          claimHref(c.id) +
           '">' +
           esc(c.shortTitle) +
           "</a></h3><p class=\"timeline-links\">" +
@@ -765,7 +770,7 @@
                 type: "Claim",
                 title: c.shortTitle,
                 body: c.summary,
-                href: "claim.html?id=" + encodeURIComponent(c.id),
+                href: claimHref(c.id),
                 meta: c.verdict,
               });
             }
@@ -776,7 +781,7 @@
                 type: "Quote",
                 title: qq.claimTitle,
                 body: qq.quote,
-                href: "claim.html?id=" + encodeURIComponent(qq.claimId),
+                href: claimHref(qq.claimId),
                 meta: qq.date,
               });
             }
@@ -867,8 +872,8 @@
             esc(c.dateRange) +
             "</em></p><p>" +
             esc(c.summary) +
-            "</p><p>URL: claim.html?id=" +
-            esc(c.id) +
+            "</p><p>URL: " +
+            esc((SOE.SITE_ORIGIN || "") + "/" + (SOE.claimPath ? SOE.claimPath(c.id) : "c/" + c.id + ".html")) +
             "</p>";
           if (c.primarySources && c.primarySources[0]) {
             var s = c.primarySources[0];
@@ -902,7 +907,7 @@
         esc(SOE.SITE_ORIGIN) +
         '/</code></p></article>' +
         '<article class="stack-card"><h3>Key entry points</h3><p class="timeline-links"><a href="facts.html">Public record</a> · <a href="claims.html">Claim catalog</a> · <a href="journalists.html">Journalist pack</a> · <a href="archive.html">Archive hub</a> · <a href="feed.xml">RSS</a></p></article>' +
-        '<article class="stack-card"><h3>Assets</h3><p><a href="assets/og-image.svg">OG image</a> · <a href="assets/favicon.svg">Favicon</a></p></article>' +
+        '<article class="stack-card"><h3>Assets</h3><p><a href="assets/og-image.png">OG image (PNG)</a> · <a href="assets/og-image.svg">SVG source</a> · <a href="assets/favicon.svg">Favicon</a></p></article>' +
         '<article class="stack-card"><h3>Contact</h3><p><a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a> · <a href="submit.html">Submit claims</a> · <a href="corrections.html">Corrections</a></p></article>' +
         "</div>"
       );

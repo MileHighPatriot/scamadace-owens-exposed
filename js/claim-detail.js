@@ -3,7 +3,17 @@
   var root = document.getElementById("claim-root");
   if (!root || !window.CLAIMS_DATA) return;
 
-  var id = new URLSearchParams(location.search).get("id");
+  var prefix = SOE.rootPrefix || "";
+  function pageHref(file) {
+    return prefix + file;
+  }
+  function hrefFor(url) {
+    if (!url) return "#";
+    if (/^https?:\/\//i.test(url) || url.charAt(0) === "#" || url.charAt(0) === "/") return url;
+    return prefix + url;
+  }
+
+  var id = SOE.currentClaimId ? SOE.currentClaimId() : new URLSearchParams(location.search).get("id");
   var claim = SOE.getClaim(id);
 
   if (!claim) {
@@ -12,7 +22,7 @@
       title: document.title,
       description:
         "That claim ID was not found in the Scamdace Owens Exposed catalog.",
-      url: SOE.absoluteUrl("claim.html" + (id ? "?id=" + encodeURIComponent(id) : "")),
+      url: SOE.absoluteUrl(id ? SOE.claimPath(id) : "claims.html"),
     });
     root.innerHTML =
       '<div class="empty-state empty-state-rich">' +
@@ -23,8 +33,8 @@
         : " — missing <code class=\"inline-code\">?id=</code> parameter") +
       ".</p>" +
       '<div class="btn-row" style="justify-content:center">' +
-      '<a class="btn btn-primary" href="claims.html">Browse all claims</a>' +
-      '<a class="btn btn-secondary" href="index.html">Home</a>' +
+      '<a class="btn btn-primary" href="' + pageHref("claims.html") + '">Browse all claims</a>' +
+      '<a class="btn btn-secondary" href="' + pageHref("index.html") + '">Home</a>' +
       "</div></div>";
     return;
   }
@@ -38,7 +48,7 @@
   SOE.applySocialMeta({
     title: pageTitle,
     description: pageDesc,
-    url: SOE.absoluteUrl("claim.html?id=" + encodeURIComponent(claim.id)),
+    url: SOE.absoluteUrl(SOE.claimPath(claim.id)),
     type: "article",
   });
 
@@ -72,7 +82,7 @@
         '<li class="primary-source-item">' +
         metaRow +
         '<a href="' +
-        escapeAttr(s.url) +
+        escapeAttr(hrefFor(s.url)) +
         '" target="_blank" rel="noopener">' +
         escapeHtml(s.label) +
         "</a>" +
@@ -111,7 +121,7 @@
         .map(function (s) {
           return (
             "<li><a href=\"" +
-            escapeAttr(s.url) +
+            escapeAttr(hrefFor(s.url)) +
             "\" target=\"_blank\" rel=\"noopener\">" +
             escapeHtml(s.name) +
             "</a></li>"
@@ -149,8 +159,8 @@
       var r = SOE.getClaim(rid);
       if (!r) return "";
       return (
-        '<a class="claim-card" href="claim.html?id=' +
-        encodeURIComponent(r.id) +
+        '<a class="claim-card" href="' +
+        SOE.claimHref(r.id) +
         '"><div class="claim-card-top">' +
         SOE.verdictHtml(r.verdict) +
         "</div><h2>" +
@@ -183,9 +193,7 @@
     tocItems += '<li><a href="#related">Related claims</a></li>';
   }
 
-  var shareUrl = SOE.absoluteUrl(
-    "claim.html?id=" + encodeURIComponent(claim.id)
-  );
+  var shareUrl = SOE.absoluteUrl(SOE.claimPath(claim.id));
   var tweetText =
     claim.shortTitle +
     " — " +
@@ -200,9 +208,9 @@
 
   root.innerHTML =
     '<nav class="breadcrumb" aria-label="Breadcrumb">' +
-    '<a href="index.html">Home</a>' +
+    '<a href="' + pageHref("index.html") + '">Home</a>' +
     ' <span class="bc-sep" aria-hidden="true">/</span> ' +
-    '<a href="claims.html">All claims</a>' +
+    '<a href="' + pageHref("claims.html") + '">All claims</a>' +
     ' <span class="bc-sep" aria-hidden="true">/</span> ' +
     "<span aria-current=\"page\">" +
     escapeHtml(claim.shortTitle) +
@@ -241,7 +249,7 @@
     escapeHtml(updatedLabel) +
     "</time></p>" +
     '<div class="btn-row">' +
-    '<a class="btn btn-secondary btn-sm" href="claims.html">← All claims</a>' +
+    '<a class="btn btn-secondary btn-sm" href="' + pageHref("claims.html") + '">← All claims</a>' +
     '<a class="btn btn-primary btn-sm" href="#disproof">Jump to evidence (' +
     n +
     ")</a>" +
@@ -289,8 +297,8 @@
         "</div></section>"
       : "") +
     '<section class="claim-section">' +
-    '<div class="callout">See something missing or wrong? Contact <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a> with primary links. <a href="submit.html">Submit a claim</a> · <a href="corrections.html">Corrections</a> · <a href="vault.html">Source vault</a> · <a href="quotes.html">Quote bank</a> · <a href="archive.html">Archive hub</a></div>' +
-    '<div class="btn-row"><a class="btn btn-primary" href="claims.html">← Back to all claims</a><a class="btn btn-secondary" href="contradictions.html">Contradiction engine</a><a class="btn btn-secondary" href="timeline.html">Timeline</a></div>' +
+    '<div class="callout">See something missing or wrong? Contact <a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a> with primary links. <a href="' + pageHref("submit.html") + '">Submit a claim</a> · <a href="' + pageHref("corrections.html") + '">Corrections</a> · <a href="' + pageHref("vault.html") + '">Source vault</a> · <a href="' + pageHref("quotes.html") + '">Quote bank</a> · <a href="' + pageHref("archive.html") + '">Archive hub</a></div>' +
+    '<div class="btn-row"><a class="btn btn-primary" href="' + pageHref("claims.html") + '">← Back to all claims</a><a class="btn btn-secondary" href="' + pageHref("contradictions.html") + '">Contradiction engine</a><a class="btn btn-secondary" href="' + pageHref("timeline.html") + '">Timeline</a></div>' +
     "</section>" +
     "</div>" + // claim-main
     '<aside class="claim-toc" aria-label="On this page">' +
