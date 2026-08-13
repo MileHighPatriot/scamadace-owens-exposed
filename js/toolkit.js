@@ -12,17 +12,17 @@
       '<div class="claim-card-top">' +
       SOE.verdictHtml(c.verdict) +
       "</div>" +
-      "<h3 style=\"margin:0.5rem 0\"><a href=\"claim.html?id=" +
-      encodeURIComponent(c.id) +
+      "<h3 style=\"margin:0.5rem 0\"><a href=\"" +
+      (SOE.claimHref ? SOE.claimHref(c.id) : "c/" + encodeURIComponent(c.id) + ".html") +
       '">' +
       escapeHtml(c.shortTitle) +
       "</a></h3>" +
       '<div class="talk-box"><button type="button" class="btn btn-sm btn-secondary copy-btn">Copy</button><h4>Ready reply</h4><p class="copy-text">' +
       escapeHtml(tp.medium || tp.short || "") +
       "</p></div>" +
-      '<a class="btn btn-sm btn-secondary" href="claim.html?id=' +
-      encodeURIComponent(c.id) +
-      '#combat">Full short / medium / long + sources →</a>' +
+      '<a class="btn btn-sm btn-secondary" href="' +
+      (SOE.claimHref ? SOE.claimHref(c.id) : "c/" + encodeURIComponent(c.id) + ".html") +
+      '#disproof">Full evidence stack →</a>' +
       "</article>"
     );
   }).join("");

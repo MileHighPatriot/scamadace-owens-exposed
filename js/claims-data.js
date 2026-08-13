@@ -5992,7 +5992,7 @@ window.CLAIMS_DATA = [
         "sources": [
           {
             "name": "This site: maroon shirts / decoy boys",
-            "url": "claim.html?id=maroon-shirts"
+            "url": "c/maroon-shirts.html"
           }
         ]
       },
