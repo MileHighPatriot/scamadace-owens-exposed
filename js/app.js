@@ -379,7 +379,7 @@
             navLink("index.html", "Home") +
             navLink("claims.html", "Claims") +
             navLink("archive.html", "Archive") +
-            navLink("facts.html", "Record") +
+            navLink("facts.html", "Facts") +
             navLink("search.html", "Search") +
             navLink("about.html", "About") +
             "</nav></div>" +

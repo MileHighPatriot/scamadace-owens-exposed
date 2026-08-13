@@ -69,7 +69,7 @@ node scripts/generate-pages.js
 node scripts/generate-pages.js --check
 ```
 
-`--check` fails if `c/<id>.html` or `sitemap.xml` do not match `js/claims-data.js`. The generated pages include the full evidence stack in the HTML, so they work without JavaScript.
+`--check` fails if `c/<id>.html`, the archive tool pages, or `sitemap.xml` do not match the data files. Generated claim and archive pages include their full content in the HTML, so they work without JavaScript.
 
 ## Deploy
 
