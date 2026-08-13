@@ -2,6 +2,7 @@
 /**
  * Generate static claim permalinks (c/<id>.html) and refresh sitemap.xml.
  * Run from repo root: node scripts/generate-pages.js
+ * Check without writing: node scripts/generate-pages.js --check
  */
 "use strict";
 
@@ -10,17 +11,26 @@ var path = require("path");
 var vm = require("vm");
 
 var ROOT = path.join(__dirname, "..");
-var ORIGIN = "https://milehighpatriot.github.io/scamadace-owens-exposed";
-var UPDATED = "2026-08-12";
+var CHECK = process.argv.indexOf("--check") !== -1;
 
-function loadClaims() {
-  var code = fs.readFileSync(path.join(ROOT, "js/claims-data.js"), "utf8");
-  var sandbox = { window: {} };
-  vm.runInNewContext(code, sandbox);
-  return {
-    claims: sandbox.window.CLAIMS_DATA || [],
-    verdicts: sandbox.window.VERDICT_META || {},
-  };
+function readSiteConfig() {
+  var appJs = fs.readFileSync(path.join(ROOT, "js/app.js"), "utf8");
+  var origin = appJs.match(/var SITE_ORIGIN = "([^"]+)"/);
+  var updated = appJs.match(/var SITE_UPDATED = "([^"]+)"/);
+  if (!origin || !updated) {
+    throw new Error("Could not read SITE_ORIGIN / SITE_UPDATED from js/app.js");
+  }
+  return { origin: origin[1].replace(/\/$/, ""), updated: updated[1] };
+}
+
+function loadWindow() {
+  var sandbox = { window: {}, console: console };
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, "js/claims-data.js"), "utf8"), sandbox);
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, "js/claim-render.js"), "utf8"), sandbox);
+  if (!sandbox.window.SOE_RENDER) {
+    throw new Error("js/claim-render.js did not attach window.SOE_RENDER");
+  }
+  return sandbox.window;
 }
 
 function esc(s) {
@@ -42,19 +52,18 @@ function ratingFor(verdict) {
   return map[verdict] || { value: "2", name: verdict || "Unsupported" };
 }
 
-function claimPage(claim, verdicts) {
+function claimPage(claim, loaded, site) {
+  var render = loaded.SOE_RENDER;
   var title = claim.shortTitle + " — Scamdace Owens Exposed";
   var desc = String(claim.summary || "").replace(/\s+/g, " ").trim().slice(0, 200);
-  var url = ORIGIN + "/c/" + claim.id + ".html";
-  var meta = verdicts[claim.verdict] || {};
-  var verdictLabel = meta.label || claim.verdict;
+  var url = site.origin + "/c/" + claim.id + ".html";
   var rating = ratingFor(claim.verdict);
   var ld = {
     "@context": "https://schema.org",
     "@type": "ClaimReview",
     url: url,
-    datePublished: UPDATED,
-    dateModified: UPDATED,
+    datePublished: site.updated,
+    dateModified: site.updated,
     claimReviewed: claim.title,
     author: {
       "@type": "Person",
@@ -82,75 +91,126 @@ function claimPage(claim, verdicts) {
     },
   };
 
-  var primaries = (claim.primarySources || [])
-    .slice(0, 4)
-    .map(function (s) {
-      return (
-        "<li><a href=\"" +
-        esc(s.url) +
-        "\">" +
-        esc(s.label || s.url) +
-        "</a>" +
-        (s.quote ? " — “" + esc(s.quote) + "”" : "") +
-        "</li>"
-      );
-    })
-    .join("");
+  var claimsById = {};
+  loaded.CLAIMS_DATA.forEach(function (c) {
+    claimsById[c.id] = c;
+  });
 
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${esc(title)}</title>
-  <meta name="description" content="${esc(desc)}" />
-  <meta name="author" content="MileHigh Patriot (@America1st5280)" />
-  <meta name="theme-color" content="#08090c" />
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-  <link rel="canonical" href="${esc(url)}" />
-  <meta property="og:site_name" content="Scamdace Owens Exposed" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="${esc(title)}" />
-  <meta property="og:description" content="${esc(desc)}" />
-  <meta property="og:url" content="${esc(url)}" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="${ORIGIN}/assets/og-image.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:image" content="${ORIGIN}/assets/og-image.png" />
-  <meta name="twitter:title" content="${esc(title)}" />
-  <meta name="twitter:description" content="${esc(desc)}" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <script type="application/ld+json">${JSON.stringify(ld)}</script>
-</head>
-<body data-claim-id="${esc(claim.id)}">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div id="site-header-mount"></div>
-  <main id="main">
-    <noscript>
-      <article class="claim-hero">
-        <p class="hero-kicker">${esc(verdictLabel)}</p>
-        <h1>${esc(claim.title)}</h1>
-        <p class="claim-summary">${esc(claim.summary || "")}</p>
-        ${primaries ? "<h2>Where she said it</h2><ul class=\"source-list\">" + primaries + "</ul>" : ""}
-        <p>This page needs JavaScript to load the full evidence stack. <a href="../claims.html">Browse all claims</a> · <a href="../facts.html">Public record</a></p>
-      </article>
-    </noscript>
-    <div id="claim-root">
-      <div class="empty-state" role="status">Loading claim…</div>
-    </div>
-  </main>
-  <div id="site-footer-mount"></div>
-  <script src="../js/claims-data.js"></script>
-  <script src="../js/app.js"></script>
-  <script src="../js/claim-detail.js"></script>
-</body>
-</html>
-`;
+  var article = render.renderClaimInner(claim, {
+    prefix: "../",
+    origin: site.origin,
+    siteUpdated: site.updated,
+    verdicts: loaded.VERDICT_META || {},
+    categories: loaded.CATEGORIES || [],
+    getClaim: function (id) {
+      return claimsById[id] || null;
+    },
+  });
+
+  return (
+    "<!DOCTYPE html>\n" +
+    '<html lang="en">\n' +
+    "<head>\n" +
+    '  <meta charset="UTF-8" />\n' +
+    '  <meta name="viewport" content="width=device-width, initial-scale=1" />\n' +
+    "  <title>" +
+    esc(title) +
+    "</title>\n" +
+    '  <meta name="description" content="' +
+    esc(desc) +
+    '" />\n' +
+    '  <meta name="author" content="MileHigh Patriot (@America1st5280)" />\n' +
+    '  <meta name="theme-color" content="#08090c" />\n' +
+    '  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />\n' +
+    '  <link rel="canonical" href="' +
+    esc(url) +
+    '" />\n' +
+    '  <meta property="og:site_name" content="Scamdace Owens Exposed" />\n' +
+    '  <meta property="og:type" content="article" />\n' +
+    '  <meta property="og:title" content="' +
+    esc(title) +
+    '" />\n' +
+    '  <meta property="og:description" content="' +
+    esc(desc) +
+    '" />\n' +
+    '  <meta property="og:url" content="' +
+    esc(url) +
+    '" />\n' +
+    '  <meta name="twitter:card" content="summary_large_image" />\n' +
+    '  <meta property="og:image" content="' +
+    site.origin +
+    '/assets/og-image.png" />\n' +
+    '  <meta property="og:image:type" content="image/png" />\n' +
+    '  <meta property="og:image:width" content="1200" />\n' +
+    '  <meta property="og:image:height" content="630" />\n' +
+    '  <meta property="og:image:alt" content="' +
+    esc(title) +
+    '" />\n' +
+    '  <meta name="twitter:image" content="' +
+    site.origin +
+    '/assets/og-image.png" />\n' +
+    '  <meta name="twitter:title" content="' +
+    esc(title) +
+    '" />\n' +
+    '  <meta name="twitter:description" content="' +
+    esc(desc) +
+    '" />\n' +
+    '  <link rel="stylesheet" href="../css/styles.css" />\n' +
+    '  <script type="application/ld+json">' +
+    JSON.stringify(ld) +
+    "</script>\n" +
+    "</head>\n" +
+    '<body data-claim-id="' +
+    esc(claim.id) +
+    '">\n' +
+    '  <a class="skip-link" href="#main">Skip to content</a>\n' +
+    '  <div id="site-header-mount">\n' +
+    "    " +
+    render.renderHeader("../", "claims.html") +
+    "\n" +
+    "  </div>\n" +
+    '  <main id="main">\n' +
+    '    <div id="claim-root" data-static-claim="' +
+    esc(claim.id) +
+    '">\n' +
+    article +
+    "\n" +
+    "    </div>\n" +
+    "  </main>\n" +
+    '  <div id="site-footer-mount">\n' +
+    "    " +
+    render.renderFooter("../") +
+    "\n" +
+    "  </div>\n" +
+    '  <script src="../js/claims-data.js"></script>\n' +
+    '  <script src="../js/claim-render.js"></script>\n' +
+    '  <script src="../js/app.js"></script>\n' +
+    '  <script src="../js/claim-detail.js"></script>\n' +
+    "</body>\n" +
+    "</html>\n"
+  );
 }
 
-function writeSitemap(claims) {
+function catalogIndex(site) {
+  return (
+    "<!DOCTYPE html>\n" +
+    '<html lang="en">\n' +
+    "<head>\n" +
+    '  <meta charset="UTF-8" />\n' +
+    '  <meta http-equiv="refresh" content="0; url=../claims.html" />\n' +
+    "  <title>Claim catalog — Scamdace Owens Exposed</title>\n" +
+    '  <link rel="canonical" href="' +
+    site.origin +
+    '/claims.html" />\n' +
+    "</head>\n" +
+    "<body>\n" +
+    '  <p><a href="../claims.html">Open the claim catalog</a></p>\n' +
+    "</body>\n" +
+    "</html>\n"
+  );
+}
+
+function buildSitemap(claims, site) {
   var staticPages = [
     { loc: "/", priority: "1.0" },
     { loc: "/claims.html", priority: "0.95" },
@@ -192,11 +252,11 @@ function writeSitemap(claims) {
     return (
       "  <url>\n" +
       "    <loc>" +
-      ORIGIN +
+      site.origin +
       loc +
       "</loc>\n" +
       "    <lastmod>" +
-      UPDATED +
+      site.updated +
       "</lastmod>\n" +
       "    <changefreq>weekly</changefreq>\n" +
       "    <priority>" +
@@ -206,7 +266,10 @@ function writeSitemap(claims) {
     );
   }
 
-  var parts = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
+  var parts = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ];
   staticPages.forEach(function (p) {
     parts.push(urlEntry(p.loc, p.priority));
   });
@@ -214,45 +277,83 @@ function writeSitemap(claims) {
     parts.push(urlEntry("/c/" + c.id + ".html", c.featured ? "0.8" : "0.65"));
   });
   parts.push("</urlset>\n");
-  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), parts.join("\n"));
+  return parts.join("\n");
+}
+
+function expectedFiles(loaded, site) {
+  var files = {};
+  loaded.CLAIMS_DATA.forEach(function (claim) {
+    files["c/" + claim.id + ".html"] = claimPage(claim, loaded, site);
+  });
+  files["c/index.html"] = catalogIndex(site);
+  files["sitemap.xml"] = buildSitemap(loaded.CLAIMS_DATA, site);
+  return files;
 }
 
 function main() {
-  var loaded = loadClaims();
-  var claims = loaded.claims;
+  var site = readSiteConfig();
+  var loaded = loadWindow();
+  var claims = loaded.CLAIMS_DATA || [];
   if (!claims.length) {
     console.error("No claims loaded from js/claims-data.js");
     process.exit(1);
   }
 
+  var expected = expectedFiles(loaded, site);
+  var errors = [];
+
+  if (CHECK) {
+    Object.keys(expected).forEach(function (rel) {
+      var full = path.join(ROOT, rel);
+      if (!fs.existsSync(full)) {
+        errors.push("missing " + rel);
+        return;
+      }
+      var onDisk = fs.readFileSync(full, "utf8");
+      if (onDisk !== expected[rel]) {
+        errors.push("stale " + rel);
+      }
+    });
+
+    var dir = path.join(ROOT, "c");
+    fs.readdirSync(dir).forEach(function (name) {
+      if (!name.endsWith(".html")) return;
+      var rel = "c/" + name;
+      if (!expected[rel]) errors.push("extra " + rel);
+    });
+
+    claims.forEach(function (c) {
+      var html = expected["c/" + c.id + ".html"];
+      if (html.indexOf('data-static-claim="' + c.id + '"') === -1) {
+        errors.push(c.id + " missing static claim marker");
+      }
+      if (html.indexOf(esc(c.shortTitle)) === -1) errors.push(c.id + " missing short title");
+      if (html.indexOf('id="disproof"') === -1) errors.push(c.id + " missing evidence stack");
+      if (html.indexOf("Loading claim") !== -1) errors.push(c.id + " still a loading shell");
+    });
+
+    if (errors.length) {
+      console.error("Claim pages are out of date (" + errors.length + "):\n- " + errors.slice(0, 20).join("\n- "));
+      if (errors.length > 20) console.error("… and " + (errors.length - 20) + " more");
+      console.error("\nRun: node scripts/generate-pages.js");
+      process.exit(1);
+    }
+    console.log("OK — " + claims.length + " claim pages and sitemap match the catalog.");
+    return;
+  }
+
   var dir = path.join(ROOT, "c");
   fs.mkdirSync(dir, { recursive: true });
   fs.readdirSync(dir).forEach(function (name) {
-    if (name.endsWith(".html")) fs.unlinkSync(path.join(dir, name));
+    if (name.endsWith(".html") && !expected["c/" + name]) {
+      fs.unlinkSync(path.join(dir, name));
+    }
   });
 
-  claims.forEach(function (claim) {
-    fs.writeFileSync(path.join(dir, claim.id + ".html"), claimPage(claim, loaded.verdicts));
+  Object.keys(expected).forEach(function (rel) {
+    fs.writeFileSync(path.join(ROOT, rel), expected[rel]);
   });
 
-  fs.writeFileSync(
-    path.join(dir, "index.html"),
-    `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=../claims.html" />
-  <title>Claim catalog — Scamdace Owens Exposed</title>
-  <link rel="canonical" href="${ORIGIN}/claims.html" />
-</head>
-<body>
-  <p><a href="../claims.html">Open the claim catalog</a></p>
-</body>
-</html>
-`
-  );
-
-  writeSitemap(claims);
   console.log("Wrote " + claims.length + " claim pages to c/ and refreshed sitemap.xml");
 }
 
