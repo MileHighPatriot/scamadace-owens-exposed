@@ -60,12 +60,16 @@ Old links of the form `claim.html?id=exploding-microphone` still redirect to `c/
 - `js/archive-data.js` — timeline, people, methods, quotes, legal, hearing, glossary, etc.
 - `js/archive.js` — page renderers for archive sections
 - `js/app.js` — shared chrome, helpers, permalink builder
+- `js/claim-render.js` — claim-page HTML used by both the generator and the browser
 
 After editing the catalog, regenerate permalinks and the sitemap:
 
 ```bash
 node scripts/generate-pages.js
+node scripts/generate-pages.js --check
 ```
+
+`--check` fails if `c/<id>.html` or `sitemap.xml` do not match `js/claims-data.js`. The generated pages include the full evidence stack in the HTML, so they work without JavaScript.
 
 ## Deploy
 

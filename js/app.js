@@ -12,41 +12,48 @@
   var SITE_UPDATED = "2026-08-12";
 
   // —— Mobile nav (a11y) ——
-  var toggle = qs(".nav-toggle");
-  var links = qs(".nav-links");
-  if (toggle && links) {
-    if (!links.id) links.id = "site-nav";
-    toggle.setAttribute("aria-controls", links.id);
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Open menu");
-
-    function setOpen(open) {
-      links.classList.toggle("open", open);
+  // Delegated so it still works after mountChrome replaces the header on /c/ pages.
+  function setNavOpen(open) {
+    var toggle = qs(".nav-toggle");
+    var links = qs(".nav-links");
+    if (!links) return;
+    links.classList.toggle("open", open);
+    if (toggle) {
+      if (!links.id) links.id = "site-nav";
+      toggle.setAttribute("aria-controls", links.id);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     }
-
-    toggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      setOpen(!links.classList.contains("open"));
-    });
-
-    // Close on outside click / Escape / link navigation
-    document.addEventListener("click", function (e) {
-      if (!links.classList.contains("open")) return;
-      if (links.contains(e.target) || toggle.contains(e.target)) return;
-      setOpen(false);
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && links.classList.contains("open")) {
-        setOpen(false);
-        toggle.focus();
-      }
-    });
-    links.addEventListener("click", function (e) {
-      if (e.target && e.target.tagName === "A") setOpen(false);
-    });
   }
+
+  document.addEventListener("click", function (e) {
+    var toggle = qs(".nav-toggle");
+    var links = qs(".nav-links");
+    if (!toggle || !links) return;
+    if (toggle.contains(e.target)) {
+      e.stopPropagation();
+      setNavOpen(!links.classList.contains("open"));
+      return;
+    }
+    var navLink = e.target && e.target.closest ? e.target.closest("a") : null;
+    if (links.classList.contains("open") && links.contains(e.target) && navLink) {
+      setNavOpen(false);
+      return;
+    }
+    if (links.classList.contains("open") && !links.contains(e.target)) {
+      setNavOpen(false);
+    }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    var toggle = qs(".nav-toggle");
+    var links = qs(".nav-links");
+    if (links && links.classList.contains("open")) {
+      setNavOpen(false);
+      if (toggle) toggle.focus();
+    }
+  });
+  setNavOpen(false);
 
   // —— Active nav (claim detail counts as catalog) ——
   var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -358,47 +365,53 @@
             '<a href="' + prefix + 'feed.xml">RSS</a>' +
             "</div>"
           : "";
-        headerMount.innerHTML =
-          '<header class="site-header">' +
-          '<div class="nav-inner">' +
-          '<a class="brand" href="' +
-          prefix +
-          'index.html"><strong>Scamdace Owens Exposed</strong><span>Kirk assassination claim archive</span></a>' +
-          '<button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>' +
-          '<nav class="nav-links" id="site-nav" aria-label="Primary">' +
-          navLink("index.html", "Home") +
-          navLink("claims.html", "Claims") +
-          navLink("archive.html", "Archive") +
-          navLink("facts.html", "Record") +
-          navLink("search.html", "Search") +
-          navLink("about.html", "About") +
-          "</nav></div>" +
-          sub +
-          "</header>";
-        bindNavToggle();
+        if (window.SOE_RENDER && SOE_RENDER.renderHeader) {
+          headerMount.innerHTML = SOE_RENDER.renderHeader(prefix, path) + sub;
+        } else {
+          headerMount.innerHTML =
+            '<header class="site-header">' +
+            '<div class="nav-inner">' +
+            '<a class="brand" href="' +
+            prefix +
+            'index.html"><strong>Scamdace Owens Exposed</strong><span>Kirk assassination claim archive</span></a>' +
+            '<button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>' +
+            '<nav class="nav-links" id="site-nav" aria-label="Primary">' +
+            navLink("index.html", "Home") +
+            navLink("claims.html", "Claims") +
+            navLink("archive.html", "Archive") +
+            navLink("facts.html", "Record") +
+            navLink("search.html", "Search") +
+            navLink("about.html", "About") +
+            "</nav></div>" +
+            sub +
+            "</header>";
+        }
+        setNavOpen(false);
         updateHeaderState();
       }
 
       if (footerMount) {
         footerMount.innerHTML =
-          '<footer class="site-footer"><div class="footer-inner">' +
-          "<div><strong>Scamdace Owens Exposed</strong><br/>By MileHigh Patriot · " +
-          '<a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a></div>' +
-          '<nav class="footer-links" aria-label="Footer">' +
-          '<a href="' + prefix + 'claims.html">Claims</a>' +
-          '<a href="' + prefix + 'archive.html">Archive hub</a>' +
-          '<a href="' + prefix + 'facts.html">Public record</a>' +
-          '<a href="' + prefix + 'timeline.html">Timeline</a>' +
-          '<a href="' + prefix + 'people.html">People</a>' +
-          '<a href="' + prefix + 'search.html">Search</a>' +
-          '<a href="' + prefix + 'earnings.html">Earnings</a>' +
-          '<a href="' + prefix + 'submit.html">Submit</a>' +
-          '<a href="' + prefix + 'corrections.html">Corrections</a>' +
-          '<a href="' + prefix + 'about.html">About</a>' +
-          '<a href="' + prefix + 'feed.xml">RSS</a>' +
-          "</nav>" +
-          '<p class="footer-meta">Catalog baseline: August 12, 2026 · Static archive · No tracking required</p>' +
-          "</div></footer>";
+          window.SOE_RENDER && SOE_RENDER.renderFooter
+            ? SOE_RENDER.renderFooter(prefix)
+            : '<footer class="site-footer"><div class="footer-inner">' +
+              "<div><strong>Scamdace Owens Exposed</strong><br/>By MileHigh Patriot · " +
+              '<a href="https://x.com/America1st5280" target="_blank" rel="noopener">@America1st5280</a></div>' +
+              '<nav class="footer-links" aria-label="Footer">' +
+              '<a href="' + prefix + 'claims.html">Claims</a>' +
+              '<a href="' + prefix + 'archive.html">Archive hub</a>' +
+              '<a href="' + prefix + 'facts.html">Public record</a>' +
+              '<a href="' + prefix + 'timeline.html">Timeline</a>' +
+              '<a href="' + prefix + 'people.html">People</a>' +
+              '<a href="' + prefix + 'search.html">Search</a>' +
+              '<a href="' + prefix + 'earnings.html">Earnings</a>' +
+              '<a href="' + prefix + 'submit.html">Submit</a>' +
+              '<a href="' + prefix + 'corrections.html">Corrections</a>' +
+              '<a href="' + prefix + 'about.html">About</a>' +
+              '<a href="' + prefix + 'feed.xml">RSS</a>' +
+              "</nav>" +
+              '<p class="footer-meta">Catalog baseline: August 12, 2026 · Static archive · No tracking required</p>' +
+              "</div></footer>";
       }
     },
   };
@@ -412,28 +425,6 @@
   }
   function escapeAttr(s) {
     return escapeHtml(s).replace(/'/g, "&#39;");
-  }
-
-  function bindNavToggle() {
-    var toggle = qs(".nav-toggle");
-    var links = qs(".nav-links");
-    if (!toggle || !links) return;
-    if (!links.id) links.id = "site-nav";
-    toggle.setAttribute("aria-controls", links.id);
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Open menu");
-    function setOpen(open) {
-      links.classList.toggle("open", open);
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    }
-    // avoid duplicate listeners by cloning
-    var newToggle = toggle.cloneNode(true);
-    toggle.parentNode.replaceChild(newToggle, toggle);
-    newToggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      setOpen(!links.classList.contains("open"));
-    });
   }
 
   // Mount chrome for archive pages (and any page using mounts)
