@@ -1,33 +1,37 @@
-# Connect ScamdaceOwensExposed.com
+# Connect a custom domain (Vercel + Origin)
 
-**Site is live now:**  
-https://milehighpatriot.github.io/scamadace-owens-exposed/
+**Repo (Cursor Origin):**  
+https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed
 
-**Repo:**  
-https://github.com/MileHighPatriot/scamadace-owens-exposed
+GitHub Pages is not part of this setup. After you connect Origin to Vercel, attach the domain on the Vercel project.
+
+Until that is live, the old github.io URL can stay up so the site does not go dark. Flip DNS only after the Vercel deployment responds on the custom hostname.
 
 ## Buy the domain
+
 Purchase **scamadaceowensexposed.com** (Cloudflare, Porkbun, Namecheap, etc.).
 
-## Point DNS to GitHub Pages
-At your registrar, create these records for the root domain:
+## Attach the domain in Vercel
+
+1. Open the Vercel project connected to this Origin repo.
+2. **Settings → Domains** → add `scamadaceowensexposed.com` and `www.scamadaceowensexposed.com`.
+3. Vercel will show the exact DNS records (usually an A record and a CNAME). Copy those — do not use GitHub Pages IPs.
+
+## Point DNS at Vercel
+
+Use the records Vercel displays for the project. Typical pattern:
 
 | Type | Name | Value |
 |------|------|-------|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
+| A | @ | (Vercel apex IP shown in the dashboard) |
+| CNAME | www | `cname.vercel-dns.com` |
 
-Optional `www`:
+Wait for DNS (minutes to 48h). Vercel issues HTTPS automatically.
 
-| Type | Name | Value |
-|------|------|-------|
-| CNAME | www | MileHighPatriot.github.io |
+## Canonical URL
 
-## Attach the domain in GitHub
-1. Create a file named `CNAME` in the repo root with one line: `scamadaceowensexposed.com`
-2. Or: **Settings → Pages → Custom domain** → enter `scamadaceowensexposed.com` → Save
-3. After DNS works (minutes to 48h), check **Enforce HTTPS**
+Set `SITE_ORIGIN` (no trailing slash) as a Vercel environment variable and in `js/app.js`, then regenerate pages:
 
-Until that DNS is live, the public URL stays on github.io so the site does not go dark.
+```bash
+node scripts/generate-pages.js
+```
