@@ -1,38 +1,34 @@
-# Origin only — Vercel Hobby (no Pro)
+# Origin for work, GitHub Pages for the public link (for now)
 
-**GitHub is not used.** Code and pull requests stay on **Cursor Origin**. Vercel is only the public website.
-
-Hobby cannot *watch* a private Origin repo. So we do **not** click “Continue with Origin.” We upload the built site with a token. Same Origin repo. Free Vercel. You (or an agent with `VERCEL_TOKEN`) republish after you merge.
+**Cursor Origin** is where we edit, review, and merge. **GitHub Pages** is only the free public website until Origin can host pages itself.
 
 | Job | Where |
 |-----|--------|
-| Store / review / merge code | Origin — [scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed) |
-| Public site | Vercel Hobby (`*.vercel.app`) |
-| How it updates | After an Origin merge, run `scripts/deploy-vercel.sh` |
+| Store / review / merge | Origin — [scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed) |
+| Public site | [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/) |
+| How it updates | Push / merge the same commits to GitHub `main`. Pages serves that branch. |
 
-Do not add a GitHub remote. Do not use `gh`. Do not import this repo on Vercel with GitHub or Origin.
-
----
-
-## One-time (you)
-
-1. Stay on the **free Hobby** team at [vercel.com/dashboard](https://vercel.com/dashboard).
-2. Create a token: [vercel.com/account/tokens](https://vercel.com/account/tokens) → Create → copy it.
-3. Paste it into this agent as `VERCEL_TOKEN` (or export it locally).
-4. The agent runs `scripts/deploy-vercel.sh` and gives you the `*.vercel.app` URL.
-
-Then set `SITE_ORIGIN` in `js/app.js` to that URL and merge on Origin.
+Do not use GitHub Actions. Do not make GitHub the place you review PRs. Origin stays the source of truth.
 
 ---
 
-## Every Monday (after you merge on Origin)
+## One-time GitHub Pages check
 
-```bash
-export VERCEL_TOKEN=…   # once per machine
-./scripts/deploy-vercel.sh
-```
+On GitHub: **Settings → Pages**
 
-That rebuilds the pages and uploads them to the same Hobby project. No GitHub. No Pro.
+- Source: **Deploy from a branch**
+- Branch: `main` / `/` (root)
+- The repo already has `.nojekyll` so GitHub will not break the static files
+
+---
+
+## Monday (or any update)
+
+1. Work on **Origin** (this repo, draft PR, you merge).
+2. Push the same `main` to GitHub (`github` remote).
+3. Wait a minute. The github.io URL updates.
+
+When Cursor adds public pages on Origin, drop the GitHub copy and keep Origin only.
 
 ---
 
@@ -43,7 +39,7 @@ node scripts/generate-pages.js
 node scripts/generate-pages.js --check
 ```
 
-Commit, open an **Origin** PR, merge, then run the deploy script.
+Commit and merge on Origin, then update GitHub `main` so Pages republishes.
 
 ## Local preview
 

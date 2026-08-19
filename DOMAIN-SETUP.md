@@ -1,21 +1,19 @@
-# Custom domain (Vercel + Origin only)
+# Custom domain later
 
-**Repo:** [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed)
+**Public site now:**  
+https://milehighpatriot.github.io/scamadace-owens-exposed/
 
-Do not attach a domain in GitHub Pages. After Vercel is imported from this Origin repo, add the domain on the Vercel project.
+**Code:**  
+https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed
 
-## Attach in Vercel
+When you buy a domain, point it at GitHub Pages until Origin has its own hosting:
 
-1. Vercel project (the one connected to Origin) → **Settings → Domains**.
-2. Add `scamadaceowensexposed.com` and `www.scamadaceowensexposed.com`.
-3. Use the DNS records Vercel shows. Do not use GitHub Pages IPs.
+| Type | Name | Value |
+|------|------|-------|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | MileHighPatriot.github.io |
 
-## Canonical URL
-
-Set `SITE_ORIGIN` (no trailing slash) as a Vercel env var and in `js/app.js`, then regenerate:
-
-```bash
-node scripts/generate-pages.js
-```
-
-Commit and merge on Origin. Vercel republishes.
+Then GitHub → **Settings → Pages → Custom domain**. Keep `SITE_ORIGIN` in `js/app.js` in sync and regenerate pages on Origin.

@@ -7,8 +7,7 @@
     return Array.from((root || document).querySelectorAll(sel));
   }
 
-  // Public site URL. Switch this to the Vercel URL after Origin → Vercel Deploy.
-  // Override at generate time with SITE_ORIGIN=https://….vercel.app
+  // Public GitHub Pages URL until Origin can host pages.
   var SITE_ORIGIN = "https://milehighpatriot.github.io/scamadace-owens-exposed";
   var SITE_UPDATED = "2026-08-19";
 
