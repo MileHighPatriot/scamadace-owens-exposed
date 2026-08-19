@@ -1,60 +1,38 @@
-# Origin only — Vercel is just the public website
+# Origin only — Vercel Hobby (no Pro)
 
-**GitHub is not used.** Code, pull requests, Monday updates, and the Vercel connection all go through **Cursor Origin**.
+**GitHub is not used.** Code and pull requests stay on **Cursor Origin**. Vercel is only the public website.
+
+Hobby cannot *watch* a private Origin repo. So we do **not** click “Continue with Origin.” We upload the built site with a token. Same Origin repo. Free Vercel. You (or an agent with `VERCEL_TOKEN`) republish after you merge.
 
 | Job | Where |
 |-----|--------|
-| Store the code | Origin — `origin.cursor.com/git/milehigh-patriot/scamadace-owens-exposed` |
-| Browse / review / merge | [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed) |
-| Public site people visit | Vercel (`*.vercel.app`), **imported from this Origin repo** |
-| Monday new-claims draft | Cursor Automation on **this Origin repo**, branch `main` |
+| Store / review / merge code | Origin — [scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed) |
+| Public site | Vercel Hobby (`*.vercel.app`) |
+| How it updates | After an Origin merge, run `scripts/deploy-vercel.sh` |
 
-There is no Origin “pages” URL. Origin holds the repo. Vercel holds the live site. Vercel watches **Origin**, not GitHub.
-
-Origin repos are private, so Vercel’s “Continue with Origin” import only works on a **Vercel Pro** team (~$20/month). Hobby will show an empty project list.
+Do not add a GitHub remote. Do not use `gh`. Do not import this repo on Vercel with GitHub or Origin.
 
 ---
 
-## One-time: create the Vercel project from Origin
+## One-time (you)
 
-Linking the Vercel *app* is not enough. You have to import this repo and click **Deploy**.
+1. Stay on the **free Hobby** team at [vercel.com/dashboard](https://vercel.com/dashboard).
+2. Create a token: [vercel.com/account/tokens](https://vercel.com/account/tokens) → Create → copy it.
+3. Paste it into this agent as `VERCEL_TOKEN` (or export it locally).
+4. The agent runs `scripts/deploy-vercel.sh` and gives you the `*.vercel.app` URL.
 
-1. Open [vercel.com/new](https://vercel.com/new).
-2. Top-left team switcher: a **Pro** team (not Hobby).
-3. **Continue with Origin** — never “Continue with GitHub.”
-4. Pick `scamadace-owens-exposed`.
-5. Settings are already in `vercel.json`. Confirm:
-
-   | Field | Value |
-   |-------|--------|
-   | Framework | Other |
-   | Build Command | `node scripts/generate-pages.js` |
-   | Output Directory | `.` |
-   | Install Command | empty |
-
-6. **Deploy.** Copy the `*.vercel.app` URL. That is the public link.
-
-If Origin repos do not appear: Vercel team **Settings → Git → Origin** → reconnect, then [vercel.com/new](https://vercel.com/new) again.
-
-After this:
-
-- Origin PRs get a Vercel preview.
-- Merge to `main` on Origin → production updates.
-- Do not add a GitHub remote. Do not use `gh`. Do not turn GitHub Pages back on.
-
-Paste the `*.vercel.app` URL back to the agent so `SITE_ORIGIN` in `js/app.js` can be switched off github.io.
+Then set `SITE_ORIGIN` in `js/app.js` to that URL and merge on Origin.
 
 ---
 
-## Monday (manual is fine)
+## Every Monday (after you merge on Origin)
 
-You do **not** have to run a Vercel command. After the project is connected:
+```bash
+export VERCEL_TOKEN=…   # once per machine
+./scripts/deploy-vercel.sh
+```
 
-1. New claims land in an Origin draft PR (you or the Automation).
-2. You review and **merge on Origin**.
-3. Vercel republishes.
-
-Optional Automation fields and the prompt to paste: [scripts/WEEKLY-AGENT-PROMPT.md](scripts/WEEKLY-AGENT-PROMPT.md).
+That rebuilds the pages and uploads them to the same Hobby project. No GitHub. No Pro.
 
 ---
 
@@ -65,7 +43,7 @@ node scripts/generate-pages.js
 node scripts/generate-pages.js --check
 ```
 
-Commit, open an **Origin** PR, merge. Vercel rebuilds.
+Commit, open an **Origin** PR, merge, then run the deploy script.
 
 ## Local preview
 

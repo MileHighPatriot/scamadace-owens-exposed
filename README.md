@@ -6,7 +6,7 @@ Public static website cataloguing Candace Owens’s claims about the Charlie Kir
 
 **Code (Cursor Origin, not GitHub):** [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed)
 
-**Live site:** Vercel, imported from that Origin repo (see [DEPLOY.md](./DEPLOY.md)). Until the first Origin → Vercel deploy, the old github.io URL still answers.
+**Live site:** Vercel Hobby (`*.vercel.app`), published from this Origin repo with `scripts/deploy-vercel.sh` — not GitHub, not Vercel Pro. Until the first upload, the old github.io URL still answers.
 
 ## Core pages
 
@@ -75,7 +75,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md). Everything stays on **Cursor Origin**. Vercel is only the public host and must be imported with **Continue with Origin** (Pro team). Do not connect GitHub.
+See [DEPLOY.md](./DEPLOY.md). Code stays on **Cursor Origin**. The public host is free **Vercel Hobby** via `scripts/deploy-vercel.sh`. Do not connect GitHub. Do not use “Continue with Origin” (that path is Pro-only).
 
 ## Local preview
 
