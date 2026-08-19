@@ -61,6 +61,25 @@ node scripts/weekly-scan.js
 
 ---
 
+## Did the two clicks work?
+
+I cannot see your Vercel dashboard or Automations list from here. If both look like this, you did it correctly:
+
+**Vercel**
+- [vercel.com/dashboard](https://vercel.com/dashboard) shows a project for `scamadace-owens-exposed` on a **Pro** team (not Hobby).
+- Project → **Settings → Git** says the connected repo is this Origin repo.
+- After the next push, the Origin PR gets a preview URL (or the Vercel project **Deployments** tab shows a new build). A first connect often does not deploy until the next git push.
+
+**Monday Automation**
+- [cursor.com/automations](https://cursor.com/automations) shows the job **on**.
+- Trigger is scheduled `0 14 * * 1`.
+- Repository is **this** Origin repo, branch `main` — not “no repository”.
+- Nothing will run until next Monday 14:00 UTC. That is normal.
+
+If Vercel still shows Hobby, or the Automation has no repo attached, fix those two items and you are done.
+
+---
+
 ## After you edit claims yourself
 
 ```bash
