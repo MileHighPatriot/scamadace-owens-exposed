@@ -1,9 +1,9 @@
 /**
  * Scamdace Owens Exposed — archive expansion data
- * Updated: 2026-08-12
+ * Updated: 2026-08-19
  */
 window.ARCHIVE_DATA = {
-  "updated": "2026-08-12",
+  "updated": "2026-08-19",
   "quotes": [
     {
       "id": "exploding-microphone-q0",
@@ -472,6 +472,54 @@ window.ARCHIVE_DATA = {
       "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fpodscripts.co%2Fpodcasts%2Fcandace%2Fexclusive-never-before-seen-rooftop-footage-plus-the-rookie-cop-who-found-the-gun-ep-367",
       "label": "Candace Ep 367 transcript open: Kolvet White House / Netanyahu timing",
       "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "thirty-ought-six-impossible-q0",
+      "claimId": "thirty-ought-six-impossible",
+      "claimTitle": ".30-06 “Superman neck” / YouTube cage tests",
+      "date": "August 14, 2026",
+      "timestamp": "Debate clock ~00:35:39–00:35:46",
+      "quote": "If we're talking about was he shot from a gun, a 30-odd six, I would say definitively no. It defies common sense to think that he had a Superman neck.",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "label": "PBD debate (Aug 14, 2026): definitively no .30-06 / Superman neck",
+      "verdict": "FALSE"
+    },
+    {
+      "id": "israeli-phones-uvu-q0",
+      "claimId": "israeli-phones-uvu",
+      "claimTitle": "12 Israeli phones at UVU",
+      "date": "August 14, 2026",
+      "timestamp": "Debate clock ~02:21:12",
+      "quote": "Joe Kent, who I think would have the right to assert it, noted that there were 12 Israeli cell phones on the ground that day.",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "label": "PBD debate (Aug 14, 2026): 12 Israeli phones / Joe Kent attribution",
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "israel-mossad-q-debate",
+      "claimId": "israel-mossad",
+      "claimTitle": "Israel / Mossad killed Kirk",
+      "date": "August 14, 2026",
+      "timestamp": "Debate clock ~02:19:25",
+      "quote": "Well, I couldn’t say Israel was on the ground and shot and killed Charlie Kirk.",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "label": "PBD debate (Aug 14, 2026): Israel-on-the-ground concession",
+      "verdict": "FALSE"
+    },
+    {
+      "id": "more-evidence-patsy-q-debate",
+      "claimId": "more-evidence-patsy",
+      "claimTitle": "“More evidence” he is a patsy (Aug 2026)",
+      "date": "August 14, 2026",
+      "timestamp": "Live ~11:00 a.m. EDT · ~4 hours",
+      "quote": "I'm not even convinced that Charlie was shot from the rooftop on Losey that day based on the evidence that has been.",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "label": "PBD debate (Aug 14, 2026): still not convinced of a Losee rooftop shot",
+      "verdict": "CONTRADICTED"
     }
   ],
   "timeline": [
@@ -766,6 +814,21 @@ window.ARCHIVE_DATA = {
         "more-evidence-patsy",
         "tpusa-trans-journalist"
       ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "PBD debate: .30-06 “Superman neck,” 12 Israeli phones, Israel concession",
+      "body": "Four-hour Owens vs Andrew Wilson debate moderated by Patrick Bet-David. Owens: a Losee .30-06 is “definitively no”; cites YouTube steel-cage tests / “Superman neck”; attributes 12 Israeli phones at UVU to Joe Kent; says she “couldn’t say Israel was on the ground”; still floats exploding-mic / PETN. No replacement shooter produced.",
+      "type": "claim",
+      "claimIds": [
+        "thirty-ought-six-impossible",
+        "israeli-phones-uvu",
+        "more-evidence-patsy",
+        "israel-mossad",
+        "robinson-framed",
+        "no-rooftop-shot",
+        "exploding-microphone"
+      ]
     }
   ],
   "episodes": [
@@ -976,6 +1039,23 @@ window.ARCHIVE_DATA = {
       ],
       "url": "https://x.com/RealCandaceO/status/2087296768417415659",
       "notes": "Friday debate announced; uncompressed stills vs court compression; unnamed journalist attack."
+    },
+    {
+      "id": "ep-pbd-debate",
+      "date": "2026-08-14",
+      "title": "Candace Owens vs Andrew Wilson: The Great Debate (PBD Podcast)",
+      "claimIds": [
+        "thirty-ought-six-impossible",
+        "israeli-phones-uvu",
+        "more-evidence-patsy",
+        "israel-mossad",
+        "robinson-framed",
+        "no-rooftop-shot",
+        "exploding-microphone",
+        "smokehouse-receipt"
+      ],
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "notes": "Live four-hour debate. Timestamped quotes: .30-06 ~00:35; Israel concession ~02:19; 12 phones ~02:21; mic/PETN ~02:55."
     }
   ],
   "people": [
@@ -1021,7 +1101,8 @@ window.ARCHIVE_DATA = {
         "only-robinson-not-enough",
         "rooftop-no-recoil",
         "uncompressed-4k-not-robinson",
-        "more-evidence-patsy"
+        "more-evidence-patsy",
+        "thirty-ought-six-impossible"
       ],
       "owensAngle": "Total patsy / not on campus / gun not fired / wrongly framed — rotating denials."
     },
@@ -1178,7 +1259,8 @@ window.ARCHIVE_DATA = {
       "claimIds": [
         "oneill-ied-shot",
         "exploding-microphone",
-        "paved-crime-scene"
+        "paved-crime-scene",
+        "thirty-ought-six-impossible"
       ],
       "owensAngle": "Authority laundering for exotic-device / Fed-lying cluster."
     },
@@ -1256,9 +1338,48 @@ window.ARCHIVE_DATA = {
         "device-seizure-decentralized",
         "officer-bagley-rooftop",
         "uncompressed-4k-not-robinson",
-        "tpusa-trans-journalist"
+        "tpusa-trans-journalist",
+        "thirty-ought-six-impossible",
+        "israeli-phones-uvu"
       ],
       "owensAngle": "This entire site documents her claims vs public evidence."
+    },
+    {
+      "id": "andrew-wilson",
+      "name": "Andrew Wilson",
+      "role": "Debate opponent (Aug 14, 2026)",
+      "kind": "media",
+      "summary": "Pressed Owens on the weighted “patsy” claim in a four-hour PBD debate; asked for positive evidence Israel killed Kirk.",
+      "claimIds": [
+        "more-evidence-patsy",
+        "thirty-ought-six-impossible",
+        "israeli-phones-uvu",
+        "robinson-framed"
+      ],
+      "owensAngle": "Packaged as the man she would “gladly” beat with the facts; the stage is where she restated the catalog without a replacement case."
+    },
+    {
+      "id": "patrick-bet-david",
+      "name": "Patrick Bet-David",
+      "role": "PBD Podcast moderator",
+      "kind": "media",
+      "summary": "Moderated the Aug 14 Owens–Wilson debate after Owens named him on Aug 11.",
+      "claimIds": [
+        "more-evidence-patsy"
+      ],
+      "owensAngle": "Production choice sold as fairness; not a forensic authority."
+    },
+    {
+      "id": "joe-kent",
+      "name": "Joe Kent",
+      "role": "Named-drop on the 12-phone claim",
+      "kind": "subject",
+      "summary": "Owens attributed “12 Israeli cell phones on the ground” at UVU to Kent during the Aug 14 debate. This site records her attribution — not an independent confirmation that Kent published a SIGINT exhibit.",
+      "claimIds": [
+        "israeli-phones-uvu",
+        "israel-mossad"
+      ],
+      "owensAngle": "Used as a prestige warrant (“who I think would have the right to assert it”) for an unconfirmed phone count."
     },
     {
       "id": "netanyahu",
@@ -1271,7 +1392,8 @@ window.ARCHIVE_DATA = {
         "netanyahu-denial",
         "netanyahu-invite-threat",
         "pro-israel-motive",
-        "kolvet-white-house-lie"
+        "kolvet-white-house-lie",
+        "israeli-phones-uvu"
       ],
       "owensAngle": "Denial = guilt; invite = threat; war convenience = motive."
     },
@@ -1472,6 +1594,18 @@ window.ARCHIVE_DATA = {
         "rooftop-no-recoil",
         "gun-not-fired"
       ]
+    },
+    {
+      "from": "Weighted patsy claim + debate purse",
+      "to": "Four-hour PBD stage: .30-06 impossible + phones + Israel concession",
+      "when": "August 14, 2026",
+      "note": "The product she scheduled restated the catalog (Losee denial, mic/PETN, receipt, France rumor) and added a hard “definitively no” on the charging caliber — still no replacement shooter.",
+      "claimIds": [
+        "more-evidence-patsy",
+        "thirty-ought-six-impossible",
+        "israeli-phones-uvu",
+        "israel-mossad"
+      ]
     }
   ],
   "contradictions": [
@@ -1530,12 +1664,30 @@ window.ARCHIVE_DATA = {
       "a": "robinson-framed",
       "b": "only-robinson-not-enough",
       "body": "Absolute innocence confidence and permanent “even if guilty, pawn” escape hatch serve different rhetorical needs; both protect the show if either fails."
+    },
+    {
+      "id": "c9",
+      "title": "Definitively not a .30-06 vs exploding mic vs maybe a smaller gun",
+      "a": "thirty-ought-six-impossible",
+      "b": "exploding-microphone",
+      "body": "On Aug 14 she said a Losee .30-06 is “definitively no,” left a smaller-caliber gunshot open, and still called the PETN / rigged-mic theory viable. Three kill mechanisms cannot occupy one neck. See also no-rooftop-shot."
+    },
+    {
+      "id": "c10",
+      "title": "Months of Israel implication vs “I couldn’t say Israel was on the ground”",
+      "a": "israel-mossad",
+      "b": "israeli-phones-uvu",
+      "body": "The Israel page is months of association sold as a case. The debate sentence refuses the operational claim, then offers 12 phones as the exhibit. Keep the angle, refuse the hit — that is one method, not two theories that can both be “the investigation.”"
     }
   ],
   "glossary": [
     {
       "term": "UVU",
       "def": "Utah Valley University — site of the Sept 10, 2025 assassination."
+    },
+    {
+      "term": ".30-06 / 30-odd-six",
+      "def": "Rifle cartridge class in the official case (Mauser Model 98). On Aug 14 Owens said a Losee .30-06 is “definitively no” (“Superman neck”)."
     },
     {
       "term": "Losee Center",
@@ -3484,11 +3636,57 @@ window.ARCHIVE_DATA = {
       "timestamp": "Show clock ~00:00–02:20 Kolvet “liar” / White House meeting / Netanyahu coincidence",
       "quote": "I was also able to confirm with a White House employee that there certainly was a White House meeting on the books… Why do you lie? … BB Netanyahu happens to be in town. Is it a coincidence?",
       "kind": "video-audio"
+    },
+    {
+      "claimId": "thirty-ought-six-impossible",
+      "claimTitle": ".30-06 “Superman neck” / YouTube cage tests",
+      "label": "PBD debate (Aug 14, 2026): definitively no .30-06 / Superman neck",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "date": "August 14, 2026",
+      "timestamp": "Debate clock ~00:35:39–00:35:46",
+      "quote": "If we're talking about was he shot from a gun, a 30-odd six, I would say definitively no. It defies common sense to think that he had a Superman neck.",
+      "kind": "video-audio"
+    },
+    {
+      "claimId": "israeli-phones-uvu",
+      "claimTitle": "12 Israeli phones at UVU",
+      "label": "PBD debate (Aug 14, 2026): 12 Israeli phones / Joe Kent attribution",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "date": "August 14, 2026",
+      "timestamp": "Debate clock ~02:21:12",
+      "quote": "Joe Kent, who I think would have the right to assert it, noted that there were 12 Israeli cell phones on the ground that day.",
+      "kind": "video-audio"
+    },
+    {
+      "claimId": "israel-mossad",
+      "claimTitle": "Israel / Mossad killed Kirk",
+      "label": "PBD debate (Aug 14, 2026): Israel-on-the-ground concession",
+      "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184",
+      "date": "August 14, 2026",
+      "timestamp": "Debate clock ~02:19:25",
+      "quote": "Well, I couldn’t say Israel was on the ground and shot and killed Charlie Kirk.",
+      "kind": "video-audio"
+    },
+    {
+      "claimId": "israeli-phones-uvu",
+      "claimTitle": "12 Israeli phones at UVU",
+      "label": "Washington Times (Aug 14, 2026): 12-phone claim; no agency confirmation",
+      "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.washingtontimes.com%2Fnews%2F2026%2Faug%2F14%2Fcandace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk%2F",
+      "date": "August 14, 2026",
+      "timestamp": "Article published Aug 14, 2026",
+      "quote": "She repeated an unsubstantiated claim she first made in November 2025 — that 12 Israeli-registered cellphones were detected near the shooting scene at Utah Valley University.",
+      "kind": "article"
     }
   ],
   "journalistTop": [
     "exploding-microphone",
     "robinson-framed",
+    "thirty-ought-six-impossible",
+    "israeli-phones-uvu",
     "uncompressed-4k-not-robinson",
     "israel-mossad",
     "harpole-plot",
@@ -3556,6 +3754,11 @@ window.ARCHIVE_DATA = {
     "ethicalNote": "Estimates are labeled estimates. The moral point is incentive literacy, not omniscient accounting."
   },
   "changelog": [
+    {
+      "date": "2026-08-19",
+      "title": "Aug 14 PBD debate wave",
+      "body": "Added thirty-ought-six-impossible (.30-06 “Superman neck” / Valhalla cage tests; “definitively no”) and israeli-phones-uvu (12 Israeli-registered phones at UVU, restated on stage and attributed to Joe Kent). Extended more-evidence-patsy, israel-mossad, robinson-framed, and no-rooftop-shot with debate primaries and Owens’s “couldn’t say Israel was on the ground” concession. Coverage window → Aug 19, 2026."
+    },
     {
       "date": "2026-08-12",
       "title": "Visual system pass",

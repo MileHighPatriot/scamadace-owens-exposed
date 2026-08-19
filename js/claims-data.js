@@ -1,7 +1,7 @@
 /**
  * Scamdace Owens Exposed — claim catalog
  * Author: MileHigh Patriot (@America1st5280)
- * Updated: August 12, 2026 — uncompressed 4K / maroon-guy stills, TPUSA journalist “PR disaster,” PBD debate moderator
+ * Updated: August 19, 2026 — PBD debate (Aug 14): .30-06 “Superman neck,” 12 Israeli phones, Israel concession
  */
 window.CLAIMS_DATA = [
   {
@@ -12,7 +12,7 @@ window.CLAIMS_DATA = [
       "forensic",
       "cover-up"
     ],
-    "dateRange": "June–July 2026 (still promoted through late July)",
+    "dateRange": "June 2026 – August 14, 2026 (still promoted in the PBD debate)",
     "verdict": "FALSE",
     "severity": "core",
     "featured": true,
@@ -159,7 +159,8 @@ window.CLAIMS_DATA = [
       "suv-mystery-object",
       "philip-goldsberry-micing",
       "gun-not-fired",
-      "rooftop-no-recoil"
+      "rooftop-no-recoil",
+      "thirty-ought-six-impossible"
     ],
     "confidence": {
       "centrality": 3,
@@ -287,11 +288,11 @@ window.CLAIMS_DATA = [
       "forensic",
       "timeline"
     ],
-    "dateRange": "Sept 2025 – July 2026",
+    "dateRange": "Sept 2025 – August 14, 2026",
     "verdict": "FALSE",
     "severity": "core",
     "featured": true,
-    "summary": "Owens said she would bet “no gun was ever fired from Losee” and the mic exploded instead.",
+    "summary": "Owens said she would bet “no gun was ever fired from Losee” and the mic exploded instead. On Aug 14 she told Andrew Wilson she is “not even convinced” Kirk was shot from Losee and that a .30-06 from there is “definitively no.”",
     "claimDetail": "Candace Owens has directly denied the core official mechanism of Charlie Kirk’s death: that he was killed by a gunshot from a rooftop position near the UVU scene, commonly discussed in connection with the Losee Center area. In her July 7, 2026 post she said she would put her money on conspiracy theorists and that “no gun was ever fired from Losee— Charlie’s mic exploded.”\n\nThis page sets out what that claim means in practice, how she has packaged it for her audience, and why it fails when measured against the public record of Charlie Kirk’s assassination.\n\nAs with every entry in this archive, the control sample is the public case against Tyler Robinson as described by prosecutors and major wire reporting: a rooftop rifle murder at UVU on September 10, 2025, with forensic and communications evidence presented in charging proceedings. Alternate stories must beat that file. They do not get to ignore it.",
     "primarySources": [
       {
@@ -302,6 +303,15 @@ window.CLAIMS_DATA = [
         "timestamp": "Posted ~22:33 UTC (X)",
         "quote": "no gun was ever fired from Losee— Charlie’s mic exploded",
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074622867103174949"
+      },
+      {
+        "label": "PBD debate (Aug 14, 2026): not convinced of a Losee rooftop shot",
+        "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+        "note": "Primary livestream · timestamp ~00:34:53",
+        "date": "August 14, 2026",
+        "timestamp": "Debate clock ~00:34:53",
+        "quote": "I mean, I don't, I'm not even convinced that Charlie was shot from the rooftop on Losey that day based on the evidence that has been.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184"
       }
     ],
     "evidence": [
@@ -399,7 +409,8 @@ window.CLAIMS_DATA = [
       "dna-indefensible",
       "losee-lone-witness",
       "rooftop-no-recoil",
-      "gun-not-fired"
+      "gun-not-fired",
+      "thirty-ought-six-impossible"
     ],
     "confidence": {
       "centrality": 3,
@@ -1151,12 +1162,12 @@ window.CLAIMS_DATA = [
       "israel",
       "motive"
     ],
-    "dateRange": "Sept 2025 – July 2026",
+    "dateRange": "Sept 2025 – August 14, 2026",
     "verdict": "FALSE",
     "severity": "core",
     "featured": true,
-    "summary": "Months of implication and association: Netanyahu, Zionists, Mossad, donor wars — often while denying she was “implying.”",
-    "claimDetail": "From the week of Charlie Kirk’s death onward, Candace Owens has been one of the loudest promoters of Israel-centered suspicion. Sometimes she states associations carefully. Sometimes she uses hard rhetoric about Zionists, Netanyahu, and Mossad. Across months of shows and posts, the practical effect on her audience has been the same: to treat Israeli power, Jewish donors, or Netanyahu personally as the real explanatory key to the murder, while the charged Utah defendant is demoted to patsy or sideshow.\n\nShe has framed Netanyahu’s public denials as themselves suspicious, weaponized Kirk’s donor and Israel-politics texts as motive proof, used Mossad taunts on X, and kept Ben Shapiro and “IDF security” adjacent to foreknowledge implications. Reporting from outlets such as the Guardian and CNN documented both the content and the method: implication and association even when a clean, falsifiable sentence like “Israel ordered the hit” is sometimes avoided in the same breath.",
+    "summary": "Months of implication and association: Netanyahu, Zionists, Mossad, donor wars — often while denying she was “implying.” On Aug 14 she conceded she could not say Israel was “on the ground,” then kept an “Israeli angle” and the 12-phone story.",
+    "claimDetail": "From the week of Charlie Kirk’s death onward, Candace Owens has been one of the loudest promoters of Israel-centered suspicion. Sometimes she states associations carefully. Sometimes she uses hard rhetoric about Zionists, Netanyahu, and Mossad. Across months of shows and posts, the practical effect on her audience has been the same: to treat Israeli power, Jewish donors, or Netanyahu personally as the real explanatory key to the murder, while the charged Utah defendant is demoted to patsy or sideshow.\n\nShe has framed Netanyahu’s public denials as themselves suspicious, weaponized Kirk’s donor and Israel-politics texts as motive proof, used Mossad taunts on X, and kept Ben Shapiro and “IDF security” adjacent to foreknowledge implications. Reporting from outlets such as the Guardian and CNN documented both the content and the method: implication and association even when a clean, falsifiable sentence like “Israel ordered the hit” is sometimes avoided in the same breath.\n\nOn August 14, 2026, in the Patrick Bet-David debate with Andrew Wilson, she was asked for any positive evidence that Israel killed Kirk. Her answer was: “Well, I couldn’t say Israel was on the ground and shot and killed Charlie Kirk.” She then said she was “trying to establish… a motive,” attributed “12 Israeli cell phones on the ground that day” to Joe Kent, called Netanyahu’s denial unnecessary, and closed that “we cannot say for certainty that Israel called the shots” while still calling it “a conspiracy building” and an “Israeli angle.” That is the same method as the rest of this claim: keep the implication, refuse the operational sentence, and treat the refusal as sophistication.",
     "primarySources": [
       {
         "label": "Guardian: Owens Israel-centered theories",
@@ -1182,6 +1193,24 @@ window.CLAIMS_DATA = [
         "date": "Sept 2025 – July 2026",
         "timestamp": "X post · open link for exact post time",
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fx.com%2FRealCandaceO%2Fstatus%2F2074645801930776622"
+      },
+      {
+        "label": "PBD debate (Aug 14, 2026): “I couldn’t say Israel was on the ground”",
+        "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+        "note": "Primary livestream · timestamp ~02:19:25",
+        "date": "August 14, 2026",
+        "timestamp": "Debate clock ~02:19:25",
+        "quote": "Well, I couldn’t say Israel was on the ground and shot and killed Charlie Kirk.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184"
+      },
+      {
+        "label": "Washington Times (Aug 14, 2026): concession + no LE confirmation",
+        "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/",
+        "note": "Documents debate quotes and that no agency has presented foreign-involvement evidence",
+        "date": "August 14, 2026",
+        "timestamp": "Article published Aug 14, 2026",
+        "quote": "Well, I couldn’t say Israel was on the ground and shot and killed Charlie Kirk.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.washingtontimes.com%2Fnews%2F2026%2Faug%2F14%2Fcandace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk%2F"
       }
     ],
     "evidence": [
@@ -1260,7 +1289,9 @@ window.CLAIMS_DATA = [
       "egypt-planes",
       "foreign-agents-bigger",
       "prophecy-texts",
-      "bill-ackman-intervention"
+      "bill-ackman-intervention",
+      "israeli-phones-uvu",
+      "more-evidence-patsy"
     ],
     "confidence": {
       "centrality": 3,
@@ -1388,11 +1419,11 @@ window.CLAIMS_DATA = [
       "suspect",
       "cover-up"
     ],
-    "dateRange": "Sept 2025 – August 12, 2026 (still active)",
+    "dateRange": "Sept 2025 – August 14, 2026 (still active)",
     "verdict": "CONTRADICTED",
     "severity": "core",
     "featured": true,
-    "summary": "Owens: confident Robinson did not murder Kirk; total patsy; not even on campus; Fed slop; Twiggs as federal setup. Doubled down Aug 2026 that there is “more evidence” he is a patsy than that he committed the crime.",
+    "summary": "Owens: confident Robinson did not murder Kirk; total patsy; not even on campus; Fed slop; Twiggs as federal setup. Doubled down Aug 2026 that there is “more evidence” he is a patsy than that he committed the crime — then sat a four-hour PBD debate without producing a replacement shooter.",
     "claimDetail": "Candace Owens has not merely questioned details of the case against Tyler Robinson. She has denied the core conclusion. In comments reported by the New York Times in July 2026, she said she felt confident stating that Robinson did not murder Charlie Kirk, called him a total patsy, and claimed he was not even on campus that day. On X she has dismissed the official narrative as “Fed slop,” cast doubt using partner statements about what Robinson did or did not discuss, and speculated that Lance Twiggs could be revealed as a federal asset who helped set Robinson up.\n\nIn early August 2026 she escalated again during a public spat with commentator Andrew Wilson: she accepted the framed claim that there is more evidence Robinson was set up as a patsy than evidence he committed the murder, said she was willing to defend that claim “gladly,” and negotiated a high-dollar debate package around it — after a preliminary hearing had already walked the public through campus video, DNA, and confessional communications.\n\nAt the same time she has promoted replacement mechanisms and villains: exploding microphones, foreign planes, French troops, freemason signaling, maroon decoys, and inside-job framing. The through-line is that the charged defendant is a narrative inconvenience rather than the person at the center of a dense public evidence package.",
     "primarySources": [
       {
@@ -5704,12 +5735,12 @@ window.CLAIMS_DATA = [
       "cover-up",
       "self"
     ],
-    "dateRange": "August 5–12, 2026 (active; Friday debate announced)",
+    "dateRange": "August 5–14, 2026 (debate completed Aug 14)",
     "verdict": "CONTRADICTED",
     "severity": "core",
     "featured": false,
-    "summary": "After the July prelim, Owens doubled down: more evidence Robinson is a fed-set-up patsy than that he did the crime; accepted a high-dollar debate with Andrew Wilson. On Aug 11 she named Patrick Bet-David as moderator and said Friday’s debate is “officially happening.”",
-    "claimDetail": "In early August 2026, Candace Owens turned a social-media fight with commentator Andrew Wilson into a formal claim commitment. Wilson argued she had already asserted that there is overwhelming evidence Robinson was set up by the feds as a patsy. Owens did not walk it back. She said she firmly believes there is evidence he was set up as a patsy, is more than happy to defend that claim, and then went further: she accepted the sharper formulation that there is more evidence he was set up as a patsy than evidence that he committed the crime — “yes, yes, yes” — and said she would defend that gladly with “the facts of the case presented thus far.”\n\nThe exchange was packaged with money: Wilson publicly described a $300,000 debate offer (later discussed on Joe Rogan’s podcast); Owens counter-offered $500k, then accepted the original $300k, demanded the debate happen at her location (citing pregnancy), no smoking around her, live stream, cross-examination time, and public scoring — and floated that TPUSA should say Wilson was debating on their behalf. Michael Knowles, Wilson’s first-choice moderator, declined and said the murder case belongs in court, not a paid content product.\n\nOn August 11 she announced Patrick Bet-David as moderator and said Friday’s debate was “officially happening.” She said she trusts him to “moderate fairly,” that he will control breaks and speaking turns, and that producers will talk to him when either side wants something raised. That is a production plan, not a forensic filing.\n\nThis is not “just asking questions.” It is a weighted evidentiary claim after a multi-day preliminary hearing put campus video, DNA, and confessional communications on the public record. Treating a podcast debate purse as the burden of proof is entertainment. The case is not decided by who books a better room.",
+    "summary": "After the July prelim, Owens doubled down: more evidence Robinson is a fed-set-up patsy than that he did the crime; accepted a high-dollar debate with Andrew Wilson. The Aug 14 PBD debate happened. She restated the weighted claim and did not produce a replacement case.",
+    "claimDetail": "In early August 2026, Candace Owens turned a social-media fight with commentator Andrew Wilson into a formal claim commitment. Wilson argued she had already asserted that there is overwhelming evidence Robinson was set up by the feds as a patsy. Owens did not walk it back. She said she firmly believes there is evidence he was set up as a patsy, is more than happy to defend that claim, and then went further: she accepted the sharper formulation that there is more evidence he was set up as a patsy than evidence that he committed the crime — “yes, yes, yes” — and said she would defend that gladly with “the facts of the case presented thus far.”\n\nThe exchange was packaged with money: Wilson publicly described a $300,000 debate offer (later discussed on Joe Rogan’s podcast); Owens counter-offered $500k, then accepted the original $300k, demanded the debate happen at her location (citing pregnancy), no smoking around her, live stream, cross-examination time, and public scoring — and floated that TPUSA should say Wilson was debating on their behalf. Michael Knowles, Wilson’s first-choice moderator, declined and said the murder case belongs in court, not a paid content product.\n\nOn August 11 she announced Patrick Bet-David as moderator and said Friday’s debate was “officially happening.” She said she trusts him to “moderate fairly,” that he will control breaks and speaking turns, and that producers will talk to him when either side wants something raised. That is a production plan, not a forensic filing.\n\nThe debate happened on August 14, 2026 — roughly four hours on the PBD Podcast, streamed and clipped into millions of views. The proposition she had accepted was not “are there unanswered questions.” It was the weighted claim: more evidence Robinson is a fed-set-up patsy than evidence he committed the murder. On the stage she said she was “not even convinced” Kirk was shot from Losee, that a .30-06 from there is “definitively no,” that she could not say Israel was “on the ground,” and that she had never said Erika Kirk or TPUSA “participated in the murder.” She reused the 12-Israeli-phones story, the French Foreign Legion rumor, the exploding-mic / PETN track, and the Smokehouse receipt. She did not produce an authenticated second shooter, a lab product that replaces the rifle, or a location alibi that beats the hearing stack.\n\nThis is not “just asking questions.” It is a weighted evidentiary claim after a multi-day preliminary hearing put campus video, DNA, and confessional communications on the public record. Treating a podcast debate purse as the burden of proof is entertainment. The case is not decided by who books a better room.",
     "primarySources": [
       {
         "label": "TOI (Aug 9, 2026): “I am willing to defend” / more-evidence patsy claim",
@@ -5746,6 +5777,33 @@ window.CLAIMS_DATA = [
         "timestamp": "Article on Aug 11 episode",
         "quote": "I think that he will moderate fairly. I actually truly believe that he will moderate fairly and that is my number one interest in this.",
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.aol.com%2Farticles%2Fmoderate-fairly-candace-owens-announces-034216000.html"
+      },
+      {
+        "label": "PBD Podcast (Aug 14, 2026): Owens vs Wilson — Tyler Robinson guilty or patsy",
+        "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+        "note": "Primary livestream of the debate she accepted",
+        "date": "August 14, 2026",
+        "timestamp": "Live ~11:00 a.m. EDT · ~4 hours",
+        "quote": "If we're talking about was he shot from a gun, a 30-odd six, I would say definitively no.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184"
+      },
+      {
+        "label": "Washington Times (Aug 14, 2026): no positive Israel evidence on the debate stage",
+        "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/",
+        "note": "Documents Wilson’s “any positive evidence” question and Owens’s concession",
+        "date": "August 14, 2026",
+        "timestamp": "Article published Aug 14, 2026",
+        "quote": "Well, I couldn’t say Israel was on the ground and shot and killed Charlie Kirk.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.washingtontimes.com%2Fnews%2F2026%2Faug%2F14%2Fcandace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk%2F"
+      },
+      {
+        "label": "Media Matters (Aug 18, 2026): debate view counts / “who killed Charlie Kirk” economy",
+        "url": "https://www.mediamatters.org/candace-owens/candace-owens-and-andrew-wilson-debate-continues-grift-over-charlie-kirks-murder",
+        "note": "Documents the debate as a multi-million-view content event, not a case filing",
+        "date": "August 18, 2026",
+        "timestamp": "Published 08/18/26",
+        "quote": "The debate between Owens and Wilson amassed at least 11 million views from 64 YouTube and Rumble channels",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.mediamatters.org%2Fcandace-owens%2Fcandace-owens-and-andrew-wilson-debate-continues-grift-over-charlie-kirks-murder"
       }
     ],
     "evidence": [
@@ -5781,6 +5839,25 @@ window.CLAIMS_DATA = [
       },
       {
         "tier": 5,
+        "title": "The Aug 14 debate was the test she scheduled — and she still had no replacement case",
+        "body": "She chose the proposition. She chose the purse. She chose the room. On August 14 she had hours to convert “more evidence he is a patsy” into a chain: authenticated location proof, a lab product that replaces the Mauser, a named second shooter with physical exhibits, or a documented frame-up communication.\n\nWhat she put on the table was the existing catalog: Losee denial, “Superman neck” / YouTube cage demos, a .30-06 “definitively no,” an exploding-mic / PETN maybe, a receipt she has already sold, French Legion rumor-as-report, and an Israel “angle” she would not operationalize. Wilson asked for positive evidence that Israel killed Kirk. She answered with motive talk and 12 phones. That is not a stack that outweighs DNA on a trigger plus campus video plus a pre-crime note. It is the same show, now with a moderator and a clip farm.\n\nA debate can be entertaining. It cannot substitute for the hearing. If the weighted claim were true, the four-hour product would have contained the exhibits. It contained the portfolio.",
+        "sources": [
+          {
+            "name": "PBD debate video",
+            "url": "https://www.youtube.com/watch?v=_DnMymkR184"
+          },
+          {
+            "name": "Washington Times: Israel concession",
+            "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/"
+          },
+          {
+            "name": "Media Matters: view-count packaging",
+            "url": "https://www.mediamatters.org/candace-owens/candace-owens-and-andrew-wilson-debate-continues-grift-over-charlie-kirks-murder"
+          }
+        ]
+      },
+      {
+        "tier": 5,
         "title": "Related: “offered to help the defense” is political theater around the same claim",
         "body": "During the July hearing window, coverage also described Owens offering to help Robinson’s defense while calling him a patsy who was not even on campus. Helping a defendant is a free-country choice. Treating that offer as proof the prosecution case is empty is circular: she assumes the frame-up, then cites her own activism as validation.",
         "sources": [
@@ -5797,7 +5874,10 @@ window.CLAIMS_DATA = [
       "twiggs-fed-asset",
       "feds-altered-evidence",
       "rooftop-no-recoil",
-      "dna-indefensible"
+      "dna-indefensible",
+      "thirty-ought-six-impossible",
+      "israeli-phones-uvu",
+      "israel-mossad"
     ],
     "confidence": {
       "centrality": 3,
@@ -6144,6 +6224,220 @@ window.CLAIMS_DATA = [
     ],
     "confidence": {
       "centrality": 2,
+      "checkability": 2,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "thirty-ought-six-impossible",
+    "title": "A .30-06 from the Losee rooftop “definitively” could not have killed Charlie Kirk — he would have needed a “Superman neck,” and YouTube cage tests prove it",
+    "shortTitle": ".30-06 “Superman neck” / YouTube cage tests",
+    "categories": [
+      "forensic",
+      "cover-up"
+    ],
+    "dateRange": "August 14, 2026 (PBD debate; still active)",
+    "verdict": "FALSE",
+    "severity": "core",
+    "featured": false,
+    "summary": "On the Aug 14 PBD debate Owens said she has seen no compelling evidence Kirk was shot by a .30-06, then: “definitively no.” She cited “Superman neck” common sense and a YouTuber (Valhalla / steel-cage) demo that a .30-06 goes through steel.",
+    "claimDetail": "On August 14, 2026, Candace Owens sat the debate she had spent a week selling. Asked whether she thinks Charlie Kirk was shot at all, she would not close the door on “a projectile of some description.” Asked whether it was a .30-06 from the Losee rooftop — the weapon class in the public charging case — she did close the door.\n\n“I do not think that Charlie was shot from a 30 odd six from a [rooftop].” Then: she has “not seen any compelling evidence that Charlie was shot by a 30 odd six.” Then the hard line: “If we’re talking about was he shot from a gun, a 30-odd six, I would say definitively no.” The color commentary was “Superman neck.” She said a YouTuber (the debate-review record identifies Nate Cornacchia / Valhalla VFT; the auto-transcript garbles it as “Spalhalla”) set up steel cages, shot them, and “it went through.” Therefore, she said, under no circumstance will she accept a Losee .30-06 as the kill.\n\nLater in the same debate she was still selling the exploding-microphone / PETN track and shirt-motion “from underneath.” She also left a smaller-caliber gunshot as a maybe. That is three mechanisms in one afternoon: no .30-06, maybe a smaller gun, maybe a shaped charge in a lapel. The official case is one mechanism: a bolt-action Mauser Model 98 .30-06, a neck gunshot, a recovered rifle, a spent casing, and medical-examiner language of a projectile perforating the neck.\n\nA YouTube steel-cage stunt is not a wound-ballistics reconstruction of a human neck at ~150 yards with a 150-grain soft-point. Soft-point hunting ammunition is designed to expand and dump energy in tissue. It is not required to drill a clean through-and-through hole in every target the way a cage plate might. “Superman neck” is a slogan. “Definitively no” is a verdict she is not entitled to on a demo video.",
+    "primarySources": [
+      {
+        "label": "PBD debate (Aug 14, 2026): “definitively no” on a .30-06",
+        "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+        "note": "Primary livestream · timestamp ~00:35:03–00:36:05",
+        "date": "August 14, 2026",
+        "timestamp": "Debate clock ~00:35:03–00:36:05",
+        "quote": "If we're talking about was he shot from a gun, a 30-odd six, I would say definitively no. It defies common sense to think that he had a Superman neck.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184"
+      },
+      {
+        "label": "PBD debate transcript (Fudgie / show page): same exchange",
+        "url": "https://fight.fudgie.org/search/show/co/episode/20260814_Fri_v7bzelg",
+        "note": "Timestamped transcript of the debate she hosted on her feed",
+        "date": "August 14, 2026",
+        "timestamp": "► 00:35:39 / 00:35:46",
+        "quote": "If we're talking about was he shot from a gun, a 30-odd six, I would say definitively no. It defies common sense to think that he had a Superman neck.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ffight.fudgie.org%2Fsearch%2Fshow%2Fco%2Fepisode%2F20260814_Fri_v7bzelg"
+      },
+      {
+        "label": "Evangelical Dark Web debate review (Aug 15, 2026): Valhalla / Cornacchia cite",
+        "url": "https://evangelicaldarkweb.org/2026/08/15/candace-owens-vs-andrew-wilson-debate-review/",
+        "note": "Contemporaneous review naming Nate Cornacchia of Valhalla VFT as the YouTube experiment she cited",
+        "date": "August 15, 2026",
+        "timestamp": "Review published Aug 15, 2026",
+        "quote": "Owens says that Kirk could not have been shot with a 30-06 round, based on the “experiments” performed by Nate Cornacchia of Valhalla VFT on YouTube.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fevangelicaldarkweb.org%2F2026%2F08%2F15%2Fcandace-owens-vs-andrew-wilson-debate-review%2F"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 1,
+        "title": "The public case is a .30-06 rifle case — not a mystery caliber",
+        "body": "July 2026 preliminary-hearing coverage described a Mauser Model 98 .30-06 recovered wrapped in a towel near campus, a spent casing, unfired rounds, and DNA testimony on the weapon. The medical-examiner summary used in the debate described a projectile sequentially perforating the interior left of Kirk’s neck and strap muscles — gunshot language, not “unknown energy event.”\n\nOwens is not arguing a footnote. She is telling a live audience that the weapon class already walked into open court is physically impossible. That requires her to beat the rifle, the casing, the ME language, and the courtyard video. A steel-cage YouTube is none of those exhibits.",
+        "sources": [
+          {
+            "name": "AP: timeline and charging evidence details",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          },
+          {
+            "name": "CNN: hearing takeaways",
+            "url": "https://www.cnn.com/2026/07/11/us/charlie-kirk-tyler-robinson-hearing-takeaways"
+          },
+          {
+            "name": "This site: public-record briefing (weapon class)",
+            "url": "facts.html"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "title": "A neck gunshot from a hunting soft-point is not required to look like a steel-plate drill",
+        "body": "Wilson’s on-stage counter was the boring one, which is why it matters: a 150-grain Remington Core-Lokt (or similar soft-point) is designed to expand and can fragment or dump in tissue. A human neck is not a steel cage. Bone, cartilage, vessels, and a short path through a moving body are a different problem than “I shot a plate and it went through, therefore a neck must also be a through-and-through or the official story is fake.”\n\nIf a smaller caliber “could” also fail to exit — Owens conceded that when asked — then “no exit = not a .30-06” is not a rule. It is a slogan. Temporary cavity, yaw, and recovered-fragment facts belong to the ME and the trial, not to a podcast common-sense test.",
+        "sources": [
+          {
+            "name": "PBD debate: Wilson on Core-Lokt / ME summary (~00:37:41)",
+            "url": "https://www.youtube.com/watch?v=_DnMymkR184"
+          },
+          {
+            "name": "NBC: what we know (neck gunshot / official mechanism)",
+            "url": "https://www.nbcnews.com/news/us-news/know-charlie-kirks-assassination-rcna230552"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "YouTube cage tests are content, not a reconstruction of September 10",
+        "body": "To overturn a charging weapon class you need: the actual ammunition, the actual range and angle, a tissue-simulant or cadaver protocol, and a medical correlation to this wound. “A YouTuber set up steel cages and it went through” is a brand of entertainment that feels like ballistics because there is a bang and a hole.\n\nEven the review that named Valhalla VFT noted the same experimenter has publicly disagreed with Owens’s Fort Huachuca / Erika-and-security-planning lore. Borrowing a creator’s steel video while discarding the rest of his file is shopping, not science. If she has Cornacchia’s protocol, range, load, and a signed comparison to the ME report, she can publish it. Until then, “Superman neck” is a punchline attached to a false necessity.",
+        "sources": [
+          {
+            "name": "EDW debate review: Cornacchia / Valhalla cite + Huachuca disagreement",
+            "url": "https://evangelicaldarkweb.org/2026/08/15/candace-owens-vs-andrew-wilson-debate-review/"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "She ran three kill mechanisms in one debate",
+        "body": "In the same sitting she said: (1) not a Losee .30-06, definitively; (2) maybe a smaller-caliber gunshot; (3) still a viable exploding-mic / PETN story, with shirt motion “from underneath” and Rob O’Neill as prestige. Those cannot all be the murder weapon.\n\nThe method is to keep every alternative alive so the official rifle can never be allowed to win. A truth procedure picks a mechanism and tries to kill it. A content procedure keeps a menu. See also exploding-microphone and no-rooftop-shot — this page is the caliber sticker slapped on the same denial.",
+        "sources": [
+          {
+            "name": "This site: exploding / rigged microphone",
+            "url": "c/exploding-microphone.html"
+          },
+          {
+            "name": "This site: no rooftop gunshot",
+            "url": "c/no-rooftop-shot.html"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "no-rooftop-shot",
+      "exploding-microphone",
+      "oneill-ied-shot",
+      "me-lungs-heart",
+      "autopsy-flipflops",
+      "gun-not-fired",
+      "more-evidence-patsy",
+      "robinson-framed"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "israeli-phones-uvu",
+    "title": "Twelve Israeli-registered cell phones were “on the ground” at Utah Valley University the day Charlie Kirk was killed — and that is the Israel evidence",
+    "shortTitle": "12 Israeli phones at UVU",
+    "categories": [
+      "israel",
+      "foreign-actors",
+      "cover-up"
+    ],
+    "dateRange": "November 2025 – August 14, 2026 (restated on the debate stage)",
+    "verdict": "UNSUPPORTED",
+    "severity": "high",
+    "featured": false,
+    "summary": "Owens’s concrete “Israel on campus” exhibit: 12 personal cell accounts opened in Israel, detected at UVU on Sept 10. In the Aug 14 debate she attributed the note to Joe Kent, then admitted she could not say Israel was on the ground and killed Kirk.",
+    "claimDetail": "For months the Israel package on this site was implication: donor texts, Netanyahu denials, Mossad jokes, Shapiro adjacency. The closest thing Owens has offered as a numbered, checkable on-scene claim is the phones.\n\nIn November 2025 she told her audience there were, “for whatever reason, 12 Israeli cell phones on the ground at Utah Valley University the day that Charlie Kirk was assassinated” — not VPNs routed through Israel, she said, but personal accounts opened in Israel, present on campus September 10. She framed the number as something that had “spooked” high officials.\n\nOn August 14, 2026, when Andrew Wilson asked for any positive evidence that Israel killed Kirk, she did not produce a name, a unit, or a communication. She said she “couldn’t say Israel was on the ground and shot and killed Charlie Kirk,” then reached for the phones: “Joe Kent, who I think would have the right to assert it, noted that there were 12 Israeli cell phones on the ground that day.” She added that maybe they were students, that “we’d like to probe that,” and that Netanyahu’s denial plus a Hamptons call plus “desperate lies about Charlie shifting opinion” make an “Israeli angle.” She closed: “we cannot say for certainty that Israel called the shots.”\n\nThat is the claim. A number, a nationality label, a named-drop, and a motive mood. No public SIGINT product. No carrier exhibit. No law-enforcement confirmation. A large American campus on a weekday in September will have international students, visitors, dual citizens, and roaming devices. “12 Israeli-registered phones” — even if the raw count were real — is not a hit team.",
+    "primarySources": [
+      {
+        "label": "PBD debate (Aug 14, 2026): phones as the Israel “evidence”",
+        "url": "https://www.youtube.com/watch?v=_DnMymkR184",
+        "note": "Primary livestream · timestamp ~02:21:12",
+        "date": "August 14, 2026",
+        "timestamp": "Debate clock ~02:21:12",
+        "quote": "Joe Kent, who I think would have the right to assert it, noted that there were 12 Israeli cell phones on the ground that day.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184"
+      },
+      {
+        "label": "Washington Times (Aug 14, 2026): 12-phone claim; no agency confirmation",
+        "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/",
+        "note": "Documents the Nov 2025 origin, the Kent attribution, and that no LE agency has confirmed the claim",
+        "date": "August 14, 2026",
+        "timestamp": "Article published Aug 14, 2026",
+        "quote": "She repeated an unsubstantiated claim she first made in November 2025 — that 12 Israeli-registered cellphones were detected near the shooting scene at Utah Valley University.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.washingtontimes.com%2Fnews%2F2026%2Faug%2F14%2Fcandace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk%2F"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 2,
+        "title": "No public agency has adopted the 12-phone exhibit",
+        "body": "Washington Times reporting on the debate is blunt: no law-enforcement agency has confirmed the Israeli-phone count, and it did not originate as a named investigative finding in the charging case. Prosecutors have walked a rifle, DNA, campus video, and communications. They have not walked a SIGINT slide titled “12 Israeli IMSIs at UVU.”\n\nIf Owens or Joe Kent has a carrier dump, a lawful intercept summary, or a FOIA product, it can be published with enough metadata to audit. A podcast number is not that. Attributing the number to Kent — “who I think would have the right to assert it” — is still hearsay until Kent puts a document on the table. This site is not asserting Kent said it. It is documenting that Owens used his name as the warrant.",
+        "sources": [
+          {
+            "name": "Washington Times: no LE confirmation of the phone claim",
+            "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/"
+          },
+          {
+            "name": "AP: charging / evidence overview (no foreign-phone case)",
+            "url": "https://apnews.com/article/charlie-kirk-assassination-timeline-robinson-arrest-bab1ccce01dbacb449b79fd52c3de94f"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "A campus headcount is not a kill team",
+        "body": "Utah Valley University is a large public campus. International students, visiting families, roaming tourists, dual citizens, and people whose accounts were opened abroad are ordinary. Even a true count of “accounts opened in Israel” — Owens’s own gloss — would require: who, where on campus, when relative to 12:23 p.m., what they did, and a bridge from a handset to a rooftop or a microphone. She offered none of that.\n\nShe even said the phones “could be maybe they were students.” That concession belongs in the same paragraph as the claim. A number that she admits might be students is not “the Israel evidence.” It is a vibe with a digit stapled on.",
+        "sources": [
+          {
+            "name": "PBD debate: “maybe they were students” (~02:21:20)",
+            "url": "https://www.youtube.com/watch?v=_DnMymkR184"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "She used the phones as a substitute for the sentence she would not say",
+        "body": "Wilson asked for positive evidence that Israel killed Charlie Kirk. Owens refused the operational sentence, then spent the next minute on motive, Netanyahu’s tone, a Hamptons call, and the phones. That is the method catalogued on the Israel/Mossad page: keep the angle, refuse the hit, treat the refusal as seriousness.\n\nIf the phones were a real exhibit, they would have a document. If they are a rumor, they cannot carry an assassination theory. She cannot have it both ways — “we cannot say for certainty that Israel called the shots” and “this is the evidence you asked for.”",
+        "sources": [
+          {
+            "name": "This site: Israel / Mossad killed Kirk",
+            "url": "c/israel-mossad.html"
+          },
+          {
+            "name": "Washington Times: concession language",
+            "url": "https://www.washingtontimes.com/news/2026/aug/14/candace-owens-concedes-no-direct-proof-israel-killed-charlie-kirk/"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "israel-mossad",
+      "pro-israel-motive",
+      "netanyahu-denial",
+      "bill-ackman-intervention",
+      "kolvet-white-house-lie",
+      "more-evidence-patsy",
+      "foreign-agents-bigger"
+    ],
+    "confidence": {
+      "centrality": 3,
       "checkability": 2,
       "stillActive": true
     }

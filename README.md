@@ -1,6 +1,6 @@
 # Scamdace Owens Exposed
 
-Public static website cataloguing Candace Owens’s claims about the Charlie Kirk assassination (Sept 10, 2025 – August 12, 2026) and the public evidence that dismantles them — plus a full investigative **archive hub**.
+Public static website cataloguing Candace Owens’s claims about the Charlie Kirk assassination (Sept 10, 2025 – August 19, 2026) and the public evidence that dismantles them — plus a full investigative **archive hub**.
 
 **Author:** MileHigh Patriot ([@America1st5280](https://x.com/America1st5280))
 

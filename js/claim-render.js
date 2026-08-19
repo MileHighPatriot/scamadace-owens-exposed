@@ -194,7 +194,7 @@
       prefix +
       'feed.xml">RSS</a>' +
       "</nav>" +
-      '<p class="footer-meta">Catalog baseline: August 12, 2026 · Static archive · No tracking required</p>' +
+      '<p class="footer-meta">Catalog baseline: August 19, 2026 · Static archive · No tracking required</p>' +
       "</div></footer>"
     );
   }

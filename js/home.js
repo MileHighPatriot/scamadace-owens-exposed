@@ -39,8 +39,8 @@
   }
 
   var latestIds = [
-    "uncompressed-4k-not-robinson",
-    "tpusa-trans-journalist",
+    "thirty-ought-six-impossible",
+    "israeli-phones-uvu",
     "more-evidence-patsy",
   ];
 
