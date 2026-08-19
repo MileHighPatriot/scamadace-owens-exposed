@@ -1,48 +1,58 @@
-# Origin for work, GitHub Pages for the public link (for now)
+# Two lockers, one public link
 
-**Cursor Origin** is where we edit, review, and merge. **GitHub Pages** is only the free public website until Origin can host pages itself.
+Work can live in **both** Cursor Origin and GitHub. The public website is GitHub Pages until Origin can host pages.
 
-| Job | Where |
-|-----|--------|
-| Store / review / merge | Origin — [scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed) |
-| Public site | [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/) |
-| How it updates | Push / merge the same commits to GitHub `main`. Pages serves that branch. |
+## Do both lockers get the same files?
 
-Do not use GitHub Actions. Do not make GitHub the place you review PRs. Origin stays the source of truth.
+Yes. Use Origin’s **Sync from GitHub** (official, built-in):
+
+- GitHub holds the copy Pages publishes
+- Origin is a live mirror
+- Pull requests show on both
+- A push to Origin is forwarded to GitHub, so the public link updates
+
+That is the switch you want later: when Origin gets pages, turn Pages off and keep Origin.
+
+Do **not** keep two unrelated copies and edit them by hand. That is how they drift.
+
+### Turn sync on (once per site)
+
+1. Open [cursor.com/codebase](https://cursor.com/codebase)
+2. **Sync from GitHub**
+3. Pick the GitHub repo for that site
+4. Confirm
+
+If a site is already Origin-only, put it on GitHub first (same name), turn Pages on, then Sync from GitHub.
+
+### Pages (the public link)
+
+GitHub → **Settings → Pages** → Deploy from a branch → `main` → folder `/`
+
+Link will be:
+
+`https://milehighpatriot.github.io/<repo-name>/`
 
 ---
 
-## One-time GitHub Pages check
+## This site (Owens)
 
-On GitHub: **Settings → Pages**
+| | |
+|--|--|
+| Origin | [scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed) |
+| GitHub | [MileHighPatriot/scamadace-owens-exposed](https://github.com/MileHighPatriot/scamadace-owens-exposed) |
+| Public | [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/) |
 
-- Source: **Deploy from a branch**
-- Branch: `main` / `/` (root)
-- The repo already has `.nojekyll` so GitHub will not break the static files
+GitHub `main` is still August 13. New claims are on Origin [PR #1](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed/pull/1) until that branch is pushed to GitHub.
 
----
+## Other sites
 
-## Monday (or any update)
+Name them (Origin or GitHub repo names). Each one gets the same three things: GitHub repo, Pages on, Sync from GitHub.
 
-1. Work on **Origin** (this repo, draft PR, you merge).
-2. Push the same `main` to GitHub (`github` remote).
-3. Wait a minute. The github.io URL updates.
-
-When Cursor adds public pages on Origin, drop the GitHub copy and keep Origin only.
-
----
-
-## After you edit claims yourself
+## After you edit
 
 ```bash
 node scripts/generate-pages.js
 node scripts/generate-pages.js --check
 ```
 
-Commit and merge on Origin, then update GitHub `main` so Pages republishes.
-
-## Local preview
-
-```bash
-python3 -m http.server 8080
-```
+Commit and merge. With sync on, one push updates both lockers and then Pages.

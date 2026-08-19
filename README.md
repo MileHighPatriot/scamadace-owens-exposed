@@ -4,11 +4,9 @@ Public static website cataloguing Candace Owens’s claims about the Charlie Kir
 
 **Author:** MileHigh Patriot ([@America1st5280](https://x.com/America1st5280))
 
-**Code (Cursor Origin):** [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed)
+**Code:** Cursor Origin and GitHub (keep them in sync — see [DEPLOY.md](./DEPLOY.md))
 
-**Live (GitHub Pages, temporary):** [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/)
-
-Work happens on Origin. The github.io URL is only the free public copy until Origin can host pages.
+**Live:** [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/)
 
 ## Core pages
 
@@ -77,7 +75,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md). Edit and merge on **Origin**. Publish by updating GitHub `main` so Pages can serve the site.
+See [DEPLOY.md](./DEPLOY.md). Public link is GitHub Pages. Turn on **Sync from GitHub** so Origin and GitHub stay the same.
 
 ## Local preview
 
