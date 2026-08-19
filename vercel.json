@@ -1,4 +1,8 @@
 {
+  "framework": null,
+  "buildCommand": "node scripts/generate-pages.js",
+  "outputDirectory": ".",
+  "installCommand": "",
   "cleanUrls": false,
   "trailingSlash": false,
   "headers": [

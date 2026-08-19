@@ -4,7 +4,9 @@ Public static website cataloguing Candace Owens’s claims about the Charlie Kir
 
 **Author:** MileHigh Patriot ([@America1st5280](https://x.com/America1st5280))
 
-**Live:** [milehighpatriot.github.io/scamadace-owens-exposed](https://milehighpatriot.github.io/scamadace-owens-exposed/)
+**Code (Cursor Origin, not GitHub):** [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed)
+
+**Live site:** Vercel, imported from that Origin repo (see [DEPLOY.md](./DEPLOY.md)). Until the first Origin → Vercel deploy, the old github.io URL still answers.
 
 ## Core pages
 
@@ -73,7 +75,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md). Origin → Vercel auto-deploy needs **Vercel Pro**. The Monday scan is a Cursor Automation (no extra Vercel bill). The live github.io URL can stay until you choose a host.
+See [DEPLOY.md](./DEPLOY.md). Everything stays on **Cursor Origin**. Vercel is only the public host and must be imported with **Continue with Origin** (Pro team). Do not connect GitHub.
 
 ## Local preview
 
