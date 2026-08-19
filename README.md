@@ -56,7 +56,7 @@ Old links of the form `claim.html?id=exploding-microphone` still redirect to `c/
 
 ## Data
 
-- `js/claims-data.js` — 60+ claim objects (primary sources with date/timestamp/quote/archiveUrl + confidence)
+- `js/claims-data.js` — 70 claim objects (primary sources with date/timestamp/quote/archiveUrl + confidence)
 - `js/archive-data.js` — timeline, people, methods, quotes, legal, hearing, glossary, etc.
 - `js/archive.js` — page renderers for archive sections
 - `js/app.js` — shared chrome, helpers, permalink builder
@@ -73,7 +73,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md) for free GitHub Pages setup.
+See [DEPLOY.md](./DEPLOY.md) for **Vercel** (recommended for a custom domain), GitHub Pages, and the **weekly scan → Cloud Agent → merge** update loop.
 
 ## Local preview
 

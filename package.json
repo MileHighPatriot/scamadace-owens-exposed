@@ -1,0 +1,11 @@
+{
+  "name": "scamadace-owens-exposed",
+  "private": true,
+  "description": "Static catalog of Candace Owens claims about the Charlie Kirk assassination.",
+  "scripts": {
+    "build": "node scripts/generate-pages.js",
+    "check": "node scripts/generate-pages.js --check",
+    "scan": "node scripts/weekly-scan.js",
+    "preview": "python3 -m http.server 8080"
+  }
+}

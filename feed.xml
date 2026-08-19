@@ -7,6 +7,13 @@
   <language>en-us</language>
   <lastBuildDate>Wed, 19 Aug 2026 16:00:00 GMT</lastBuildDate>
   <item>
+    <title>Vercel deploy + weekly scan loop</title>
+    <link>https://milehighpatriot.github.io/scamadace-owens-exposed/DEPLOY.md</link>
+    <guid isPermaLink="false">2026-08-19-vercel-weekly-scan</guid>
+    <pubDate>Wed, 19 Aug 2026 16:30:00 GMT</pubDate>
+    <description>Vercel config, Monday RSS scan Action, Cloud Agent prompt. Scan finds candidates; merge still publishes.</description>
+  </item>
+  <item>
     <title>Aug 14 PBD debate wave</title>
     <link>https://milehighpatriot.github.io/scamadace-owens-exposed/corrections.html</link>
     <guid isPermaLink="false">2026-08-19-pbd-debate-wave</guid>

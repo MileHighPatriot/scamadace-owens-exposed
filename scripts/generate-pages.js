@@ -20,7 +20,8 @@ function readSiteConfig() {
   if (!origin || !updated) {
     throw new Error("Could not read SITE_ORIGIN / SITE_UPDATED from js/app.js");
   }
-  return { origin: origin[1].replace(/\/$/, ""), updated: updated[1] };
+  var originValue = (process.env.SITE_ORIGIN || origin[1]).replace(/\/$/, "");
+  return { origin: originValue, updated: updated[1] };
 }
 
 function loadWindow() {
