@@ -78,9 +78,9 @@
     <div class="card" style="margin-bottom:1rem">
       <p style="margin:0;color:var(--text-muted)">
         <strong>2026-08-19 — Vercel + weekly scan.</strong>
-        Added Vercel static deploy, a Monday GitHub Action that writes a candidate scan
-        (<code>scripts/weekly-scan.js</code>), and a Cloud Agent prompt for sourced page updates.
-        Merge a PR to publish; the cron job does not auto-write verdicts.
+        Vercel deploys from this Cursor Origin repo (no GitHub). A Monday Cloud
+        Automation runs <code>scripts/weekly-scan.js</code> and opens an Origin draft PR
+        when new sourced claims exist. You merge; Vercel publishes.
       </p>
     </div>
     <div class="card" style="margin-bottom:1rem">

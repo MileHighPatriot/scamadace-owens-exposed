@@ -73,7 +73,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md) for **Vercel** (recommended for a custom domain), GitHub Pages, and the **weekly scan → Cloud Agent → merge** update loop.
+See [DEPLOY.md](./DEPLOY.md) for **Vercel from Cursor Origin** (no GitHub) and the Monday Cloud Automation.
 
 ## Local preview
 

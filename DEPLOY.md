@@ -1,89 +1,63 @@
-# Deploy and weekly updates
+# Deploy on Vercel from Cursor Origin (no GitHub)
 
-The site is a static folder. **Vercel** (or GitHub Pages) publishes whatever is on `main`. Nothing on the live site changes until a commit lands.
+This repo lives on **Cursor Origin**. Vercel can deploy Origin repos directly. GitHub is not part of the loop.
 
-## What can be automatic — and what cannot
+## The loop
 
-| Step | Automatic? | How |
-|------|------------|-----|
-| Publish the site | Yes | Connect the GitHub repo to Vercel. Every push to `main` deploys. |
-| Hunt new headlines / episodes | Yes | Monday GitHub Action runs `scripts/weekly-scan.js` and opens an issue. |
-| Write a sourced claim page + verdict | **No — needs you or a Cursor agent** | A cron job should not invent “False” stacks. Use the weekly issue + Cloud Agent prompt. |
-| Go live | Yes, after merge | Merge the PR → Vercel rebuilds in about a minute. |
+1. You connect this Origin repo to Vercel once.
+2. A **Cursor Automation** runs every Monday, scans for new Owens / Kirk claims, and opens an Origin PR if anything new is sourced.
+3. You merge the PR on Origin. Vercel ships production.
 
-That is the safe loop: **scan every week → draft PR → you glance at it → merge → Vercel updates.**
+| Step | Who | Notes |
+|------|-----|--------|
+| Host the code | Origin | `origin.cursor.com/git/milehigh-patriot/scamadace-owens-exposed` |
+| Preview / production | Vercel | PR → preview. Merge to `main` → production. |
+| Monday scan + draft pages | Cursor Automation | Scheduled cron. Must be attached to **this** Origin repo. |
+| Publish | You | Merge the draft PR. Do not let a cron auto-merge verdicts. |
 
----
-
-## Upload to Vercel (about 5 minutes)
-
-1. Put the project on **GitHub** if it is not already (live repo: [MileHighPatriot/scamadace-owens-exposed](https://github.com/MileHighPatriot/scamadace-owens-exposed)).
-2. Go to [vercel.com](https://vercel.com) → **Add New… → Project** → Import that repo.
-3. Leave the defaults:
-   - Framework: Other
-   - Build command: `node scripts/generate-pages.js` (from `package.json`)
-   - Output directory: `.` (repo root)
-4. Deploy. You get a URL like `https://scamadace-owens-exposed.vercel.app`.
-5. Optional production URL: Vercel → Project → **Settings → Domains** → add `scamadaceowensexposed.com` (or whatever you bought). Point the domain’s DNS as Vercel shows (usually an A record or CNAME).
-6. Optional: Project → **Settings → Environment Variables** → `SITE_ORIGIN` = `https://your-domain.com` (no trailing slash). Generated canonicals / sitemap will use it. Also change `SITE_ORIGIN` in `js/app.js` so share buttons match.
-
-`vercel.json` is already in the repo. You do **not** need to drag-and-drop files in the Vercel dashboard after the first import.
-
-### Local Vercel preview (optional)
-
-```bash
-npm i -g vercel
-vercel
-```
+Origin repos are private. Vercel’s Origin integration is in public beta and **does not work on a Vercel Hobby team** — you need a Vercel Pro (or Enterprise) team.
 
 ---
 
-## GitHub Pages (still works)
+## 1. Connect Origin → Vercel (you click this)
 
-Same as before: **Settings → Pages → Deploy from a branch → `main` / root.**
+**From Origin (easiest):**
 
-Live today: https://milehighpatriot.github.io/scamadace-owens-exposed/
+1. Open the repo: [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed)
+2. Open the **Apps** tab.
+3. Connect **Vercel** and authorize the Cursor Origin team.
 
-You can run **both**. Use Vercel if you want a cleaner custom domain and instant deploys; keep Pages as the backup.
+**From Vercel:**
+
+1. [vercel.com/new](https://vercel.com/new) → **Continue with Origin**.
+2. Pick the Origin team, then `scamadace-owens-exposed`.
+3. Framework: **Other**. Build: `node scripts/generate-pages.js`. Output: `.` (root).
+4. Deploy.
+
+After that, every Origin PR gets a preview URL. Merge to `main` updates production.
+
+Optional: Vercel → Project → **Domains** for a custom domain. Set `SITE_ORIGIN` (no trailing slash) as a Vercel env var and in `js/app.js`.
 
 ---
 
-## Weekly automatic scan (GitHub)
+## 2. Monday automation (you save this once)
 
-The workflow [`.github/workflows/weekly-scan.yml`](.github/workflows/weekly-scan.yml) runs **every Monday at 14:00 UTC** (and whenever you click **Run workflow**).
+I cannot create Cursor Automations from this agent (that API is read-only here). You create it once:
 
-It:
+1. Open [cursor.com/automations](https://cursor.com/automations) → **New**.
+2. Trigger: **Scheduled** → cron `0 14 * * 1` (Monday 14:00 UTC).
+3. Repository: **this Origin repo**, branch `main`. Cron defaults to “no repository” — change that or the agent cannot edit code.
+4. Tools: leave **Pull request creation** on.
+5. Paste the prompt in [scripts/WEEKLY-AGENT-PROMPT.md](scripts/WEEKLY-AGENT-PROMPT.md).
+6. Save and turn it **on**.
 
-1. Fetches the Candace podcast RSS and Google News for Owens + Kirk / Robinson.
-2. Drops anything already in the catalog.
-3. Writes `research/weekly-scan.md`.
-4. Opens or updates a GitHub issue labeled `weekly-scan`.
+Manual test anytime: run the same prompt as a Cloud Agent on this repo.
 
-**First-time setup on GitHub**
-
-1. Create the label `weekly-scan` (Issues → Labels).
-2. Confirm Actions are enabled for the repo.
-3. Actions → **Weekly claim scan** → **Run workflow** once to test.
-
-Manual scan on your machine:
+Local scan only (no publish):
 
 ```bash
 node scripts/weekly-scan.js
 ```
-
-Then open `research/weekly-scan.md`.
-
----
-
-## Weekly automatic *pages* (Cursor Cloud Agent)
-
-Vercel will not write claim essays. A Cursor Cloud Agent will.
-
-1. [cursor.com/agents](https://cursor.com/agents) → new cloud agent on this repo.
-2. Paste [scripts/WEEKLY-AGENT-PROMPT.md](scripts/WEEKLY-AGENT-PROMPT.md).
-3. To make that hands-off: Cursor → **Automations** → weekly schedule → same prompt.
-
-The agent should open a **draft PR**. You merge when the primaries look right. Vercel publishes the merge.
 
 ---
 
@@ -94,14 +68,10 @@ node scripts/generate-pages.js
 node scripts/generate-pages.js --check
 ```
 
-Commit and push `main` (or merge the PR). Vercel and/or Pages rebuild.
-
----
+Commit, open an Origin PR, merge. Vercel rebuilds.
 
 ## Local preview
 
 ```bash
 python3 -m http.server 8080
 ```
-
-Open `http://localhost:8080`.

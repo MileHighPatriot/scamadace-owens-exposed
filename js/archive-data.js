@@ -3724,13 +3724,13 @@ window.ARCHIVE_DATA = {
   ],
   "researchOps": {
     "weeklyRitual": [
-      "Run `node scripts/weekly-scan.js` (or wait for the Monday GitHub Action issue)",
+      "Monday Cursor Automation runs `node scripts/weekly-scan.js` on this Origin repo",
       "Scan @RealCandaceO for Kirk/Robinson/TPUSA/Losee/mic keywords",
       "Capture latest episode title + date + chapter list",
       "Add candidate rows: date | URL | timestamp | quote | thesis | related claim IDs",
       "Screenshot + archive.today every primary X post",
       "Mark stillActive on claims reaffirmed",
-      "Paste research/weekly-scan.md agent prompt into a Cursor Cloud Agent if you want drafted pages"
+      "Automation opens an Origin draft PR; merge to ship on Vercel"
     ],
     "intakeFields": [
       "date",
@@ -3759,7 +3759,7 @@ window.ARCHIVE_DATA = {
     {
       "date": "2026-08-19",
       "title": "Vercel deploy + weekly scan loop",
-      "body": "Added Vercel config, Monday GitHub Action that scans podcast/news RSS for new Kirk-assassination items, and a Cloud Agent prompt so weekly page updates stay sourced instead of auto-published."
+      "body": "Vercel deploys from Cursor Origin (no GitHub). Monday Cloud Automation scans RSS/news and opens an Origin draft PR when new sourced claims exist."
     },
     {
       "date": "2026-08-19",
