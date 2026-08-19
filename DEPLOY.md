@@ -4,7 +4,7 @@ This repo lives on **Cursor Origin**. Vercel can deploy Origin repos directly. G
 
 ## The loop
 
-1. You connect this Origin repo to Vercel once.
+1. You create a **Vercel project** from this Origin repo (linking the app is not enough).
 2. A **Cursor Automation** runs every Monday, scans for new Owens / Kirk claims, and opens an Origin PR if anything new is sourced.
 3. You merge the PR on Origin. Vercel ships production.
 
@@ -19,64 +19,89 @@ Origin repos are private. Vercel’s Origin integration is in public beta and **
 
 ---
 
-## 1. Connect Origin → Vercel (you click this)
+## 1. Why Vercel looks empty after “linking”
 
-**From Origin (easiest):**
+**Connect / Apps / Continue with Origin** only authorizes the Origin team. It does **not** create a project or a deployment. The dashboard stays empty until you import this repo and click **Deploy**.
 
-1. Open the repo: [cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed](https://cursor.com/codebase/milehigh-patriot/scamadace-owens-exposed)
-2. Open the **Apps** tab.
-3. Connect **Vercel** and authorize the Cursor Origin team.
+### Create the project (the step that was missing)
 
-**From Vercel:**
+1. Open [vercel.com/new](https://vercel.com/new).
+2. Top-left: make sure you are on a **Pro** team, not Hobby / your personal Hobby account.
+3. Click **Continue with Origin** (if you already linked Origin, you will see Origin repos instead of GitHub repos).
+4. If it asks which Origin team: pick the one that owns `scamadace-owens-exposed`.
+5. Click the repo **`scamadace-owens-exposed`**.
+6. Fill the form exactly:
 
-1. [vercel.com/new](https://vercel.com/new) → **Continue with Origin**.
-2. Pick the Origin team, then `scamadace-owens-exposed`.
-3. Framework: **Other**. Build: `node scripts/generate-pages.js`. Output: `.` (root).
-4. Deploy.
+   | Field | Value |
+   |-------|--------|
+   | Framework Preset | **Other** |
+   | Root Directory | `./` (leave default) |
+   | Build Command | `node scripts/generate-pages.js` |
+   | Output Directory | `.` (repo root — not `dist` or `public`) |
+   | Install Command | leave empty |
 
-After that, every Origin PR gets a preview URL. Merge to `main` updates production.
+7. Click **Deploy**. Wait until it finishes. You should get a `*.vercel.app` URL.
 
-Optional: Vercel → Project → **Domains** for a custom domain. Set `SITE_ORIGIN` (no trailing slash) as a Vercel env var and in `js/app.js`.
+If **Continue with Origin** is missing, or the repo list is empty: Vercel → team **Settings → Git → Origin**. Reconnect, then go back to [vercel.com/new](https://vercel.com/new).
+
+If Deploy fails with a private-repo / Hobby error: upgrade that Vercel team to **Pro**, then retry.
+
+After this, Origin PR #1 should get a preview. Merge to `main` updates production.
 
 ---
 
-## 2. Monday automation (you save this once)
+## 2. Monday Automation — click every field
 
-I cannot create Cursor Automations from this agent (that API is read-only here). You create it once:
+Open [cursor.com/automations](https://cursor.com/automations) → **New**.
 
-1. Open [cursor.com/automations](https://cursor.com/automations) → **New**.
-2. Trigger: **Scheduled** → cron `0 14 * * 1` (Monday 14:00 UTC).
-3. Repository: **this Origin repo**, branch `main`. Cron defaults to “no repository” — change that or the agent cannot edit code.
-4. Tools: leave **Pull request creation** on.
-5. Paste the prompt in [scripts/WEEKLY-AGENT-PROMPT.md](scripts/WEEKLY-AGENT-PROMPT.md).
-6. Save and turn it **on**.
+If you already made one, open it and match this list. Scheduled automations default to **no repository**, which means the agent cannot edit the site or open a PR.
 
-Manual test anytime: run the same prompt as a Cloud Agent on this repo.
+### Fields to set
 
-Local scan only (no publish):
+| Field | What to choose |
+|-------|----------------|
+| **Name** | `Monday Owens claim scan` |
+| **Trigger** | **Scheduled** (not Slack, not GitHub) |
+| **Schedule** | Custom cron: `0 14 * * 1` |
+| **What that means** | Every Monday at 14:00 UTC (8:00 AM Denver in standard time, 7:00 AM MDT) |
+| **Repository** | **Single repository** — `milehigh-patriot/scamadace-owens-exposed` |
+| **Branch** | `main` |
+| **Tools** | Leave **Pull request creation** on. Leave the rest default. |
+| **Instructions / Prompt** | Paste the block in [scripts/WEEKLY-AGENT-PROMPT.md](scripts/WEEKLY-AGENT-PROMPT.md) (also copied below). |
+| **Enabled** | Turn it **on**, then **Save**. |
 
-```bash
-node scripts/weekly-scan.js
+Do **not** pick “No repository.” That is why a cron job can look “set up” and still do nothing useful.
+
+### Prompt to paste (copy the whole box)
+
+```
+You are updating Scamdace Owens Exposed on Cursor Origin (not GitHub).
+
+Catalog new Candace Owens claims about the Charlie Kirk assassination since SITE_UPDATED in js/app.js.
+
+1. Run `node scripts/weekly-scan.js` and read research/weekly-scan.md.
+2. Check her latest show and @RealCandaceO for Kirk, Robinson, TPUSA, Losee, mic, Israel, Erika.
+3. Add only claims she herself stated, with date, URL, timestamp, and a short quote.
+4. If she restated an old claim, extend that entry — do not create a duplicate id.
+5. Write evidence stacks in the existing site voice. No insults. No unsourced verdicts.
+6. Run `node scripts/generate-pages.js` and `node scripts/generate-pages.js --check`.
+7. If nothing new is sourced, do not open a PR. Leave a short note that the catalog is current.
+8. If you added or extended claims, commit, push an Origin branch, and open a draft PR against main.
+9. Do not merge. Do not use GitHub Actions or gh.
 ```
 
----
+### How you know it worked
 
-## Did the two clicks work?
+- The Automations list shows **Monday Owens claim scan** as **on**.
+- Opening it shows this Origin repo + `main`, not “no repository.”
+- Nothing runs until the next Monday 14:00 UTC. That is normal.
 
-I cannot see your Vercel dashboard or Automations list from here. If both look like this, you did it correctly:
+### Test it now (do not wait until Monday)
 
-**Vercel**
-- [vercel.com/dashboard](https://vercel.com/dashboard) shows a project for `scamadace-owens-exposed` on a **Pro** team (not Hobby).
-- Project → **Settings → Git** says the connected repo is this Origin repo.
-- After the next push, the Origin PR gets a preview URL (or the Vercel project **Deployments** tab shows a new build). A first connect often does not deploy until the next git push.
-
-**Monday Automation**
-- [cursor.com/automations](https://cursor.com/automations) shows the job **on**.
-- Trigger is scheduled `0 14 * * 1`.
-- Repository is **this** Origin repo, branch `main` — not “no repository”.
-- Nothing will run until next Monday 14:00 UTC. That is normal.
-
-If Vercel still shows Hobby, or the Automation has no repo attached, fix those two items and you are done.
+1. Open [cursor.com/agents](https://cursor.com/agents) → **New agent**.
+2. Repository: this Origin repo, branch `main`.
+3. Paste the same prompt box above.
+4. Send it. If it finds nothing new, it should say the catalog is current. If it finds something, it should open a **draft** Origin PR — you still decide whether to merge.
 
 ---
 
