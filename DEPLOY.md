@@ -15,7 +15,14 @@ This repo lives on **Cursor Origin**. Vercel can deploy Origin repos directly. G
 | Monday scan + draft pages | Cursor Automation | Scheduled cron. Must be attached to **this** Origin repo. |
 | Publish | You | Merge the draft PR. Do not let a cron auto-merge verdicts. |
 
-Origin repos are private. Vercel’s Origin integration is in public beta and **does not work on a Vercel Hobby team** — you need a Vercel Pro (or Enterprise) team.
+**Do you have to pay?** Only if you want Vercel to watch Origin and auto-deploy every PR/merge. That git hook is Pro-only (~$20/month) because every Origin repo is private. Hobby cannot import Origin.
+
+You do **not** need Pro to:
+- keep the site on the existing github.io URL
+- run the Monday Cursor Automation (that is Cursor usage you already have)
+- upload a build to free Vercel Hobby with the CLI (`npx vercel`), with no Origin git connection
+
+The rest of this file is the paid auto-deploy path. Skip it if you do not want a Vercel bill.
 
 ---
 

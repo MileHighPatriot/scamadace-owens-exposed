@@ -73,7 +73,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md) for **Vercel from Cursor Origin** (no GitHub) and the Monday Cloud Automation.
+See [DEPLOY.md](./DEPLOY.md). Origin → Vercel auto-deploy needs **Vercel Pro**. The Monday scan is a Cursor Automation (no extra Vercel bill). The live github.io URL can stay until you choose a host.
 
 ## Local preview
 
