@@ -41,6 +41,32 @@
     return month + " " + Number(parts[2]) + ", " + parts[0];
   }
 
+  function formatFirstStated(claim) {
+    if (!claim || !claim.firstStated) return "";
+    var parts = String(claim.firstStated).split("-");
+    var months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    var prec = claim.firstStatedPrecision;
+    var year = parts[0];
+    var month = months[Number(parts[1]) - 1];
+    var day = Number(parts[2]);
+    if (prec === "year" || !month) return year;
+    if (prec === "month" || !day || day === 1) return month + " " + year;
+    return month + " " + day + ", " + year;
+  }
+
   var TIER_LABELS = {
     1: "Tier 1 — Court / charging / official case facts",
     2: "Tier 2 — Named officials & law-enforcement briefings",
@@ -220,6 +246,36 @@
       function () {
         return null;
       };
+    var chrono = (ctx.claims || []).slice();
+    var chronoIdx = -1;
+    chrono.forEach(function (c, i) {
+      if (c && c.id === claim.id) chronoIdx = i;
+    });
+    var prevClaim = chronoIdx > 0 ? chrono[chronoIdx - 1] : null;
+    var nextClaim = chronoIdx >= 0 && chronoIdx < chrono.length - 1 ? chrono[chronoIdx + 1] : null;
+
+    function chronoLink(other, label) {
+      if (!other) return "";
+      var when = formatFirstStated(other);
+      return (
+        '<a class="chrono-link" href="' +
+        claimHref(prefix, other.id) +
+        '"><span class="chrono-dir">' +
+        escapeHtml(label) +
+        "</span><strong>" +
+        escapeHtml(other.shortTitle || other.title) +
+        "</strong>" +
+        (when ? '<span class="chrono-when">' + escapeHtml(when) + "</span>" : "") +
+        "</a>"
+      );
+    }
+    var chronoNav =
+      prevClaim || nextClaim
+        ? '<nav class="chrono-nav" aria-label="Claims in the order she first stated them">' +
+          (prevClaim ? chronoLink(prevClaim, "← Earlier") : "<span></span>") +
+          (nextClaim ? chronoLink(nextClaim, "Later →") : "<span></span>") +
+          "</nav>"
+        : "";
 
     var meta = verdicts[claim.verdict] || {};
     var tags = categoryLabels(categories, claim.categories)
@@ -412,8 +468,11 @@
       '<p class="claim-summary">' +
       escapeHtml(claim.summary) +
       "</p>" +
-      '<p class="claim-meta"><strong>When she pushed it:</strong> ' +
-      escapeHtml(claim.dateRange || "See sources") +
+      '<p class="claim-meta"><strong>First stated:</strong> ' +
+      escapeHtml(formatFirstStated(claim) || "See sources") +
+      (claim.dateRange
+        ? " · <strong>When she pushed it:</strong> " + escapeHtml(claim.dateRange)
+        : "") +
       " · <strong>Verdict:</strong> " +
       escapeHtml(meta.label || claim.verdict) +
       " — " +
@@ -503,6 +562,7 @@
       '">Quote bank</a> · <a href="' +
       pageHref(prefix, "archive.html") +
       '">Archive hub</a></div>' +
+      chronoNav +
       '<div class="btn-row"><a class="btn btn-primary" href="' +
       pageHref(prefix, "claims.html") +
       '">← Back to all claims</a><a class="btn btn-secondary" href="' +
@@ -529,6 +589,7 @@
     formatUpdated: formatUpdated,
     renderHeader: renderHeader,
     renderFooter: renderFooter,
+    formatFirstStated: formatFirstStated,
     renderClaimInner: renderClaimInner,
     claimHref: claimHref,
     pageHref: pageHref,

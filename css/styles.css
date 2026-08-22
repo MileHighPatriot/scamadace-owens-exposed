@@ -1391,6 +1391,45 @@ main.wide {
   min-width: 0;
 }
 
+.chrono-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+}
+.chrono-nav .chrono-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  min-height: 100%;
+}
+.chrono-nav .chrono-link:last-child {
+  text-align: right;
+}
+.chrono-nav .chrono-dir {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.chrono-nav .chrono-link strong {
+  font-size: 0.95rem;
+}
+.chrono-nav .chrono-when {
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+.chrono-nav .chrono-link:hover {
+  border-color: rgba(212, 174, 58, 0.55);
+  text-decoration: none;
+}
+
 .claim-toc {
   position: sticky;
   top: calc(var(--nav-h) + 1rem);
@@ -1720,6 +1759,13 @@ main.wide {
 }
 
 @media (max-width: 960px) {
+  .chrono-nav {
+    grid-template-columns: 1fr;
+  }
+  .chrono-nav .chrono-link:last-child {
+    text-align: left;
+  }
+
   .claim-layout {
     grid-template-columns: 1fr;
   }

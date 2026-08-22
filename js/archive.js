@@ -701,20 +701,16 @@
       Object.keys(vc).forEach(function (k) {
         html += "<li>" + esc(k) + ": " + vc[k] + "</li>";
       });
-      html += "</ul><h3>Featured / core claims</h3>";
-      claims
-        .filter(function (c) {
-          return c.featured || c.severity === "core";
-        })
-        .forEach(function (c) {
-          html +=
-            '<section class="print-claim"><h4>' +
-            esc(c.shortTitle) +
-            " — " +
-            esc(c.verdict) +
-            "</h4><p><em>" +
-            esc(c.dateRange) +
-            "</em></p><p>" +
+      html += "</ul><h3>All claims (chronological by first statement)</h3>";
+      claims.forEach(function (c) {
+        html +=
+          '<section class="print-claim"><h4>' +
+          esc(c.shortTitle) +
+          " — " +
+          esc(c.verdict) +
+          "</h4><p><em>" +
+          esc(c.firstStated || c.dateRange) +
+          "</em></p><p>" +
             esc(c.summary) +
             "</p><p>URL: " +
             esc((SOE.SITE_ORIGIN || "") + "/" + (SOE.claimPath ? SOE.claimPath(c.id) : "c/" + c.id + ".html")) +
@@ -729,8 +725,8 @@
               (s.date ? " (" + esc(s.date) + ")" : "") +
               "</p>";
           }
-          html += "</section>";
-        });
+        html += "</section>";
+      });
       html +=
         "<h3>How to use</h3><ol><li>Read facts.html baseline</li><li>Open individual claim stacks</li><li>Verify primaries via vault.html archives</li></ol></article>";
       return html;

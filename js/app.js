@@ -287,6 +287,49 @@
       SOE.setHeadMeta("rel", "canonical", url);
     },
 
+    sortClaimsChrono: function (arr) {
+      function titleKey(s) {
+        return String(s || "")
+          .replace(/^[“”"'\s]+/, "")
+          .toLowerCase();
+      }
+      return (arr || []).slice().sort(function (a, b) {
+        var da = a.firstStated || "";
+        var db = b.firstStated || "";
+        if (da !== db) return da.localeCompare(db);
+        return titleKey(a.shortTitle).localeCompare(titleKey(b.shortTitle));
+      });
+    },
+
+    formatFirstStated: function (claim) {
+      if (!claim) return "";
+      var iso = typeof claim === "string" ? claim : claim.firstStated;
+      var prec =
+        typeof claim === "string" ? arguments[1] : claim.firstStatedPrecision;
+      if (!iso) return "";
+      var parts = String(iso).split("-");
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      var year = parts[0];
+      var month = months[Number(parts[1]) - 1];
+      var day = Number(parts[2]);
+      if (prec === "year" || !month) return year;
+      if (prec === "month" || !day || day === 1) return month + " " + year;
+      return month + " " + day + ", " + year;
+    },
+
     formatUpdated: function (iso) {
       iso = iso || SITE_UPDATED;
       try {

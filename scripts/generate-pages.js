@@ -233,6 +233,7 @@ function claimPage(claim, loaded, site) {
     siteUpdated: site.updated,
     verdicts: loaded.VERDICT_META || {},
     categories: loaded.CATEGORIES || [],
+    claims: loaded.CLAIMS_DATA || [],
     getClaim: function (id) {
       return claimsById[id] || null;
     },
@@ -432,6 +433,26 @@ function main() {
     console.error("No claims loaded from js/claims-data.js");
     process.exit(1);
   }
+  claims.forEach(function (c, i) {
+    if (!c.firstStated) {
+      console.error("Missing firstStated on " + c.id);
+      process.exit(1);
+    }
+    if (i > 0 && c.firstStated < claims[i - 1].firstStated) {
+      console.error(
+        "Claims are not chronological at " +
+          c.id +
+          " (" +
+          c.firstStated +
+          " after " +
+          claims[i - 1].id +
+          " " +
+          claims[i - 1].firstStated +
+          ")"
+      );
+      process.exit(1);
+    }
+  });
 
   var expected = expectedFiles(loaded, site);
   var errors = [];

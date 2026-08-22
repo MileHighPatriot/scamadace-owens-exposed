@@ -31,20 +31,17 @@
     }
   } catch (e) {}
 
-  function severityRank(s) {
-    return { core: 0, high: 1, medium: 2, low: 3 }[s] ?? 4;
-  }
-
   function sortedBase() {
+    if (window.SOE && SOE.sortClaimsChrono) {
+      return SOE.sortClaimsChrono(window.CLAIMS_DATA);
+    }
     return window.CLAIMS_DATA.slice().sort(function (a, b) {
-      // Featured first, then core/high severity, then title
-      var af = a.featured ? 0 : 1;
-      var bf = b.featured ? 0 : 1;
-      if (af !== bf) return af - bf;
-      var as = severityRank(a.severity);
-      var bs = severityRank(b.severity);
-      if (as !== bs) return as - bs;
-      return (a.shortTitle || "").localeCompare(b.shortTitle || "");
+      var da = a.firstStated || "";
+      var db = b.firstStated || "";
+      if (da !== db) return da.localeCompare(db);
+      var ta = (a.shortTitle || "").replace(/^[“”"'\s]+/, "");
+      var tb = (b.shortTitle || "").replace(/^[“”"'\s]+/, "");
+      return ta.localeCompare(tb);
     });
   }
 
@@ -140,7 +137,7 @@
         items.length +
         " of " +
         window.CLAIMS_DATA.length +
-        " claims · click any claim for the full evidence stack";
+        " claims · chronological by first statement · click any claim for the full evidence stack";
     }
     if (!items.length) {
       listEl.innerHTML =
@@ -169,7 +166,15 @@
           (c.featured
             ? '<span class="tag tag-hot">Major claim</span>'
             : "") +
-          (c.dateRange
+          (c.firstStated
+            ? '<span class="tag">' +
+              escapeHtml(
+                (window.SOE && SOE.formatFirstStated
+                  ? SOE.formatFirstStated(c)
+                  : c.firstStated) + " · first stated"
+              ) +
+              "</span>"
+            : c.dateRange
             ? '<span class="tag">' + escapeHtml(c.dateRange) + "</span>"
             : "") +
           "</div>" +

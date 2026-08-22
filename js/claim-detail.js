@@ -77,6 +77,7 @@
       siteUpdated: SOE.SITE_UPDATED,
       verdicts: window.VERDICT_META || {},
       categories: window.CATEGORIES || [],
+      claims: window.CLAIMS_DATA || [],
       getClaim: function (rid) {
         return SOE.getClaim(rid);
       },

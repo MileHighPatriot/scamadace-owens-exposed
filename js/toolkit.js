@@ -3,7 +3,11 @@
   const root = document.getElementById("toolkit-list");
   if (!root || !window.CLAIMS_DATA) return;
 
-  root.innerHTML = window.CLAIMS_DATA.map(function (c) {
+  var claims =
+    window.SOE && SOE.sortClaimsChrono
+      ? SOE.sortClaimsChrono(window.CLAIMS_DATA)
+      : window.CLAIMS_DATA;
+  root.innerHTML = claims.map(function (c) {
     const tp = c.talkingPoints || {};
     return (
       '<article class="card" style="margin-bottom:1rem" id="' +
