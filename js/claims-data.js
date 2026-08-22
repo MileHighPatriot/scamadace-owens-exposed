@@ -1,7 +1,7 @@
 /**
  * Scamdace Owens Exposed — claim catalog
  * Author: MileHigh Patriot (@America1st5280)
- * Updated: August 19, 2026 — PBD debate (Aug 14): .30-06 “Superman neck,” 12 Israeli phones, Israel concession
+ * Updated: August 22, 2026 — Utah reply memo (Aug 18): defense “does not challenge” identity/shooting evidence
  */
 window.CLAIMS_DATA = [
   {
@@ -12,7 +12,7 @@ window.CLAIMS_DATA = [
       "forensic",
       "cover-up"
     ],
-    "dateRange": "June 2026 – August 14, 2026 (still promoted in the PBD debate)",
+    "dateRange": "June 2026 – August 21, 2026 (still promoted; Utah reply Aug 18)",
     "verdict": "FALSE",
     "severity": "core",
     "featured": true,
@@ -56,7 +56,33 @@ window.CLAIMS_DATA = [
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcharlies-shattered-charlie-kirk-assassination-case-takes-another-twist-as-candace-owens-points-to-new-suv-image-evidence%2Farticleshow%2F131952143.cms"
       }
     ],
+    "documentHighlights": [
+      {
+        "label": "State of Utah reply — weapon class",
+        "pin": "Introduction / § II · filed Aug 18, 2026",
+        "cite": "State v. Robinson, No. 251403576 (4th Dist. Utah, Reply Memorandum, Aug. 18, 2026).",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "The evidence here easily establishes at least probable cause to believe that Defendant did so when he intentionally fired his grandfather’s high-powered rifle towards a crowd of thousands, several of whom were in the line of fire between him and Mr. Kirk, while others were in close proximity to Mr. Kirk.",
+        "highlight": "intentionally fired his grandfather’s high-powered rifle",
+        "beats": "The State’s bindover theory is a rifle shot. A mic-bomb homicide would be a different exhibit class — and the defense brief did not file one."
+      }
+    ],
     "evidence": [
+      {
+        "tier": 1,
+        "title": "Utah’s August reply still calls the kill a rifle shot — and says the defense is not contesting that sequence",
+        "body": "Owens’s mic-bomb story requires the official weapon class to be fake. On August 18, 2026, the State of Utah wrote that Robinson’s lawyers “do not challenge the substance of the evidence” that he crawled to the Losee perch and “fired the fatal shot,” then argued the death-penalty aggravator from “his grandfather’s high-powered rifle.” Readers of the defense’s own August 11 memo noted it described the rooftop figure as “the shooter” and treated a rifle shot from Losee as the kill. That is two sides of a court file agreeing on mechanism class. A podcast RODE teardown is not in that file. See utah-filings-lied.",
+        "sources": [
+          {
+            "name": "State of Utah reply PDF (Aug 18, 2026)",
+            "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf"
+          },
+          {
+            "name": "This site: Utah filings “don’t concede” / they’re lying",
+            "url": "c/utah-filings-lied.html"
+          }
+        ]
+      },
       {
         "tier": 3,
         "title": "What the multi-angle video actually shows — and what a mic explosion would have to show",
@@ -160,7 +186,8 @@ window.CLAIMS_DATA = [
       "philip-goldsberry-micing",
       "gun-not-fired",
       "rooftop-no-recoil",
-      "thirty-ought-six-impossible"
+      "thirty-ought-six-impossible",
+      "utah-filings-lied"
     ],
     "confidence": {
       "centrality": 3,
@@ -288,7 +315,7 @@ window.CLAIMS_DATA = [
       "forensic",
       "timeline"
     ],
-    "dateRange": "Sept 2025 – August 14, 2026",
+    "dateRange": "Sept 2025 – August 21, 2026",
     "verdict": "FALSE",
     "severity": "core",
     "featured": true,
@@ -314,7 +341,37 @@ window.CLAIMS_DATA = [
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DnMymkR184"
       }
     ],
+    "documentHighlights": [
+      {
+        "label": "State of Utah reply — Losee perch / fatal shot",
+        "pin": "Introduction · filed Aug 18, 2026",
+        "cite": "State v. Robinson, No. 251403576 (4th Dist. Utah, Reply Memorandum, Aug. 18, 2026).",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk, hid the rifle in a wooded area, got rid of some of the clothing he was wearing, and told his roommate to delete their texts about the shooting.",
+        "highlight": "crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot",
+        "beats": "Refutes “no gun was ever fired from Losee” and the Aug 14 “not even convinced” line."
+      }
+    ],
     "evidence": [
+      {
+        "tier": 1,
+        "title": "Utah’s August reply treats a Losee rooftop shot as the unchallenged sequence",
+        "body": "On August 14 Owens told a debate audience she was “not even convinced” Kirk was shot from Losee. Four days later the State of Utah wrote that the defense “does not challenge the substance of the evidence” that Robinson crawled to “the sniper’s perch on the Losee Building rooftop” and “fired the fatal shot.” Readers of the defense memo noted it already called that rooftop figure “the shooter.” “No gun from Losee” is now a show slogan running against both sides of a court file. See utah-filings-lied.",
+        "sources": [
+          {
+            "name": "State of Utah reply PDF (Aug 18, 2026)",
+            "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf"
+          },
+          {
+            "name": "KSL: rooftop-shot evidence “isn’t even” being challenged",
+            "url": "https://www.ksl.com/article/51611672/prosecutors-say-they-have-shown-aggravating-elements-in-tyler-robinson-murder-case"
+          },
+          {
+            "name": "This site: Utah filings “don’t concede” / they’re lying",
+            "url": "c/utah-filings-lied.html"
+          }
+        ]
+      },
       {
         "tier": 1,
         "title": "July 2026 hearing: state advanced a Losee rooftop shooter narrative",
@@ -410,7 +467,8 @@ window.CLAIMS_DATA = [
       "losee-lone-witness",
       "rooftop-no-recoil",
       "gun-not-fired",
-      "thirty-ought-six-impossible"
+      "thirty-ought-six-impossible",
+      "utah-filings-lied"
     ],
     "confidence": {
       "centrality": 3,
@@ -1419,11 +1477,11 @@ window.CLAIMS_DATA = [
       "suspect",
       "cover-up"
     ],
-    "dateRange": "Sept 2025 – August 14, 2026 (still active)",
+    "dateRange": "Sept 2025 – August 21, 2026 (still active)",
     "verdict": "CONTRADICTED",
     "severity": "core",
     "featured": true,
-    "summary": "Owens: confident Robinson did not murder Kirk; total patsy; not even on campus; Fed slop; Twiggs as federal setup. Doubled down Aug 2026 that there is “more evidence” he is a patsy than that he committed the crime — then sat a four-hour PBD debate without producing a replacement shooter.",
+    "summary": "Owens: confident Robinson did not murder Kirk; total patsy; not even on campus; Fed slop; Twiggs as federal setup. Doubled down Aug 2026 that there is “more evidence” he is a patsy — then, after Utah’s Aug 18 reply said the defense “does not challenge” the rooftop-shot identity evidence, called people quoting that filing liars.",
     "claimDetail": "Candace Owens has not merely questioned details of the case against Tyler Robinson. She has denied the core conclusion. In comments reported by the New York Times in July 2026, she said she felt confident stating that Robinson did not murder Charlie Kirk, called him a total patsy, and claimed he was not even on campus that day. On X she has dismissed the official narrative as “Fed slop,” cast doubt using partner statements about what Robinson did or did not discuss, and speculated that Lance Twiggs could be revealed as a federal asset who helped set Robinson up.\n\nIn early August 2026 she escalated again during a public spat with commentator Andrew Wilson: she accepted the framed claim that there is more evidence Robinson was set up as a patsy than evidence he committed the murder, said she was willing to defend that claim “gladly,” and negotiated a high-dollar debate package around it — after a preliminary hearing had already walked the public through campus video, DNA, and confessional communications.\n\nAt the same time she has promoted replacement mechanisms and villains: exploding microphones, foreign planes, French troops, freemason signaling, maroon decoys, and inside-job framing. The through-line is that the charged defendant is a narrative inconvenience rather than the person at the center of a dense public evidence package.",
     "primarySources": [
       {
@@ -1487,9 +1545,57 @@ window.CLAIMS_DATA = [
         "timestamp": "Public exchange with Andrew Wilson (early August 2026)",
         "quote": "yes, yes, yes I accept the claim there is more evidence Tyler Robinson was set up as a patsy than evidence that he committed this crime. I am willing to defend, gladly, with the facts of the case presented thus far.",
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fi-am-willing-to-defend-candace-owens-ignites-fresh-charlie-kirk-murder-controversy-with-bold-tyler-robinson-patsy-claim%2Farticleshow%2F133061054.cms"
+      },
+      {
+        "label": "TOI (Aug 20, 2026): Owens says quoting the Utah reply is a “lie”",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt/articleshow/133389793.cms",
+        "note": "Her response after the State said the defense is not challenging the identity evidence",
+        "date": "August 20, 2026",
+        "timestamp": "Show comments on Blake Neff’s summary of the Aug 18 reply",
+        "quote": "He just lies and misrepresents and we're the bad guys for noticing that he's doing it.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt%2Farticleshow%2F133389793.cms"
+      }
+    ],
+    "documentHighlights": [
+      {
+        "label": "State of Utah reply — Introduction",
+        "pin": "p. 1 · filed Aug 18, 2026",
+        "cite": "State v. Robinson, No. 251403576 (4th Dist. Utah, Reply Memorandum, Aug. 18, 2026).",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk, hid the rifle in a wooded area, got rid of some of the clothing he was wearing, and told his roommate to delete their texts about the shooting.",
+        "highlight": "does not challenge the substance of the evidence",
+        "beats": "Direct collision with “total patsy / not even on campus / Fed slop.”"
+      },
+      {
+        "label": "State of Utah reply — unchallenged counts",
+        "pin": "p. 1",
+        "cite": "Same filing.",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "Defendant therefore raises no valid challenge to the evidence supporting Count 1 as at least murder; Count 2, felony discharge of a firearm causing serious bodily injury; Counts 3 and 4, obstruction of justice; or Count 5, tampering with a witness.",
+        "highlight": "raises no valid challenge to the evidence supporting Count 1 as at least murder",
+        "beats": "The live brief is about the death-penalty aggravator, not a replacement killer."
       }
     ],
     "evidence": [
+      {
+        "tier": 1,
+        "title": "Aug 18, 2026: Utah says the defense is not disputing the identity/shooting evidence",
+        "body": "After the July hearing, the next public paper from the State of Utah is the August 18 reply memorandum. Its opening sentence is not a vibe. It is the Utah County Attorney’s Office telling the judge that Robinson “does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot,” hid the rifle, dumped clothing, and told his roommate to delete the texts.\n\nThat is the State describing the defense’s own bindover brief. It is not a guilty plea — Robinson still has not entered one — and it is not a verdict. It is the opposite of Owens’s still-active line that he is a total patsy who was not even on campus. When she later called people quoting that paragraph liars, the document was already online. See utah-filings-lied for the highlighted excerpts.",
+        "sources": [
+          {
+            "name": "State of Utah reply PDF (Aug 18, 2026)",
+            "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf"
+          },
+          {
+            "name": "KSL: “isn’t even challenging” the Losee rooftop evidence",
+            "url": "https://www.ksl.com/article/51611672/prosecutors-say-they-have-shown-aggravating-elements-in-tyler-robinson-murder-case"
+          },
+          {
+            "name": "This site: Utah filings “don’t concede” / they’re lying",
+            "url": "c/utah-filings-lied.html"
+          }
+        ]
+      },
       {
         "tier": 1,
         "title": "July 2026 preliminary hearing: identity package in open court",
@@ -1597,7 +1703,8 @@ window.CLAIMS_DATA = [
       "gun-not-fired",
       "rooftop-no-recoil",
       "more-evidence-patsy",
-      "device-seizure-decentralized"
+      "device-seizure-decentralized",
+      "utah-filings-lied"
     ],
     "confidence": {
       "centrality": 3,
@@ -4079,12 +4186,12 @@ window.CLAIMS_DATA = [
       "security",
       "cover-up"
     ],
-    "dateRange": "Fall 2025 – 2026",
+    "dateRange": "Fall 2025 – August 21, 2026",
     "verdict": "UNSUPPORTED",
     "severity": "high",
     "featured": false,
-    "summary": "Owens amplified video of TPUSA AV/camera worker Terryl Farnsworth moving to film after the shot, treating professional filming instincts as sinister.",
-    "claimDetail": "Owens shared and discussed footage of contracted camera operator Terryl Farnsworth after the shooting — including movement to elevated or advantageous angles and filming while Kirk was being carried — as if documenting the aftermath were proof of guilt rather than the job description of event media staff.\n\nCamera people film disasters. That is often morally jarring and sometimes ethically contested. It is not the same as proving they arranged a rooftop rifle shot. Pairing Farnsworth optics with McCoy optics creates a “folder” of staff suspicion without a charging theory that names them.",
+    "summary": "Owens amplified video of TPUSA AV/camera worker Terryl Farnsworth moving to film after the shot, then in mid-August 2026 released SD-card footage and asked whether the rear-camera files were edited because he pocketed a card.",
+    "claimDetail": "Owens shared and discussed footage of contracted camera operator Terryl Farnsworth after the shooting — including movement to elevated or advantageous angles and filming while Kirk was being carried — as if documenting the aftermath were proof of guilt rather than the job description of event media staff.\n\nIn mid-August 2026 she escalated the same staffer into an evidence-tampering story. Episode packaging and follow-up posts described “exclusive” footage of Farnsworth removing an SD card from the camera behind Kirk within minutes of the shot, putting it in a pocket, then using a phone or computer instead of collecting every nearby card. She asked Blake Neff whether the footage was edited, why cards went to a laptop before the SBI, and treated a September 18 call in which Farnsworth allegedly downplayed his file-transfer ability as proof of a lie because investigators later described Google Drive links. She is “speculating,” she said, that a 1102 statement about clipped/zoomed rear-camera video means the file was cropped to hide the ground.\n\nCamera people film disasters and pull media before a crush or a theft. That is often morally jarring. It is not a charging theory that names Farnsworth as a killer, and it does not move the bullet off a rooftop rifle. Pairing Farnsworth optics with McCoy optics still creates a “folder” of staff suspicion without a mechanism that beats the public Robinson file — a file Utah’s August 18 reply says the defense is not substantively contesting.",
     "primarySources": [
       {
         "label": "Politico: Farnsworth as early focus of Owens scrutiny",
@@ -4102,9 +4209,42 @@ window.CLAIMS_DATA = [
         "date": "Fall 2025 – 2026",
         "timestamp": "Article/report documenting the claim window",
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-lists-10-tpusa-verifiable-lies-and-raises-big-questions-about-charlie-kirks-assassination-story%2Farticleshow%2F125337151.cms"
+      },
+      {
+        "label": "TOI (Aug 20, 2026): “exclusive” SD-card footage / pocket-then-phone",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-drops-new-charlie-kirk-sd-card-footage-as-questions-mount-over-the-moments-after-the-shooting/articleshow/133361028.cms",
+        "note": "Documents the mid-August Farnsworth SD-card package",
+        "date": "August 19–20, 2026",
+        "timestamp": "Episode 377 window / social clips",
+        "quote": "the beeline to that footage so quickly, within four or five minutes, as if that had to be secured.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-drops-new-charlie-kirk-sd-card-footage-as-questions-mount-over-the-moments-after-the-shooting%2Farticleshow%2F133361028.cms"
+      },
+      {
+        "label": "TOI (Aug 21, 2026): Owens asks Neff “Was the footage edited?”",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/was-the-footage-edited-candace-owens-demands-answers-from-blake-neff-over-bizarre-sd-card-footage-after-charlie-kirk-shooting/articleshow/133415477.cms",
+        "note": "Primary-adjacent: quotes her X demand to Blake Neff",
+        "date": "August 21, 2026",
+        "timestamp": "X post to @BlakeSNeff as quoted",
+        "quote": "Was the footage edited? Seems like a very odd thing to do in the immediate aftermath.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fwas-the-footage-edited-candace-owens-demands-answers-from-blake-neff-over-bizarre-sd-card-footage-after-charlie-kirk-shooting%2Farticleshow%2F133415477.cms"
       }
     ],
     "evidence": [
+      {
+        "tier": 5,
+        "title": "Pocketing a camera card in a crush is not a homicide exhibit",
+        "body": "Event video staff pull media. They do it because cameras walk, cards get stolen, and a livestreamed murder turns a courtyard into a mob. Pulling the rear-camera card within minutes, pocketing it, and later producing files to investigators — including, in the story Owens herself tells, Google Drive links the same day — is a chain-of-custody argument at most. It is not proof the card was cropped to hide a bomb, a second shooter, or an innocent Robinson.\n\nOwens says she is speculating that a zoomed rear-camera clip was “clipped” because it looks tighter than prior wide shots. Speculation is the right word. A cropped export for a show, a digital zoom in camera, and a different lens kit from a prior event are ordinary explanations. “Was the footage edited?” is a question. Treating a pocket as the edit is the leap.",
+        "sources": [
+          {
+            "name": "TOI: SD-card / pocket package",
+            "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-drops-new-charlie-kirk-sd-card-footage-as-questions-mount-over-the-moments-after-the-shooting/articleshow/133361028.cms"
+          },
+          {
+            "name": "TOI: “Was the footage edited?” demand",
+            "url": "https://timesofindia.indiatimes.com/world/us-streamers/was-the-footage-edited-candace-owens-demands-answers-from-blake-neff-over-bizarre-sd-card-footage-after-charlie-kirk-shooting/articleshow/133415477.cms"
+          }
+        ]
+      },
       {
         "tier": 5,
         "title": "Filming a crime you cover for a living is not proof you ordered it",
@@ -4128,7 +4268,9 @@ window.CLAIMS_DATA = [
       "tpusa-inside-job",
       "tpusa-ten-lies",
       "security-setup",
-      "crime-scene-destroyed"
+      "crime-scene-destroyed",
+      "feds-altered-evidence",
+      "utah-filings-lied"
     ],
     "confidence": {
       "centrality": 2,
@@ -5735,11 +5877,11 @@ window.CLAIMS_DATA = [
       "cover-up",
       "self"
     ],
-    "dateRange": "August 5–14, 2026 (debate completed Aug 14)",
+    "dateRange": "August 5–21, 2026 (debate Aug 14; Utah reply Aug 18)",
     "verdict": "CONTRADICTED",
     "severity": "core",
     "featured": false,
-    "summary": "After the July prelim, Owens doubled down: more evidence Robinson is a fed-set-up patsy than that he did the crime; accepted a high-dollar debate with Andrew Wilson. The Aug 14 PBD debate happened. She restated the weighted claim and did not produce a replacement case.",
+    "summary": "After the July prelim, Owens doubled down: more evidence Robinson is a fed-set-up patsy than that he did the crime. She sat the Aug 14 debate without a replacement case. Four days later Utah’s reply said the defense is not challenging the substance of the identity/shooting evidence.",
     "claimDetail": "In early August 2026, Candace Owens turned a social-media fight with commentator Andrew Wilson into a formal claim commitment. Wilson argued she had already asserted that there is overwhelming evidence Robinson was set up by the feds as a patsy. Owens did not walk it back. She said she firmly believes there is evidence he was set up as a patsy, is more than happy to defend that claim, and then went further: she accepted the sharper formulation that there is more evidence he was set up as a patsy than evidence that he committed the crime — “yes, yes, yes” — and said she would defend that gladly with “the facts of the case presented thus far.”\n\nThe exchange was packaged with money: Wilson publicly described a $300,000 debate offer (later discussed on Joe Rogan’s podcast); Owens counter-offered $500k, then accepted the original $300k, demanded the debate happen at her location (citing pregnancy), no smoking around her, live stream, cross-examination time, and public scoring — and floated that TPUSA should say Wilson was debating on their behalf. Michael Knowles, Wilson’s first-choice moderator, declined and said the murder case belongs in court, not a paid content product.\n\nOn August 11 she announced Patrick Bet-David as moderator and said Friday’s debate was “officially happening.” She said she trusts him to “moderate fairly,” that he will control breaks and speaking turns, and that producers will talk to him when either side wants something raised. That is a production plan, not a forensic filing.\n\nThe debate happened on August 14, 2026 — roughly four hours on the PBD Podcast, streamed and clipped into millions of views. The proposition she had accepted was not “are there unanswered questions.” It was the weighted claim: more evidence Robinson is a fed-set-up patsy than evidence he committed the murder. On the stage she said she was “not even convinced” Kirk was shot from Losee, that a .30-06 from there is “definitively no,” that she could not say Israel was “on the ground,” and that she had never said Erika Kirk or TPUSA “participated in the murder.” She reused the 12-Israeli-phones story, the French Foreign Legion rumor, the exploding-mic / PETN track, and the Smokehouse receipt. She did not produce an authenticated second shooter, a lab product that replaces the rifle, or a location alibi that beats the hearing stack.\n\nThis is not “just asking questions.” It is a weighted evidentiary claim after a multi-day preliminary hearing put campus video, DNA, and confessional communications on the public record. Treating a podcast debate purse as the burden of proof is entertainment. The case is not decided by who books a better room.",
     "primarySources": [
       {
@@ -5804,9 +5946,57 @@ window.CLAIMS_DATA = [
         "timestamp": "Published 08/18/26",
         "quote": "The debate between Owens and Wilson amassed at least 11 million views from 64 YouTube and Rumble channels",
         "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.mediamatters.org%2Fcandace-owens%2Fcandace-owens-and-andrew-wilson-debate-continues-grift-over-charlie-kirks-murder"
+      },
+      {
+        "label": "State of Utah reply (Aug 18, 2026): defense does not challenge identity evidence",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "note": "Primary court filing four days after the debate",
+        "date": "August 18, 2026",
+        "timestamp": "Filed Aug 18, 2026 · Case No. 251403576",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fstatic.foxnews.com%2Ffoxnews.com%2Fcontent%2Fuploads%2F2026%2F08%2FProsecutor_Reply.pdf"
+      }
+    ],
+    "documentHighlights": [
+      {
+        "label": "State of Utah reply — Introduction",
+        "pin": "p. 1 · filed Aug 18, 2026",
+        "cite": "State v. Robinson, No. 251403576 (4th Dist. Utah, Reply Memorandum, Aug. 18, 2026).",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk, hid the rifle in a wooded area, got rid of some of the clothing he was wearing, and told his roommate to delete their texts about the shooting.",
+        "highlight": "does not challenge the substance of the evidence",
+        "beats": "A weighted “more evidence he is a patsy” claim has to beat the defense’s own decision not to contest that sequence."
+      },
+      {
+        "label": "State of Utah reply — unchallenged murder count",
+        "pin": "p. 1",
+        "cite": "Same filing.",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "Defendant therefore raises no valid challenge to the evidence supporting Count 1 as at least murder; Count 2, felony discharge of a firearm causing serious bodily injury; Counts 3 and 4, obstruction of justice; or Count 5, tampering with a witness.",
+        "highlight": "no valid challenge to the evidence supporting Count 1 as at least murder",
+        "beats": "The brief’s energy went to the death-penalty aggravator, not to a frame-up."
       }
     ],
     "evidence": [
+      {
+        "tier": 1,
+        "title": "Four days after the debate, Utah wrote that the defense is not contesting the kill sequence",
+        "body": "Owens’s August formulation was a weighing: more evidence of a federal patsy setup than of the murder. On August 14 she had four hours to put that stack on a stage. On August 18 the State of Utah told the court the defense “does not challenge the substance of the evidence” that Robinson crawled to the Losee perch, fired the fatal shot, hid the rifle, dumped clothing, and told his roommate to delete the texts — and therefore “raises no valid challenge” to murder and the related counts.\n\nThat is not a podcast scorecard. It is the county attorney describing the other side’s paper. If the patsy evidence outweighed the murder evidence, the brief that already fights bindover was the place to spend it. The defense spent it on whether a single shot created a “great risk of death” to someone other than Kirk. See utah-filings-lied for the highlighted sentences.",
+        "sources": [
+          {
+            "name": "State of Utah reply PDF (Aug 18, 2026)",
+            "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf"
+          },
+          {
+            "name": "Fox News write-up of the same paragraph",
+            "url": "https://www.foxnews.com/us/prosecutors-hammer-tyler-robinson-bid-derail-death-penalty-charlie-kirk-murder-case"
+          },
+          {
+            "name": "This site: Utah filings “don’t concede” / they’re lying",
+            "url": "c/utah-filings-lied.html"
+          }
+        ]
+      },
       {
         "tier": 1,
         "title": "“More evidence he is a patsy” fails the open-court identity stack",
@@ -5877,7 +6067,8 @@ window.CLAIMS_DATA = [
       "dna-indefensible",
       "thirty-ought-six-impossible",
       "israeli-phones-uvu",
-      "israel-mossad"
+      "israel-mossad",
+      "utah-filings-lied"
     ],
     "confidence": {
       "centrality": 3,
@@ -6439,6 +6630,196 @@ window.CLAIMS_DATA = [
     "confidence": {
       "centrality": 3,
       "checkability": 2,
+      "stillActive": true
+    }
+  },
+  {
+    "id": "utah-filings-lied",
+    "title": "The “overwhelming evidence” crowd is lying about Utah’s filings — Robinson’s defense is not conceding the murder case",
+    "shortTitle": "Utah filings “don’t concede” / they’re lying",
+    "categories": [
+      "suspect",
+      "cover-up",
+      "self"
+    ],
+    "dateRange": "August 12–21, 2026 (still active)",
+    "verdict": "CONTRADICTED",
+    "severity": "core",
+    "featured": true,
+    "summary": "After Utah’s Aug 18 reply memo said Robinson “does not challenge the substance” of the rooftop-shot identity evidence, Owens called that reading a lie and said prelim hearings skip alternate theories. The highlighted sentences are in the State’s signed filing.",
+    "claimDetail": "In mid-August 2026 the State of Utah and Tyler Robinson’s defense exchanged bindover briefs ahead of the September 1 probable-cause argument. Contemporaneous readers of the defense’s August 11 memorandum noted that it spent almost all of its pages on the death-penalty aggravator and a hearsay objection — not on exploding microphones, Israeli phones, or “Robinson was not even on campus.”\n\nOwens’s first move, on August 12, was to tell her audience the “overwhelming evidence” crowd was “lying about the recent case filings” and hoping no one would actually read them. After the State filed its August 18 reply, TPUSA spokesman Blake Neff summarized the obvious: the defense was not contesting the camera footage, DNA, rifle, cause of death, or phone data. Owens answered on her show that Neff “just lies and misrepresents,” that a community note had already “caught” him, and that preliminary hearings decide only probable cause so defense lawyers “often skip alternative theories to avoid previewing their strategy.” She also asked why TPUSA seemed “hell-bent on sending a 22 year old young man to his death.”\n\nTwo separate things are true. A preliminary hearing is not a trial, and silence is not a guilty plea — Robinson still has not entered a plea. What is not true is that people quoting the State’s opening paragraph are inventing it. Utah County Attorney Jeffrey S. Gray’s office wrote, in a signed reply dated August 18, 2026, that the defendant “does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk,” hid the rifle, discarded clothing, and told his roommate to delete the texts. The State then said he “raises no valid challenge” to murder and the related firearm / obstruction / witness counts. That is the State of Utah describing the defense’s own brief. It is not Blake Neff’s fanfic.\n\nOwens’s “they skip theories” escape hatch also has to survive what the defense filing itself said, as quoted by readers of the document: it described the person on the Losee rooftop as “the shooter,” treated a rifle shot from that roof as the kill, and said “the evidence shows Mr. Robinson walking up and down stairs at UVU.” That is not a reserved Israel/mic-bomb file. It is the charged mechanism, written down by the lawyers who would have every incentive to float a better one if they had it.",
+    "primarySources": [
+      {
+        "label": "State of Utah reply memorandum (Aug 18, 2026) — PDF",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "note": "Primary court filing · signed by Deputy Utah County Attorney Christopher D. Ballard",
+        "date": "August 18, 2026",
+        "timestamp": "Filed Aug 18, 2026 · Fourth District Court, Utah County · Case No. 251403576",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk, hid the rifle in a wooded area, got rid of some of the clothing he was wearing, and told his roommate to delete their texts about the shooting.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fstatic.foxnews.com%2Ffoxnews.com%2Fcontent%2Fuploads%2F2026%2F08%2FProsecutor_Reply.pdf"
+      },
+      {
+        "label": "Fox News (Aug 19, 2026): quotes the same opening paragraph",
+        "url": "https://www.foxnews.com/us/prosecutors-hammer-tyler-robinson-bid-derail-death-penalty-charlie-kirk-murder-case",
+        "note": "Hosts the PDF and prints the identity/shooting sentence",
+        "date": "August 19, 2026",
+        "timestamp": "Article on the Aug 18 reply",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.foxnews.com%2Fus%2Fprosecutors-hammer-tyler-robinson-bid-derail-death-penalty-charlie-kirk-murder-case"
+      },
+      {
+        "label": "KSL (Utah): “isn’t even challenging” the rooftop-shot evidence",
+        "url": "https://www.ksl.com/article/51611672/prosecutors-say-they-have-shown-aggravating-elements-in-tyler-robinson-murder-case",
+        "note": "Local court reporting of the same reply",
+        "date": "August 19, 2026",
+        "timestamp": "Utah County Attorney’s Office filing as reported by KSL",
+        "quote": "The Utah County Attorney's Office says Tyler Robinson isn't even challenging the evidence that allegedly shows he climbed onto the roof of the Losee Center and shot and killed Charlie Kirk.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.ksl.com%2Farticle%2F51611672%2Fprosecutors-say-they-have-shown-aggravating-elements-in-tyler-robinson-murder-case"
+      },
+      {
+        "label": "TOI (Aug 20–21, 2026): Owens says Neff “just lies and misrepresents” the filings",
+        "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt/articleshow/133389793.cms",
+        "note": "Documents her show response to Blake Neff’s summary of the State reply",
+        "date": "August 20, 2026",
+        "timestamp": "Show comments after the Aug 18 filing",
+        "quote": "He just lies and misrepresents and we're the bad guys for noticing that he's doing it.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt%2Farticleshow%2F133389793.cms"
+      },
+      {
+        "label": "SoapCentral (Aug 19, 2026): community-note / “skip alternate theories” line",
+        "url": "https://www.soapcentral.com/entertainment/news-he-just-lies-misrepresents-candace-owens-slams-blake-neff-community-note-challenges-claims-tyler-robinson-s-defense-filings",
+        "note": "Quotes her reading the community-note script about prelim hearings",
+        "date": "August 19, 2026",
+        "timestamp": "Episode commentary on Neff’s tweet",
+        "quote": "Preliminary hearings decide only probable cause under the Utah 112 standard. … Defense counsel often skip alternative theories to avoid previewing their strategy before the trial.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fwww.soapcentral.com%2Fentertainment%2Fnews-he-just-lies-misrepresents-candace-owens-slams-blake-neff-community-note-challenges-claims-tyler-robinson-s-defense-filings"
+      },
+      {
+        "label": "Reporting on Owens’s Aug 12 “lying about the recent case filings” post",
+        "url": "https://concealedrepublican.com/politics/robinsons-defense-team-shooter-hit-the-intended-target/",
+        "note": "Quotes her Aug 12 X post and walks the defense memo’s rooftop-rifle language",
+        "date": "August 12, 2026",
+        "timestamp": "Posted the morning the defense brief circulated",
+        "quote": "the “overwhelming evidence” crowd is lying about the recent case filings in the hope that no one will actually read them or understand them.",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fconcealedrepublican.com%2Fpolitics%2Frobinsons-defense-team-shooter-hit-the-intended-target%2F"
+      }
+    ],
+    "documentHighlights": [
+      {
+        "label": "State of Utah reply — Introduction",
+        "pin": "p. 1 · filed Aug 18, 2026",
+        "cite": "State v. Robinson, No. 251403576 (4th Dist. Utah, Reply Memorandum in Support of Preliminary Hearing Bindover, Aug. 18, 2026).",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fstatic.foxnews.com%2Ffoxnews.com%2Fcontent%2Fuploads%2F2026%2F08%2FProsecutor_Reply.pdf",
+        "quote": "Defendant does not challenge the substance of the evidence demonstrating that he was the person who crawled to the sniper’s perch on the Losee Building rooftop, fired the fatal shot that killed Mr. Charlie Kirk, hid the rifle in a wooded area, got rid of some of the clothing he was wearing, and told his roommate to delete their texts about the shooting.",
+        "highlight": "does not challenge the substance of the evidence",
+        "beats": "Refutes: Robinson is a patsy / was not on campus / no rooftop shot / exploding mic / “they’re lying about the filings.”"
+      },
+      {
+        "label": "State of Utah reply — counts the defense left standing",
+        "pin": "p. 1 · same introduction",
+        "cite": "Same filing. The State’s next sentence names the counts it says are unchallenged on the evidence.",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "Defendant therefore raises no valid challenge to the evidence supporting Count 1 as at least murder; Count 2, felony discharge of a firearm causing serious bodily injury; Counts 3 and 4, obstruction of justice; or Count 5, tampering with a witness.",
+        "highlight": "raises no valid challenge to the evidence supporting Count 1 as at least murder",
+        "beats": "Refutes: “more evidence he is a patsy than that he committed the crime.” The live fight in the brief is the death-penalty aggravator, not identity."
+      },
+      {
+        "label": "State of Utah reply — weapon class",
+        "pin": "Introduction / § II",
+        "cite": "Same filing: the State’s theory of the kill is a rifle shot, not a body-worn charge.",
+        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf",
+        "quote": "The evidence here easily establishes at least probable cause to believe that Defendant did so when he intentionally fired his grandfather’s high-powered rifle towards a crowd of thousands, several of whom were in the line of fire between him and Mr. Kirk, while others were in close proximity to Mr. Kirk.",
+        "highlight": "intentionally fired his grandfather’s high-powered rifle",
+        "beats": "Refutes: exploding / rigged microphone, iPhone gun, “no gun was ever fired from Losee,” .30-06 “definitively no.”"
+      }
+    ],
+    "evidence": [
+      {
+        "tier": 1,
+        "title": "The “they’re lying about the filings” line dies on page one of the State’s reply",
+        "body": "You do not need Blake Neff, a community note, or a podcast recap. Open the August 18 Reply Memorandum in Support of Preliminary Hearing Bindover. The first paragraph is the State of Utah telling Judge Tony Graf that Robinson’s lawyers are not contesting the substance of the identity/shooting sequence: Losee perch, fatal shot, hidden rifle, discarded clothing, delete-the-texts instruction. The second paragraph says that leaves no valid evidence challenge to murder and the related firearm, obstruction, and witness-tampering counts.\n\nOwens told her audience the “overwhelming evidence” crowd was lying about what the papers say. The papers say exactly that. Quoting a signed county-attorney filing is not a misrepresentation. Calling the quote a lie is.",
+        "sources": [
+          {
+            "name": "State of Utah reply PDF (Aug 18, 2026)",
+            "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf"
+          },
+          {
+            "name": "Fox News: same paragraph + “has not entered a plea”",
+            "url": "https://www.foxnews.com/us/prosecutors-hammer-tyler-robinson-bid-derail-death-penalty-charlie-kirk-murder-case"
+          },
+          {
+            "name": "KSL: Utah County Attorney’s Office summary",
+            "url": "https://www.ksl.com/article/51611672/prosecutors-say-they-have-shown-aggravating-elements-in-tyler-robinson-murder-case"
+          }
+        ]
+      },
+      {
+        "tier": 1,
+        "title": "What the defense actually spent its pages on — death-penalty math, not a replacement shooter",
+        "body": "The defense’s August 11 memorandum asked the court to strike the sole aggravating factor that makes the case capital: whether Robinson “knowingly created a great risk of death to another other than Charlie Kirk.” That is a sentencing-eligibility fight. KUTV and other Utah outlets reported the motion in those terms. Readers of the brief itself noted it spent about one page on a hearsay objection to Lance Twiggs’s statements and the rest on aggravators and secondary counts.\n\nThat posture is compatible with “we will try the case later.” It is not compatible with Owens’s catalog. If the lawyers who have the discovery thought the kill was a lapel bomb, a phone gun, or a man who was not on campus, the cheapest time to say so is the brief that already argues the State failed its burden. They argued the bullet traveled above the crowd. They did not argue there was no bullet.",
+        "sources": [
+          {
+            "name": "KUTV: defense asks to remove the death-penalty aggravator",
+            "url": "https://kutv.com/news/local/defense-asks-judge-to-remove-death-penalty-from-tyler-robinson-case"
+          },
+          {
+            "name": "Walkthrough of the defense memo’s rooftop-rifle language",
+            "url": "https://concealedrepublican.com/politics/robinsons-defense-team-shooter-hit-the-intended-target/"
+          },
+          {
+            "name": "Daily Wire: State reply + Sept 1 argument date",
+            "url": "https://www.dailywire.com/news/prosecutors-make-final-push-for-death-penalty-in-tyler-robinson-case"
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "title": "“Prelim hearings skip theories” does not erase the words the defense did write",
+        "body": "Owens is right about the legal box: Utah preliminary hearings decide probable cause; reliable hearsay can come in; a defense team can decline to preview a trial theory. A community note that says only that is not a scandal. It is first-year procedure.\n\nThe problem is the next inference — therefore Neff is lying, therefore the filings do not undercut the patsy catalog. The defense memo, as quoted by people who read it, called the rooftop figure “the shooter,” described a rifle shot from the Losee Center, said “the evidence shows Mr. Robinson walking up and down stairs at UVU,” and treated texts about turning himself in as part of the record. That is affirmative language about the charged mechanism and Robinson’s presence. “We reserved our Israel file” is a story you tell after those sentences, not a reading of them.",
+        "sources": [
+          {
+            "name": "SoapCentral: Owens’s community-note / skip-theories script",
+            "url": "https://www.soapcentral.com/entertainment/news-he-just-lies-misrepresents-candace-owens-slams-blake-neff-community-note-challenges-claims-tyler-robinson-s-defense-filings"
+          },
+          {
+            "name": "Defense-memo excerpts: “the shooter,” UVU stairs, turn-myself-in texts",
+            "url": "https://concealedrepublican.com/politics/robinsons-defense-team-shooter-hit-the-intended-target/"
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "This is not a guilty plea — and it does not have to be one to sink the show",
+        "body": "Robinson has not entered a plea. Judge Graf has not bound the case over. A prosecutor’s characterization of a defense brief is still an adversary’s sentence. All of that belongs on the record so nobody pretends a bindover memo is a verdict.\n\nWhat the memo still does is collapse Owens’s weighted August claim: that there is more evidence Robinson is a fed-set-up patsy than evidence he committed the murder. The lawyers who would file that patsy case in court filed a death-penalty brief instead, and the State answered by listing the identity facts they left standing. A podcast can call that “lying about the filings.” A reader can open page one.",
+        "sources": [
+          {
+            "name": "Fox News: “Robinson has not entered a plea” / Sept 1 hearing",
+            "url": "https://www.foxnews.com/us/prosecutors-hammer-tyler-robinson-bid-derail-death-penalty-charlie-kirk-murder-case"
+          },
+          {
+            "name": "Utah County Attorney media page: Sept 1 argument notice",
+            "url": "https://atty.utahcounty.gov/media/ckpr"
+          },
+          {
+            "name": "This site: “more evidence” he is a patsy",
+            "url": "c/more-evidence-patsy.html"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "robinson-framed",
+      "more-evidence-patsy",
+      "exploding-microphone",
+      "no-rooftop-shot",
+      "thirty-ought-six-impossible",
+      "twiggs-fed-asset",
+      "feds-altered-evidence"
+    ],
+    "confidence": {
+      "centrality": 3,
+      "checkability": 3,
       "stillActive": true
     }
   }

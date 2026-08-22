@@ -100,6 +100,15 @@
     });
   }
 
+  function highlightQuote(quote, phrase) {
+    var q = escapeHtml(quote);
+    if (!phrase) return q;
+    var p = escapeHtml(phrase);
+    var i = q.indexOf(p);
+    if (i === -1) return q;
+    return q.slice(0, i) + "<mark>" + p + "</mark>" + q.slice(i + p.length);
+  }
+
   function paragraphsHtml(text) {
     return String(text || "")
       .split(/\n\s*\n/)
@@ -194,7 +203,7 @@
       prefix +
       'feed.xml">RSS</a>' +
       "</nav>" +
-      '<p class="footer-meta">Catalog baseline: August 19, 2026 · Static archive · No tracking required</p>' +
+          '<p class="footer-meta">Catalog baseline: August 22, 2026 · Static archive · No tracking required</p>' +
       "</div></footer>"
     );
   }
@@ -309,9 +318,49 @@
       })
       .join("");
 
+    var highlights = claim.documentHighlights || [];
+    var highlightsHtml = highlights
+      .map(function (h, i) {
+        var arch = h.archiveUrl || archiveUrl(h.url);
+        return (
+          '<article class="exhibit-highlight" id="highlight-' +
+          (i + 1) +
+          '">' +
+          '<div class="exhibit-highlight-meta">' +
+          escapeHtml(h.label || "Court excerpt") +
+          (h.pin ? " · " + escapeHtml(h.pin) : "") +
+          "</div>" +
+          '<blockquote class="exhibit-highlight-quote">“' +
+          highlightQuote(h.quote, h.highlight) +
+          '”</blockquote>' +
+          (h.cite ? '<p class="exhibit-highlight-cite">' + escapeHtml(h.cite) + "</p>" : "") +
+          (h.beats ? '<p class="exhibit-highlight-beats">' + escapeHtml(h.beats) + "</p>" : "") +
+          (h.url
+            ? '<p class="exhibit-highlight-links"><a href="' +
+              escapeAttr(hrefFor(prefix, h.url)) +
+              '" target="_blank" rel="noopener">Read the filing</a>' +
+              (arch
+                ? ' · <a class="archive-link" href="' +
+                  escapeAttr(arch) +
+                  '" target="_blank" rel="noopener">Archive</a>'
+                : "") +
+              "</p>"
+            : "") +
+          "</article>"
+        );
+      })
+      .join("");
+
     var tocItems =
       '<li><a href="#her-claim">1. Her claim</a></li>' +
-      '<li><a href="#primary">2. Where she said it</a></li>' +
+      '<li><a href="#primary">2. Where she said it</a></li>';
+    if (highlightsHtml) {
+      tocItems +=
+        '<li><a href="#utah-filing">Utah filing highlights (' +
+        highlights.length +
+        ")</a></li>";
+    }
+    tocItems +=
       '<li><a href="#disproof">3. Evidence stack (' +
       evidence.length +
       ")</a></li>";
@@ -416,6 +465,13 @@
       (primaryHtml || '<li class="src-note">No primary links listed yet.</li>') +
       "</ul>" +
       "</section>" +
+      (highlightsHtml
+        ? '<section class="claim-section" id="utah-filing">' +
+          '<h2><span class="step">★</span> Highlighted Utah filing — what the State actually wrote</h2>' +
+          '<p class="section-lead">These are short excerpts, not the whole memorandum. Highlighted phrases are the ones that collide with the claim on this page. A preliminary hearing is not a guilty plea; it is still the State of Utah putting the defense’s posture on the record.</p>' +
+          highlightsHtml +
+          "</section>"
+        : "") +
       '<section class="claim-section" id="disproof">' +
       '<h2><span class="step">3</span> The disproof — full evidence stack</h2>' +
       '<p class="section-lead">Everything below is ordered by reliability tier. Read the whole stack for this claim.</p>' +
