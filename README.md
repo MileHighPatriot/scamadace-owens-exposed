@@ -75,7 +75,7 @@ node scripts/generate-pages.js --check
 
 ## Deploy
 
-See [DEPLOY.md](./DEPLOY.md). Public link is GitHub Pages. Turn on **Sync from GitHub** so Origin and GitHub stay the same.
+See [DEPLOY.md](./DEPLOY.md). Public link is GitHub Pages. This Origin repo is not a GitHub mirror, so Cursor Cloud cannot update github.io — merge to `main`, then say **update** in Grok Build.
 
 ## Local preview
 

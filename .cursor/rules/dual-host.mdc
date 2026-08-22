@@ -1,0 +1,13 @@
+---
+description: Origin vs GitHub Pages for this site
+alwaysApply: true
+---
+
+This Origin repo (`milehigh-patriot/scamadace-owens-exposed`) is native Origin, not a GitHub mirror. Cursor Cloud has no GitHub login. `git push origin` here updates Origin only. GitHub Pages will not change.
+
+Work on `main`. Do not treat `cursor/owens-aug14-debate-claims-92a6` as the live branch. Do not work in `milehighpatriot-scamadace-owens-exposed`.
+
+After merging to Origin `main`, do not request a `GITHUB_TOKEN`. Tell the user to say **update** in Grok Build (that machine pushes GitHub and rebuilds Pages).
+
+Live site: https://milehighpatriot.github.io/scamadace-owens-exposed/
+GitHub: https://github.com/MileHighPatriot/scamadace-owens-exposed
