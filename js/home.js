@@ -39,8 +39,8 @@
   }
 
   var latestIds = [
-    "thirty-ought-six-impossible",
-    "israeli-phones-uvu",
+    "utah-filings-lied",
+    "robinson-framed",
     "more-evidence-patsy",
   ];
 

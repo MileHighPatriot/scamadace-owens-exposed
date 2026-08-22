@@ -1,10 +1,34 @@
 /**
  * Scamdace Owens Exposed — archive expansion data
- * Updated: 2026-08-19
+ * Updated: 2026-08-22
  */
 window.ARCHIVE_DATA = {
-  "updated": "2026-08-19",
+  "updated": "2026-08-22",
   "quotes": [
+    {
+      "id": "utah-filings-lied-q0",
+      "claimId": "utah-filings-lied",
+      "claimTitle": "Utah filings “don’t concede” / they’re lying",
+      "date": "August 20, 2026",
+      "timestamp": "Show comments after the Aug 18 State reply",
+      "quote": "He just lies and misrepresents and we're the bad guys for noticing that he's doing it.",
+      "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt/articleshow/133389793.cms",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fworld%2Fus-streamers%2Fcandace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt%2Farticleshow%2F133389793.cms",
+      "label": "TOI: Owens on Neff’s summary of the Utah reply",
+      "verdict": "CONTRADICTED"
+    },
+    {
+      "id": "utah-filings-lied-q1",
+      "claimId": "utah-filings-lied",
+      "claimTitle": "Utah filings “don’t concede” / they’re lying",
+      "date": "August 12, 2026",
+      "timestamp": "Morning-of-filing X post as quoted",
+      "quote": "the “overwhelming evidence” crowd is lying about the recent case filings in the hope that no one will actually read them or understand them.",
+      "url": "https://concealedrepublican.com/politics/robinsons-defense-team-shooter-hit-the-intended-target/",
+      "archiveUrl": "https://archive.today/?run=1&url=https%3A%2F%2Fconcealedrepublican.com%2Fpolitics%2Frobinsons-defense-team-shooter-hit-the-intended-target%2F",
+      "label": "Reporting: Owens on the defense bindover memo",
+      "verdict": "CONTRADICTED"
+    },
     {
       "id": "exploding-microphone-q0",
       "claimId": "exploding-microphone",
@@ -829,6 +853,41 @@ window.ARCHIVE_DATA = {
         "no-rooftop-shot",
         "exploding-microphone"
       ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "Owens: “overwhelming evidence” crowd is lying about the new filings",
+      "body": "As Robinson’s defense bindover memo circulates, Owens tells followers the people calling the evidence overwhelming are lying about what the papers say and hoping no one reads them.",
+      "type": "claim",
+      "claimIds": [
+        "utah-filings-lied",
+        "robinson-framed",
+        "more-evidence-patsy"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "State of Utah reply: defense “does not challenge” the rooftop-shot identity evidence",
+      "body": "Utah County Attorney’s Office reply memorandum: Robinson “does not challenge the substance of the evidence” that he crawled to the Losee perch, fired the fatal shot, hid the rifle, dumped clothing, and told his roommate to delete texts — and “raises no valid challenge” to murder and related counts. Live fight is the death-penalty aggravator.",
+      "type": "legal",
+      "claimIds": [
+        "utah-filings-lied",
+        "robinson-framed",
+        "more-evidence-patsy",
+        "no-rooftop-shot",
+        "exploding-microphone"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Owens: Neff “just lies and misrepresents” the Utah reply; Farnsworth SD-card package",
+      "body": "After the State reply, Owens calls Blake Neff’s summary of the unchallenged identity evidence a lie and reads a community-note script about prelim hearings skipping trial theories. Same window: “exclusive” Farnsworth SD-card footage and “was the footage edited?”",
+      "type": "claim",
+      "claimIds": [
+        "utah-filings-lied",
+        "terryl-farnsworth-selfie",
+        "robinson-framed"
+      ]
     }
   ],
   "episodes": [
@@ -1056,6 +1115,19 @@ window.ARCHIVE_DATA = {
       ],
       "url": "https://www.youtube.com/watch?v=_DnMymkR184",
       "notes": "Live four-hour debate. Timestamped quotes: .30-06 ~00:35; Israel concession ~02:19; 12 phones ~02:21; mic/PETN ~02:55."
+    },
+    {
+      "id": "ep-utah-filings-neff",
+      "date": "2026-08-19",
+      "title": "Neff “lies and misrepresents” the Utah reply / Farnsworth SD cards",
+      "claimIds": [
+        "utah-filings-lied",
+        "terryl-farnsworth-selfie",
+        "robinson-framed",
+        "more-evidence-patsy"
+      ],
+      "url": "https://timesofindia.indiatimes.com/world/us-streamers/candace-owens-calls-out-erika-kirk-and-tpusa-over-tyler-robinson-case-as-accusations-of-gaslighting-erupt/articleshow/133389793.cms",
+      "notes": "Show response after the Aug 18 State reply. Community-note / skip-theories script. Same window: SD-card pocket package."
     }
   ],
   "people": [
@@ -1091,7 +1163,7 @@ window.ARCHIVE_DATA = {
       "name": "Tyler Robinson",
       "role": "Charged defendant",
       "kind": "defendant",
-      "summary": "Charged with aggravated murder; prelim hearing package includes surveillance, DNA, communications as reported.",
+      "summary": "Charged with aggravated murder; has not entered a plea. July prelim package: surveillance, DNA, communications. Aug 18 State reply: defense does not challenge the substance of the Losee-perch / fatal-shot sequence.",
       "claimIds": [
         "robinson-framed",
         "dna-indefensible",
@@ -1102,7 +1174,8 @@ window.ARCHIVE_DATA = {
         "rooftop-no-recoil",
         "uncompressed-4k-not-robinson",
         "more-evidence-patsy",
-        "thirty-ought-six-impossible"
+        "thirty-ought-six-impossible",
+        "utah-filings-lied"
       ],
       "owensAngle": "Total patsy / not on campus / gun not fired / wrongly framed — rotating denials."
     },
@@ -1610,6 +1683,13 @@ window.ARCHIVE_DATA = {
   ],
   "contradictions": [
     {
+      "id": "c-utah-filings",
+      "title": "“They’re lying about the filings” vs the State’s opening paragraph",
+      "a": "utah-filings-lied",
+      "b": "more-evidence-patsy",
+      "body": "Owens told followers the “overwhelming evidence” crowd was lying about mid-August court papers, then that Blake Neff “just lies” by saying the defense is not contesting the core identity evidence. The State of Utah’s August 18 reply opens by saying the defense does not challenge that Robinson crawled to the Losee perch and fired the fatal shot. You cannot call the quote a lie and still run “more evidence he is a patsy” as if those papers do not exist."
+    },
+    {
       "id": "c1",
       "title": "Mic bomb vs rooftop rifle professional",
       "a": "exploding-microphone",
@@ -1827,6 +1907,54 @@ window.ARCHIVE_DATA = {
       "claimIds": [
         "me-lungs-heart"
       ]
+    },
+    {
+      "date": "2026-08-11",
+      "title": "Defense bindover memorandum (death-penalty aggravator)",
+      "status": "Defense filing",
+      "body": "Robinson’s lawyers ask the court to strike the sole capital aggravator (great risk of death to someone other than Kirk) and renew a hearsay objection. Reporting and readers of the brief: almost no pages contest identity; the rooftop figure is “the shooter”; a rifle shot from Losee is the kill mechanism in the paper.",
+      "links": [
+        {
+          "label": "KUTV: strike the death-penalty aggravator",
+          "url": "https://kutv.com/news/local/defense-asks-judge-to-remove-death-penalty-from-tyler-robinson-case"
+        },
+        {
+          "label": "Defense-memo walkthrough",
+          "url": "https://concealedrepublican.com/politics/robinsons-defense-team-shooter-hit-the-intended-target/"
+        }
+      ],
+      "claimIds": [
+        "utah-filings-lied",
+        "robinson-framed",
+        "more-evidence-patsy"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "State of Utah reply: defense “does not challenge” identity/shooting evidence",
+      "status": "Prosecution filing (public PDF)",
+      "body": "Reply Memorandum in Support of Preliminary Hearing Bindover, Case No. 251403576. Opening paragraph: defendant does not challenge the substance of the evidence that he crawled to the Losee perch, fired the fatal shot, hid the rifle, discarded clothing, and told his roommate to delete texts. Next sentence: no valid challenge to murder and related counts. Weapon class in the same paper: “grandfather’s high-powered rifle.” Not a guilty plea; Sept 1 argument still set.",
+      "links": [
+        {
+          "label": "State reply PDF",
+          "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Prosecutor_Reply.pdf"
+        },
+        {
+          "label": "Fox News",
+          "url": "https://www.foxnews.com/us/prosecutors-hammer-tyler-robinson-bid-derail-death-penalty-charlie-kirk-murder-case"
+        },
+        {
+          "label": "KSL",
+          "url": "https://www.ksl.com/article/51611672/prosecutors-say-they-have-shown-aggravating-elements-in-tyler-robinson-murder-case"
+        }
+      ],
+      "claimIds": [
+        "utah-filings-lied",
+        "robinson-framed",
+        "more-evidence-patsy",
+        "no-rooftop-shot",
+        "exploding-microphone"
+      ]
     }
   ],
   "hearing": [
@@ -1922,6 +2050,10 @@ window.ARCHIVE_DATA = {
     {
       "q": "How do I verify a quote?",
       "a": "Open the primary link; use the listed timestamp/show clock; prefer archive links in the Vault if the original moves."
+    },
+    {
+      "q": "Did Utah say Robinson is not disputing the charges?",
+      "a": "The State’s August 18, 2026 reply memorandum says the defense “does not challenge the substance of the evidence” that Robinson crawled to the Losee perch, fired the fatal shot, hid the rifle, discarded clothing, and told his roommate to delete texts — and “raises no valid challenge” to murder and related counts. That is not a guilty plea; Robinson has not entered a plea. The live fight in those papers is the death-penalty aggravator. Owens called people quoting that paragraph liars. See utah-filings-lied."
     }
   ],
   "exhibits": [
@@ -1994,6 +2126,19 @@ window.ARCHIVE_DATA = {
       "body": "Named-person plot claims met with defamation suit — seriousness marker, not itself proof of all counters.",
       "beats": [
         "harpole-plot"
+      ]
+    },
+    {
+      "id": "ex-utah-reply",
+      "title": "Utah Aug 18 reply: defense does not challenge the rooftop-shot sequence",
+      "tier": 1,
+      "body": "Signed State memorandum: no challenge to the substance of Losee-perch / fatal-shot / hidden-rifle / discarded-clothing / delete-texts evidence; no valid challenge to murder and related counts; kill tool described as grandfather’s high-powered rifle.",
+      "beats": [
+        "utah-filings-lied",
+        "robinson-framed",
+        "more-evidence-patsy",
+        "no-rooftop-shot",
+        "exploding-microphone"
       ]
     }
   ],
@@ -3683,6 +3828,7 @@ window.ARCHIVE_DATA = {
     }
   ],
   "journalistTop": [
+    "utah-filings-lied",
     "exploding-microphone",
     "robinson-framed",
     "thirty-ought-six-impossible",
@@ -3756,6 +3902,11 @@ window.ARCHIVE_DATA = {
     "ethicalNote": "Estimates are labeled estimates. The moral point is incentive literacy, not omniscient accounting."
   },
   "changelog": [
+    {
+      "date": "2026-08-22",
+      "title": "Utah Aug 18 reply + Owens “they’re lying about the filings”",
+      "body": "Added utah-filings-lied. Highlighted three sentences from the State of Utah’s August 18 bindover reply (does not challenge Losee-perch/fatal-shot sequence; no valid challenge to murder counts; grandfather’s high-powered rifle). Extended robinson-framed, more-evidence-patsy, exploding-microphone, and no-rooftop-shot with the same excerpts. Extended terryl-farnsworth-selfie with the mid-August SD-card / “was it edited?” package. Coverage window → Aug 22, 2026."
+    },
     {
       "date": "2026-08-19",
       "title": "Vercel deploy + weekly scan loop",

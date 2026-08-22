@@ -9,7 +9,7 @@
 
   // Public GitHub Pages URL until Origin can host pages.
   var SITE_ORIGIN = "https://milehighpatriot.github.io/scamadace-owens-exposed";
-  var SITE_UPDATED = "2026-08-19";
+  var SITE_UPDATED = "2026-08-22";
 
   // —— Mobile nav (a11y) ——
   // Delegated so it still works after mountChrome replaces the header on /c/ pages.
@@ -410,7 +410,7 @@
               '<a href="' + prefix + 'about.html">About</a>' +
               '<a href="' + prefix + 'feed.xml">RSS</a>' +
               "</nav>" +
-              '<p class="footer-meta">Catalog baseline: August 19, 2026 · Static archive · No tracking required</p>' +
+              '<p class="footer-meta">Catalog baseline: August 22, 2026 · Static archive · No tracking required</p>' +
               "</div></footer>";
       }
     },
